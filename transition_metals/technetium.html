@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technetium</title>
+    <style>
+        /* Technetium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">43</div>
+            <div class="symbol-large">Tc</div>
+        </div>
+        <div class="element-title">
+            <h1>Technetium</h1>
+            <div class="element-subtitle">Transition Metal • Group 7 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>43</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[98] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d⁵ 5s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (synthetic)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Technetium is a radioactive, silvery-gray metal that is the lightest element whose isotopes are all radioactive. It is the first synthetically produced element, filling the gap in the periodic table between molybdenum and ruthenium. Technetium-99m (metastable) is the most widely used medical radioisotope in the world for diagnostic imaging. The name "technetium" comes from the Greek "technetos" meaning "artificial."</p>
+        <p>Technetium was predicted by Dmitri Mendeleev in 1871 as "eka-manganese." After numerous false claims of discovery, it was first conclusively identified in 1937 by Italian physicists Carlo Perrier and Emilio Segrè at the University of Palermo. They isolated it from molybdenum foil that had been irradiated with deuterons in Ernest Lawrence's cyclotron at UC Berkeley. Technetium was the first element to be produced artificially.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>2157°C (3915°F, 2430 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>4265°C (7709°F, 4538 K)</td>
+            </tr>
+            <tr>
+                <td>Density (estimated)</td>
+                <td>11 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (synthetic)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.243 J/(g·K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>33.29 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>585 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>50.6 W/(m·K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>200 nΩ·m (at 0°C, estimated)</td>
+            </tr>
+        </table>
+        <p><em>Note: Many properties are estimated due to technetium's radioactivity and limited availability.</em></p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -1, 0, +1, +2, +3, +4, +5, +6, +7 (most common: +4, +7)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.9 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>702 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>136 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>147 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp)</td>
+            </tr>
+            <tr>
+                <td>Common Compounds</td>
+                <td>Technetium heptoxide (Tc₂O₇), technetium sulfide (TcS₂), ammonium pertechnetate (NH₄TcO₄)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Technetium has no stable isotopes. All isotopes are radioactive. The most important are:</p>
+        <ul>
+            <li><strong>Technetium-99m (⁹⁹ᵐTc)</strong> - Metastable isotope with half-life of 6.01 hours; decays to technetium-99 by gamma emission. Used in 80% of nuclear medicine diagnostic procedures.</li>
+            <li><strong>Technetium-99 (⁹⁹Tc)</strong> - Beta emitter with half-life of 211,100 years; fission product from nuclear reactors. Long-term environmental concern.</li>
+            <li><strong>Technetium-95m (⁹⁵ᵐTc)</strong> - Metastable isotope with half-life of 61 days</li>
+            <li><strong>Technetium-96 (⁹⁶Tc)</strong> - Radioactive isotope with half-life of 4.28 days</li>
+            <li><strong>Technetium-97 (⁹⁷Tc)</strong> - Radioactive isotope with half-life of 2.6×10⁶ years</li>
+            <li><strong>Technetium-98 (⁹⁸Tc)</strong> - Radioactive isotope with half-life of 4.2×10⁶ years</li>
+        </ul>
+        <p>Technetium-99m is typically obtained from molybdenum-99/technetium-99m generators in hospitals. Technetium-99 is a significant component of nuclear waste due to its long half-life and mobility in the environment.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Medical Imaging</strong> - Technetium-99m for diagnostic imaging of bones, heart, lungs, thyroid, liver, and other organs (40 million procedures annually worldwide)</li>
+            <li><strong>Industrial Radiography</strong> - Technetium-99 as sealed source for industrial thickness gauges and radiography</li>
+            <li><strong>Corrosion Inhibition</strong> - Technetium compounds (especially pertechnetate) as corrosion inhibitors for steel in closed systems</li>
+            <li><strong>Superconductivity Research</strong> - Technetium has highest critical temperature (7.8 K) of binary alloy superconductors</li>
+            <li><strong>Catalysis</strong> - Technetium compounds as catalysts in some chemical reactions</li>
+            <li><strong>Research</strong> - Technetium chemistry studied for nuclear waste management and environmental behavior</li>
+            <li><strong>Astrophysics</strong> - Detection of technetium in stars provided evidence for stellar nucleosynthesis</li>
+            <li><strong>Calibration</strong> - Technetium-99m used to calibrate gamma cameras and other nuclear medicine equipment</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Technetium has no natural biological role but has crucial medical applications:</p>
+        <ul>
+            <li><strong>Medical Imaging</strong> - Technetium-99m used in 80% of nuclear medicine diagnostic procedures worldwide</li>
+            <li><strong>Radiopharmaceuticals</strong> - Technetium-99m incorporated into various compounds for imaging different organs:
+                <ul>
+                    <li><strong>Tc-99m MDP</strong> - Bone scans for metastases, infections, fractures</li>
+                    <li><strong>Tc-99m Sestamibi</strong> - Cardiac perfusion imaging (stress tests)</li>
+                    <li><strong>Tc-99m MAG3</strong> - Renal function studies</li>
+                    <li><strong>Tc-99m HMPAO</strong> - Brain perfusion imaging</li>
+                    <li><strong>Tc-99m Pertechnetate</strong> - Thyroid and gastric imaging</li>
+                </ul>
+            </li>
+            <li><strong>Biological Behavior</strong> - Technetium compounds mimic biological analogs (e.g., pertechnetate mimics iodide in thyroid)</li>
+            <li><strong>Low Radiation Dose</strong> - Technetium-99m ideal for medical imaging due to short half-life (6 hours) and gamma emission without beta particles</li>
+            <li><strong>Excretion</strong> - Technetium compounds typically excreted rapidly from body, minimizing radiation exposure</li>
+            <li><strong>Toxicity</strong> - Chemical toxicity low compared to radiation hazard; pertechnetate less toxic than chromate or permanganate</li>
+            <li><strong>Environmental Concern</strong> - Technetium-99 from nuclear waste can enter food chains; pertechnetate anion mobile in groundwater</li>
+            <li><strong>No Natural Occurrence</strong> - Not found naturally in biological systems except from human nuclear activities</li>
+        </ul>
+        <p>Technetium-99m represents one of the most important medical applications of any radioactive element, saving countless lives through early disease detection.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Technetium is essentially absent from Earth's crust except from:</p>
+        <ul>
+            <li><strong>Uranium Ores</strong> - Trace amounts from spontaneous fission of uranium-238 (about 0.2 ng per kg of uranium ore)</li>
+            <li><strong>Molybdenum Ores</strong> - Extremely trace amounts from neutron capture by molybdenum</li>
+            <li><strong>Stars</strong> - Technetium detected in S-type stars, providing evidence for nucleosynthesis in stars</li>
+            <li><strong>Human-made</strong> - Virtually all technetium on Earth is anthropogenic from nuclear activities</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Technetium is produced artificially:</p>
+        <ol>
+            <li><strong>Nuclear Reactors</strong> - Molybdenum-98 neutron capture produces molybdenum-99, which decays to technetium-99m
+                <ul>
+                    <li>⁹⁸Mo + n → ⁹⁹Mo → ⁹⁹ᵐTc (β⁻ decay, 66 hours)</li>
+                </ul>
+            </li>
+            <li><strong>Nuclear Fission</strong> - Technetium-99 produced as fission product in nuclear reactors (6% yield from uranium-235 fission)</li>
+            <li><strong>Generator Systems</strong> - Molybdenum-99/technetium-99m generators in hospitals:
+                <ul>
+                    <li>Molybdenum-99 adsorbed on alumina column</li>
+                    <li>Technetium-99m eluted with saline solution as pertechnetate (TcO₄⁻)</li>
+                    <li>Generator provides technetium-99m for about 1 week</li>
+                </ul>
+            </li>
+            <li><strong>Cyclotron Production</strong> - Smaller amounts from proton bombardment of molybdenum</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 30 million medical procedures annually use technetium-99m. Major producers: NRU Reactor (Canada, closed), BR2 Reactor (Belgium), HFR Reactor (Netherlands), OPAL Reactor (Australia).</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Technetium-99 is a significant environmental concern from nuclear activities:</p>
+        <ul>
+            <li><strong>Nuclear Waste</strong> - Technetium-99 present in high-level nuclear waste; half-life 211,000 years requires long-term management</li>
+            <li><strong>Environmental Mobility</strong> - Pertechnetate ion (TcO₄⁻) highly soluble and mobile in groundwater; difficult to contain</li>
+            <li><strong>Nuclear Reprocessing</strong> - Sellafield (UK) and La Hague (France) facilities have released technetium-99 into marine environment</li>
+            <li><strong>Bioaccumulation</strong> - Technetium-99 accumulates in certain seafood (lobsters, seaweed); enters human food chain</li>
+            <li><strong>Medical Waste</strong> - Used technetium-99m generators create low-level radioactive waste</li>
+            <li><strong>Atmospheric Testing</strong> - Historical nuclear weapons testing released technetium-99 globally</li>
+            <li><strong>Remediation Challenges</strong> - Technetium difficult to remove from water; conventional methods ineffective for pertechnetate</li>
+            <li><strong>Microbial Reduction</strong> - Some bacteria can reduce Tc(VII) to Tc(IV), which is less mobile and forms insoluble compounds</li>
+            <li><strong>Regulatory Limits</strong> - Technetium-99 subject to strict discharge limits from nuclear facilities</li>
+        </ul>
+        <p>Despite its environmental challenges, technetium-99m provides enormous medical benefits that outweigh its environmental impact when properly managed.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1871, Dmitri Mendeleev predicted an element between molybdenum and ruthenium, which he called "eka-manganese." For decades, chemists searched for this missing element, with several false claims of discovery (named "illenium," "masurium," etc.).</p>
+        <p>In 1937, Italian physicist Emilio Segrè visited Ernest Lawrence's radiation laboratory at UC Berkeley. Lawrence gave him some molybdenum foil that had been used as a target in the cyclotron. Segrè and his colleague Carlo Perrier in Palermo, Italy, chemically analyzed the foil and isolated two radioactive isotopes of element 43.</p>
+        <p>They named the new element "technetium" from the Greek "technetos" meaning "artificial," as it was the first element to be made artificially. In 1952, technetium was discovered in certain stars by Paul Merrill, providing direct evidence for nucleosynthesis in stars.</p>
+        <p>The medical importance of technetium-99m was recognized in the 1960s, and it became the workhorse of nuclear medicine. Today, it remains the most important medical radioisotope despite ongoing challenges with production security.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Technetium was the first element to be produced artificially</li>
+            <li>Its name comes from the Greek "technetos" meaning "artificial"</li>
+            <li>Technetium-99m is used in about 40 million medical procedures each year worldwide</li>
+            <li>The element has been found in certain stars, proving that stars create heavy elements</li>
+            <li>A 1 kg sample of pure technetium-99 would glow faintly red in the dark due to radioactivity</li>
+            <li>Technetium is the lightest element with no stable isotopes</li>
+            <li>Some bacteria can "breathe" technetium, using it instead of oxygen in their metabolism</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All technetium isotopes are radioactive. Handle with appropriate radiation protection.</p>
+        <p><strong>Technetium-99m:</strong> Gamma emitter with 6-hour half-life. Medical doses carefully controlled to minimize patient exposure while obtaining diagnostic information.</p>
+        <p><strong>Technetium-99:</strong> Beta emitter with 211,000-year half-life. Internal exposure hazard if ingested or inhaled. Can concentrate in thyroid (as pertechnetate).</p>
+        <p><strong>Radiation Protection:</strong> Use time, distance, and shielding principles. Lead shielding effective for gamma rays from Tc-99m.</p>
+        <p><strong>Contamination Control:</strong> Technetium compounds can become airborne or contaminate surfaces. Use fume hoods and containment for handling.</p>
+        <p><strong>Waste Disposal:</strong> Technetium-99 requires long-term radioactive waste management due to long half-life. Technetium-99m waste decays quickly but requires proper handling.</p>
+        <p><strong>First Aid:</strong> For contamination, remove contaminated clothing, wash skin with soap and water. For internal contamination, seek medical attention immediately.</p>
+        <p><strong>Protective Equipment:</strong> Lab coat, gloves, safety glasses. Radiation monitoring badges required. Use lead shielding for handling significant quantities.</p>
+        <p><strong>Generator Systems:</strong> Molybdenum-99/technetium-99m generators must be handled by trained personnel following radiation safety protocols.</p>
+        <p><strong>Environmental Release:</strong> Technetium-99 releases to environment strictly regulated due to long half-life and environmental mobility.</p>
+    </div>
+</body>
+</html>
