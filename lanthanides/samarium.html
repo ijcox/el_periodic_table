@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarium</title>
+    <style>
+        /* Samarium is a lanthanide */
+        .lanthanide { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #ff9800;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .info-card h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">62</div>
+            <div class="symbol-large">Sm</div>
+        </div>
+        <div class="element-title">
+            <h1>Samarium</h1>
+            <div class="element-subtitle">Lanthanide • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>62</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>150.36 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f⁶ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Samarium is a moderately hard, silvery-white metallic element in the lanthanide series. It oxidizes in air and ignites spontaneously at 150°C. Samarium has relatively stable +2 and +3 oxidation states, with the +3 state being most common. The element is used in various applications including magnets, cancer treatment, and nuclear reactors.</p>
+        <p>Samarium was discovered in 1879 by French chemist Paul-Émile Lecoq de Boisbaudran. He isolated it from the mineral samarskite, which was named after Russian mining engineer Colonel Vasili Samarsky-Bykhovets. Samarium was the first chemical element to be named after a person, though indirectly through the mineral name. The mineral samarskite was itself the first mineral to be named after a person.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1072°C (1962°F, 1345 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1794°C (3261°F, 2067 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>7.52 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.197 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>8.62 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>192 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>13.3 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>940 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</strong></td>
+                <td>N/A (moderately hard metal)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>49.7 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.17 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>544.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>180 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>198 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Rhombohedral</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Samarium has seven naturally occurring isotopes, three of which are stable and four are radioactive with extremely long half-lives:</p>
+        <ul>
+            <li><strong>Samarium-144 (¹⁴⁴Sm)</strong> - 3.07% abundance, stable</li>
+            <li><strong>Samarium-149 (¹⁴⁹Sm)</strong> - 13.82% abundance, stable</li>
+            <li><strong>Samarium-150 (¹⁵⁰Sm)</strong> - 7.38% abundance, stable</li>
+            <li><strong>Samarium-152 (¹⁵²Sm)</strong> - 26.75% abundance, radioactive with half-life of 1.08×10¹⁴ years</li>
+            <li><strong>Samarium-154 (¹⁵⁴Sm)</strong> - 22.75% abundance, radioactive with half-life of 2.3×10¹⁵ years</li>
+            <li><strong>Samarium-147 (¹⁴⁷Sm)</strong> - 14.99% abundance, radioactive with half-life of 1.06×10¹¹ years</li>
+            <li><strong>Samarium-148 (¹⁴⁸Sm)</strong> - 11.24% abundance, radioactive with half-life of 7×10¹⁵ years</li>
+        </ul>
+        <p>Samarium has several artificial radioactive isotopes with important applications:</p>
+        <ul>
+            <li><strong>Samarium-153 (¹⁵³Sm)</strong> - Medical isotope with half-life of 46.3 hours; used in cancer treatment (Quadramet®)</li>
+            <li><strong>Samarium-151 (¹⁵¹Sm)</strong> - Artificial isotope with half-life of 90 years</li>
+            <li><strong>Samarium-145 (¹⁴⁵Sm)</strong> - Artificial isotope with half-life of 340 days</li>
+        </ul>
+        <p>The samarium-neodymium dating method uses the decay of samarium-147 to neodymium-143 for geological dating.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Permanent Magnets</strong> - Samarium-cobalt (SmCo₅, Sm₂Co₁₇) magnets for high-temperature applications</li>
+            <li><strong>Cancer Treatment</strong> - Samarium-153 lexidronam (Quadramet®) for pain relief in bone cancer</li>
+            <li><strong>Nuclear Reactors</strong> - Samarium-149 as neutron absorber in control rods (nuclear poison)</li>
+            <li><strong>Glass Manufacturing</strong> - Samarium oxide for absorbing infrared radiation in glass</li>
+            <li><strong>Catalysts</strong> - Samarium compounds as catalysts in organic synthesis and dehydration reactions</li>
+            <li><strong>Carbon Arc Lighting</strong> - Samarium salts in carbon arc electrodes for studio lighting</li>
+            <li><strong>Strain Gauges</strong> - Samarium monosulfide exhibits large resistance changes under pressure</li>
+            <li><strong>Mischmetal</strong> - Samarium component (1%) in mischmetal alloy</li>
+            <li><strong>Research</strong> - Samarium in high-temperature superconductors and other advanced materials</li>
+            <li><strong>Dating Geological Samples</strong> - Samarium-neodymium dating method for rocks and meteorites</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Samarium has no essential biological role but has important medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Cancer Treatment</strong> - Samarium-153 lexidronam (Quadramet®) treats bone pain from metastatic cancer</li>
+            <li><strong>Mechanism</strong> - Samarium-153 emits beta particles that kill cancer cells in bone; also emits gamma rays for imaging</li>
+            <li><strong>Bone-seeking</strong> - Samarium-153 complex targets areas of bone turnover (osteoblastic activity)</li>
+            <li><strong>Toxicity</strong> - Stable samarium compounds have low to moderate toxicity; similar to other rare earth elements</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in rare earth processing may be exposed to samarium dust</li>
+            <li><strong>Plants</strong> - Samarium can affect plant growth; typically inhibitory at high concentrations</li>
+            <li><strong>Radioactive Samarium</strong> - Samarium-153 medical use requires radiation safety precautions</li>
+            <li><strong>Research</strong> - Samarium compounds investigated for other medical applications</li>
+        </ul>
+        <p>Samarium's main biological significance is its use in targeted radiotherapy for bone cancer pain.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Samarium is relatively rare in Earth's crust (7.05 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Monazite and bastnäsite are primary ores; also in samarskite, cerite, gadolinite</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in China (Bayun Obo), United States (Mountain Pass), Australia, India</li>
+            <li><strong>Seawater</strong> - Very low concentration (0.45 ng/L)</li>
+            <li><strong>In Rocks</strong> - More abundant than tin, bismuth, or cadmium</li>
+            <li><strong>Association</strong> - Typically found with other rare earth elements</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Samarium is produced from rare earth ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Rare earth ores (monazite, bastnäsite) mined</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated</li>
+            <li><strong>Acid Digestion</strong> - Concentrate treated with sulfuric or hydrochloric acid</li>
+            <li><strong>Solvent Extraction</strong> - Multiple solvent extraction steps separate rare earth elements</li>
+            <li><strong>Separation</strong> - Samarium separated from other rare earths using ion exchange or additional solvent extraction</li>
+            <li><strong>Precipitation</strong> - Samarium precipitated as oxalate or double sulfate</li>
+            <li><strong>Calcination</strong> - Precipitate calcined to samarium oxide (Sm₂O₃)</li>
+            <li><strong>Metal Production</strong> - Oxide reduced with lanthanum: Sm₂O₃ + 2La → 2Sm + La₂O₃</li>
+            <li><strong>Magnet Production</strong> - Samarium and cobalt melted together under vacuum or inert atmosphere</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 700 tons annually as samarium oxide. China produces majority of world supply.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Samarium production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Rare earth mining causes significant environmental damage</li>
+            <li><strong>Radioactive Waste</strong> - Monazite contains thorium; processing generates radioactive waste</li>
+            <li><strong>Chemical Pollution</strong> - Acid leaching processes can contaminate water with acids and heavy metals</li>
+            <li><strong>Medical Radioisotopes</strong> - Samarium-153 medical use generates radioactive waste requiring proper disposal</li>
+            <li><strong>Electronic Waste</strong> - Samarium in magnets and electronics requires proper recycling</li>
+            <li><strong>High-temperature Magnets</strong> - Samarium-cobalt magnets enable technologies operating in extreme environments</li>
+            <li><strong>Limited Recycling</strong> - Low rates of rare earth recycling from end-of-life products</li>
+            <li><strong>Toxicity to Aquatic Life</strong> - Samarium compounds can be toxic to aquatic organisms</li>
+            <li><strong>Medical Benefits</strong> - Samarium-153 provides palliative care for cancer patients, improving quality of life</li>
+            <li><strong>Nuclear Applications</strong> - Samarium-149 helps control nuclear reactions, enhancing safety</li>
+        </ul>
+        <p>Samarium presents environmental trade-offs: mining impacts vs. benefits in medicine and technology.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1853, Swiss chemist Jean Charles Galissard de Marignac discovered samarium spectroscopically in the mineral samarskite. However, he did not isolate it as a pure element.</p>
+        <p>In 1879, French chemist Paul-Émile Lecoq de Boisbaudran isolated samarium oxide from the mineral samarskite. He was using fractional crystallization of ammonium samarium nitrate and observed spectral lines that didn't match any known element. He named the new element "samarium" after the mineral samarskite.</p>
+        <p>The mineral samarskite was itself named after Russian mining engineer Colonel Vasili Samarsky-Bykhovets, who provided the first samples of the mineral to German mineralogist Gustav Rose. This makes samarium the first chemical element to be named after a person, though indirectly through the mineral name.</p>
+        <p>Relatively pure samarium metal was first produced in 1903 by French chemist Eugène-Anatole Demarçay. However, it wasn't until the 1960s that high-purity samarium became available through ion exchange techniques.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Samarium was the first element to be named after a person (indirectly through the mineral samarskite)</li>
+            <li>Samarium-cobalt magnets were the first rare earth magnets, discovered in the 1960s before neodymium magnets</li>
+            <li>Samarium-149 is one of the most important nuclear reactor poisons, with the highest thermal neutron capture cross-section of any stable nuclide</li>
+            <li>The samarium-neodymium dating method is used to date some of Earth's oldest rocks and meteorites</li>
+            <li>Samarium-153 treatment can provide pain relief for bone cancer within days, with effects lasting several months</li>
+            <li>Samarium monosulfide undergoes a dramatic color change from black to gold when pressure is applied</li>
+            <li>Adding samarium to glass makes it absorb infrared radiation, useful for certain optical applications</li>
+            <li>Samarium burns in air with a bright flame, producing samarium(III) oxide</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Samarium compounds have low to moderate toxicity. Metal dust flammable.</p>
+        <p><strong>Metal Dust:</strong> Samarium powder flammable, can ignite spontaneously in air at 150°C. Fire produces irritating fumes.</p>
+        <p><strong>Medical Use:</strong> Samarium-153 lexidronam (Quadramet®) used medically under controlled conditions. Radiation safety protocols required.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of samarium dust may cause lung damage. Chronic exposure may cause pneumoconiosis.</p>
+        <p><strong>Chemical Reactivity:</strong> Samarium metal reacts with water to produce hydrogen gas. Reacts with acids exothermically.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling samarium compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Radiation Safety:</strong> For samarium-153, follow radiation safety protocols. Use shielding, monitoring, and proper disposal.</p>
+        <p><strong>Storage:</strong> Store metal under mineral oil or argon to prevent oxidation. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Samarium metal burns readily. Use Class D extinguisher for metal fires. Do not use water on burning metal.</p>
+        <p><strong>Radioactive Considerations:</strong> Natural samarium ores may contain radioactive thorium. Follow radiation safety protocols when processing ores.</p>
+        <p><strong>Environmental:</strong> Samarium compounds may accumulate in environment. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of samarium compounds and contaminated materials. Radioactive samarium requires special disposal.</p>
+    </div>
+</body>
+</html>
