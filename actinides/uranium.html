@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uranium</title>
+    <style>
+        /* Uranium is an actinide */
+        .actinide { background: linear-gradient(135deg, #607d8b 0%, #455a64 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #607d8b;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #607d8b;
+        }
+        
+        .info-card h3 {
+            color: #607d8b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #607d8b;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">92</div>
+            <div class="symbol-large">U</div>
+        </div>
+        <div class="element-title">
+            <h1>Uranium</h1>
+            <div class="element-subtitle">Actinide • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>92</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>238.03 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f³ 6d¹ 7s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Uranium is a silvery-gray metallic chemical element with the symbol U and atomic number 92. It is a weakly radioactive element whose nucleus is unstable, causing it to decay gradually. All uranium isotopes are unstable, with uranium-238 having the longest half-life (4.5 billion years, about the age of the Earth). Uranium is the heaviest naturally occurring element.</p>
+        <p>Uranium was discovered in 1789 by German chemist Martin Heinrich Klaproth in the mineral pitchblende. He named it after the planet Uranus, which had been discovered eight years earlier. For over a century, uranium was primarily used as a colorant in ceramic glazes and glass. Its radioactive properties were discovered in 1896 by Henri Becquerel, and its potential as an energy source was realized with the discovery of nuclear fission in 1938.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1132°C (2070°F, 1405 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>4131°C (7468°F, 4404 K)</td>
+            </tr>
+            <tr>
+                <td>Density (near room temperature)</td>
+                <td>19.1 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.116 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>9.14 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>417.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>27.5 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>0.28 μΩ·m (at 0°C)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>208 GPa</td>
+            </tr>
+            <tr>
+                <td>Shear Modulus</td>
+                <td>111 GPa</td>
+            </tr>
+            <tr>
+                <td>Bulk Modulus</td>
+                <td>100 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2, +3, +4, +5, +6 (most common: +4, +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.38 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>597.6 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (2nd)</td>
+                <td>1420 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>156 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>196 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Orthorhombic (alpha phase, room temperature)</td>
+            </tr>
+        </table>
+        <p>Uranium is a reactive metal. It reacts with almost all nonmetals and their compounds. Finely divided uranium powder is pyrophoric. Uranium metal corrodes in air, forming a layer of uranium oxide. Uranium dissolves in acids but is not attacked by alkalis. In compounds, uranium usually displays the +4 and +6 oxidation states.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Uranium has no stable isotopes. Natural uranium consists of three isotopes:</p>
+        <ul>
+            <li><strong>Uranium-238 (²³⁸U)</strong> - Half-life of 4.468 billion years, alpha decay, 99.2745% natural abundance, fertile material</li>
+            <li><strong>Uranium-235 (²³⁵U)</strong> - Half-life of 704 million years, alpha decay, 0.7200% natural abundance, fissile material</li>
+            <li><strong>Uranium-234 (²³⁴U)</strong> - Half-life of 245,500 years, alpha decay, 0.0055% natural abundance, decay product of uranium-238</li>
+        </ul>
+        <p>Important artificial isotopes include:</p>
+        <ul>
+            <li><strong>Uranium-233 (²³³U)</strong> - Half-life of 159,200 years, fissile, produced from thorium-232</li>
+            <li><strong>Uranium-236 (²³⁶U)</strong> - Half-life of 23.42 million years, produced in nuclear reactors</li>
+            <li><strong>Uranium-232 (²³²U)</strong> - Half-life of 68.9 years, alpha emitter with strong gamma radiation from decay products</li>
+        </ul>
+        <p>Uranium-235 is the only naturally occurring fissile isotope and is essential for nuclear weapons and most nuclear power reactors.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Nuclear Power</strong> - Fuel for nuclear reactors (about 90% of uranium use)</li>
+            <li><strong>Nuclear Weapons</strong> - Fissile material for atomic bombs (uranium-235)</li>
+            <li><strong>Military Applications</strong> - Depleted uranium (uranium-238) for armor-piercing ammunition and armor plating</li>
+            <li><strong>Historical: Glass and Ceramics</strong> - Uranium compounds produce yellow to green colors in glass and ceramic glazes</li>
+            <li><strong>Radioactive Dating</strong> - Uranium-lead dating for determining age of rocks</li>
+            <li><strong>Medical</strong> - Radioactive tracers, historical use in radiotherapy</li>
+            <li><strong>Scientific Instruments</strong> - Radiation shielding, standards for radiation detection</li>
+            <li><strong>Spacecraft Power</strong> - Radioisotope thermoelectric generators (uranium-238 as heat source)</li>
+            <li><strong>Counterweights</strong> - Depleted uranium for aircraft control surfaces, racing yachts</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Uranium has no known biological role and is toxic:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Chemical Toxicity</strong> - Uranium compounds toxic to kidneys; can cause kidney failure</li>
+            <li><strong>Radioactive Toxicity</strong> - Alpha radiation from uranium and decay products</li>
+            <li><strong>Bone Seeker</strong> - Uranium accumulates in bones if internalized</li>
+            <li><strong>Natural Exposure</strong> - Trace amounts in food and water; average person contains about 90 micrograms</li>
+            <li><strong>Occupational Exposure</strong> - Miners, mill workers at risk from inhalation of uranium dust</li>
+            <li><strong>Depleted Uranium</strong> - Chemical toxicity greater concern than radioactivity; fragments from munitions can cause kidney damage</li>
+            <li><strong>Regulation</strong> - Maximum contaminant level in drinking water: 30 μg/L (US EPA)</li>
+        </ul>
+        <p>Uranium's primary health concern is chemical toxicity to kidneys rather than its radioactivity at typical exposure levels.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Uranium is relatively common (2.8 ppm in Earth's crust):</p>
+        <ul>
+            <li><strong>Uraninite (pitchblende)</strong> - Primary uranium ore (UO₂)</li>
+            <li><strong>Carnotite</strong> - Potassium uranium vanadate (K₂(UO₂)₂(VO₄)₂·3H₂O)</li>
+            <li><strong>Autunite</strong> - Calcium uranium phosphate</li>
+            <li><strong>Seawater</strong> - Contains about 3.3 mg uranium per cubic meter</li>
+            <li><strong>Major Producers</strong> - Kazakhstan, Canada, Australia, Namibia, Uzbekistan</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Uranium extraction:</p>
+        <ol>
+            <li><strong>Mining</strong> - Open-pit, underground, or in-situ leaching (ISL) mining</li>
+            <li><strong>Milling</strong> - Ore crushed and leached with acid or alkaline solutions</li>
+            <li><strong>Purification</strong> - Uranium separated by solvent extraction or ion exchange</li>
+            <li><strong>Conversion</strong> - Yellowcake (U₃O₈) converted to uranium hexafluoride (UF₆) for enrichment</li>
+            <li><strong>Enrichment</strong> - Uranium-235 concentration increased for reactor fuel (typically 3-5%)</li>
+            <li><strong>Fuel Fabrication</strong> - Enriched uranium converted to uranium dioxide (UO₂) pellets for fuel rods</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 50,000 tonnes annually. Kazakhstan produces about 40% of world supply.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Uranium mining and use have significant environmental impacts:</p>
+        <ul>
+            <li><strong>Mining Waste</strong> - Tailings from uranium mining contain radioactive materials and heavy metals</li>
+            <li><strong>Water Contamination</strong> - Acid mine drainage, leaching of radioactive materials into groundwater</li>
+            <li><strong>Radon Emission</strong> - Uranium decay produces radon-222 gas, a lung carcinogen</li>
+            <li><strong>Nuclear Waste</strong> - Spent nuclear fuel remains radioactive for thousands of years</li>
+            <li><strong>Weapons Testing</strong> - Atmospheric nuclear testing dispersed uranium and fission products globally</li>
+            <li><strong>Depleted Uranium</strong> - Munitions leave radioactive contamination in conflict zones</li>
+            <li><strong>Carbon-Free Energy</strong> - Nuclear power produces minimal greenhouse gases during operation</li>
+            <li><strong>Land Use</strong> - Uranium mining disturbs large areas, though less than coal mining per energy produced</li>
+        </ul>
+        <p>Uranium presents complex environmental trade-offs: nuclear power offers low-carbon energy but creates long-lived radioactive waste and mining impacts.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Uranium was discovered in 1789 by German chemist Martin Heinrich Klaproth while analyzing the mineral pitchblende from the Joachimsthal silver mines in Bohemia (now Czech Republic). He identified a new element and named it "uranium" after the planet Uranus, which had been discovered eight years earlier by William Herschel.</p>
+        <p>For over a century, uranium had limited use, primarily as a colorant in ceramics and glass. In 1896, French physicist Henri Becquerel discovered radioactivity while studying uranium salts. This led to the discovery of radium and polonium by Marie and Pierre Curie from uranium ore.</p>
+        <p>The discovery of nuclear fission by Otto Hahn, Lise Meitner, and Fritz Strassmann in 1938 revolutionized uranium's importance. The Manhattan Project during World War II developed the first nuclear weapons using uranium-235. The first nuclear reactor, Chicago Pile-1, achieved criticality in 1942. Today, uranium is primarily used for nuclear power generation.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Uranium is named after the planet Uranus</li>
+            <li>It is about 40 times more naturally abundant than silver</li>
+            <li>The Oklo natural nuclear reactor in Gabon operated naturally 2 billion years ago</li>
+            <li>Uranium glass (vaseline glass) glows green under UV light</li>
+            <li>Depleted uranium is 1.7 times denser than lead</li>
+            <li>The total energy in 1 kg of uranium-235 equals about 3 million kg of coal</li>
+            <li>Some uranium mines have higher radiation levels than Chernobyl's exclusion zone</li>
+            <li>The first atomic bomb used uranium-235 from Oak Ridge, Tennessee</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> Uranium radioactive. Alpha emitter; also emits beta and gamma radiation from decay products.</p>
+        <p><strong>Chemical Toxicity:</strong> Uranium compounds toxic to kidneys; can cause kidney failure.</p>
+        <p><strong>Internal Hazard:</strong> Inhalation or ingestion of uranium compounds hazardous. Accumulates in bones.</p>
+        <strong>Powder Hazard:</strong> Uranium powder pyrophoric - ignites spontaneously in air.</p>
+        <p><strong>Criticality Hazard:</strong> Enriched uranium (uranium-235) can achieve nuclear criticality if sufficient mass assembled.</p>
+        <p><strong>Radon Hazard:</strong> Uranium decay produces radon-222 gas; proper ventilation required in mining and processing.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, lab coat, safety glasses. Respiratory protection for dust. Lead shielding for gamma radiation.</p>
+        <p><strong>Storage:</strong> Store in sealed containers. Separate from flammable materials due to pyrophoric nature.</p>
+        <p><strong>Disposal:</strong> Radioactive waste. Dispose according to radioactive waste regulations.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, seek medical attention.</p>
+        <p><strong>Regulations:</strong> Strictly regulated due to nuclear proliferation concerns and radioactivity. Special licenses required.</p>
+    </div>
+</body>
+</html>
