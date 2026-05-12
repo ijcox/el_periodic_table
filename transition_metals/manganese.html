@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manganese</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">25</div>
+            <div class="symbol-large">Mn</div>
+        </div>
+        <div class="element-title">
+            <h1>Manganese</h1>
+            <div class="element-subtitle">Transition Metal • Group 7 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>25</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>54.938 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d⁵ 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Manganese is a hard, brittle, silvery-gray metal that resembles iron but is harder and more brittle. It is an essential trace element for all living organisms and plays important roles in many biological processes. Manganese is the fifth most abundant metal in Earth's crust.</p>
+        <p>Manganese compounds have been used since prehistoric times. The element was isolated in 1774 by Swedish chemist Johan Gottlieb Gahn by reducing manganese dioxide with carbon. The name comes from either the Latin "magnes" (magnet) or "magnesia nigri" (black magnesia), though it is not magnetic.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1246°C (2275°F, 1519 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2061°C (3742°F, 2334 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>7.21 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>5.95 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.479 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>12.91 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>221 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>6.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -2, -1, 0, +1, +2, +3, +4, +5, +6, +7 (most common: +2, +4, +7)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.55 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>717.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>127 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>139 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>No data</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Manganese has one stable isotope:</p>
+        <ul>
+            <li><strong>Manganese-55 (⁵⁵Mn)</strong> - The only stable isotope, making up 100% of natural manganese. It has 25 protons and 30 neutrons.</li>
+        </ul>
+        <p>Manganese has several radioactive isotopes, with manganese-53 being the most notable:</p>
+        <ul>
+            <li><strong>Manganese-53 (⁵³Mn)</strong> - Cosmogenic radionuclide with half-life of 3.7 million years; used in radiometric dating with chromium-53</li>
+            <li><strong>Manganese-54 (⁵⁴Mn)</strong> - Radioactive isotope with half-life of 312.3 days; produced in nuclear reactors and used as tracer</li>
+            <li><strong>Manganese-52 (⁵²Mn)</strong> - Short-lived isotope (5.591 day half-life); used in PET imaging</li>
+            <li><strong>Manganese-56 (⁵⁶Mn)</strong> - Short-lived isotope (2.5785 hour half-life); produced in nuclear reactors</li>
+        </ul>
+        <p>Manganese-53 is particularly important in cosmochemistry for dating early solar system events.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Steel Production</strong> - About 90% of manganese goes to steelmaking as ferromanganese and silicomanganese; removes oxygen and sulfur, increases strength and toughness</li>
+            <li><strong>Aluminum Alloys</strong> - Improves strength and corrosion resistance of aluminum alloys, especially for beverage cans</li>
+            <li><strong>Batteries</strong> - Manganese dioxide in alkaline and zinc-carbon batteries; lithium manganese oxide in lithium-ion batteries</li>
+            <li><strong>Chemical Industry</strong> - Potassium permanganate as oxidizing agent, disinfectant, and analytical reagent</li>
+            <li><strong>Agriculture</strong> - Manganese sulfate as micronutrient fertilizer for manganese-deficient soils</li>
+            <li><strong>Glass and Ceramics</strong> - Decolorizer (removes green tint from iron) and colorant (produces purple amethyst glass)</li>
+            <li><strong>Water Treatment</strong> - Potassium permanganate for water purification and odor control</li>
+            <li><strong>Catalysts</strong> - Manganese compounds in oxidation catalysts and organic synthesis</li>
+            <li><strong>Pigments</strong> - Manganese violet and other manganese-based pigments</li>
+            <li><strong>Coins</strong> - U.S. "wartime" nickels (1942-1945) contained 35% manganese</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Manganese is an essential trace element for all living organisms:</p>
+        <ul>
+            <li><strong>Enzyme Cofactor</strong> - Essential component of several enzymes including manganese superoxide dismutase (antioxidant defense), arginase (urea cycle), and pyruvate carboxylase (gluconeogenesis)</li>
+            <li><strong>Photosynthesis</strong> - Manganese cluster in Photosystem II catalyzes water oxidation (oxygen-evolving complex)</li>
+            <li><strong>Bone Formation</strong> - Required for bone mineralization and connective tissue synthesis</li>
+            <li><strong>Brain Function</strong> - Involved in neurotransmitter synthesis and function; manganese deficiency affects cognitive function</li>
+            <li><strong>Metabolism</strong> - Participates in carbohydrate, amino acid, and cholesterol metabolism</li>
+            <li><strong>Human Requirements</strong> - Adults need 1.8-2.3 mg/day; rich sources include nuts, seeds, whole grains, legumes, and leafy vegetables</li>
+            <li><strong>Deficiency</strong> - Rare but causes impaired growth, skeletal abnormalities, reduced fertility, and altered glucose metabolism</li>
+            <li><strong>Toxicity (Manganism)</strong> - Neurological disorder similar to Parkinson's disease from chronic inhalation of manganese dust</li>
+            <li><strong>Homeostasis</strong> - Tightly regulated by absorption in intestine and excretion via bile</li>
+            <li><strong>Environmental Health</strong> - Manganese in drinking water above 0.3 mg/L can cause neurological effects, especially in children</li>
+        </ul>
+        <p>Manganese's role in antioxidant defense and brain function makes it crucial for health, but balance is essential.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Manganese is the 12th most abundant element in Earth's crust (0.1% by weight). It occurs in many minerals:</p>
+        <ul>
+            <li><strong>Pyrolusite</strong> - MnO₂, the most important ore mineral</li>
+            <li><strong>Rhodochrosite</strong> - MnCO₃, often pink or red crystals</li>
+            <li><strong>Manganite</strong> - MnO(OH)</li>
+            <li><strong>Hausmannite</strong> - Mn₃O₄</li>
+            <li><strong>Braunite</strong> - Mn²⁺Mn³⁺₆SiO₁₂</li>
+            <li><strong>Psilomelane</strong> - Ba(Mn²⁺)(Mn⁴⁺)₈O₁₆(OH)₄, amorphous mixture</li>
+            <li><strong>Ocean Nodules</strong> - Manganese nodules on deep sea floor (potential future source)</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Manganese metal is produced by:</p>
+        <ol>
+            <li><strong>Aluminothermic Process</strong> - Reduction of manganese(IV) oxide with aluminum</li>
+            <li><strong>Electrolysis</strong> - Of manganese sulfate solutions</li>
+            <li><strong>Ferromanganese Production</strong> - Reduction of manganese ores with carbon in blast or electric arc furnaces</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 20 million tons of manganese ore annually. South Africa produces about 33%, followed by Australia, Gabon, and China.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Manganese mining and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impacts</strong> - Open-pit manganese mining causes landscape disruption, dust pollution, and water contamination</li>
+            <li><strong>Water Pollution</strong> - Manganese from mining runoff and industrial discharges affects water quality</li>
+            <li><strong>Neurological Toxicity</strong> - High manganese in drinking water causes neurological effects, especially in children</li>
+            <li><strong>Air Pollution</strong> - Manganese compounds from industrial processes contribute to particulate matter</li>
+            <li><strong>Steel Production Benefits</strong> - Manganese improves steel properties, reducing material needs in construction</li>
+            <li><strong>Battery Technology</strong> - Manganese-based batteries are more environmentally friendly than some alternatives</li>
+            <li><strong>Deep Sea Mining</strong> - Potential mining of manganese nodules raises concerns about deep sea ecosystem disruption</li>
+            <li><strong>Bioremediation</strong> - Some bacteria oxidize manganese and can be used in water treatment</li>
+            <li><strong>Regulations</strong> - WHO recommends 0.4 mg/L maximum in drinking water; some countries have stricter limits</li>
+        </ul>
+        <p>Balancing manganese's essential uses with environmental protection requires careful management of mining, industrial use, and water quality.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Manganese compounds have been used since ancient times. The cave paintings in Lascaux, France (over 30,000 years old) used manganese dioxide as black pigment. Ancient Egyptians and Romans used manganese in glassmaking to remove color.</p>
+        <p>In the 17th century, German chemist Johann Rudolf Glauber produced potassium permanganate. In 1774, Swedish chemist Carl Wilhelm Scheele recognized manganese as a distinct element. Later that year, his colleague Johan Gottlieb Gahn isolated manganese metal by reducing pyrolusite with charcoal.</p>
+        <p>The name "manganese" may come from Latin "magnes" (magnet) because pyrolusite was used to decolorize glass, making it clear like a magnet attracts, or from "magnesia nigri" (black magnesia) to distinguish it from "magnesia alba" (white magnesia, magnesium oxide).</p>
+        <p>Industrial use expanded in the 19th century with the Bessemer process for steelmaking, which required manganese to remove sulfur and oxygen. Sir Robert Hadfield developed manganese steel (containing 12-14% manganese) in 1882, revolutionizing wear-resistant materials.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Manganese steel (Hadfield steel) is so tough it's used in rock crushers, railroad tracks, and safe vaults</li>
+            <li>The U.S. wartime nickel (1942-1945) contained 35% manganese, 56% copper, and 9% silver to save nickel for armor plating</li>
+            <li>Manganese nodules on the ocean floor grow incredibly slowly - about 1-10 mm per million years</li>
+            <li>Potassium permanganate is so strongly oxidizing it can start fires when mixed with glycerin or other organic materials</li>
+            <li>Manganese deficiency in soil causes "gray speck" disease in oats and other cereal crops</li>
+            <li>The beautiful pink mineral rhodochrosite is manganese carbonate and is sometimes used as a gemstone</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Manganism:</strong> Chronic inhalation of manganese dust or fumes causes manganism, a neurological disorder with symptoms similar to Parkinson's disease: tremors, difficulty walking, facial muscle spasms.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in mining, welding, ferroalloy production, and battery manufacturing are at highest risk. OSHA PEL: 5 mg/m³ for manganese dust, 1 mg/m³ for manganese fume.</p>
+        <p><strong>Drinking Water:</strong> Manganese in drinking water above 0.3-0.4 mg/L can cause neurological effects, especially in infants and children. EPA secondary standard: 0.05 mg/L for aesthetic reasons (staining).</p>
+        <p><strong>Chemical Hazards:</strong> Potassium permanganate is strong oxidizer that can cause fires or explosions when mixed with organic materials. Causes severe skin and eye burns.</p>
+        <p><strong>Fire Hazard:</strong> Manganese powder is flammable and can form explosive mixtures with air.</p>
+        <p><strong>Medical Monitoring:</strong> Workers with manganese exposure require regular neurological examinations. Blood or urine manganese levels can indicate exposure.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact with potassium permanganate, wash immediately with water. For ingestion, do not induce vomiting; seek medical attention.</p>
+        <p><strong>Environmental Concerns:</strong> Manganese mining runoff contaminates water. Proper tailings management and water treatment are essential.</p>
+        <p><strong>Supplement Safety:</strong> While manganese is essential, excessive supplementation can be harmful. Maximum safe intake: 10 mg/day for adults.</p>
+    </div>
+</body>
+</html>
