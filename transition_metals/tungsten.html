@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tungsten</title>
+    <style>
+        /* Tungsten is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">74</div>
+            <div class="symbol-large">W</div>
+        </div>
+        <div class="element-title">
+            <h1>Tungsten</h1>
+            <div class="element-subtitle">Transition Metal • Group 6 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>74</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>183.84 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹⁴ 5d⁴ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Tungsten is a rare, hard, steel-gray to white transition metal. It has the highest melting point of all metals (3422°C) and the second highest of all elements (after carbon). Tungsten also has the highest tensile strength at temperatures above 1650°C. The name "tungsten" comes from Swedish: "tung sten" meaning "heavy stone," while its chemical symbol W comes from "wolfram," from the mineral wolframite, which itself is named from "wolf rahm" (German for "wolf's foam"), describing the mineral's behavior during smelting.</p>
+        <p>Tungsten was discovered in 1781 by Swedish chemist Carl Wilhelm Scheele, who identified tungstic acid in the mineral scheelite (which was later named after him). In 1783, Spanish brothers Juan José and Fausto Elhuyar isolated tungsten metal by reducing tungstic acid with charcoal. Tungsten's importance grew with the invention of incandescent light bulbs in the late 19th century and cemented during World War I and II for military applications.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>3422°C (6192°F, 3695 K) - highest of all metals</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>5555°C (10031°F, 5828 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>19.25 g/cm³ - similar to gold</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.132 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>35.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>806 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>173 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>52.8 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>7.5</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>411 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -2, -1, 0, +1, +2, +3, +4, +5, +6 (most common: +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.36 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>770 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>135 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>162 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Body-centered cubic (bcc)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Tungsten has five naturally occurring isotopes:</p>
+        <ul>
+            <li><strong>Tungsten-180 (¹⁸⁰W)</strong> - 0.12% abundance, radioactive with extremely long half-life</li>
+            <li><strong>Tungsten-182 (¹⁸²W)</strong> - 26.50% abundance, stable</li>
+            <li><strong>Tungsten-183 (¹⁸³W)</strong> - 14.31% abundance, stable</li>
+            <li><strong>Tungsten-184 (¹⁸⁴W)</strong> - 30.64% abundance, stable</li>
+            <li><strong>Tungsten-186 (¹⁸⁶W)</strong> - 28.43% abundance, stable</li>
+        </ul>
+        <p>Tungsten has several artificial radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Tungsten-188 (¹⁸⁸W)</strong> - Artificial isotope with half-life of 69.4 days; parent of rhenium-188</li>
+            <li><strong>Tungsten-185 (¹⁸⁵W)</strong> - Artificial isotope with half-life of 75.1 days</li>
+            <li><strong>Tungsten-181 (¹⁸¹W)</strong> - Artificial isotope with half-life of 121.2 days</li>
+            <li><strong>Tungsten-187 (¹⁸⁷W)</strong> - Artificial isotope with half-life of 23.72 hours</li>
+            <li><strong>Tungsten-178 (¹⁷⁸W)</strong> - Artificial isotope with half-life of 21.6 days</li>
+        </ul>
+        <p>Tungsten-188 is used to produce rhenium-188 for medical applications.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Incandescent Lighting</strong> - Tungsten filaments in traditional light bulbs</li>
+            <li><strong>Cutting Tools</strong> - Tungsten carbide in drill bits, milling cutters, saw blades</li>
+            <li><strong>Military Applications</strong> - Tungsten in armor-piercing ammunition and armor plating</li>
+            <li><strong>Electronics</strong> - Tungsten in integrated circuits, microchips, and electrical contacts</li>
+            <li><strong>Heating Elements</strong> - Tungsten in high-temperature furnaces and rocket nozzles</li>
+            <li><strong>Alloying Agent</strong> - Tungsten in high-speed steels and superalloys</li>
+            <li><strong>Radiation Shielding</strong> - Tungsten alloys for medical radiation shields and containers</li>
+            <li><strong>Jewelry</strong> - Tungsten carbide wedding bands and jewelry</li>
+            <li><strong>Sporting Goods</strong> - Tungsten in golf clubs, fishing weights, darts</li>
+            <li><strong>Medical Applications</strong> - Tungsten in radiation therapy devices and X-ray tubes</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Tungsten has limited biological role but some interesting biological interactions:</p>
+        <ul>
+            <li><strong>No Essential Function in Humans</strong> - Not required for human biological processes</li>
+            <li><strong>Enzyme Cofactor in Microbes</strong> - Some bacteria and archaea use tungsten in enzymes (tungstoenzymes)</li>
+            <li><strong>Chemical Analog of Molybdenum</strong> - Tungsten can replace molybdenum in some enzymes, often inhibiting them</li>
+            <li><strong>Toxicity</strong> - Tungsten compounds generally low toxicity but can be toxic at high concentrations</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in tungsten processing may develop "hard metal lung disease"</li>
+            <li><strong>Hard Metal Disease</strong> - Pulmonary fibrosis from inhalation of tungsten carbide-cobalt dust</li>
+            <li><strong>Plants</strong> - Tungsten can inhibit plant growth by interfering with molybdenum metabolism</li>
+            <li><strong>Research</strong> - Tungsten compounds studied for potential medical applications</li>
+            <li><strong>Environmental Impact</strong> - Tungsten from military use can contaminate soil and water</li>
+        </ul>
+        <p>Tungsten's biological significance is primarily as an occupational hazard and environmental contaminant.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Tungsten is relatively rare in Earth's crust (1.25 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Wolframite [(Fe,Mn)WO₄], scheelite (CaWO₄), ferberite (FeWO₄), hübnerite (MnWO₄)</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in China (85% of world production), Russia, Canada, Austria, Portugal</li>
+            <li><strong>Seawater</strong> - Very low concentration (0.1 ng/L)</li>
+            <li><strong>In Rocks</strong> - Often found with tin, molybdenum, and bismuth ores</li>
+            <li><strong>Strategic Mineral</strong> - Considered critical mineral due to military importance</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Tungsten is produced from wolframite and scheelite ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Tungsten ores mined (often underground mines)</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated by gravity and flotation</li>
+            <li><strong>Digestion</strong> - Concentrate treated with sodium carbonate or sodium hydroxide to form sodium tungstate</li>
+            <li><strong>Purification</strong> - Solution purified by precipitation and ion exchange</li>
+            <li><strong>Precipitation</strong> - Tungsten precipitated as ammonium paratungstate (APT)</li>
+            <li><strong>Calcination</strong> - APT calcined to tungsten oxide (WO₃)</li>
+            <li><strong>Reduction</strong> - Oxide reduced with hydrogen: WO₃ + 3H₂ → W + 3H₂O</li>
+            <li><strong>Powder Metallurgy</strong> - Tungsten powder pressed and sintered into solid form</li>
+            <li><strong>Carbide Production</strong> - Tungsten powder mixed with carbon and heated to form tungsten carbide</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 84,000 tons annually. China produces 85% of world supply.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Tungsten production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Tungsten mining causes habitat destruction and water pollution</li>
+            <li><strong>Energy Intensive</strong> - High-temperature processing requires significant energy</li>
+            <li><strong>Military Use</strong> - Tungsten ammunition leaves environmental contamination in conflict zones</li>
+            <li><strong>Hard Metal Disease</strong> - Occupational hazard for workers in tungsten carbide production</li>
+            <li><strong>Energy Efficiency</strong> - Tungsten filaments in traditional light bulbs inefficient compared to LEDs</li>
+            <li><strong>Recycling</strong> - Tungsten recycling from scrap and end-of-life products growing</li>
+            <li><strong>Strategic Importance</strong> - Critical for defense industries; supply security concerns</li>
+            <li><strong>Water Contamination</strong> - Tungsten compounds can leach into groundwater from industrial sites</li>
+            <li><strong>Green Technology</strong> - Tungsten enables technologies with environmental benefits (efficient cutting tools)</li>
+            <li><strong>Environmental Persistence</strong> - Tungsten relatively inert but compounds can be mobile in environment</li>
+        </ul>
+        <p>Tungsten presents environmental challenges in mining and processing, balanced against its essential role in industry and defense.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1781, Swedish chemist Carl Wilhelm Scheele was studying the mineral tungsten (meaning "heavy stone" in Swedish). He discovered that it contained a new acid, which he called "tungstic acid." Scheele showed that this mineral contained a new element, but he did not isolate the metal itself.</p>
+        <p>In 1783, Spanish brothers Juan José and Fausto Elhuyar, working at the Seminary of Vergara in Spain, isolated tungsten metal. They reduced tungstic acid with charcoal, obtaining a black powder that they recognized as a new metal. They named it "wolfram," from the mineral wolframite.</p>
+        <p>The name "tungsten" (Swedish for "heavy stone") was adopted in English, while "wolfram" (W) became the chemical symbol. In many European languages, the element is called "wolfram."</p>
+        <p>Tungsten's importance grew with the invention of the incandescent light bulb. In 1904, Hungarian inventor Sándor Just and Croatian inventor Franjo Hanaman patented the tungsten filament lamp. Later, American engineer William D. Coolidge developed a process to produce ductile tungsten, making it practical for light bulb filaments and revolutionizing lighting.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Tungsten has the highest melting point of all metals (3422°C) - about twice that of steel</li>
+            <li>Its density (19.25 g/cm³) is almost identical to gold (19.32 g/cm³)</li>
+            <li>Tungsten carbide is so hard that only diamond tools can cut it</li>
+            <li>The element has two names: "tungsten" in English and "wolfram" in many other languages (hence symbol W)</li>
+            <li>Tungsten filaments in incandescent bulbs can reach temperatures of 2500°C</li>
+            <li>During World War II, Portugal supplied tungsten to both sides, becoming incredibly wealthy</li>
+            <li>Tungsten is used in "kinetic energy penetrators" - tank shells that can pierce armor without explosives</li>
+            <li>China controls about 85% of the world's tungsten production</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Tungsten metal and compounds have low toxicity. Tungsten carbide with cobalt highly toxic.</p>
+        <p><strong>Hard Metal Lung Disease:</strong> Inhalation of tungsten carbide-cobalt dust causes pulmonary fibrosis.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in tungsten processing require respiratory protection and ventilation.</p>
+        <p><strong>Metal Dust:</strong> Tungsten powder flammable. Fine powder can form explosive mixtures with air.</p>
+        <p><strong>Chemical Reactivity:</strong> Tungsten metal relatively inert but reacts with strong oxidizers.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, respirators when handling tungsten compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Medical Monitoring:</strong> Workers exposed to tungsten carbide require regular lung function tests.</p>
+        <p><strong>Storage:</strong> Store metal powder in airtight containers. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Tungsten powder flammable. Use Class D extinguisher for metal fires. Do not use water on burning tungsten powder.</p>
+        <p><strong>Cobalt Content:</strong> Tungsten carbide typically contains cobalt binder, which is toxic and carcinogenic.</p>
+        <p><strong>Environmental:</strong> Tungsten from military use can contaminate environment. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of tungsten compounds and contaminated materials.</p>
+        <p><strong>Recycling:</strong> Recycle tungsten from scrap to reduce environmental impact of mining.</p>
+    </div>
+</body>
+</html>
