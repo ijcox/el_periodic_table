@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulfur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #9b59b6;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .info-card h3 {
+            color: #9b59b6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">16</div>
+            <div class="symbol-large">S</div>
+        </div>
+        <div class="element-title">
+            <h1>Sulfur</h1>
+            <div class="element-subtitle">Nonmetal • Group 16 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>16</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>32.06 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s² 3p⁴</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Sulfur is a bright yellow, crystalline solid at room temperature. It is abundant, multivalent, and nonmetallic. Sulfur is the tenth most abundant element in the universe and the fifth most common element on Earth by mass. In its native form, it occurs as yellow crystals or crystalline masses.</p>
+        <p>Sulfur has been known since ancient times, mentioned in the Bible as "brimstone." The name comes from the Sanskrit "sulvere" and Latin "sulphurium." Sulfur is essential for all life and is a component of two amino acids: cysteine and methionine. It has a characteristic rotten egg smell when burned.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point (α-sulfur)</td>
+                <td>115.21°C (239.38°F, 388.36 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>444.6°C (832.3°F, 717.8 K)</td>
+            </tr>
+            <tr>
+                <td>Density (α-sulfur)</td>
+                <td>2.07 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (β-sulfur)</td>
+                <td>1.96 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>1.727 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>45 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, 0, +1, +2, +3, +4, +5, +6 (most common: -2, +4, +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.58 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>999.6 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>88 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>105 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>180 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Sulfur has more allotropes than any other element, with over 30 known solid forms:</p>
+        <ul>
+            <li><strong>Cyclo-Octasulfur (S₈)</strong> - The most common form, yellow orthorhombic α-sulfur, stable below 95.6°C</li>
+            <li><strong>Monoclinic β-sulfur</strong> - Needle-like crystals, stable between 95.6°C and 119°C</li>
+            <li><strong>Monoclinic γ-sulfur</strong> - Less common form with S₈ rings</li>
+            <li><strong>Polymeric Sulfur</strong> - Amorphous plastic sulfur formed by rapid cooling of liquid sulfur</li>
+            <li><strong>Cyclo-Hexasulfur (S₆)</strong> - Orange-red crystals with chair-shaped rings</li>
+            <li><strong>Cyclo-Heptasulfur (S₇)</strong> - Yellow crystals with unusual "crown" shape</li>
+            <li><strong>Sulfur Dioxide (SO₂)</strong> - Colorless gas with pungent smell, important in atmospheric chemistry</li>
+            <li><strong>Liquid Sulfur</strong> - Undergoes dramatic viscosity changes around 160°C due to polymerization</li>
+        </ul>
+        <p>The variety of sulfur allotropes results from its ability to form rings and chains of different sizes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Fertilizers</strong> - Sulfuric acid production for phosphate fertilizers; elemental sulfur as soil amendment</li>
+            <li><strong>Chemical Industry</strong> - Sulfuric acid is the most produced chemical worldwide; used in countless industrial processes</li>
+            <li><strong>Rubber Production</strong> - Vulcanization of rubber with sulfur creates durable materials for tires and other products</li>
+            <li><strong>Pharmaceuticals</strong> - Sulfur compounds in antibiotics (sulfa drugs), anti-inflammatory drugs, and skin treatments</li>
+            <li><strong>Agriculture</strong> - Sulfur as fungicide and pesticide; sulfur dioxide for fumigation</li>
+            <li><strong>Paper Industry</strong> - Sulfite process for paper pulping</li>
+            <li><strong>Food Industry</strong> - Sulfur dioxide as preservative in dried fruits and wine; sulfites in food processing</li>
+            <li><strong>Batteries</strong> - Lead-acid batteries use sulfuric acid as electrolyte</li>
+            <li><strong>Gunpowder</strong> - Historical use in black powder (charcoal, sulfur, saltpeter)</li>
+            <li><strong>Construction</strong> - Sulfur concrete for corrosive environments; sulfur asphalt for roads</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Sulfur is an essential element for all living organisms and plays crucial roles in biochemistry:</p>
+        <ul>
+            <li><strong>Amino Acids</strong> - Component of cysteine and methionine, which are building blocks of proteins</li>
+            <li><strong>Disulfide Bonds</strong> - Sulfur-sulfur bonds between cysteine residues stabilize protein structures</li>
+            <li><strong>Coenzymes</strong> - Biotin, thiamine (B1), coenzyme A, and alpha-lipoic acid contain sulfur</li>
+            <li><strong>Detoxification</strong> - Sulfur compounds conjugate with toxins for excretion</li>
+            <li><strong>Metabolism</strong> - Sulfur participates in electron transfer via iron-sulfur clusters in enzymes</li>
+            <li><strong>Human Requirements</strong> - No specific RDA, but needed for protein synthesis; dietary sources include protein-rich foods</li>
+            <li><strong>Sulfur Cycle</strong> - Moves through atmosphere, lithosphere, and biosphere via processes like volcanic emissions and bacterial metabolism</li>
+            <li><strong>Deficiency</strong> - Rare but can occur with protein malnutrition; symptoms include poor growth, skin problems, and joint issues</li>
+            <li><strong>Medicinal Uses</strong> - Sulfur creams and ointments for skin conditions like acne, scabies, and dandruff</li>
+        </ul>
+        <p>Sulfur's versatility in forming different oxidation states and bonds makes it indispensable for life.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Sulfur is the tenth most abundant element in the universe. It occurs in:</p>
+        <ul>
+            <li><strong>Native Sulfur</strong> - Elemental sulfur deposits near volcanoes and salt domes</li>
+            <li><strong>Sulfide Minerals</strong> - Pyrite (fool's gold, FeS₂), galena (PbS), sphalerite (ZnS), cinnabar (HgS)</li>
+            <li><strong>Sulfate Minerals</strong> - Gypsum (CaSO₄·2H₂O), barite (BaSO₄), celestine (SrSO₄)</li>
+            <li><strong>Fossil Fuels</strong> - Coal and petroleum contain sulfur compounds</li>
+            <li><strong>Volcanic Emissions</strong> - Hydrogen sulfide and sulfur dioxide from volcanoes</li>
+            <li><strong>Hot Springs</strong> - Sulfur deposits from microbial activity</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Most sulfur is produced as a byproduct:</p>
+        <ol>
+            <li><strong>Frasch Process</strong> - Extraction of native sulfur using superheated water (now largely discontinued)</li>
+            <li><strong>Claus Process</strong> - Recovery from hydrogen sulfide in natural gas and refinery gases</li>
+            <li><strong>Roasting</strong> - From sulfide ores like pyrite</li>
+            <li><strong>Desulfurization</strong> - From coal and petroleum during refining</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 70 million tons annually, mostly from oil and gas processing.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Sulfur compounds have significant environmental effects:</p>
+        <ul>
+            <li><strong>Acid Rain</strong> - Sulfur dioxide from fossil fuel combustion forms sulfuric acid in atmosphere, causing acid rain that damages ecosystems, buildings, and human health</li>
+            <li><strong>Air Pollution</strong> - SO₂ causes respiratory problems and contributes to particulate matter formation</li>
+            <li><strong>Climate Effects</strong> - Sulfate aerosols reflect sunlight, causing cooling that partially offsets greenhouse warming</li>
+            <li><strong>Ocean Acidification</strong> - Sulfur compounds contribute to ocean acidification</li>
+            <li><strong>Mining Impacts</strong> - Sulfide mining can cause acid mine drainage when exposed to air and water</li>
+            <li><strong>Desulfurization</strong> - Flue gas desulfurization (scrubbers) reduce SO₂ emissions but produce gypsum waste</li>
+            <li><strong>Volcanic Effects</strong> - Large volcanic eruptions inject SO₂ into stratosphere, causing temporary global cooling</li>
+            <li><strong>Regulations</strong> - Clean Air Acts and international agreements have significantly reduced sulfur emissions</li>
+        </ul>
+        <p>Managing sulfur emissions while meeting industrial and agricultural needs remains an environmental challenge.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Sulfur has been known since prehistoric times. It was used by ancient Egyptians for bleaching cloth and as a fumigant. Homer mentioned "pest-averting sulphur" in the Odyssey. The Chinese used sulfur in gunpowder by the 9th century.</p>
+        <p>In the Bible, sulfur (brimstone) is associated with divine punishment. Alchemists considered sulfur one of the three essential principles (along with mercury and salt). Antoine Lavoisier recognized sulfur as an element in 1777, disproving the phlogiston theory.</p>
+        <p>The Frasch process for mining sulfur was invented by Herman Frasch in 1894, revolutionizing sulfur production. The Claus process for recovering sulfur from hydrogen sulfide was developed by Carl Friedrich Claus in 1883.</p>
+        <p>In the 20th century, sulfur's role in acid rain became apparent, leading to environmental regulations. Today, most sulfur is recovered from fossil fuel processing rather than mined.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Sulfur is the only element that changes directly from solid to vapor (sublimes) at normal atmospheric pressure</li>
+            <li>Liquid sulfur undergoes a dramatic change at 160°C - its viscosity increases 10,000-fold as S₈ rings break and form long chains</li>
+            <li>The distinctive smell of volcanoes comes from hydrogen sulfide (H₂S) gas, which smells like rotten eggs</li>
+            <li>Jupiter's moon Io has active volcanoes that spew sulfur, giving it a yellow-orange appearance</li>
+            <li>Sulfur was once called "brimstone" and associated with hellfire in religious texts</li>
+            <li>The word "thiol" for sulfur-containing organic compounds comes from "thio-" (sulfur) + "alcohol"</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Hydrogen Sulfide (H₂S)</strong> - Highly toxic gas with rotten egg smell at low concentrations but odorless at lethal levels (>100 ppm). Causes respiratory paralysis and death at high concentrations.</p>
+        <p><strong>Sulfur Dioxide (SO₂)</strong> - Respiratory irritant that can cause bronchitis and asthma attacks. Major component of acid rain.</p>
+        <p><strong>Elemental Sulfur</strong> - Generally low toxicity but dust can irritate eyes, skin, and respiratory system. Combustion produces toxic SO₂.</p>
+        <p><strong>Sulfuric Acid</strong> - Highly corrosive; causes severe burns and tissue damage. Reacts violently with water releasing heat.</p>
+        <p><strong>Carbon Disulfide</strong> - Volatile, flammable liquid used in rayon production; neurotoxic and can cause psychiatric symptoms.</p>
+        <p><strong>Fire Hazard</strong> - Sulfur dust is explosive when mixed with air. Sulfur fires produce toxic SO₂ gas.</p>
+        <p><strong>Environmental Hazards</strong> - Acid mine drainage from sulfide mining devastates aquatic ecosystems. SO₂ emissions cause acid rain.</p>
+        <p><strong>First Aid</strong> - For SO₂ inhalation, move to fresh air. For sulfuric acid contact, flush with water for 15-20 minutes. Seek medical attention.</p>
+        <p><strong>Storage</strong> - Store away from oxidizing agents and moisture. Keep in cool, dry, well-ventilated area.</p>
+    </div>
+</body>
+</html>
