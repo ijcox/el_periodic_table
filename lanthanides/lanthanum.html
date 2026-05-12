@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanthanum</title>
+    <style>
+        /* Lanthanum is a lanthanide */
+        .lanthanide { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #ff9800;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .info-card h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">57</div>
+            <div class="symbol-large">La</div>
+        </div>
+        <div class="element-title">
+            <h1>Lanthanum</h1>
+            <div class="element-subtitle">Lanthanide • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>57</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>138.90547 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 5d¹ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Lanthanum is a soft, ductile, silvery-white metallic element that tarnishes rapidly when exposed to air. It is the first element in the lanthanide series, though it is often considered alongside the lanthanides due to similar chemical properties. Lanthanum is relatively abundant in the Earth's crust and is more common than lead or tin.</p>
+        <p>Lanthanum was discovered in 1839 by Swedish chemist Carl Gustaf Mosander at the Karolinska Institute in Stockholm. He extracted it from cerium nitrate and named it from the Greek word "lanthanein" meaning "to lie hidden," as it had remained concealed in cerium ore for decades. Lanthanum was one of the first rare earth elements to be discovered and isolated.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>920°C (1688°F, 1193 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3464°C (6267°F, 3737 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>6.162 g/cm³ (alpha), 6.19 g/cm³ (beta)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.195 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>6.20 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>400 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>13.4 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>615 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>36.6 GPa (alpha form)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +1, +2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.10 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>538.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>187 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>207 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Double hexagonal close-packed (α-La), Face-centered cubic (β-La)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Lanthanum has one stable isotope and one naturally occurring radioactive isotope:</p>
+        <ul>
+            <li><strong>Lanthanum-139 (¹³⁹La)</strong> - 99.91% abundance, stable</li>
+            <li><strong>Lanthanum-138 (¹³⁸La)</strong> - 0.09% abundance, radioactive with half-life of 1.02×10¹¹ years</li>
+        </ul>
+        <p>Lanthanum has several artificial radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Lanthanum-140 (¹⁴⁰La)</strong> - Fission product with half-life of 1.678 days; used as radioactive tracer</li>
+            <li><strong>Lanthanum-137 (¹³⁷La)</strong> - Medical isotope with half-life of 6×10⁴ years; limited applications</li>
+            <li><strong>Lanthanum-135 (¹³⁵La)</strong> - Artificial isotope with half-life of 19.5 hours</li>
+            <li><strong>Lanthanum-141 (¹⁴¹La)</strong> - Artificial isotope with half-life of 3.93 hours</li>
+        </ul>
+        <p>Lanthanum-138 is used in geological dating, particularly for potassium-argon dating systems.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Catalysts</strong> - Lanthanum oxide in fluid catalytic cracking (FCC) catalysts for petroleum refining</li>
+            <li><strong>Hydrogen Storage</strong> - Lanthanum nickel hydride (LaNi₅H₆) for hydrogen storage in fuel cells</li>
+            <li><strong>Camera Lenses</strong> - Lanthanum oxide in high-refractive-index glass for camera and telescope lenses</li>
+            <li><strong>Carbon Arc Lamps</strong> - Lanthanum fluoride in carbon arc electrodes for studio lighting and projection</li>
+            <li><strong>Steel Production</strong> - Lanthanum as scavenger to remove sulfur and oxygen from steel</li>
+            <li><strong>Mischmetal</strong> - Lanthanum component (25-45%) in mischmetal alloy for lighter flints</li>
+            <li><strong>Battery Electrodes</strong> - Lanthanum in nickel-metal hydride (NiMH) rechargeable batteries</li>
+            <li><strong>Water Treatment</strong> - Lanthanum compounds for phosphate removal in wastewater treatment</li>
+            <li><strong>Superconductors</strong> - Lanthanum barium copper oxide (LBCO) in high-temperature superconductors</li>
+            <li><strong>Medical Imaging</strong> - Lanthanum carbonate as phosphate binder for kidney disease patients</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Lanthanum has no essential biological role but has important medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Medical Use</strong> - Lanthanum carbonate (Fosrenol®) used to treat hyperphosphatemia (high phosphate levels) in kidney disease</li>
+            <li><strong>Mechanism</strong> - Lanthanum binds dietary phosphate in gut, forming insoluble lanthanum phosphate excreted in feces</li>
+            <li><strong>Advantages</strong> - Not absorbed significantly; minimal systemic exposure; alternative to aluminum-based binders</li>
+            <li><strong>Toxicity</strong> - Generally low toxicity; high doses can cause gastrointestinal side effects</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources; rare earth elements accumulating in environment</li>
+            <li><strong>Occupational Hazards</strong> - Workers in rare earth mining and processing may be exposed to lanthanum dust</li>
+            <li><strong>Plants</strong> - Lanthanum can affect plant growth at high concentrations; some stimulation at low doses</li>
+            <li><strong>Research</strong> - Lanthanum compounds studied for potential antibacterial and anticancer properties</li>
+            <li><strong>Biological Tracer</strong> - Lanthanum salts used experimentally to trace extracellular spaces in biological tissues</li>
+        </ul>
+        <p>Lanthanum's main biological significance is its therapeutic use as a phosphate binder for kidney disease patients.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Lanthanum is relatively abundant in Earth's crust (39 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Monazite and bastnäsite are primary ores; also in cerite, allanite, and other rare earth minerals</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in China (Bayun Obo), United States (Mountain Pass), Australia, India, Brazil</li>
+            <li><strong>Seawater</strong> - Very low concentration (2.8-8.8 ng/L)</li>
+            <li><strong>In Rocks</strong> - More abundant than lead or tin; typically found with other rare earth elements</li>
+            <li><strong>Association</strong> - Always found with cerium and other light rare earth elements</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Lanthanum is produced from rare earth ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Rare earth ores (monazite, bastnäsite) mined</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated by various methods</li>
+            <li><strong>Acid Digestion</strong> - Concentrate treated with sulfuric or hydrochloric acid to dissolve rare earths</li>
+            <li><strong>Solvent Extraction</strong> - Multiple solvent extraction steps separate individual rare earth elements</li>
+            <li><strong>Precipitation</strong> - Lanthanum precipitated as double sulfate or oxalate</li>
+            <li><strong>Calcination</strong> - Precipitate calcined to lanthanum oxide (La₂O₃)</li>
+            <li><strong>Metal Production</strong> - Oxide reduced with calcium or lithium at high temperature: La₂O₃ + 3Ca → 2La + 3CaO</li>
+            <li><strong>Purification</strong> - Metal purified by vacuum melting or distillation</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 12,000 tons annually as lanthanum oxide. China produces 90% of world supply.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Lanthanum production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Rare earth mining causes habitat destruction, soil erosion, water contamination</li>
+            <li><strong>Radioactive Waste</strong> - Monazite contains thorium and uranium; processing generates radioactive waste</li>
+            <li><strong>Chemical Pollution</strong> - Acid leaching processes can contaminate water with acids and heavy metals</li>
+            <li><strong>Tailings Ponds</strong> - Large tailings ponds from rare earth processing can leak or fail</li>
+            <li><strong>Water Treatment Use</strong> - Lanthanum for phosphate removal in lakes can accumulate in sediments</li>
+            <li><strong>Electronic Waste</strong> - Lanthanum in batteries and electronics requires proper recycling</li>
+            <li><strong>Limited Recycling</strong> - Low rates of rare earth recycling from end-of-life products</li>
+            <li><strong>Energy Intensive</strong> - Production requires significant energy for separation and reduction</li>
+            <li><strong>Geopolitical Issues</strong> - China's dominance in production raises supply chain concerns</li>
+            <li><strong>Green Applications</strong> - Lanthanum enables clean technologies: catalysts, batteries, hydrogen storage</li>
+        </ul>
+        <p>The environmental impact of lanthanum is primarily associated with rare earth mining and processing.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1839, Swedish chemist Carl Gustaf Mosander was working at the Karolinska Institute in Stockholm, studying cerium salts. He had obtained cerium oxide from the mineral cerite and noticed that some samples gave inconsistent results.</p>
+        <p>Mosander treated crude cerium nitrate with dilute nitric acid and found that a portion dissolved while another portion remained. From the soluble fraction, he isolated a new oxide which he named "lanthana" (from Greek "lanthanein" meaning "to lie hidden"). The element was thus named lanthanum.</p>
+        <p>Mosander initially believed he had discovered a single new element, but in 1841 he realized that his "lanthana" actually contained two new elements: lanthanum and didymium (which later turned out to be a mixture of praseodymium and neodymium).</p>
+        <p>Relatively pure lanthanum metal was first produced in 1923. Industrial applications developed slowly until the mid-20th century when uses in catalysts, glass, and electronics drove increased production.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Lanthanum gives its name to the entire lanthanide series (elements 57-71)</li>
+            <li>The element's name means "to lie hidden" - it was hidden in cerium ore for 36 years after cerium's discovery</li>
+            <li>Lanthanum-based catalysts process over 50% of the world's crude oil</li>
+            <li>Adding lanthanum to steel makes it easier to shape and more resistant to cracking</li>
+            <li>Lanthanum oxide glass has the highest refractive index of any commercial optical glass</li>
+            <li>One kilogram of lanthanum can store up to 15 liters of hydrogen at room temperature</li>
+            <li>Early color television tubes used europium and yttrium phosphors, but these were too expensive - lanthanum compounds provided a cheaper alternative</li>
+            <li>Lanthanum is more abundant in Earth's crust than lead or silver</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Lanthanum compounds have low to moderate toxicity. Metal dust flammable.</p>
+        <p><strong>Metal Dust:</strong> Lanthanum powder flammable, can ignite spontaneously in air. Fire produces irritating fumes.</p>
+        <p><strong>Medical Use:</strong> Lanthanum carbonate (Fosrenol®) generally safe when used as directed. Side effects: nausea, vomiting, diarrhea. Must be taken with food.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of lanthanum dust may cause lung damage. Chronic exposure may cause pneumoconiosis.</p>
+        <p><strong>Chemical Reactivity:</strong> Lanthanum metal reacts with water to produce hydrogen gas. Reacts with acids exothermically.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling lanthanum compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Storage:</strong> Store metal under mineral oil or argon to prevent oxidation. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Lanthanum metal burns readily. Use Class D extinguisher for metal fires. Do not use water on burning metal.</p>
+        <p><strong>Environmental:</strong> Lanthanum compounds may accumulate in environment. Follow proper disposal procedures.</p>
+        <p><strong>Radioactive Considerations:</strong> Natural lanthanum ores may contain radioactive thorium and uranium. Follow radiation safety protocols when processing ores.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of lanthanum compounds and contaminated materials.</p>
+    </div>
+</body>
+</html>
