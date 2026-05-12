@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chlorine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e91e63;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .info-card h3 {
+            color: #e91e63;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e91e63;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">17</div>
+            <div class="symbol-large">Cl</div>
+        </div>
+        <div class="element-title">
+            <h1>Chlorine</h1>
+            <div class="element-subtitle">Halogen • Group 17 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>17</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>35.45 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s² 3p⁵</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Chlorine is a yellow-green gas at room temperature with a distinctive pungent, irritating odor similar to bleach. It is a highly reactive halogen and a strong oxidizing agent. Chlorine is the second lightest halogen after fluorine and the third most abundant halogen in Earth's oceans.</p>
+        <p>Chlorine was first prepared and studied in 1774 by Swedish chemist Carl Wilhelm Scheele, who called it "dephlogisticated muriatic acid air." The name "chlorine" comes from the Greek word "chloros" meaning greenish-yellow. Humphry Davy identified it as an element in 1810.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-101.5°C (-150.7°F, 171.7 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-34.04°C (-29.27°F, 239.11 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>3.2 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>1.56 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>144°C, 7.99 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>6.406 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>20.41 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Solubility in Water</td>
+                <td>7.3 g/L (reacts to form HCl and HOCl)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, +1, +3, +4, +5, +6, +7 (most common: -1, +1, +3, +5, +7)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>3.16 (Pauling scale) - third highest</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1251.2 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Electron Affinity</td>
+                <td>349 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>79 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>99 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>175 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Chlorine has two stable isotopes:</p>
+        <ul>
+            <li><strong>Chlorine-35 (³⁵Cl)</strong> - Natural abundance of 75.76%. The most common isotope with 17 protons and 18 neutrons.</li>
+            <li><strong>Chlorine-37 (³⁷Cl)</strong> - Natural abundance of 24.24%. Used in nuclear magnetic resonance (NMR) spectroscopy.</li>
+        </ul>
+        <p>Chlorine also has several radioactive isotopes, with chlorine-36 being the most notable:</p>
+        <ul>
+            <li><strong>Chlorine-36 (³⁶Cl)</strong> - Cosmogenic radionuclide with half-life of 301,000 years; used in groundwater dating and geological studies</li>
+            <li><strong>Chlorine-38 (³⁸Cl)</strong> - Short-lived isotope (37.24 minute half-life); used in medical research</li>
+            <li><strong>Chlorine-39 (³⁹Cl)</strong> - Short-lived isotope (56.2 minute half-life)</li>
+        </ul>
+        <p>The two stable isotopes give chlorine an average atomic mass of 35.45 u, one of the few elements with a fractional atomic mass.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Water Treatment</strong> - Disinfection of drinking water and swimming pools (kills bacteria and viruses)</li>
+            <li><strong>Sanitation</strong> - Bleach (sodium hypochlorite) for cleaning and disinfection</li>
+            <li><strong>PVC Production</strong> - About 30% of chlorine production goes to making polyvinyl chloride (PVC) plastics</li>
+            <li><strong>Chemical Industry</strong> - Production of solvents (chloroform, carbon tetrachloride), pesticides, and pharmaceuticals</li>
+            <li><strong>Paper Industry</strong> - Bleaching wood pulp to make white paper</li>
+            <li><strong>Textiles</strong> - Bleaching fabrics and producing synthetic fibers</li>
+            <li><strong>Pharmaceuticals</strong> - Chlorine compounds in medicines including antibiotics, anesthetics, and antimalarials</li>
+            <li><strong>Food Industry</strong> - Chlorine dioxide for food processing and preservation</li>
+            <li><strong>Metallurgy</strong> - Extraction of metals like titanium and magnesium from their ores</li>
+            <li><strong>Military Use</strong> - Chlorine gas was the first chemical weapon used in World War I</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Chlorine is an essential element for all known species of animals and plants:</p>
+        <ul>
+            <li><strong>Electrolyte Balance</strong> - Chloride ions (Cl⁻) are major extracellular anions; work with sodium to maintain fluid balance and blood pressure</li>
+            <li><strong>Digestion</strong> - Hydrochloric acid in stomach acid (pH 1-2) activates digestive enzymes and kills pathogens</li>
+            <li><strong>Nerve Function</strong> - Chloride channels regulate neuron excitability and inhibitory neurotransmission</li>
+            <li><strong>Chloride Shift</strong> - In red blood cells, chloride ions exchange with bicarbonate to transport CO₂</li>
+            <li><strong>Photosynthesis</strong> - Chloride ions are cofactors in the oxygen-evolving complex of Photosystem II</li>
+            <li><strong>Human Requirements</strong> - Adults need about 2.3 g/day of chloride; deficiency is rare but causes metabolic alkalosis</li>
+            <li><strong>Chlorine in Nature</strong> - Most chlorine in organisms is as chloride ion; elemental chlorine is toxic</li>
+            <li><strong>Immune Function</strong> - Neutrophils produce hypochlorous acid (HOCl) to kill pathogens</li>
+        </ul>
+        <p>While chlorine gas is toxic, chloride ions are essential for life and pose no toxicity at normal concentrations.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Chlorine is the 21st most abundant element in Earth's crust. It rarely occurs free in nature due to its high reactivity. Major sources include:</p>
+        <ul>
+            <li><strong>Halite</strong> - Rock salt (NaCl) in evaporite deposits</li>
+            <li><strong>Seawater</strong> - Contains about 1.94% chloride ions (19,400 ppm)</li>
+            <li><strong>Salt Lakes</strong> - Dead Sea contains about 21% chloride</li>
+            <li><strong>Sylvite</strong> - Potassium chloride (KCl) deposits</li>
+            <li><strong>Carnallite</strong> - KMgCl₃·6H₂O in evaporite deposits</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Chlorine is produced almost exclusively by electrolysis of brine (salt water):</p>
+        <ol>
+            <li><strong>Chloralkali Process</strong> - Electrolysis of NaCl solution produces chlorine gas, sodium hydroxide, and hydrogen gas</li>
+            <li><strong>Membrane Cell Process</strong> - Modern method using ion-exchange membranes</li>
+            <li><strong>Diaphragm Cell Process</strong> - Older method using asbestos diaphragms</li>
+            <li><strong>Mercury Cell Process</strong> - Being phased out due to mercury pollution concerns</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 65 million tons annually, making it one of the highest volume industrial chemicals.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Chlorine compounds have significant environmental effects:</p>
+        <ul>
+            <li><strong>Ozone Depletion</strong> - Chlorofluorocarbons (CFCs) destroy stratospheric ozone, leading to the ozone hole</li>
+            <li><strong>Water Disinfection Byproducts</strong> - Chlorine reacts with organic matter forming trihalomethanes and other potentially carcinogenic compounds</li>
+            <li><strong>DDT and PCBs</strong> - Organochlorine pesticides and industrial chemicals persist in environment and bioaccumulate</li>
+            <li><strong>Dioxins</strong> - Highly toxic chlorinated compounds formed in combustion and industrial processes</li>
+            <li><strong>Acid Rain</strong> - Hydrochloric acid emissions contribute to acidification</li>
+            <li><strong>Mercury Pollution</strong> - From outdated mercury cell chloralkali plants</li>
+            <li><strong>Regulations</strong> - Montreal Protocol phased out ozone-depleting CFCs; drinking water standards limit disinfection byproducts</li>
+            <li><strong>Balancing Act</strong> - Chlorine's benefits in water disinfection and medicine must be weighed against environmental risks</li>
+        </ul>
+        <p>Modern environmental management focuses on replacing harmful chlorinated compounds while preserving beneficial uses.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Chlorine compounds have been known since ancient times. Rock salt was mined and traded. In 1630, Jan Baptist van Helmont first distinguished gases and may have prepared chlorine. In 1774, Carl Wilhelm Scheele produced chlorine gas by reacting pyrolusite (MnO₂) with hydrochloric acid, but thought it was a compound containing oxygen.</p>
+        <p>In 1810, Humphry Davy showed it was an element and named it "chlorine" from Greek "chloros" (greenish-yellow). In 1823, Michael Faraday first liquefied chlorine by compression. Industrial production began in the late 19th century with the development of the chloralkali process.</p>
+        <p>Chlorine's use as a chemical weapon began at the Second Battle of Ypres in 1915, marking the start of modern chemical warfare. After World War I, chlorine found peaceful uses in water treatment and PVC production.</p>
+        <p>The environmental impact of chlorinated compounds became apparent in the late 20th century, leading to regulations like the Montreal Protocol (1987) banning CFCs.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Chlorine is so reactive it's never found free in nature - it's always combined with other elements</li>
+            <li>The distinctive "pool smell" isn't from chlorine itself but from chloramines formed when chlorine reacts with sweat and urine</li>
+            <li>Chlorine was used as a chemical weapon in World War I, causing about 1.3 million casualties</li>
+            <li>Table salt (NaCl) is about 60% chlorine by weight</li>
+            <li>Chlorine gas is about 2.5 times heavier than air, so it stays close to the ground</li>
+            <li>The human body contains about 95 grams of chloride ions</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Toxicity:</strong> Chlorine gas is highly toxic - 10 ppm causes irritation, 30 ppm causes coughing, 430 ppm is lethal within 30 minutes, 1000 ppm is fatal within minutes.</p>
+        <p><strong>Respiratory Effects:</strong> Causes severe respiratory irritation, pulmonary edema, and chemical pneumonitis. Can trigger asthma attacks.</p>
+        <p><strong>Chemical Burns:</strong> Liquid chlorine causes severe frostbite and chemical burns. Chlorine gas reacts with moisture to form hydrochloric and hypochlorous acids.</p>
+        <p><strong>Reactivity:</strong> Reacts violently with many organic compounds, ammonia, and reducing agents. Can form explosive compounds.</p>
+        <p><strong>Storage and Handling:</strong> Must be stored in approved containers away from incompatible materials. Cylinders should be upright and secured.</p>
+        <p><strong>First Aid:</strong> Move to fresh air immediately. For skin/eye contact, flush with water for at least 15 minutes. Seek medical attention.</p>
+        <p><strong>Environmental Hazards:</strong> Toxic to aquatic life. Forms persistent organic pollutants (POPs) that bioaccumulate.</p>
+        <p><strong>Water Treatment Safety:</strong> Never mix chlorine bleach with ammonia or acids - produces toxic chloramine or chlorine gas.</p>
+        <p><strong>Protective Equipment:</strong> Use appropriate respirators, gloves, and eye protection when handling chlorine.</p>
+    </div>
+</body>
+</html>
