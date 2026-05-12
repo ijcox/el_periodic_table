@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminum</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #16a085;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #16a085 0%, #138d75 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #16a085;
+        }
+        
+        .info-card h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #16a085;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">13</div>
+            <div class="symbol-large">Al</div>
+        </div>
+        <div class="element-title">
+            <h1>Aluminum</h1>
+            <div class="element-subtitle">Post-Transition Metal • Group 13 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>13</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>26.982 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s² 3p¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Aluminum (or aluminium) is a silvery-white, soft, non-magnetic, ductile metal in the boron group. It is the most abundant metal in Earth's crust and the third most abundant element overall after oxygen and silicon. Despite its abundance, aluminum was considered a precious metal until the late 19th century due to the difficulty of extracting it from its ores.</p>
+        <p>Aluminum was first isolated in 1825 by Danish physicist Hans Christian Ørsted. The name comes from "alumen," the Latin name for alum. Aluminum's combination of low density, corrosion resistance, and good mechanical properties makes it one of the most important engineering materials.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>660.32°C (1220.58°F, 933.47 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2519°C (4566°F, 2792 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>2.70 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>2.375 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.897 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>237 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>26.5 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.75</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, +1, +2, +3 (amphoteric oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.61 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>577.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>143 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>121 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>184 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Aluminum has only one stable isotope:</p>
+        <ul>
+            <li><strong>Aluminum-27 (²⁷Al)</strong> - The only stable isotope, making up 100% of natural aluminum. It has 13 protons and 14 neutrons.</li>
+        </ul>
+        <p>Aluminum has several radioactive isotopes, with aluminum-26 being the most notable:</p>
+        <ul>
+            <li><strong>Aluminum-26 (²⁶Al)</strong> - Radioactive isotope with half-life of 717,000 years; produced by cosmic rays in the atmosphere; used in radiodating of geological samples</li>
+            <li><strong>Aluminum-26m</strong> - Metastable state with half-life of 6.345 seconds</li>
+            <li><strong>Other Isotopes</strong> - Aluminum-24 to Aluminum-42 with half-lives ranging from milliseconds to minutes</li>
+        </ul>
+        <p>Aluminum-26 is particularly important in cosmochemistry as it was present in the early solar system and its decay contributed to early planetary heating.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Transportation</strong> - Aircraft, automobiles, trucks, railcars, and ships for weight reduction and fuel efficiency</li>
+            <li><strong>Construction</strong> - Window frames, doors, siding, roofing, and structural components</li>
+            <li><strong>Packaging</strong> - Aluminum foil, beverage cans, food containers, and pharmaceutical packaging</li>
+            <li><strong>Electrical Transmission</strong> - Overhead power lines (often steel-reinforced aluminum conductors)</li>
+            <li><strong>Consumer Goods</strong> - Appliances, electronics, furniture, and sporting equipment</li>
+            <li><strong>Machinery and Equipment</strong> - Piping, heat exchangers, and industrial machinery</li>
+            <li><strong>Chemical Industry</strong> - Aluminum compounds as catalysts, fillers, and in water treatment</li>
+            <li><strong>Pyrotechnics</strong> - Aluminum powder in fireworks and thermite reactions</li>
+            <li><strong>Reflectors</strong> - Mirrors, reflectors, and insulation due to high reflectivity</li>
+            <li><strong>Cookware</strong> - Pots, pans, and baking sheets</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Aluminum has no known biological role and is considered a non-essential element:</p>
+        <ul>
+            <li><strong>Ubiquitous Exposure</strong> - Present in most foods, water, and air; average adult intake is about 10 mg/day</li>
+            <li><strong>Low Absorption</strong> - Only about 0.1-0.3% of ingested aluminum is absorbed; most is excreted</li>
+            <li><strong>Potential Toxicity</strong> - High aluminum exposure can cause neurological effects; linked to dialysis encephalopathy</li>
+            <li><strong>Alzheimer's Disease</strong> - Some studies suggest aluminum accumulation in brain tissue may be associated with Alzheimer's, but causal relationship remains unproven</li>
+            <li><strong>Bone Effects</strong> - Can interfere with bone mineralization at high exposure levels</li>
+            <li><strong>Regulation</strong> - WHO recommends less than 0.2 mg/L in drinking water; FDA regulates aluminum in foods and drugs</li>
+            <li><strong>Natural Occurrence</strong> - Present in many foods naturally; tea, herbs, and some grains have higher aluminum content</li>
+        </ul>
+        <p>While aluminum is generally considered safe at normal exposure levels, occupational exposure to aluminum dust and fumes requires monitoring and control.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Aluminum is the most abundant metal in Earth's crust (8.23% by weight) but never occurs free in nature. Major sources include:</p>
+        <ul>
+            <li><strong>Bauxite</strong> - Primary ore containing aluminum hydroxides (gibbsite, boehmite, diaspore)</li>
+            <li><strong>Clay Minerals</strong> - Kaolinite and other aluminosilicates</li>
+            <li><strong>Feldspars</strong> - Most abundant mineral group in Earth's crust</li>
+            <li><strong>Corundum</strong> - Aluminum oxide (Al₂O₃) as ruby and sapphire gemstones</li>
+            <li><strong>Cryolite</strong> - Sodium aluminum fluoride (Na₃AlF₆), historically important for aluminum production</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Aluminum is produced in two stages:</p>
+        <ol>
+            <li><strong>Bayer Process</strong> - Extraction of alumina (Al₂O₃) from bauxite using sodium hydroxide</li>
+            <li><strong>Hall-Héroult Process</strong> - Electrolysis of alumina dissolved in molten cryolite to produce aluminum metal</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 65 million tons annually. China produces over half of world aluminum, followed by Russia, India, and Canada.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Aluminum production has significant environmental impacts but offers sustainability benefits through recycling:</p>
+        <ul>
+            <li><strong>Energy Intensive</strong> - Primary production requires about 15 kWh per kg of aluminum (mostly for electrolysis)</li>
+            <li><strong>Greenhouse Gases</strong> - Production emits CO₂ (from electricity generation) and perfluorocarbons (PFCs from electrolysis)</li>
+            <li><strong>Bauxite Mining</strong> - Open-pit mining causes habitat destruction, soil erosion, and water pollution</li>
+            <li><strong>Red Mud</strong> - Bayer process produces alkaline bauxite residue requiring careful disposal</li>
+            <li><strong>Recycling Benefits</strong> - Recycled aluminum uses only 5% of the energy of primary production; 75% of all aluminum ever produced is still in use</li>
+            <li><strong>Lightweight Advantage</strong> - Reduces vehicle weight, improving fuel efficiency and reducing emissions</li>
+            <li><strong>Water Usage</strong> - Mining and processing require significant water</li>
+        </ul>
+        <p>Aluminum's infinite recyclability without quality loss makes it one of the most sustainable industrial materials.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Aluminum compounds have been used since antiquity. Alum (potassium aluminum sulfate) was used by ancient Egyptians and Romans for dyeing and medicine. In 1808, Sir Humphry Davy proposed the name "aluminum" for the unknown metal in alum.</p>
+        <p>The metal was first isolated in 1825 by Danish physicist Hans Christian Ørsted by reacting aluminum chloride with potassium amalgam. Friedrich Wöhler improved the process in 1827 and produced pure aluminum powder.</p>
+        <p>In 1854, Henri Étienne Sainte-Claire Deville developed the first commercial process using sodium reduction of aluminum chloride. Aluminum was more valuable than gold - Napoleon III served state dinners on aluminum plates while guests used gold.</p>
+        <p>The modern electrolytic process was independently invented in 1886 by American Charles Martin Hall and Frenchman Paul Héroult. Karl Josef Bayer improved the alumina extraction process in 1888. These developments reduced aluminum's price by over 90%, transforming it from precious metal to common commodity.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Recycling one aluminum can saves enough energy to power a TV for three hours</li>
+            <li>The Washington Monument is capped with a 2.8 kg aluminum pyramid - when installed in 1884, aluminum was as valuable as silver</li>
+            <li>Aluminum was once called "the metal of kings" because it was more expensive than gold</li>
+            <li>An aluminum-air battery can power an electric car for 1,500 miles on a single charge</li>
+            <li>The Empire State Building contains about 730 tons of aluminum</li>
+            <li>Aluminum foil was first produced in Switzerland in 1910 and originally used to wrap chocolate bars</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Fire Hazard:</strong> Aluminum powder and fine dust can form explosive mixtures with air. Aluminum fires require Class D extinguishers - never use water.</p>
+        <p><strong>Welding and Cutting Hazards:</strong> Aluminum welding produces ozone and metal fumes that can cause respiratory issues. Proper ventilation is essential.</p>
+        <p><strong>Machining Safety:</strong> Aluminum machining produces fine dust that can be explosive. Use proper dust collection systems.</p>
+        <p><strong>Chemical Reactivity:</strong> Aluminum reacts with strong acids and bases. Contact with mercury can cause rapid corrosion.</p>
+        <p><strong>Health Considerations:</strong> While dietary aluminum is generally safe, occupational exposure to aluminum dust and fumes may cause respiratory issues and neurological effects.</p>
+        <p><strong>Environmental Concerns:</strong> Acid rain can mobilize aluminum from soils, potentially toxic to aquatic life. Red mud from bauxite processing requires careful management.</p>
+        <p><strong>Recycling Safety:</strong> Aluminum recycling involves melting which can produce dross and fumes requiring proper controls.</p>
+        <p><strong>Galvanic Corrosion:</strong> When aluminum contacts more noble metals in corrosive environments, it can corrode rapidly. Proper isolation is needed.</p>
+    </div>
+</body>
+</html>
