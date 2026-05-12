@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terbium</title>
+    <style>
+        /* Terbium is a lanthanide */
+        .lanthanide { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #ff9800;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .info-card h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">65</div>
+            <div class="symbol-large">Tb</div>
+        </div>
+        <div class="element-title">
+            <h1>Terbium</h1>
+            <div class="element-subtitle">Lanthanide • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>65</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>158.92535 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f⁹ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Terbium is a silvery-white, malleable, and ductile rare earth metal. It is relatively stable in air compared to other rare earth metals. Terbium exists in two crystal forms, with a transformation temperature of 1289°C. The element is named after the village of Ytterby in Sweden, where many rare earth minerals were first discovered. Like other rare earths, terbium is never found in nature as a free element, but it is contained in many minerals.</p>
+        <p>Terbium was discovered in 1843 by Swedish chemist Carl Gustaf Mosander, who was investigating yttria (yttrium oxide). He separated it into three oxides which he called yttria, erbia, and terbia. Interestingly, what Mosander called "terbia" is now called "erbia," and what he called "erbia" is now called "terbia." The confusion was cleared up in the 1860s. Pure terbium metal was not isolated until the advent of ion exchange techniques in the 20th century.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1356°C (2473°F, 1629 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3230°C (5846°F, 3503 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>8.23 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.182 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>10.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>293 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>11.1 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>1.150 µΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Curie Temperature</td>
+                <td>219 K (-54°C, -65°F)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>55.7 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +1, +2, +3, +4 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.20 (Pauling scale, for Tb³⁺)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>565.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>177 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>194 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp, α-Tb), Body-centered cubic (bcc, β-Tb)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Terbium has one stable isotope:</p>
+        <ul>
+            <li><strong>Terbium-159 (¹⁵⁹Tb)</strong> - 100% abundance, only stable isotope</li>
+        </ul>
+        <p>Terbium has several radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Terbium-149 (¹⁴⁹Tb)</strong> - Artificial isotope with half-life of 4.118 hours; used in medical research</li>
+            <li><strong>Terbium-152 (¹⁵²Tb)</strong> - Artificial isotope with half-life of 17.5 hours</li>
+            <li><strong>Terbium-155 (¹⁵⁵Tb)</strong> - Artificial isotope with half-life of 5.32 days</li>
+            <li><strong>Terbium-156 (¹⁵⁶Tb)</strong> - Artificial isotope with half-life of 5.35 days</li>
+            <li><strong>Terbium-157 (¹⁵⁷Tb)</strong> - Artificial isotope with half-life of 71 years</li>
+            <li><strong>Terbium-158 (¹⁵⁸Tb)</strong> - Artificial isotope with half-life of 180 years</li>
+            <li><strong>Terbium-160 (¹⁶⁰Tb)</strong> - Artificial isotope with half-life of 72.3 days</li>
+            <li><strong>Terbium-161 (¹⁶¹Tb)</strong> - Medical isotope with half-life of 6.89 days; used in cancer therapy</li>
+        </ul>
+        <p>Terbium-161 is particularly promising for targeted radionuclide therapy due to its emission of low-energy electrons.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Green Phosphors</strong> - Terbium oxide in green phosphors for color television tubes, fluorescent lamps, and LED displays</li>
+            <li><strong>Solid-state Devices</strong> - Terbium-doped calcium fluoride, calcium tungstate, and strontium molybdate in solid-state devices</li>
+            <li><strong>Terfenol-D</strong> - Terbium-dysprosium-iron alloy with giant magnetostriction; changes shape in magnetic field</li>
+            <li><strong>Fuel Cells</strong> - Terbium-stabilized zirconia as electrolyte in solid oxide fuel cells</li>
+            <li><strong>Data Storage</strong> - Terbium-iron-cobalt alloys in magneto-optical recording media</li>
+            <li><strong>Medical Imaging</strong> - Terbium-doped materials in X-ray intensifying screens</li>
+            <li><strong>Lasers</strong> - Terbium-doped materials in some solid-state lasers</li>
+            <li><strong>Actuators and Sensors</strong> - Terfenol-D in sonar systems, precision positioning, and vibration control</li>
+            <li><strong>Color Correcting</strong> - Terbium in trichromatic lighting to improve color rendering</li>
+            <li><strong>Research</strong> - Terbium as Mossbauer spectroscopy source and in various spectroscopic studies</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Terbium has no essential biological role but has applications in biological research:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Biological Probes</strong> - Terbium(III) complexes used as luminescent probes in biochemical assays</li>
+            <li><strong>Advantages</strong> - Long luminescence lifetime allows time-resolved measurements, reducing background fluorescence</li>
+            <li><strong>Calcium Mimic</strong> - Terbium(III) can replace calcium(II) in some proteins for structural studies</li>
+            <li><strong>Medical Research</strong> - Terbium-161 investigated for targeted radionuclide therapy of cancer</li>
+            <li><strong>Toxicity</strong> - Terbium compounds have low to moderate toxicity; similar to other rare earth elements</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in rare earth processing may be exposed to terbium dust</li>
+            <li><strong>Plants</strong> - Terbium can affect plant growth; typically inhibitory at high concentrations</li>
+            <li><strong>Research Tool</strong> - Used to study calcium-binding sites in proteins and enzyme mechanisms</li>
+        </ul>
+        <p>Terbium's biological significance is primarily as a research tool and potential therapeutic agent.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Terbium is one of the rarer rare earth elements (1.2 ppm in Earth's crust):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Monazite, bastnäsite, xenotime, and euxenite are primary ores</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in China (Bayun Obo), United States (Mountain Pass), Australia, India</li>
+            <li><strong>Seawater</strong> - Very low concentration (0.14 ng/L)</li>
+            <li><strong>In Rocks</strong> - Rarer than silver or mercury</li>
+            <li><strong>Association</strong> - Typically found with other heavy rare earth elements like dysprosium and gadolinium</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Terbium is produced from rare earth ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Rare earth ores (monazite, bastnäsite) mined</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated</li>
+            <li><strong>Acid Digestion</strong> - Concentrate treated with sulfuric or hydrochloric acid</li>
+            <li><strong>Solvent Extraction</strong> - Multiple solvent extraction steps separate rare earth elements</li>
+            <li><strong>Separation</strong> - Terbium separated from other rare earths using ion exchange chromatography</li>
+            <li><strong>Precipitation</strong> - Terbium precipitated as oxalate or hydroxide</li>
+            <li><strong>Calcination</strong> - Precipitate calcined to terbium oxide (Tb₄O₇, mixed +3/+4 oxidation state)</li>
+            <li><strong>Metal Production</strong> - Oxide reduced with calcium or lithium: Tb₂O₃ + 3Ca → 2Tb + 3CaO</li>
+            <li><strong>Purification</strong> - Additional purification by vacuum distillation</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 10 tons annually as terbium oxide. China produces majority of world supply.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Terbium production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Rare earth mining causes significant environmental damage</li>
+            <li><strong>Radioactive Waste</strong> - Monazite contains thorium; processing generates radioactive waste</li>
+            <li><strong>Chemical Pollution</strong> - Acid leaching processes can contaminate water with acids and heavy metals</li>
+            <li><strong>Electronic Waste</strong> - Terbium in displays and electronics requires proper recycling</li>
+            <li><strong>Energy Efficiency</strong> - Terbium phosphors enable energy-efficient lighting (fluorescent lamps, LEDs)</li>
+            <li><strong>Limited Recycling</strong> - Very low rates of terbium recycling from end-of-life products</li>
+            <li><strong>Resource Scarcity</strong> - Terbium is one of the rarest rare earths; critical for green technologies</li>
+            <li><strong>Medical Applications</strong> - Terbium-161 for cancer therapy could reduce need for more toxic treatments</li>
+            <li><strong>Toxicity to Aquatic Life</strong> - Terbium compounds can be toxic to aquatic organisms</li>
+            <li><strong>Supply Chain Issues</strong> - Geopolitical concerns due to China's dominance in production</li>
+        </ul>
+        <p>Terbium presents environmental trade-offs: mining impacts vs. enabling energy efficiency and potential medical benefits.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1843, Swedish chemist Carl Gustaf Mosander was working with yttria (yttrium oxide) at the Karolinska Institute in Stockholm. He succeeded in separating yttria into three different materials which he called yttria, erbia, and terbia.</p>
+        <p>Mosander named one of these "terbia" after the village of Ytterby in Sweden, where the mineral containing yttrium had been found. However, there was considerable confusion in the naming. What Mosander called "terbia" is now known to be erbium oxide, while what he called "erbia" is now known to be terbium oxide mixed with other rare earth oxides.</p>
+        <p>The confusion wasn't resolved until the 1860s when spectroscopic techniques became available. In 1886, French chemist Jean Charles Galissard de Marignac clarified the situation, and the current names were established.</p>
+        <p>Pure terbium metal was not isolated until much later. In 1905, French chemist Georges Urbain claimed to have isolated it, but his product was impure. Relatively pure terbium (99.9%) was first produced in 1953 by American chemist Frank Spedding using ion exchange techniques.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Terbium gives the green color to trichromatic fluorescent lamps and some LED displays</li>
+            <li>The alloy Terfenol-D can change length by 0.2% in a magnetic field - one of the largest magnetostrictive effects known</li>
+            <li>Terbium is named after Ytterby, Sweden - the same village gave its name to yttrium, erbium, and ytterbium</li>
+            <li>Terbium-161 emits low-energy electrons ideal for killing cancer cells while sparing surrounding tissue</li>
+            <li>Terbium-doped materials can convert ultraviolet light into visible light with high efficiency</li>
+            <li>The element exists in two crystal structures that transform at 1289°C (2352°F)</li>
+            <li>Terbium compounds can exhibit both +3 and +4 oxidation states, though +3 is more common</li>
+            <li>Terbium was involved in one of the most confusing naming mix-ups in chemistry history</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Terbium compounds have low to moderate toxicity. Metal dust flammable.</p>
+        <p><strong>Metal Dust:</strong> Terbium powder flammable, can ignite spontaneously in air. Fire produces irritating fumes.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of terbium dust may cause lung damage. Chronic exposure may cause pneumoconiosis.</p>
+        <p><strong>Chemical Reactivity:</strong> Terbium metal reacts slowly with water and reacts with acids exothermically.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling terbium compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Radiation Safety:</strong> For radioactive terbium isotopes (¹⁶¹Tb, etc.), follow radiation safety protocols.</p>
+        <p><strong>Storage:</strong> Store metal under mineral oil or argon to prevent oxidation. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Terbium metal burns readily. Use Class D extinguisher for metal fires. Do not use water on burning metal.</p>
+        <p><strong>Radioactive Considerations:</strong> Natural terbium ores may contain radioactive thorium. Follow radiation safety protocols when processing ores.</p>
+        <p><strong>Environmental:</strong> Terbium compounds may accumulate in environment. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of terbium compounds and contaminated materials. Radioactive terbium requires special disposal.</p>
+        <p><strong>Medical Applications:</strong> Terbium-161 for cancer therapy under investigation; not yet approved for routine clinical use.</p>
+    </div>
+</body>
+</html>
