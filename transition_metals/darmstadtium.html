@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darmstadtium</title>
+    <style>
+        /* Darmstadtium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">110</div>
+            <div class="symbol-large">Ds</div>
+        </div>
+        <div class="element-title">
+            <h1>Darmstadtium</h1>
+            <div class="element-subtitle">Transition Metal • Group 10 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>110</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[281] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d⁸ 7s² (predicted; may have different ground state)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (presumed)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Darmstadtium is a synthetic chemical element and a member of the transactinide series. It is a highly radioactive metal that does not occur naturally and can only be produced in particle accelerators. Darmstadtium is expected to be a solid under normal conditions and is predicted to have properties similar to platinum, directly above it in group 10 of the periodic table, though relativistic effects may cause significant deviations.</p>
+        <p>Darmstadtium was first synthesized in 1994 by a German research team at the Gesellschaft für Schwerionenforschung (GSI) in Darmstadt, led by Sigurd Hofmann. The element was named after the city of Darmstadt, Germany, where the GSI laboratory is located. This continued the tradition of naming elements after geographical locations associated with their discovery laboratories.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>Unknown (estimated to be high, similar to platinum)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Density (predicted)</td>
+                <td>34.8 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (presumed)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be metallic)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (predicted, like platinum) or different due to relativistic effects</td>
+            </tr>
+        </table>
+        <p>Darmstadtium's physical properties are difficult to predict because relativistic effects are expected to be extremely strong. Some calculations suggest darmstadtium may be a gas at room temperature due to these effects, though most predictions indicate it will be a solid like other group 10 metals.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+6, +4, +2, 0 (predicted; +2 may be most stable due to relativistic effects)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>955.2 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>128 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>128 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>May resemble platinum (Group 10) or show unique behavior due to extreme relativistic effects</td>
+            </tr>
+        </table>
+        <p>Darmstadtium's chemistry is predicted to be dominated by relativistic effects. Unlike platinum which typically exhibits +2 and +4 oxidation states, darmstadtium may favor +2 and 0 oxidation states. The 6d electrons are predicted to be so destabilized by relativity that darmstadtium might behave more like a noble gas than a transition metal. Some calculations even suggest darmstadtium could be chemically inert like the noble gases. The ground state electron configuration is uncertain and may be [Rn] 5f¹⁴ 6d⁹ 7s¹ rather than the expected 6d⁸ 7s².</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Darmstadtium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Darmstadtium-267 (²⁶⁷Ds)</strong> - Half-life: 4 microseconds (alpha decay)</li>
+            <li><strong>Darmstadtium-269 (²⁶⁹Ds)</strong> - Half-life: 0.18 milliseconds (alpha decay)</li>
+            <li><strong>Darmstadtium-270 (²⁷⁰Ds)</strong> - Half-life: 0.10 milliseconds (alpha decay)</li>
+            <li><strong>Darmstadtium-270m (²⁷⁰ᵐDs)</strong> - Half-life: 6.0 milliseconds (alpha decay, isomeric state)</li>
+            <li><strong>Darmstadtium-271 (²⁷¹Ds)</strong> - Half-life: 1.63 milliseconds (alpha decay)</li>
+            <li><strong>Darmstadtium-273 (²⁷³Ds)</strong> - Half-life: 0.17 milliseconds (alpha decay)</li>
+            <li><strong>Darmstadtium-279 (²⁷⁹Ds)</strong> - Half-life: 0.20 seconds (alpha decay)</li>
+            <li><strong>Darmstadtium-280 (²⁸⁰Ds)</strong> - Half-life: 7.6 seconds (spontaneous fission)</li>
+            <li><strong>Darmstadtium-281 (²⁸¹Ds)</strong> - Half-life: 11 seconds (spontaneous fission) - Most stable known isotope</li>
+            <li><strong>Darmstadtium-281m (²⁸¹ᵐDs)</strong> - Half-life: 3.7 minutes? (alpha decay, tentative; unusually long-lived)</li>
+        </ul>
+        <p>Darmstadtium-281 is the most stable known isotope with a half-life of approximately 11 seconds. There are unconfirmed reports of an isomer darmstadtium-281m with a half-life of several minutes, which if verified, would be exceptionally long-lived for an element this heavy and might indicate proximity to the "island of stability."</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends in heavy nuclei near the "island of stability"</li>
+            <li><strong>Theoretical Chemistry</strong> - Testing extreme predictions about relativistic effects</li>
+            <li><strong>Relativistic Effects Research</strong> - Study of how relativity influences chemical properties in the heaviest elements</li>
+            <li><strong>Island of Stability Research</strong> - Key element in research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of transactinide chemistry and nuclear synthesis</li>
+        </ul>
+        <p>Like all transactinide elements, darmstadtium has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Darmstadtium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha and spontaneous fission radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities and too short half-lives for biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, darmstadtium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Darmstadtium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Cold Fusion Reactions</strong>:
+                <br>²⁰⁸Pb + ⁶²Ni → ²⁶⁹Ds + n (original GSI discovery reaction, November 9, 1994)
+                <br>²⁰⁸Pb + ⁶²Ni → ²⁷¹Ds + n (later experiments)</li>
+            <li><strong>Hot Fusion Reactions</strong>:
+                <br>²³⁸U + ⁴⁸Ca → ²⁸³Ds + 3n (produces more neutron-rich isotopes)
+                <br>²⁴⁴Pu + ⁴⁸Ca → ²⁸⁸Ds + 4n</li>
+            <li><strong>Other Reactions</strong>:
+                <br>²⁴⁹Cf + ³⁶S → ²⁸¹Ds + 4n
+                <br>²⁵⁴Es + ³⁴S → ²⁸⁴Ds + 4n (theoretical)</li>
+            <li><strong>Separation</strong> - Darmstadtium atoms separated using recoil separation techniques. The SHIP (Separator for Heavy Ion reaction Products) at GSI was crucial for its discovery and study.</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors, often requiring correlation with daughter decays through alpha decay chains.</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms per year of beam time).</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Gesellschaft für Schwerionenforschung (GSI, Germany - primary site), Joint Institute for Nuclear Research (Dubna, Russia), RIKEN (Japan). Total world production is only about 20 atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Darmstadtium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay quickly (microseconds to seconds)</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and generally short half-life, darmstadtium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of darmstadtium was a milestone in superheavy element research at GSI Darmstadt:</p>
+        <p><strong>Discovery (1994):</strong> On November 9, 1994, a team at the Gesellschaft für Schwerionenforschung (GSI) in Darmstadt, Germany, led by Sigurd Hofmann, synthesized darmstadtium by bombarding lead-208 with nickel-62 ions. They produced a single atom of darmstadtium-269, which decayed by alpha emission with a half-life of 0.17 milliseconds. The discovery was announced on November 10, 1994.</p>
+        <p><strong>Confirmation and Further Studies:</strong> The discovery was confirmed in 2001-2002 at GSI with the production of more atoms, including the isotopes darmstadtium-270 and darmstadtium-271. The decay chains were traced to known isotopes of hassium, seaborgium, and rutherfordium.</p>
+        <p><strong>Naming:</strong> The GSI team proposed the name "darmstadtium" after the city of Darmstadt, where their laboratory is located. This followed the tradition of naming elements after geographical locations associated with their discovery (berkelium, californium, dubnium, hassium).</p>
+        <p><strong>Official Recognition (2003):</strong> After evaluation by the IUPAC/IUPAP Joint Working Party, the name "darmstadtium" with symbol Ds was officially adopted in August 2003. The naming was relatively uncontroversial compared to earlier transactinide elements.</p>
+        <p><strong>Significance:</strong> Darmstadtium's discovery demonstrated the capability of modern heavy ion accelerators and separation techniques to reach ever heavier elements. It also showed that the "cold fusion" approach (using lead or bismuth targets) could produce elements up to at least atomic number 110.</p>
+        <p><strong>Theoretical Interest:</strong> Darmstadtium has attracted considerable theoretical interest due to predictions that it might exhibit extremely unusual properties, possibly even being a gas at room temperature or chemically inert like a noble gas, due to extreme relativistic effects.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Darmstadtium is named after the city of Darmstadt, Germany, where it was discovered</li>
+            <li>The element was discovered on November 9, 1994, and announced the next day</li>
+            <li>Darmstadtium is predicted to have extremely unusual chemistry due to relativistic effects - it might even be a gas or chemically inert</li>
+            <li>Only about 20 atoms of darmstadtium have ever been produced worldwide</li>
+            <li>Some theoretical calculations suggest darmstadtium could be a gas at room temperature, unlike any other group 10 element</li>
+            <li>The element's ground state electron configuration is uncertain and debated among theorists</li>
+            <li>Darmstadtium-281m may have a half-life of several minutes, unusually long for such a heavy element</li>
+            <li>The discovery of darmstadtium showed that "cold fusion" reactions could produce elements up to at least Z=110</li>
+            <li>Darmstadtium was the first element discovered in the 1990s</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of darmstadtium are highly radioactive. Primary hazards are alpha radiation and spontaneous fission (which produces neutrons and fission fragments).</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Several isotopes undergo spontaneous fission producing neutrons and fission fragments requiring neutron shielding.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. The short half-lives require extremely fast experimental setups.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections. Neutron shielding may be required for spontaneous fission isotopes.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
