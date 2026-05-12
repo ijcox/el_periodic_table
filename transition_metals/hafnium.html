@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafnium</title>
+    <style>
+        /* Hafnium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">72</div>
+            <div class="symbol-large">Hf</div>
+        </div>
+        <div class="element-title">
+            <h1>Hafnium</h1>
+            <div class="element-subtitle">Transition Metal • Group 4 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>72</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>178.49 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹⁴ 5d² 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Hafnium is a lustrous, silvery-gray transition metal that is chemically similar to zirconium. The two elements are so similar chemically that they are difficult to separate, and hafnium is almost always found in zirconium minerals. Hafnium has an exceptionally high thermal neutron capture cross-section, making it useful in nuclear reactor control rods. The element is named after Hafnia, the Latin name for Copenhagen, Denmark, where it was discovered.</p>
+        <p>Hafnium was discovered in 1923 by Dutch physicist Dirk Coster and Hungarian chemist George de Hevesy at the University of Copenhagen. They used X-ray spectroscopy to detect the new element in zirconium ores. The discovery confirmed Russian chemist Dmitri Mendeleev's 1869 prediction of an element between lanthanum and tantalum in his periodic table. Pure hafnium metal was first produced in 1925 by reducing hafnium tetrachloride with sodium.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>2233°C (4051°F, 2506 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>4603°C (8317°F, 4876 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>13.31 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.144 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>27.2 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>648 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>23.0 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>331 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>5.5</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>78 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, 0, +1, +2, +3, +4 (most common: +4)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>658.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>155 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>175 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp, α-Hf), Body-centered cubic (bcc, β-Hf)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Hafnium has six stable isotopes:</p>
+        <ul>
+            <li><strong>Hafnium-174 (¹⁷⁴Hf)</strong> - 0.16% abundance, stable</li>
+            <li><strong>Hafnium-176 (¹⁷⁶Hf)</strong> - 5.26% abundance, stable</li>
+            <li><strong>Hafnium-177 (¹⁷⁷Hf)</strong> - 18.60% abundance, stable</li>
+            <li><strong>Hafnium-178 (¹⁷⁸Hf)</strong> - 27.28% abundance, stable</li>
+            <li><strong>Hafnium-179 (¹⁷⁹Hf)</strong> - 13.62% abundance, stable</li>
+            <li><strong>Hafnium-180 (¹⁸⁰Hf)</strong> - 35.08% abundance, stable</li>
+        </ul>
+        <p>Hafnium has several artificial radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Hafnium-182 (¹⁸²Hf)</strong> - Artificial isotope with half-life of 8.9×10⁶ years; used in isotopic dating</li>
+            <li><strong>Hafnium-181 (¹⁸¹Hf)</strong> - Artificial isotope with half-life of 42.4 days</li>
+            <li><strong>Hafnium-175 (¹⁷⁵Hf)</strong> - Artificial isotope with half-life of 70 days</li>
+            <li><strong>Hafnium-172 (¹⁷²Hf)</strong> - Artificial isotope with half-life of 1.87 years</li>
+        </ul>
+        <p>The lutetium-hafnium dating method uses the decay of lutetium-176 to hafnium-176 for geological dating.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Nuclear Reactors</strong> - Hafnium control rods for nuclear reactors due to high neutron absorption</li>
+            <li><strong>Superalloys</strong> - Hafnium in nickel-based superalloys for jet engine blades and rocket nozzles</li>
+            <li><strong>Microprocessors</strong> - Hafnium-based high-k dielectrics (HfO₂) in transistors for advanced microchips</li>
+            <li><strong>Plasma Cutting</strong> - Hafnium electrodes in plasma cutting torches</li>
+            <li><strong>Optical Coatings</strong> - Hafnium oxide in optical coatings for lenses and mirrors</li>
+            <li><strong>Incandescent Lamps</strong> - Hafnium in filaments for some specialized incandescent lamps</li>
+            <li><strong>Gettering</strong> - Hafnium as getter to remove residual gases in vacuum tubes</li>
+            <li><strong>Catalysts</strong> - Hafnium compounds as catalysts in polymerization and other chemical processes</li>
+            <li><strong>Research</strong> - Hafnium in high-temperature materials and corrosion-resistant alloys</li>
+            <li><strong>Geological Dating</strong> - Hafnium isotopes used in lutetium-hafnium dating of rocks and meteorites</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Hafnium has no known biological role and limited biological significance:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Toxicity</strong> - Hafnium compounds have low toxicity; similar to zirconium</li>
+            <li><strong>Chemical Similarity to Zirconium</strong> - Hafnium's biological behavior expected to be similar to zirconium</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in hafnium processing may be exposed to hafnium dust</li>
+            <li><strong>Limited Studies</strong> - Few studies on hafnium's biological effects due to its rarity and limited use</li>
+            <li><strong>Plants</strong> - Hafnium uptake by plants likely limited; toxicity at high concentrations</li>
+            <li><strong>Medical Research</strong> - Hafnium compounds investigated for potential medical applications</li>
+            <li><strong>Bioaccumulation</strong> - Limited bioaccumulation expected in food chain</li>
+            <li><strong>Radiation Concerns</strong> - Radioactive hafnium isotopes require radiation safety precautions</li>
+        </ul>
+        <p>Hafnium's biological significance is minimal, with primary concerns related to occupational exposure in industrial settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Hafnium is relatively rare in Earth's crust (3.0 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Always found in zirconium minerals: zircon (ZrSiO₄), baddeleyite (ZrO₂)</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in Australia, South Africa, Brazil, India, United States</li>
+            <li><strong>Seawater</strong> - Very low concentration (7 ng/L)</li>
+            <li><strong>In Rocks</strong> - More abundant than mercury, cadmium, or selenium</li>
+            <li><strong>Association with Zirconium</strong> - Typically 1-4% hafnium in zirconium minerals; difficult to separate</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Hafnium is produced as a byproduct of zirconium refining:</p>
+        <ol>
+            <li><strong>Mining</strong> - Zirconium ores (zircon, baddeleyite) mined</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated</li>
+            <li><strong>Chlorination</strong> - Zirconium-hafnium concentrate converted to chlorides: ZrSiO₄ + 4Cl₂ + 4C → ZrCl₄ + SiCl₄ + 4CO</li>
+            <li><strong>Separation</strong> - Hafnium separated from zirconium using solvent extraction (MIBK-HNO₃ system) or extractive distillation</li>
+            <li><strong>Alternative Method</strong> - Separation by fractional crystallization of ammonium or potassium fluorides</li>
+            <li><strong>Reduction</strong> - Hafnium tetrachloride reduced with magnesium: HfCl₄ + 2Mg → Hf + 2MgCl₂</li>
+            <li><strong>Purification</strong> - Additional purification by electron beam melting or iodide process</li>
+            <li><strong>Sponge Production</strong> - Typically produced as sponge metal (Kroll process)</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 70 tons annually. United States, France, Russia major producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Hafnium production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Zirconium mining causes environmental damage; hafnium is byproduct</li>
+            <li><strong>Chemical Processing</strong> - Chlorination and solvent extraction processes use hazardous chemicals</li>
+            <li><strong>Nuclear Applications</strong> - Hafnium in nuclear reactors presents radioactive waste management issues</li>
+            <li><strong>Microelectronics</strong> - Hafnium in microprocessors enables energy-efficient computing</li>
+            <li><strong>Aviation</strong> - Hafnium superalloys improve jet engine efficiency, reducing fuel consumption</li>
+            <li><strong>Electronic Waste</strong> - Hafnium in electronics requires proper recycling</li>
+            <li><strong>Limited Recycling</strong> - Low rates of hafnium recycling from end-of-life products</li>
+            <li><strong>Toxicity</strong> - Hafnium compounds generally low toxicity; less environmental concern than many metals</li>
+            <li><strong>Resource Efficiency</strong> - Hafnium production as zirconium byproduct improves resource utilization</li>
+            <li><strong>Advanced Technologies</strong> - Hafnium enables technologies with environmental benefits (efficient computing, aviation)</li>
+        </ul>
+        <p>Hafnium presents relatively low environmental concerns compared to many metals, with benefits in enabling advanced technologies.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1923, Danish physicist Dirk Coster and Hungarian chemist George de Hevesy were working at the Niels Bohr Institute in Copenhagen. They were investigating zirconium ores using X-ray spectroscopy, a technique recently developed by English physicist Henry Moseley.</p>
+        <p>They discovered spectral lines that didn't correspond to any known element. These lines indicated the presence of a new element with atomic number 72. They named the element "hafnium" after Hafnia, the Latin name for Copenhagen, where it was discovered.</p>
+        <p>The discovery confirmed Dmitri Mendeleev's 1869 prediction of an element between lanthanum and tantalum in his periodic table. Mendeleev had called this predicted element "eka-tantalum" and correctly predicted many of its properties.</p>
+        <p>Pure hafnium metal was first produced in 1925 by Dutch chemists Anton Eduard van Arkel and Jan Hendrik de Boer using the iodide decomposition process. Hafnium's importance grew during the nuclear age when its high neutron absorption cross-section was recognized as valuable for nuclear reactor control rods.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Hafnium was the last stable element to be discovered (excluding radioactive elements)</li>
+            <li>The element is named after Copenhagen (Hafnia in Latin) - the city where it was discovered</li>
+            <li>Hafnium and zirconium are so similar chemically that they're among the most difficult element pairs to separate</li>
+            <li>Hafnium-based transistors enabled Moore's Law to continue by replacing silicon dioxide with hafnium oxide</li>
+            <li>The element has one of the highest melting points of all metals (2233°C)</li>
+            <li>Hafnium control rods helped make nuclear submarines possible by providing precise reactor control</li>
+            <li>Hafnium's discovery in 1923 was one of the first using X-ray spectroscopy</li>
+            <li>The element was predicted by Mendeleev 54 years before it was actually discovered</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Hafnium compounds have low toxicity. Metal dust flammable.</p>
+        <p><strong>Metal Dust:</strong> Hafnium powder flammable, can ignite spontaneously in air. Fine powder explosive.</p>
+        <strong>Occupational Exposure:</strong> Inhalation of hafnium dust may cause lung damage. Chronic exposure may cause pneumoconiosis.</p>
+        <p><strong>Chemical Reactivity:</strong> Hafnium metal reacts with water at high temperatures. Reacts with acids exothermically.</p>
+        <p><strong>Nuclear Applications:</strong> Hafnium in nuclear reactors becomes radioactive; requires radiation safety precautions.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling hafnium compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Storage:</strong> Store metal powder in airtight containers under inert gas. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Hafnium metal burns readily. Use Class D extinguisher for metal fires. Do not use water on burning hafnium.</p>
+        <p><strong>Explosion Hazard:</strong> Fine hafnium powder can form explosive mixtures with air.</p>
+        <p><strong>Radioactive Considerations:</strong> Hafnium in nuclear applications becomes radioactive. Follow radiation safety protocols.</p>
+        <p><strong>Environmental:</strong> Hafnium compounds generally low environmental concern. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of hafnium compounds and contaminated materials.</p>
+        <p><strong>Microelectronics Manufacturing:</strong> Hafnium compounds used in chip fabrication require special handling procedures.</p>
+    </div>
+</body>
+</html>
