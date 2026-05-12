@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phosphorus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #9b59b6;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .info-card h3 {
+            color: #9b59b6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">15</div>
+            <div class="symbol-large">P</div>
+        </div>
+        <div class="element-title">
+            <h1>Phosphorus</h1>
+            <div class="element-subtitle">Nonmetal • Group 15 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>15</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>30.974 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s² 3p³</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Phosphorus is a nonmetal that exists in several allotropic forms, most commonly white, red, and black phosphorus. It is essential for life and is never found free in nature due to its high reactivity. Phosphorus was the first element whose discovery can be traced to a single individual.</p>
+        <p>Phosphorus was discovered in 1669 by German alchemist Hennig Brand, who isolated it from urine. The name comes from the Greek "phosphoros" meaning "light-bringer" because white phosphorus glows in the dark. Phosphorus is a key component of DNA, RNA, ATP, and phospholipids.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point (white)</td>
+                <td>44.1°C (111.4°F, 317.3 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>280.5°C (536.9°F, 553.7 K)</td>
+            </tr>
+            <tr>
+                <td>Density (white)</td>
+                <td>1.823 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (red)</td>
+                <td>2.34 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (black)</td>
+                <td>2.69 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion (white)</td>
+                <td>0.66 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>51.9 kJ/mol</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -2, -1, 0, +1, +2, +3, +4, +5 (most common: -3, +3, +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.19 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1011.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>98 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>106 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>180 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Phosphorus has several allotropes with dramatically different properties:</p>
+        <ul>
+            <li><strong>White Phosphorus</strong> - Waxy, translucent solid that glows in the dark; highly toxic and flammable; consists of P₄ tetrahedra; must be stored under water</li>
+            <li><strong>Red Phosphorus</strong> - Amorphous polymeric solid; non-toxic and less reactive; used in safety matches and pyrotechnics</li>
+            <li><strong>Black Phosphorus</strong> - Most stable allotope; layered structure similar to graphite; semiconductor properties; least reactive form</li>
+            <li><strong>Violet Phosphorus</strong> - Also called Hittorf's phosphorus; crystalline form with complex structure</li>
+            <li><strong>Scarlet Phosphorus</strong> - Intermediate between white and red; obtained by heating white phosphorus to 250°C</li>
+        </ul>
+        <p>The different allotropes have applications ranging from matches and fertilizers to advanced electronics.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Fertilizers</strong> - Phosphates are essential plant nutrients; about 90% of mined phosphorus goes to fertilizers</li>
+            <li><strong>Detergents</strong> - Sodium tripolyphosphate as water softener and cleaning agent (though being phased out due to eutrophication)</li>
+            <li><strong>Matches</strong> - Red phosphorus on matchbox striking surface; white phosphorus historically in matches (now banned)</li>
+            <li><strong>Steel Production</strong> - Phosphorus as alloying element in some steels; phosphorus compounds for rust protection</li>
+            <li><strong>Food Industry</strong> - Phosphoric acid in soft drinks; phosphates as food additives and preservatives</li>
+            <li><strong>Electronics</strong> - Phosphorus doping of silicon for n-type semiconductors; phosphorus in LEDs and OLED displays</li>
+            <li><strong>Pyrotechnics</strong> - White phosphorus in incendiary weapons and smoke screens (controversial)</li>
+            <li><strong>Biological Applications</strong> - Radioactive phosphorus-32 in medical imaging and research; phosphorus in DNA sequencing</li>
+            <li><strong>Water Treatment</strong> - Phosphates to prevent corrosion in water pipes</li>
+            <li><strong>Flame Retardants</strong> - Organophosphorus compounds in textiles, plastics, and electronics</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Phosphorus is essential for all living organisms and is a key component of many biological molecules:</p>
+        <ul>
+            <li><strong>DNA and RNA</strong> - Phosphate groups form the backbone of nucleic acids</li>
+            <li><strong>ATP</strong> - Adenosine triphosphate is the primary energy currency of cells</li>
+            <li><strong>Phospholipids</strong> - Form cell membranes and organelle membranes</li>
+            <li><strong>Bone and Teeth</strong> - Hydroxyapatite (calcium phosphate) is the mineral component of bones and teeth</li>
+            <li><strong>Cell Signaling</strong> - Phosphorylation regulates protein activity and cell signaling pathways</li>
+            <li><strong>Human Requirements</strong> - Adults need about 700 mg/day; found in protein-rich foods, dairy, nuts, and whole grains</li>
+            <li><strong>Phosphorus Cycle</strong> - Moves through rocks, soil, water, and living organisms; much slower than carbon or nitrogen cycles</li>
+            <li><strong>Deficiency</strong> - Rare but causes bone pain, weakness, appetite loss, and in plants, stunted growth and dark green leaves</li>
+            <li><strong>Toxicity</strong> - Excess phosphorus (hyperphosphatemia) can occur in kidney disease, causing bone and cardiovascular problems</li>
+        </ul>
+        <p>Phosphorus is so essential that life as we know it would be impossible without it.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Phosphorus is the 11th most abundant element in Earth's crust. It never occurs free in nature due to its high reactivity. Major sources include:</p>
+        <ul>
+            <li><strong>Phosphate Rock</strong> - Mostly fluorapatite (Ca₅(PO₄)₃F) and hydroxyapatite (Ca₅(PO₄)₃OH)</li>
+            <li><strong>Guano</strong> - Accumulated bird or bat droppings; historically important source</li>
+            <li><strong>Bone Ash</strong> - Traditional source before mineral phosphates were exploited</li>
+            <li><strong>Living Organisms</strong> - All contain phosphorus compounds</li>
+            <li><strong>Ocean Sediments</strong> - Phosphorite deposits on continental shelves</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Elemental phosphorus is produced by heating phosphate rock with coke and silica in an electric arc furnace at 1400-1500°C. The phosphorus vapor is condensed under water.</p>
+        <p><strong>Major Producers:</strong> China is the largest producer, followed by Morocco, United States, Russia, and Jordan. Morocco controls about 70% of world reserves.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Phosphorus has significant environmental impacts, particularly through its use in agriculture:</p>
+        <ul>
+            <li><strong>Eutrophication</strong> - Excess phosphorus from fertilizers and detergents causes algal blooms that deplete oxygen in water bodies</li>
+            <li><strong>Resource Depletion</strong> - Phosphate rock is a finite resource; peak phosphorus predicted for this century could affect food security</li>
+            <li><strong>Mining Impacts</strong> - Open-pit phosphate mining causes habitat destruction, water pollution, and radioactive waste (phosphate rock contains uranium)</li>
+            <li><strong>Wastewater Issues</strong> - Phosphorus in wastewater contributes to eutrophication; phosphorus recovery is becoming important</li>
+            <li><strong>Chemical Pollution</strong> - Organophosphorus pesticides can be toxic to non-target organisms</li>
+            <li><strong>White Phosphorus Weapons</strong> - Cause severe burns and environmental contamination</li>
+            <li><strong>Sustainable Management</strong> - Phosphorus recycling from wastewater and agricultural runoff is critical for sustainability</li>
+        </ul>
+        <p>Balancing phosphorus's essential role in agriculture with environmental protection is a major global challenge.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Phosphorus was discovered in 1669 by German alchemist Hennig Brand while attempting to create the philosopher's stone. He isolated it from urine by boiling it down to a paste, heating it with sand, and condensing the vapors. The glowing substance was named "cold fire" and kept secret for years.</p>
+        <p>In 1680, Robert Boyle also produced phosphorus and published his method. For over a century, urine remained the source of phosphorus until Carl Wilhelm Scheele showed in 1769 that bones contain phosphorus, leading to bone ash as a commercial source.</p>
+        <p>In 1845, Anton von Schrötter discovered red phosphorus by heating white phosphorus. The safety match, using red phosphorus, was invented by Gustaf Erik Pasch in 1844 and improved by John Edvard Lundström in 1855.</p>
+        <p>The electric furnace method for phosphorus production was developed by James Burgess Readman in 1888 and commercialized in the early 20th century, making phosphorus widely available for fertilizers and other uses.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>White phosphorus glows in the dark due to slow oxidation - this is chemiluminescence, not radioactivity</li>
+            <li>Phosphorus was the first element discovered since ancient times that was not known in any form</li>
+            <li>The average human body contains about 0.7 kg of phosphorus, mostly in bones</li>
+            <li>Phosphorus burns at about 2760°C (5000°F) - hotter than most metals</li>
+            <li>During World War I, phosphorus was used in tracer bullets and smoke screens</li>
+            <li>The term "phosphorescence" comes from phosphorus, though true phosphorescence is a different physical process</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>White Phosphorus Toxicity:</strong> White phosphorus is highly toxic - ingestion of as little as 50-100 mg can be fatal. Causes liver damage, cardiovascular collapse, and multiple organ failure.</p>
+        <p><strong>Fire Hazard:</strong> White phosphorus ignites spontaneously in air at about 30°C (86°F). Burns are difficult to extinguish and continue until phosphorus is consumed or deprived of oxygen.</p>
+        <p><strong>Storage:</strong> White phosphorus must be stored under water or in airtight containers under inert atmosphere. Never allow it to dry out.</p>
+        <p><strong>Phossy Jaw:</strong> Historical occupational disease from white phosphorus exposure in match factories causing bone necrosis in jaw.</p>
+        <p><strong>Environmental Toxicity:</strong> White phosphorus in military use causes severe environmental contamination and long-term ecological damage.</p>
+        <p><strong>First Aid:</strong> For white phosphorus burns, irrigate with water and keep area wet. Remove contaminated clothing. Seek immediate medical attention.</p>
+        <p><strong>Red Phosphorus:</strong> Much safer than white phosphorus but can produce toxic phosphine gas if heated with strong reducing agents.</p>
+        <p><strong>Phosphate Dust:</strong> Inhalation of phosphate dust can cause respiratory irritation. Chronic exposure may lead to pulmonary issues.</p>
+        <p><strong>Agricultural Runoff:</strong> Excess phosphorus from fertilizers causes eutrophication, creating dead zones in water bodies.</p>
+    </div>
+</body>
+</html>
