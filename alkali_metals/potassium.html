@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potassium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .info-card h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">19</div>
+            <div class="symbol-large">K</div>
+        </div>
+        <div class="element-title">
+            <h1>Potassium</h1>
+            <div class="element-subtitle">Alkali Metal • Group 1 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>19</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>39.098 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 4s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Potassium is a soft, silvery-white alkali metal that oxidizes rapidly in air and reacts violently with water. It is chemically similar to sodium, the alkali metal above it in the periodic table. Potassium was the first metal to be isolated by electrolysis.</p>
+        <p>Potassium was discovered in 1807 by Sir Humphry Davy, who derived it from caustic potash (KOH). The name "potassium" comes from the English word "potash" (pot ashes), referring to the method of producing potassium carbonate from wood ashes in iron pots. The chemical symbol K comes from the Latin word "kalium," from Arabic "al-qalyah" meaning "plant ashes."</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>63.5°C (146.3°F, 336.7 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>759°C (1398°F, 1032 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>0.862 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>0.828 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.757 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>2.33 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>76.9 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>0.4</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, +1 (strongly basic oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.82 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>418.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>227 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>203 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>275 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Potassium has three naturally occurring isotopes:</p>
+        <ul>
+            <li><strong>Potassium-39 (³⁹K)</strong> - Natural abundance of 93.2581%. The most common isotope with 19 protons and 20 neutrons.</li>
+            <li><strong>Potassium-41 (⁴¹K)</strong> - Natural abundance of 6.7302%. Stable isotope used in some scientific studies.</li>
+            <li><strong>Potassium-40 (⁴⁰K)</strong> - Natural abundance of 0.0117%. Radioactive with half-life of 1.248×10⁹ years; decays to argon-40 (89%) and calcium-40 (11%).</li>
+        </ul>
+        <p>Potassium-40 is particularly important:</p>
+        <ul>
+            <li><strong>Radioactive Dating</strong> - Potassium-argon dating used in geology and archaeology</li>
+            <li><strong>Natural Radioactivity</strong> - Major source of natural radioactivity in living organisms</li>
+            <li><strong>Heat Production</strong> - Decay contributes to Earth's internal heat</li>
+            <li><strong>Banana Equivalent Dose</strong> - Bananas contain potassium-40, used as informal radiation dose unit</li>
+        </ul>
+        <p>The human body contains about 16 mg of potassium-40, making us slightly radioactive.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Fertilizers</strong> - Potassium compounds (potash) are essential plant nutrients; about 95% of potassium production goes to fertilizers</li>
+            <li><strong>Food Industry</strong> - Potassium chloride as salt substitute for low-sodium diets; potassium sorbate as food preservative</li>
+            <li><strong>Chemical Industry</strong> - Production of potassium hydroxide (caustic potash), potassium carbonate (potash), and potassium nitrate (saltpeter)</li>
+            <li><strong>Medicine</strong> - Potassium supplements for hypokalemia; potassium iodide for thyroid protection in radiation emergencies</li>
+            <li><strong>Glass Manufacturing</strong> - Potassium carbonate produces harder glass than sodium carbonate</li>
+            <li><strong>Soaps and Detergents</strong> - Potassium soaps are softer and more soluble than sodium soaps</li>
+            <li><strong>Batteries</strong> - Research into potassium-ion batteries as potential alternatives to lithium-ion</li>
+            <li><strong>Pyrotechnics</strong> - Potassium nitrate in black powder and fireworks; potassium chlorate and perchlorate in matches and explosives</li>
+            <li><strong>Metallurgy</strong> - Potassium as reducing agent in some metal production processes</li>
+            <li><strong>Laboratory Reagents</strong> - Potassium compounds in analytical chemistry and organic synthesis</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Potassium is essential for all living organisms and is the major intracellular cation:</p>
+        <ul>
+            <li><strong>Electrolyte Balance</strong> - Potassium ions are the primary intracellular cations; crucial for maintaining fluid balance and cellular function</li>
+            <li><strong>Nerve Function</strong> - Sodium-potassium pump maintains resting membrane potential; potassium efflux during action potentials</li>
+            <li><strong>Muscle Function</strong> - Regulates cardiac muscle contraction; abnormal levels cause arrhythmias</li>
+            <li><strong>Blood Pressure</strong> - Adequate potassium intake helps lower blood pressure and counteracts sodium's effects</li>
+            <li><strong>Protein Synthesis</strong> - Required for ribosome function and protein production</li>
+            <li><strong>Enzyme Activation</strong> - Cofactor for many enzymes including pyruvate kinase</li>
+            <li><strong>Human Requirements</strong> - Adults need 2.6-3.4 g/day; rich sources include bananas, potatoes, beans, and leafy greens</li>
+            <li><strong>Potassium Homeostasis</strong> - Tightly regulated by kidneys; aldosterone increases potassium excretion</li>
+            <li><strong>Deficiency (Hypokalemia)</strong> - Causes muscle weakness, cramps, fatigue, cardiac arrhythmias, and paralysis</li>
+            <li><strong>Toxicity (Hyperkalemia)</strong> - Causes cardiac arrest; usually from kidney failure or medication interactions</li>
+        </ul>
+        <p>The ratio of intracellular to extracellular potassium (about 30:1) is critical for cellular function.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Potassium is the seventh most abundant element in Earth's crust (2.4% by weight). It never occurs free in nature due to its high reactivity. Major sources include:</p>
+        <ul>
+            <li><strong>Sylvite</strong> - Potassium chloride (KCl), the most important ore</li>
+            <li><strong>Carnallite</strong> - KMgCl₃·6H₂O in evaporite deposits</li>
+            <li><strong>Langbeinite</strong> - K₂Mg₂(SO₄)₃</li>
+            <li><strong>Polyhalite</strong> - K₂Ca₂Mg(SO₄)₄·2H₂O</li>
+            <li><strong>Seawater</strong> - Contains about 380 ppm potassium</li>
+            <li><strong>Plant Ashes</strong> - Traditional source as potash (potassium carbonate)</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Metallic potassium is produced by:</p>
+        <ol>
+            <li><strong>Thermal Reduction</strong> - Of potassium chloride with sodium at 850°C (Na + KCl → NaCl + K)</li>
+            <li><strong>Electrolysis</strong> - Of molten potassium hydroxide (similar to sodium production but less common)</li>
+        </ol>
+        <p><strong>Major Producers:</strong> Canada is the largest producer (Saskatchewan potash deposits), followed by Russia, Belarus, China, and Germany.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Potassium mining and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impacts</strong> - Potash mining (mostly solution mining) can cause land subsidence and brine contamination of groundwater</li>
+            <li><strong>Water Usage</strong> - Solution mining requires large amounts of water</li>
+            <li><strong>Tailings Management</strong> - Salt tailings from potash processing require careful disposal</li>
+            <li><strong>Fertilizer Runoff</strong> - Excess potassium fertilizers can leach into water systems, though less problematic than nitrogen or phosphorus</li>
+            <li><strong>Energy Intensive</strong> - Production requires significant energy, especially for thermal processes</li>
+            <li><strong>Radioactive Waste</strong> - Some potassium ores contain potassium-40, requiring management of low-level radioactive waste</li>
+            <li><strong>Salt Pollution</strong> - Potash mining increases salinity in local water bodies</li>
+            <li><strong>Sustainable Agriculture</strong> - Precision agriculture helps optimize potassium fertilizer use, reducing waste</li>
+        </ul>
+        <p>While potassium is essential for agriculture, sustainable mining and fertilizer practices are important for minimizing environmental impact.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Potassium compounds have been known since antiquity. Potash (potassium carbonate) was produced by leaching wood ashes and evaporating the solution in iron pots. It was used for making soap, glass, and as a fertilizer.</p>
+        <p>In 1702, German chemist Georg Ernst Stahl distinguished between sodium and potassium salts, though the metals were unknown. In 1807, Sir Humphry Davy isolated potassium by passing an electric current through molten potash (potassium hydroxide). This was the first metal isolated by electrolysis.</p>
+        <p>Davy named the metal "potassium" from "potash." The symbol K comes from "kalium," proposed by Swedish chemist Berzelius. In 1808, Louis-Joseph Gay-Lussac and Louis-Jacques Thénard obtained potassium by heating potash with iron filings.</p>
+        <p>Industrial production began in the 19th century. The Castner process (using sodium to reduce potassium hydroxide) was developed in the 1880s. Today, most potassium is produced by thermal reduction of potassium chloride with sodium.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Potassium is so soft it can be cut with a butter knife at room temperature</li>
+            <li>The human body contains about 140 grams of potassium - a typical banana contains about 400 mg</li>
+            <li>Potassium-40 makes bananas slightly radioactive - eating one banana gives you about 0.1 μSv of radiation</li>
+            <li>Potassium burns with a lilac-colored flame, used in flame tests to identify potassium compounds</li>
+            <li>Potassium reacts more violently with water than sodium - the heat of reaction often ignites the hydrogen gas produced</li>
+            <li>The Dead Sea contains very high concentrations of potassium salts - about 1.7% potassium</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Water Reactivity:</strong> Potassium reacts violently with water, producing hydrogen gas and heat that can cause explosions or fires. The reaction is more vigorous than with sodium.</p>
+        <p><strong>Fire Hazard:</strong> Potassium metal ignites spontaneously in air if the oxide coating is broken. Burning potassium produces superoxide (KO₂) which can explode on contact with organic materials.</p>
+        <p><strong>Storage:</strong> Must be stored under mineral oil, kerosene, or in an inert atmosphere (argon) to prevent oxidation. Keep away from water, acids, and oxidizing agents.</p>
+        <p><strong>Toxicity:</strong> While potassium ions are essential nutrients, metallic potassium causes severe chemical burns. Potassium superoxide (KO₂) is a strong oxidizer and irritant.</p>
+        <p><strong>Fire Extinguishing:</strong> Use Class D fire extinguishers (for metal fires), dry sand, graphite, or specialized extinguishing powders. Never use water, CO₂, or standard fire extinguishers.</p>
+        <p><strong>Medical Considerations:</strong> Both hypokalemia (low potassium) and hyperkalemia (high potassium) are life-threatening. Potassium supplements require medical supervision.</p>
+        <p><strong>Radioactivity:</strong> Natural potassium contains 0.0117% radioactive potassium-40. While generally not hazardous, potassium compounds in large quantities may require radiation monitoring.</p>
+        <p><strong>First Aid:</strong> For skin contact with potassium metal, remove contaminated clothing and brush off visible particles. Do not use water initially. Seek immediate medical attention.</p>
+    </div>
+</body>
+</html>
