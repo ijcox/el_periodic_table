@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molybdenum</title>
+    <style>
+        /* Molybdenum is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">42</div>
+            <div class="symbol-large">Mo</div>
+        </div>
+        <div class="element-title">
+            <h1>Molybdenum</h1>
+            <div class="element-subtitle">Transition Metal • Group 6 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>42</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>95.95 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d⁵ 5s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Molybdenum is a silvery-white metal with one of the highest melting points of all pure elements. It has high strength and stiffness at elevated temperatures and excellent corrosion resistance. Molybdenum is an essential trace element for most living organisms and plays crucial roles in numerous enzymes. The element's name comes from the Ancient Greek "molybdos" meaning "lead," as its ores were confused with lead ores.</p>
+        <p>Although molybdenum minerals were known since ancient times, the element was discovered in 1778 by Swedish chemist Carl Wilhelm Scheele. He distinguished molybdenite (MoS₂) as distinct from graphite and lead ores. The metal was first isolated in 1781 by Swedish chemist Peter Jacob Hjelm. Molybdenum remained a laboratory curiosity until the late 19th century when its value in steel alloys was recognized.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>2623°C (4753°F, 2896 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>4639°C (8382°F, 4912 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>10.28 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.251 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>37.48 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>598 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>138 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>53.4 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>5.5</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>329 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -2, -1, 0, +1, +2, +3, +4, +5, +6 (most common: +4, +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.16 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>684.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>139 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>154 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Body-centered cubic (bcc)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Molybdenum has seven stable isotopes:</p>
+        <ul>
+            <li><strong>Molybdenum-92 (⁹²Mo)</strong> - 14.65% abundance</li>
+            <li><strong>Molybdenum-94 (⁹⁴Mo)</strong> - 9.19% abundance</li>
+            <li><strong>Molybdenum-95 (⁹⁵Mo)</strong> - 15.87% abundance</li>
+            <li><strong>Molybdenum-96 (⁹⁶Mo)</strong> - 16.67% abundance</li>
+            <li><strong>Molybdenum-97 (⁹⁷Mo)</strong> - 9.58% abundance</li>
+            <li><strong>Molybdenum-98 (⁹⁸Mo)</strong> - 24.29% abundance</li>
+            <li><strong>Molybdenum-100 (¹⁰⁰Mo)</strong> - 9.74% abundance</li>
+        </ul>
+        <p>Molybdenum has several radioactive isotopes with important applications:</p>
+        <ul>
+            <li><strong>Molybdenum-99 (⁹⁹Mo)</strong> - Radioactive isotope with half-life of 66 hours; parent isotope for technetium-99m generator used in medical imaging</li>
+            <li><strong>Molybdenum-93 (⁹³Mo)</strong> - Radioactive isotope with half-life of 4,000 years</li>
+            <li><strong>Molybdenum-101 (¹⁰¹Mo)</strong> - Radioactive isotope with half-life of 14.61 minutes</li>
+            <li><strong>Molybdenum-90 (⁹⁰Mo)</strong> - Radioactive isotope with half-life of 5.56 hours</li>
+        </ul>
+        <p>Molybdenum-99 is critically important for nuclear medicine, producing technetium-99m, the most widely used medical radioisotope.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Steel Alloying</strong> - Molybdenum added to steel increases strength, hardness, toughness, and corrosion resistance (stainless steels, tool steels)</li>
+            <li><strong>Medical Imaging</strong> - Molybdenum-99/technetium-99m generator produces technetium-99m for diagnostic imaging (80% of nuclear medicine procedures)</li>
+            <li><strong>Catalysts</strong> - Molybdenum compounds as catalysts in petroleum refining (hydrodesulfurization) and chemical synthesis</li>
+            <li><strong>High-Temperature Applications</strong> - Molybdenum metal and alloys in furnace components, rocket nozzles, and aircraft parts</li>
+            <li><strong>Electronics</strong> - Molybdenum in thin-film transistors (TFTs) for LCD displays, and as contacts in semiconductors</li>
+            <li><strong>Lubricants</strong> - Molybdenum disulfide (MoS₂) as dry lubricant in high-temperature and high-vacuum applications</li>
+            <li><strong>Pigments</strong> - Molybdenum orange and other molybdenum-based pigments</li>
+            <li><strong>Fertilizers</strong> - Molybdenum as micronutrient in fertilizers for legumes and other crops</li>
+            <li><strong>Nuclear Industry</strong> - Molybdenum alloys in nuclear reactor components</li>
+            <li><strong>Medical Applications</strong> - Molybdenum cofactor in enzymes; molybdenum-99 for medical imaging</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Molybdenum is an essential trace element for almost all organisms:</p>
+        <ul>
+            <li><strong>Molybdenum Cofactor (Moco)</strong> - Molybdenum incorporated into special cofactor required by several important enzymes</li>
+            <li><strong>Key Enzymes</strong> - Xanthine oxidase (purine metabolism), aldehyde oxidase, sulfite oxidase (sulfur amino acid metabolism), and nitrate reductase (nitrogen metabolism in plants)</li>
+            <li><strong>Human Requirements</strong> - RDA: 45 μg/day for adults; upper limit: 2,000 μg/day</li>
+            <li><strong>Dietary Sources</strong> - Legumes, grains, nuts, leafy vegetables, milk, and organ meats</li>
+            <li><strong>Deficiency</strong> - Rare in humans; can cause neurological problems, rapid heart rate, headache, night blindness. More common in plants, especially legumes.</li>
+            <li><strong>Toxicity</strong> - High molybdenum intake interferes with copper metabolism; causes gout-like symptoms and copper deficiency</li>
+            <li><strong>Molybdenum Cofactor Deficiency</strong> - Rare genetic disorder affecting molybdenum cofactor synthesis; causes severe neurological problems and early death</li>
+            <li><strong>Nitrogen Fixation</strong> - Nitrogenase enzyme in nitrogen-fixing bacteria contains molybdenum-iron cofactor</li>
+            <li><strong>Evolutionary Importance</strong> - Molybdenum enzymes likely played crucial role in evolution of aerobic life</li>
+            <li><strong>Medical Isotope</strong> - Molybdenum-99 produces technetium-99m for medical imaging of heart, bones, lungs, etc.</li>
+        </ul>
+        <p>Molybdenum is essential for key metabolic pathways involving nitrogen, sulfur, and carbon metabolism in most living organisms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Molybdenum is the 54th most abundant element in Earth's crust (1.2 ppm). It occurs in:</p>
+        <ul>
+            <li><strong>Molybdenite</strong> - MoS₂ (molybdenum disulfide, the principal commercial source)</li>
+            <li><strong>Wulfenite</strong> - PbMoO₄ (lead molybdate)</li>
+            <li><strong>Powellite</strong> - CaMoO₄ (calcium molybdate)</li>
+            <li><strong>As Byproduct</strong> - Often recovered as byproduct of copper mining</li>
+            <li><strong>Seawater</strong> - 0.01 mg/L concentration</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Molybdenum is produced from molybdenite:</p>
+        <ol>
+            <li><strong>Mining</strong> - Open-pit or underground mining of molybdenite or copper-molybdenum ores</li>
+            <li><strong>Concentration</strong> - Ore crushed and concentrated by flotation to produce molybdenite concentrate</li>
+            <li><strong>Roasting</strong> - Molybdenite roasted to convert to molybdenum trioxide (MoO₃): 2MoS₂ + 7O₂ → 2MoO₃ + 4SO₂</li>
+            <li><strong>Purification</strong> - Molybdenum trioxide sublimed or chemically purified</li>
+            <li><strong>Reduction</strong> - Molybdenum trioxide reduced with hydrogen to produce molybdenum metal powder: MoO₃ + 3H₂ → Mo + 3H₂O</li>
+            <li><strong>Consolidation</strong> - Powder metallurgy (pressing and sintering) or melting produces bulk molybdenum</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 300,000 tons annually (as molybdenum content). China produces about 45%, followed by United States, Chile, and Peru.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Molybdenum mining and production have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Waste</strong> - Open-pit mining produces large amounts of waste rock and tailings</li>
+            <li><strong>Sulfur Dioxide Emissions</strong> - Roasting molybdenite produces SO₂, a major air pollutant unless captured</li>
+            <li><strong>Water Contamination</strong> - Mining and processing can release molybdenum and other metals into water</li>
+            <li><strong>Radioisotope Production</strong> - Molybdenum-99 production in nuclear reactors creates radioactive waste</li>
+            <li><strong>Essential Nutrient</strong> - Molybdenum is essential for plants but can be toxic at high concentrations</li>
+            <li><strong>Copper Interference</strong> - High molybdenum in soil interferes with copper uptake by animals, causing molybdenosis (copper deficiency)</li>
+            <li><strong>Energy Intensive</strong> - High-temperature processing requires substantial energy</li>
+            <li><strong>Medical Waste</strong> - Used technetium-99m generators create low-level radioactive waste</li>
+            <li><strong>Supply Chain Issues</strong> - Aging nuclear reactors for molybdenum-99 production create supply vulnerabilities for medical imaging</li>
+        </ul>
+        <p>Molybdenum's essential biological role creates unique environmental considerations, with both deficiency and excess causing problems in ecosystems.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Molybdenum minerals have been known since ancient times, but were often confused with other minerals. The name comes from the Greek "molybdos" meaning "lead," as molybdenite (MoS₂) was thought to be a lead ore.</p>
+        <p>In 1778, Swedish chemist Carl Wilhelm Scheele distinguished molybdenite from graphite and lead ores. He treated molybdenite with nitric acid and obtained a white powder (molybdic acid, H₂MoO₄) that he recognized as containing a new element.</p>
+        <p>In 1781, Swedish chemist Peter Jacob Hjelm reduced molybdic acid with carbon to obtain an impure metallic powder, which he named "molybdenum." Pure molybdenum metal was first produced in 1893 by French chemist Henri Moissan using an electric furnace.</p>
+        <p>Molybdenum's industrial importance grew in the early 20th century when it was found to dramatically improve the properties of steel. During World War I, British tanks used molybdenum steel, and Germany developed molybdenum high-speed steels. Today, molybdenum is crucial for both industrial applications and medicine.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Molybdenum has the 6th highest melting point of all elements (2623°C)</li>
+            <li>Molybdenum-99 produces technetium-99m, used in about 80% of all nuclear medicine procedures</li>
+            <li>The name comes from the Greek "molybdos" meaning "lead" - it was confused with lead ores</li>
+            <li>Molybdenum is essential for most life forms, including bacteria, plants, and animals</li>
+            <li>Some dinosaurs may have gone extinct due to molybdenum deficiency affecting their food supply</li>
+            <li>Molybdenum disulfide is used as a dry lubricant in spacecraft and Formula 1 cars</li>
+            <li>The human body contains about 0.07 mg of molybdenum per kg of body weight</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Metal Dust and Powder:</strong> Molybdenum powder is flammable and can form explosive mixtures with air.</p>
+        <p><strong>Chemical Compounds:</strong> Molybdenum trioxide and soluble molybdenum compounds moderately toxic; can cause respiratory and gastrointestinal irritation.</p>
+        <p><strong>Inhalation:</strong> Molybdenum dust and fumes may cause respiratory irritation. Chronic exposure may lead to pneumoconiosis.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in molybdenum production and steel alloying at risk. OSHA PEL: 15 mg/m³ (as Mo) for insoluble compounds; 5 mg/m³ for soluble compounds.</p>
+        <p><strong>Toxicity in Animals:</strong> High molybdenum intake causes molybdenosis (copper deficiency) in ruminants; less toxic to humans.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, and dust masks when handling molybdenum powder or compounds. Use local exhaust ventilation.</p>
+        <p><strong>Fire Fighting:</strong> For molybdenum fires, use Class D extinguishers (metal fire extinguishers). Do NOT use water. Use dry sand, dry salt, or special metal fire extinguishing powder.</p>
+        <p><strong>Radioactive Materials:</strong> Molybdenum-99 requires radiation safety precautions. Handle with shielding and monitoring equipment.</p>
+        <p><strong>Environmental:</strong> Molybdenum compounds toxic to aquatic life at high concentrations. Proper disposal required.</p>
+    </div>
+</body>
+</html>
