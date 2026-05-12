@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutherfordium</title>
+    <style>
+        /* Rutherfordium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">104</div>
+            <div class="symbol-large">Rf</div>
+        </div>
+        <div class="element-title">
+            <h1>Rutherfordium</h1>
+            <div class="element-subtitle">Transition Metal • Group 4 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>104</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[267] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d² 7s² (predicted)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (presumed)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Rutherfordium is a synthetic chemical element and the first transactinide element. It is a highly radioactive metal that does not occur naturally and can only be produced in particle accelerators. Rutherfordium is expected to be a solid under normal conditions and is predicted to have properties similar to hafnium, directly above it in the periodic table, due to the periodic law.</p>
+        <p>The discovery of rutherfordium was controversial and involved a significant Cold War dispute between American and Soviet scientists. Soviet researchers at the Joint Institute for Nuclear Research (JINR) in Dubna first reported its production in 1964, while American scientists at the Lawrence Berkeley Laboratory (LBL) reported their synthesis in 1969. After years of controversy, a joint IUPAC/IUPAP working party concluded in 1992 that credit should be shared between the two teams. The element was named rutherfordium in 1997 in honor of Ernest Rutherford, the New Zealand-born physicist known as the "father of nuclear physics."</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>2100°C (3812°F, 2373 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>5500°C (9932°F, 5773 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Density (predicted)</td>
+                <td>17-18 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (presumed)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown (predicted to be low)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be metallic)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (predicted)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+4 (most stable and characteristic), +3 (possible in aqueous solution)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>579.9 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>150 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>157 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>Expected to resemble hafnium and zirconium (Group 4 metals)</td>
+            </tr>
+        </table>
+        <p>Chemical experiments with rutherfordium have confirmed it forms a +4 oxidation state and behaves similarly to hafnium. Gas-phase chemistry experiments show it forms volatile tetrachloride (RfCl₄) similar to hafnium tetrachloride (HfCl₄). In aqueous solution, rutherfordium(IV) hydrolyzes less than hafnium(IV), indicating relativistic effects may influence its chemistry.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Rutherfordium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Rutherfordium-253 (²⁵³Rf)</strong> - Half-life: 48 microseconds (spontaneous fission)</li>
+            <li><strong>Rutherfordium-254 (²⁵⁴Rf)</strong> - Half-life: 23 microseconds (spontaneous fission)</li>
+            <li><strong>Rutherfordium-255 (²⁵⁵Rf)</strong> - Half-life: 1.64 seconds (alpha decay)</li>
+            <li><strong>Rutherfordium-256 (²⁵⁶Rf)</strong> - Half-life: 6.4 milliseconds (spontaneous fission)</li>
+            <li><strong>Rutherfordium-257 (²⁵⁷Rf)</strong> - Half-life: 4.7 seconds (alpha decay)</li>
+            <li><strong>Rutherfordium-258 (²⁵⁸Rf)</strong> - Half-life: 12 milliseconds (spontaneous fission)</li>
+            <li><strong>Rutherfordium-259 (²⁵⁹Rf)</strong> - Half-life: 3.2 seconds (alpha decay)</li>
+            <li><strong>Rutherfordium-260 (²⁶⁰Rf)</strong> - Half-life: 21 milliseconds (spontaneous fission)</li>
+            <li><strong>Rutherfordium-261 (²⁶¹Rf)</strong> - Half-life: 78 seconds (alpha decay, spontaneous fission)</li>
+            <li><strong>Rutherfordium-262 (²⁶²Rf)</strong> - Half-life: 2.3 seconds (alpha decay, spontaneous fission)</li>
+            <li><strong>Rutherfordium-263 (²⁶³Rf)</strong> - Half-life: 15 minutes (alpha decay, spontaneous fission)</li>
+            <li><strong>Rutherfordium-265 (²⁶⁵Rf)</strong> - Half-life: 1.8 minutes (spontaneous fission)</li>
+            <li><strong>Rutherfordium-266 (²⁶⁶Rf)</strong> - Half-life: 23 seconds? (properties uncertain)</li>
+            <li><strong>Rutherfordium-267 (²⁶⁷Rf)</strong> - Half-life: 1.3 hours (spontaneous fission) - Most stable known isotope</li>
+            <li><strong>Rutherfordium-268 (²⁶⁸Rf)</strong> - Half-life: 1.4 seconds? (properties uncertain)</li>
+        </ul>
+        <p>Rutherfordium-267 is the most stable known isotope with a half-life of approximately 1.3 hours. The isotopes with mass numbers 265-268 may have longer half-lives due to proximity to the predicted spherical shell closures at neutron number 162.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends in heavy nuclei</li>
+            <li><strong>Chemical Studies</strong> - Examination of relativistic effects on chemical properties</li>
+            <li><strong>Island of Stability Research</strong> - Research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of transactinide chemistry and nuclear synthesis</li>
+        </ul>
+        <p>Like all transactinide elements, rutherfordium has no practical applications outside basic scientific research due to its extreme rarity, short half-life (for most isotopes), and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Rutherfordium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha and spontaneous fission radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities for any biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, rutherfordium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Rutherfordium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Cold Fusion (Dubna method)</strong>:
+                <br>²⁰⁸Pb + ⁵⁰Ti → ²⁵⁸Rf (discovery reaction)
+                <br>²⁰⁸Pb + ⁵⁰Ti → ²⁵⁷Rf + n
+                <br>Lower beam energies produce fewer neutrons</li>
+            <li><strong>Hot Fusion (Berkeley method)</strong>:
+                <br>²⁴⁹Cf + ¹²C → ²⁵⁷Rf + 4n
+                <br>²⁴⁹Cf + ¹³C → ²⁵⁹Rf + 3n</li>
+            <li><strong>Other Reactions</strong>:
+                <br>²⁴⁸Cm + ¹⁸O → ²⁶¹Rf + 5n
+                <br>²⁴⁸Cm + ¹⁸O → ²⁶²Rf + 4n</li>
+            <li><strong>Separation</strong> - Rutherfordium atoms separated using gas-phase chromatography (RfCl₄ is volatile) or recoil separation techniques</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms per day of beam time)</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Joint Institute for Nuclear Research (Dubna, Russia), Lawrence Berkeley National Laboratory (USA), GSI Helmholtz Centre (Germany), RIKEN (Japan). Total world production is only a few thousand atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Rutherfordium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay quickly (seconds to hours)</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and generally short half-life, rutherfordium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of rutherfordium was marked by Cold War competition between Soviet and American scientists:</p>
+        <p><strong>Soviet Claim (1964):</strong> A team at the Joint Institute for Nuclear Research (JINR) in Dubna, led by Georgy Flerov, bombarded plutonium-242 with neon-22 ions and reported detecting spontaneous fission with a half-life of 0.3 seconds. They initially assigned this to element 104, isotope 260, and proposed the name "kurchatovium" (Ku) in honor of Igor Kurchatov, the Soviet nuclear physicist.</p>
+        <p><strong>American Claim (1969):</strong> A team at the Lawrence Berkeley Laboratory (LBL), led by Albert Ghiorso, bombarded californium-249 with carbon-12 and carbon-13 ions. They identified rutherfordium-257 and rutherfordium-258 through alpha decay chains. They proposed the name "rutherfordium" (Rf) in honor of Ernest Rutherford.</p>
+        <p><strong>Controversy and Resolution:</strong> For over two decades, Soviet and American scientists disputed priority. The Soviets used the name "kurchatovium," while Americans used "rutherfordium." In 1992, a joint IUPAC/IUPAP working party concluded that while the Dubna work was earlier, the Berkeley work was more definitive. They recommended that credit be shared. In 1997, IUPAC officially adopted the name "rutherfordium" with symbol Rf.</p>
+        <p><strong>Chemical Studies:</strong> Beginning in the 1980s, chemical experiments confirmed rutherfordium behaves as a typical group 4 element, similar to hafnium and zirconium, with a stable +4 oxidation state.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Rutherfordium was the first transactinide element to be discovered</li>
+            <li>The element was involved in a major Cold War scientific dispute between Soviet and American researchers</li>
+            <li>It is named for Ernest Rutherford, who discovered the atomic nucleus and conducted pioneering work in nuclear physics</li>
+            <li>Rutherfordium-267 has the longest known half-life at about 1.3 hours</li>
+            <li>Chemical experiments with rutherfordium require working with single atoms on timescales of seconds</li>
+            <li>The element's chemistry confirms relativistic effects influence properties of heavy elements</li>
+            <li>Only about 5,000 atoms of rutherfordium have ever been produced worldwide</li>
+            <li>It was originally called "kurchatovium" by Soviet scientists in honor of Igor Kurchatov</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of rutherfordium are highly radioactive. Primary hazards are alpha radiation and spontaneous fission (which produces neutrons and fission fragments).</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Several isotopes undergo spontaneous fission producing neutrons and fission fragments requiring neutron shielding.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. Gas-phase chemistry requires specialized apparatus.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections. Neutron shielding may be required for spontaneous fission isotopes.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
