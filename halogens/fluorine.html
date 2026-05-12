@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluorine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e91e63;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .info-card h3 {
+            color: #e91e63;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e91e63;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">9</div>
+            <div class="symbol-large">F</div>
+        </div>
+        <div class="element-title">
+            <h1>Fluorine</h1>
+            <div class="element-subtitle">Halogen • Group 17 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>9</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>18.998 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s² 2p⁵</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Fluorine is the most reactive and electronegative of all elements. It is a pale yellow-green diatomic gas (F₂) that is extremely corrosive and reactive. Fluorine reacts with virtually all organic and inorganic substances except for a few fluorinated compounds and the noble gases helium, neon, and argon.</p>
+        <p>The existence of fluorine was predicted in 1810, and the element was finally isolated in 1886 by French chemist Henri Moissan after many failed attempts that resulted in injuries and fatalities to researchers. The name "fluorine" comes from the Latin word "fluere" meaning "to flow," referring to fluorite (CaF₂) which was used as a flux in metallurgy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-219.67°C (-363.41°F, 53.48 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-188.11°C (-306.60°F, 85.04 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>1.696 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>1.505 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>-128.85°C, 5.172 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>0.51 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>6.62 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Triple Point</td>
+                <td>-219.67°C, 0.252 kPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1 (only stable oxidation state)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>3.98 (Pauling scale) - highest of all elements</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1681.0 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>50 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>57 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>147 pm</td>
+            </tr>
+            <tr>
+                <td>Electron Affinity</td>
+                <td>328 kJ/mol - highest of all elements</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Fluorine has only one stable isotope:</p>
+        <ul>
+            <li><strong>Fluorine-19 (¹⁹F)</strong> - The only stable isotope, making up 100% of natural fluorine. It has 9 protons and 10 neutrons.</li>
+        </ul>
+        <p>Fluorine has several radioactive isotopes, all with very short half-lives:</p>
+        <ul>
+            <li><strong>Fluorine-18 (¹⁸F)</strong> - Most important radioactive isotope with a half-life of 109.77 minutes; used in positron emission tomography (PET scans)</li>
+            <li><strong>Fluorine-17 (¹⁷F)</strong> - Half-life of 64.49 seconds</li>
+            <li><strong>Fluorine-20 (²⁰F)</strong> - Half-life of 11.07 seconds</li>
+            <li><strong>Fluorine-21 (²¹F)</strong> - Half-life of 4.158 seconds</li>
+            <li><strong>Fluorine-22 (²²F)</strong> - Half-life of 4.23 seconds</li>
+        </ul>
+        <p>Fluorine-18 is particularly valuable in medical imaging as it can be incorporated into biologically active molecules like fluorodeoxyglucose (FDG) for cancer detection.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Dental Health</strong> - Fluoride in toothpaste, mouthwash, and drinking water prevents tooth decay</li>
+            <li><strong>Nuclear Industry</strong> - Uranium hexafluoride (UF₆) for uranium enrichment in nuclear fuel production</li>
+            <li><strong>Refrigerants</strong> - Chlorofluorocarbons (CFCs) historically, now being replaced by hydrofluorocarbons (HFCs)</li>
+            <li><strong>Pharmaceuticals</strong> - About 20-25% of modern pharmaceuticals contain fluorine (Lipitor, Prozac, Cipro)</li>
+            <li><strong>Polymers</strong> - Teflon (polytetrafluoroethylene) for non-stick coatings; fluoropolymers for chemical resistance</li>
+            <li><strong>Metallurgy</strong> - Fluorite as a flux in steel and aluminum production</li>
+            <li><strong>Electronics</strong> - Plasma etching in semiconductor manufacturing; lithium hexafluorophosphate in lithium-ion batteries</li>
+            <li><strong>Medical Imaging</strong> - Fluorine-18 in PET scans for cancer detection and brain imaging</li>
+            <li><strong>Agrochemicals</strong> - Fluorine-containing pesticides and herbicides</li>
+            <li><strong>High-Energy Materials</strong> - Fluorine compounds in rocket propellants and high-energy materials</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Fluorine is not considered an essential nutrient for humans or animals, but it has important health applications:</p>
+        <ul>
+            <li><strong>Dental Health</strong> - Fluoride ions incorporate into tooth enamel (hydroxyapatite → fluorapatite), making it more resistant to acid dissolution by bacteria</li>
+            <li><strong>Bone Health</strong> - Fluoride can increase bone density but may increase fracture risk at high doses</li>
+            <li><strong>Enzyme Inhibition</strong> - Fluoride inhibits enolase in glycolysis and affects other enzymes</li>
+            <li><strong>Thyroid Function</strong> - High fluoride exposure may affect thyroid hormone levels</li>
+            <li><strong>Safety Considerations</strong> - Essential for dental health at 0.7-1.2 ppm in drinking water; toxic at higher concentrations</li>
+            <li><strong>Fluorosis</strong> - Chronic overexposure causes dental fluorosis (mottled teeth) and skeletal fluorosis</li>
+        </ul>
+        <p>While not essential for life, fluoride's dental benefits are well-established, leading to widespread water fluoridation programs.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Fluorine is the 13th most abundant element in Earth's crust (950 ppm). It is never found free in nature due to its extreme reactivity. Major sources include:</p>
+        <ul>
+            <li><strong>Fluorite (CaF₂)</strong> - Most important commercial source; also called fluorspar</li>
+            <li><strong>Cryolite (Na₃AlF₆)</strong> - Historically important for aluminum production</li>
+            <li><strong>Fluorapatite (Ca₅(PO₄)₃F)</strong> - Component of phosphate rock and tooth/bone mineral</li>
+            <li><strong>Topaz (Al₂SiO₄(F,OH)₂)</strong> - Gemstone containing fluorine</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Elemental fluorine is produced by electrolysis of potassium fluoride-hydrogen fluoride mixtures at 70-100°C. The process was developed by Henri Moissan and remains essentially unchanged.</p>
+        <p><strong>Major Producers:</strong> China is the largest producer of fluorite, followed by Mexico, Mongolia, and South Africa.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Fluorine compounds have significant environmental effects:</p>
+        <ul>
+            <li><strong>Ozone Depletion</strong> - CFCs (chlorofluorocarbons) damage the stratospheric ozone layer</li>
+            <li><strong>Global Warming</strong> - Many fluorine-containing compounds (HFCs, PFCs, SF₆) are potent greenhouse gases</li>
+            <li><strong>Water Pollution</strong> - Industrial fluoride discharges can contaminate water supplies</li>
+            <li><strong>Bioaccumulation</strong> - Some fluorinated compounds persist in the environment and accumulate in organisms</li>
+            <li><strong>PFAS Contamination</strong> - Per- and polyfluoroalkyl substances are persistent environmental pollutants</li>
+            <li><strong>Regulations</strong> - Montreal Protocol phased out ozone-depleting CFCs; Kyoto Protocol addresses greenhouse gases</li>
+        </ul>
+        <p>Balancing fluorine's valuable applications with environmental protection remains an ongoing challenge.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Fluorine minerals have been known since ancient times. Fluorite (fluorspar) was described by Georgius Agricola in 1529 as a flux for smelting. Hydrofluoric acid was first prepared in 1771 by Carl Wilhelm Scheele by reacting fluorite with sulfuric acid.</p>
+        <p>Many 19th-century chemists attempted to isolate fluorine, suffering serious injuries from its extreme reactivity. The element was finally isolated on June 26, 1886, by French chemist Henri Moissan after years of dangerous experiments. He used electrolysis of potassium fluoride in anhydrous hydrogen fluoride in platinum equipment cooled to -50°C.</p>
+        <p>Moissan received the 1906 Nobel Prize in Chemistry for his discovery. Industrial production began in the early 20th century, initially for aluminum production using the Hall-Héroult process with cryolite.</p>
+        <p>The development of fluoropolymers like Teflon in 1938 by Roy Plunkett and the discovery of fluoride's dental benefits in the early 20th century greatly expanded fluorine's applications.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Fluorine is the most electronegative and reactive of all elements</li>
+            <li>It can make compounds with noble gases - xenon tetrafluoride was the first noble gas compound discovered</li>
+            <li>Hydrofluoric acid is so corrosive it dissolves glass, requiring storage in plastic containers</li>
+            <li>Fluorine gas is so reactive it can make water, asbestos, and even gold burn</li>
+            <li>Teflon (PTFE) is so slippery it has the lowest coefficient of friction of any solid</li>
+            <li>Fluorine-18 has a half-life of 110 minutes, making it ideal for medical PET scans</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Extreme Reactivity:</strong> Fluorine gas reacts violently with most organic and inorganic materials. Even water burns in fluorine gas. Special passivated metal equipment is required for handling.</p>
+        <p><strong>Toxicity:</strong> Fluorine gas is highly toxic - 25 ppm is immediately dangerous to life and health. Symptoms include severe respiratory irritation, pulmonary edema, and death.</p>
+        <p><strong>Hydrofluoric Acid Burns:</strong> HF causes deep, painful burns that may not be immediately felt. It penetrates tissue and can cause systemic fluoride poisoning and bone damage.</p>
+        <p><strong>Fluoride Poisoning:</strong> Acute fluoride poisoning causes nausea, vomiting, abdominal pain, and can be fatal. Chronic exposure causes dental and skeletal fluorosis.</p>
+        <p><strong>Fire and Explosion Hazards:</strong> Fluorine supports combustion more vigorously than oxygen. Many materials ignite spontaneously in fluorine atmosphere.</p>
+        <p><strong>Corrosion:</strong> Fluorine and its compounds attack glass, most metals, and many other materials. Special materials (nickel, Monel, Teflon) are required for containment.</p>
+        <p><strong>Environmental Persistence:</strong> Some fluorinated compounds (PFAS) are extremely persistent in the environment and bioaccumulate in organisms.</p>
+    </div>
+</body>
+</html>
