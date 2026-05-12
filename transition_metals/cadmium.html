@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadmium</title>
+    <style>
+        /* Cadmium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">48</div>
+            <div class="symbol-large">Cd</div>
+        </div>
+        <div class="element-title">
+            <h1>Cadmium</h1>
+            <div class="element-subtitle">Transition Metal • Group 12 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>48</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>112.414 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d¹⁰ 5s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Cadmium is a soft, malleable, ductile, bluish-white metal that is chemically similar to zinc and mercury. It is a relatively rare element that occurs naturally in zinc ores and is primarily produced as a byproduct of zinc refining. Cadmium is toxic and accumulates in biological systems, causing various health problems. Despite its toxicity, cadmium has important industrial applications, particularly in nickel-cadmium batteries and as pigments.</p>
+        <p>Cadmium was discovered in 1817 simultaneously by German chemists Friedrich Stromeyer and Karl Samuel Leberecht Hermann. Stromeyer found it as an impurity in zinc carbonate (calamine), while Hermann discovered it in zinc sulfide. Both noticed that some samples of zinc oxide changed color when heated, which was unusual for pure zinc oxide. Stromeyer named the new element "cadmium" after the Latin "cadmia" and Greek "kadmeia," ancient names for calamine (zinc carbonate) or zinc ores.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>321.07°C (609.93°F, 594.22 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>767°C (1413°F, 1040 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>8.65 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.232 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>6.21 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>99.87 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>96.8 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>72.7 nΩ·m (at 22°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.0</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>50 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, +1, +2 (most common: +2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.69 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>867.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>151 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>144 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>158 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Cadmium has eight stable isotopes:</p>
+        <ul>
+            <li><strong>Cadmium-106 (¹⁰⁶Cd)</strong> - 1.25% abundance</li>
+            <li><strong>Cadmium-108 (¹⁰⁸Cd)</strong> - 0.89% abundance</li>
+            <li><strong>Cadmium-110 (¹¹⁰Cd)</strong> - 12.49% abundance</li>
+            <li><strong>Cadmium-111 (¹¹¹Cd)</strong> - 12.80% abundance</li>
+            <li><strong>Cadmium-112 (¹¹²Cd)</strong> - 24.13% abundance</li>
+            <li><strong>Cadmium-113 (¹¹³Cd)</strong> - 12.22% abundance</li>
+            <li><strong>Cadmium-114 (¹¹⁴Cd)</strong> - 28.73% abundance</li>
+            <li><strong>Cadmium-116 (¹¹⁶Cd)</strong> - 7.49% abundance</li>
+        </ul>
+        <p>Cadmium has several radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Cadmium-109 (¹⁰⁹Cd)</strong> - Radioactive isotope with half-life of 462.6 days; used in analytical instruments (X-ray fluorescence)</li>
+            <li><strong>Cadmium-113m (¹¹³ᵐCd)</strong> - Metastable isomer with half-life of 14.1 years</li>
+            <li><strong>Cadmium-115 (¹¹⁵Cd)</strong> - Radioactive isotope with half-life of 53.46 hours</li>
+            <li><strong>Cadmium-107 (¹⁰⁷Cd)</strong> - Radioactive isotope with half-life of 6.5 hours</li>
+        </ul>
+        <p>Cadmium-109 is used in various analytical instruments and industrial gauges.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Nickel-Cadmium (Ni-Cd) Batteries</strong> - Rechargeable batteries for portable electronics, emergency lighting, and aviation (declining due to environmental concerns)</li>
+            <li><strong>Pigments</strong> - Cadmium sulfide (yellow), cadmium selenide (red) in plastics, ceramics, glass, and artists' paints</li>
+            <li><strong>Plating</strong> - Cadmium electroplating for corrosion protection on steel, especially in aerospace and military applications</li>
+            <li><strong>Stabilizers</strong> - Cadmium compounds as stabilizers in PVC plastics to prevent degradation by heat and light</li>
+            <li><strong>Solar Cells</strong> - Cadmium telluride (CdTe) thin-film photovoltaic cells for solar energy</li>
+            <li><strong>Nuclear Reactors</strong> - Cadmium as neutron absorber in control rods due to high neutron capture cross-section</li>
+            <li><strong>Alloys</strong> - Low-melting point alloys (e.g., Wood's metal, Lipowitz's alloy) for soldering, fire sprinklers, and fuses</li>
+            <li><strong>Semiconductors</strong> - Cadmium compounds in some semiconductor devices</li>
+            <li><strong>Analytical Instruments</strong> - Cadmium-109 in X-ray fluorescence and thickness gauges</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Cadmium has no known beneficial biological role and is highly toxic:</p>
+        <ul>
+            <li><strong>Extreme Toxicity</strong> - Cadmium accumulates in kidneys and liver; biological half-life 10-30 years</li>
+            <li><strong>Itai-itai Disease</strong> - Mass cadmium poisoning in Japan (1930s-1950s) from contaminated rice; caused kidney failure, bone softening, and severe pain</li>
+            <li><strong>Kidney Damage</strong> - Primary target organ; causes proteinuria, glucosuria, and renal tubular dysfunction</li>
+            <li><strong>Bone Effects</strong> - Interferes with calcium metabolism; causes osteomalacia and osteoporosis</li>
+            <li><strong>Carcinogen</strong> - Classified as human carcinogen (lung cancer); possibly prostate cancer</li>
+            <li><strong>Metallothionein Binding</strong> - Cadmium binds to metallothionein in liver and kidneys; overwhelms protective mechanism</li>
+            <li><strong>Smoking</strong> - Major source of cadmium exposure for smokers; tobacco plants accumulate cadmium from soil</li>
+            <li><strong>Dietary Sources</strong> - Shellfish, organ meats, grains, and vegetables (depending on soil contamination)</li>
+            <li><strong>Environmental Exposure</strong> - Mining, smelting, and industrial activities release cadmium into environment</li>
+            <li><strong>Zinc Interference</strong> - Cadmium interferes with zinc-dependent enzymes due to similar chemical properties</li>
+        </ul>
+        <p>Cadmium is one of the most toxic heavy metals with no safe level of exposure in humans.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Cadmium is a relatively rare element (0.15 ppm in Earth's crust). It occurs:</p>
+        <ul>
+            <li><strong>In Zinc Ores</strong> - As impurity in sphalerite (ZnS) and other zinc minerals (primary commercial source)</li>
+            <li><strong>Greenockite</strong> - CdS (cadmium sulfide, rare mineral)</li>
+            <li><strong>Otavite</strong> - CdCO₃ (cadmium carbonate, rare mineral)</li>
+            <li><strong>As Byproduct</strong> - Over 90% of cadmium produced as byproduct of zinc refining</li>
+            <li><strong>In Phosphate Rocks</strong> - Trace amounts in some phosphate deposits</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Cadmium is recovered during zinc production:</p>
+        <ol>
+            <li><strong>Zinc Production</strong> - Zinc ores roasted to produce zinc oxide</li>
+            <li><strong>Leaching</strong> - Zinc oxide leached with sulfuric acid; cadmium dissolves with zinc</li>
+            <li><strong>Purification</strong> - Solution purified by zinc dust cementation to remove impurities</li>
+            <li><strong>Cadmium Precipitation</strong> - Cadmium precipitated with zinc dust:
+                <ul>
+                    <li>Cd²⁺ + Zn → Cd + Zn²⁺</li>
+                </ul>
+            </li>
+            <li><strong>Electrolysis</strong> - Cadmium sponge melted and electrorefined to produce high-purity cadmium</li>
+            <li><strong>Alternative Process</strong> - Some plants use solvent extraction or ion exchange to recover cadmium</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 23,000 tons annually. China produces about 30%, followed by South Korea, Japan, and Kazakhstan.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Cadmium is a major environmental pollutant with significant impacts:</p>
+        <ul>
+            <li><strong>Soil Contamination</strong> - Cadmium from mining, smelting, phosphate fertilizers, and sewage sludge accumulates in soils</li>
+            <li><strong>Food Chain Accumulation</strong> - Plants uptake cadmium from soil; enters food chain (rice particularly efficient at cadmium uptake)</li>
+            <li><strong>Water Pollution</strong> - Mining and industrial discharges contaminate water bodies</li>
+            <li><strong>Battery Waste</strong> - Improper disposal of Ni-Cd batteries releases cadmium into environment</li>
+            <li><strong>Atmospheric Deposition</strong> - Cadmium emissions from metal production settle on land and water</li>
+            <li><strong>Phosphate Fertilizers</strong> - Cadmium impurity in phosphate rocks contaminates agricultural soils</li>
+            <li><strong>Sewage Sludge</strong> - Cadmium from industrial wastewater concentrates in sewage sludge applied to farmland</li>
+            <li><strong>Biomagnification</strong> - Cadmium accumulates in organisms up food chain</li>
+            <li><strong>Regulations</strong> - Cadmium strictly regulated in many products; EU RoHS restricts use in electronics</li>
+            <li><strong>Remediation</strong> - Phytoremediation using cadmium-accumulating plants; soil amendments to reduce bioavailability</li>
+        </ul>
+        <p>Cadmium pollution represents a serious global environmental health problem due to persistence and toxicity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1817, German chemist Friedrich Stromeyer, while serving as inspector of pharmacies in Hanover, discovered cadmium. He was testing zinc oxide (used in medicinal preparations) and noticed that some samples turned yellow when heated, unlike pure zinc oxide which remains white.</p>
+        <p>Stromeyer isolated the impurity and found it was a new metal. Independently, German chemist Karl Samuel Leberecht Hermann discovered cadmium in zinc sulfide from a Silesian mine. Both published their discoveries in 1818.</p>
+        <p>Stromeyer named the element "cadmium" after "cadmia," the ancient name for zinc ores or calamine. The name itself derives from the Greek mythological character Cadmus, founder of Thebes.</p>
+        <p>Initially, cadmium had few uses. In the 20th century, applications expanded with electroplating (1920s), pigments (1930s), and Ni-Cd batteries (1950s). Environmental concerns emerged in the 1960s-1970s with incidents like Itai-itai disease in Japan, leading to strict regulations on cadmium use and disposal.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Cadmium gives the bright yellow color to many school buses and some traffic signs</li>
+            <li>The name comes from "cadmia," the ancient name for zinc ore, which in turn comes from Cadmus of Greek mythology</li>
+            <li>Cadmium has the longest biological half-life of any heavy metal in humans - 10 to 30 years</li>
+            <li>Some artists' paints contain cadmium pigments, prized for their vibrant colors and lightfastness</li>
+            <li>Cadmium is used in some of the most efficient thin-film solar cells</li>
+            <li>The element accumulates in tobacco leaves, making smoking a major source of cadmium exposure</li>
+            <li>Cadmium turns different colors when burned - yellow in sulfide form, brown in oxide form</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Extreme Toxicity:</strong> Cadmium and its compounds highly toxic. Carcinogenic (lung, prostate). Accumulates in kidneys with biological half-life 10-30 years.</p>
+        <p><strong>Inhalation:</strong> Cadmium fumes and dust extremely hazardous. Causes chemical pneumonitis, pulmonary edema. Chronic exposure causes emphysema, lung cancer. OSHA PEL: 0.005 mg/m³.</p>
+        <p><strong>Ingestion:</strong> Causes severe gastrointestinal irritation, vomiting, diarrhea. Chronic ingestion causes kidney damage, bone disease (Itai-itai).</p>
+        <p><strong>Skin Contact:</strong> Cadmium compounds can be absorbed through skin; may cause irritation.</p>
+        <p><strong>Cadmium Oxide Fumes:</strong> Formed when heating cadmium metal; extremely toxic "metal fume fever" more severe than with other metals.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air immediately; administer oxygen if breathing difficult. For ingestion, do NOT induce vomiting; give water or milk. Seek immediate medical attention for all exposures.</p>
+        <p><strong>Protective Equipment:</strong> Use respiratory protection (NIOSH-approved for cadmium), gloves, protective clothing. Use local exhaust ventilation and enclosed processes.</p>
+        <p><strong>Medical Monitoring:</strong> Workers with cadmium exposure require regular medical exams including urine cadmium and β₂-microglobulin tests.</p>
+        <p><strong>Storage:</strong> Store in cool, dry, well-ventilated area away from acids and oxidizers.</p>
+        <p><strong>Disposal:</strong> Cadmium waste hazardous; dispose as toxic waste according to regulations. Recycle Ni-Cd batteries through proper channels.</p>
+    </div>
+</body>
+</html>
