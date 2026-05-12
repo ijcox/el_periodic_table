@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roentgenium</title>
+    <style>
+        /* Roentgenium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">111</div>
+            <div class="symbol-large">Rg</div>
+        </div>
+        <div class="element-title">
+            <h1>Roentgenium</h1>
+            <div class="element-subtitle">Transition Metal • Group 11 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>111</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[282] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d¹⁰ 7s¹ (predicted; relativistic effects important)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (presumed)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Roentgenium is a synthetic chemical element and a member of the transactinide series. It is a highly radioactive metal that does not occur naturally and can only be produced in particle accelerators. Roentgenium is expected to be a solid under normal conditions and is predicted to have properties similar to gold, directly above it in group 11 of the periodic table, though relativistic effects are expected to cause significant deviations, possibly making it even more noble than gold.</p>
+        <p>Roentgenium was first synthesized in 1994 by a German research team at the Gesellschaft für Schwerionenforschung (GSI) in Darmstadt, led by Sigurd Hofmann. The element was named in honor of Wilhelm Conrad Röntgen, the German physicist who discovered X-rays. This was particularly fitting as Röntgen's discovery revolutionized physics and medicine, and the GSI laboratory where the element was discovered uses advanced detection techniques that build upon Röntgen's work.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>Unknown (estimated to be similar to or lower than gold's 1064°C)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Density (predicted)</td>
+                <td>28.7 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (presumed)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown (predicted to be lower than gold)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be higher than gold)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown (likely soft like gold)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (predicted, like gold and other group 11 metals)</td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>Unknown (may not be golden like gold due to relativistic effects)</td>
+            </tr>
+        </table>
+        <p>Roentgenium's physical properties are particularly interesting because relativistic effects are predicted to be extremely strong. These effects cause contraction of s and p orbitals and expansion of d orbitals, which may result in roentgenium having different optical properties than gold - it might not have the characteristic golden color.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+5, +3, +1, -1 (predicted; +3 and +1 likely most important)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1020 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>138 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>121 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>Predicted to be more noble than gold, possibly the most noble metal</td>
+            </tr>
+        </table>
+        <p>Roentgenium's chemistry is predicted to be dominated by relativistic effects. Unlike gold which typically exhibits +1 and +3 oxidation states, roentgenium may favor +3 and +5 oxidation states. The electron configuration is predicted to be [Rn] 5f¹⁴ 6d¹⁰ 7s¹ rather than 6d⁹ 7s² due to relativistic stabilization of the 6d orbital. Roentgenium is expected to be extremely noble - possibly more chemically inert than even gold. It may form stable compounds in unusual oxidation states like +5, which is rare for group 11 elements. Some calculations suggest roentgenium could form a stable +5 fluoride (RgF₅) similar to gold pentafluoride (AuF₅).</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Roentgenium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Roentgenium-272 (²⁷²Rg)</strong> - Half-life: 3.8 milliseconds (alpha decay)</li>
+            <li><strong>Roentgenium-274 (²⁷⁴Rg)</strong> - Half-life: 6.4 milliseconds (alpha decay)</li>
+            <li><strong>Roentgenium-278 (²⁷⁸Rg)</strong> - Half-life: 4.2 milliseconds (alpha decay)</li>
+            <li><strong>Roentgenium-279 (²⁷⁹Rg)</strong> - Half-life: 0.17 seconds (alpha decay)</li>
+            <li><strong>Roentgenium-280 (²⁸⁰Rg)</strong> - Half-life: 3.6 seconds (alpha decay)</li>
+            <li><strong>Roentgenium-281 (²⁸¹Rg)</strong> - Half-life: 17 seconds (alpha decay, spontaneous fission)</li>
+            <li><strong>Roentgenium-282 (²⁸²Rg)</strong> - Half-life: 2.1 minutes? (alpha decay, tentative) - Most stable known isotope</li>
+            <li><strong>Roentgenium-283 (²⁸³Rg)</strong> - Half-life: 5.1 seconds? (spontaneous fission, tentative)</li>
+            <li><strong>Roentgenium-286 (²⁸⁶Rg)</strong> - Half-life: 10.7 minutes? (alpha decay, tentative; may be part of "island of stability")</li>
+        </ul>
+        <p>Roentgenium-282 is tentatively identified as the most stable known isotope with a possible half-life of around 2.1 minutes. There are unconfirmed reports of roentgenium-286 with a half-life of about 10.7 minutes, which if verified, would be exceptionally long-lived for such a heavy element and might indicate proximity to the "island of stability."</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends in heavy nuclei near the "island of stability"</li>
+            <li><strong>Theoretical Chemistry</strong> - Testing predictions about relativistic effects in the heaviest elements</li>
+            <li><strong>Relativistic Effects Research</strong> - Study of how relativity influences chemical properties, particularly for noble metal analogs</li>
+            <li><strong>Island of Stability Research</strong> - Key element in research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of transactinide chemistry and nuclear synthesis</li>
+        </ul>
+        <p>Like all transactinide elements, roentgenium has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Roentgenium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha and spontaneous fission radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities and too short half-lives for biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+            <li><strong>Nobility</strong> - If produced in quantity, its predicted chemical inertness might reduce chemical toxicity, but radiation hazard would remain</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, roentgenium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Roentgenium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Cold Fusion Reactions</strong>:
+                <br>²⁰⁹Bi + ⁶⁴Ni → ²⁷²Rg + n (original GSI discovery reaction, December 8, 1994)
+                <br>²⁰⁹Bi + ⁶⁴Ni → ²⁷¹Rg + 2n</li>
+            <li><strong>Hot Fusion Reactions</strong>:
+                <br>²³⁸U + ⁵¹V → ²⁸⁶Rg + 3n? (produces more neutron-rich isotopes)
+                <br>²⁴⁴Pu + ⁵⁵Mn → ²⁹⁶Rg + 3n? (theoretical)</li>
+            <li><strong>Other Reactions</strong>:
+                <br>²⁴⁹Bk + ⁴⁸Ca → ²⁹³Rg + 4n (theoretical)
+                <br>A more successful approach has been using ²⁰⁹Bi targets with ⁶⁴Ni beams</li>
+            <li><strong>Separation</strong> - Roentgenium atoms separated using the SHIP (Separator for Heavy Ion reaction Products) at GSI. Chemical separation is challenging due to short half-lives and uncertain chemistry.</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors, often requiring correlation with daughter decays through alpha decay chains to meitnerium and bohrium.</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms per year of beam time).</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Gesellschaft für Schwerionenforschung (GSI, Germany - primary site), Joint Institute for Nuclear Research (Dubna, Russia), RIKEN (Japan). Total world production is only about 15 atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Roentgenium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay quickly (milliseconds to minutes)</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+            <li><strong>Chemical Inertness</strong> - If released, predicted chemical nobility might reduce environmental mobility</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and generally short half-life, roentgenium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of roentgenium continued GSI Darmstadt's successful exploration of superheavy elements:</p>
+        <p><strong>Discovery (1994):</strong> On December 8, 1994, a team at the Gesellschaft für Schwerionenforschung (GSI) in Darmstadt, Germany, led by Sigurd Hofmann, synthesized roentgenium by bombarding bismuth-209 with nickel-64 ions. They produced three atoms of roentgenium-272, which decayed by alpha emission with a half-life of about 1.5 milliseconds. The discovery was based on detection of decay chains leading to known isotopes of meitnerium and bohrium.</p>
+        <p><strong>Confirmation and Further Studies:</strong> The discovery was confirmed in 2002-2004 at GSI with the production of more atoms, including the isotopes roentgenium-274 and roentgenium-279. The decay properties were studied in detail, confirming the original discovery.</p>
+        <p><strong>Naming:</strong> The GSI team proposed the name "roentgenium" in honor of Wilhelm Conrad Röntgen, discoverer of X-rays. This was particularly appropriate as Röntgen's discovery had revolutionized physics and medicine, and modern nuclear detection techniques used at GSI build upon principles related to X-ray detection.</p>
+        <p><strong>Official Recognition (2004):</strong> After evaluation by the IUPAC/IUPAP Joint Working Party, the name "roentgenium" with symbol Rg was officially adopted in November 2004. The naming was relatively uncontroversial, honoring a scientist whose contributions were universally recognized.</p>
+        <p><strong>Theoretical Interest:</strong> Roentgenium has attracted considerable theoretical interest due to predictions that it might be even more noble than gold. Its chemistry is expected to test the limits of relativistic effects in heavy elements, with possible implications for understanding chemical bonding in extreme conditions.</p>
+        <p><strong>Recent Developments:</strong> In 2020, there were reports of producing more neutron-rich isotopes of roentgenium with longer half-lives, potentially opening the door for future chemical studies.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Roentgenium is named after Wilhelm Conrad Röntgen, discoverer of X-rays</li>
+            <li>The element was discovered on December 8, 1994, just a month after darmstadtium</li>
+            <li>Roentgenium is predicted to be more noble than gold, possibly the most chemically inert metal</li>
+            <li>Only about 15 atoms of roentgenium have ever been produced worldwide</li>
+            <li>The element may not have a golden color like gold due to relativistic effects on electron transitions</li>
+            <li>Roentgenium's electron configuration is predicted to be 6d¹⁰7s¹ rather than 6d⁹7s² due to relativistic effects</li>
+            <li>Some isotopes of roentgenium may have half-lives of several minutes, unusually long for such heavy elements</li>
+            <li>Roentgenium could form stable compounds in the +5 oxidation state, which is rare for group 11 elements</li>
+            <li>The element's discovery completed the first row of transactinide elements (104-111)</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of roentgenium are highly radioactive. Primary hazards are alpha radiation and spontaneous fission (which produces neutrons and fission fragments).</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Some isotopes undergo spontaneous fission producing neutrons and fission fragments requiring neutron shielding.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. The short half-lives require extremely fast experimental setups.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections. Neutron shielding may be required for spontaneous fission isotopes.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
