@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .info-card h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">11</div>
+            <div class="symbol-large">Na</div>
+        </div>
+        <div class="element-title">
+            <h1>Sodium</h1>
+            <div class="element-subtitle">Alkali Metal • Group 1 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>11</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>22.990 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Sodium is a soft, silvery-white, highly reactive alkali metal. In its pure form, it is so soft it can be cut with a knife at room temperature. Sodium is the sixth most abundant element in Earth's crust and exists in numerous minerals such as feldspars, sodalite, and rock salt (NaCl).</p>
+        <p>Sodium was first isolated by Sir Humphry Davy in 1807 through the electrolysis of caustic soda (NaOH). The name "sodium" comes from the English word "soda" and the chemical symbol Na comes from the Latin word "natrium," which referred to a natural mineral salt found in Egypt.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>97.79°C (208.02°F, 370.94 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>882.8°C (1621.0°F, 1156.0 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>0.968 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>0.927 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>2573 K, 35 MPa (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>2.60 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>97.42 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>0.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, +1 (strongly basic oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.93 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>495.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>186 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>166 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>227 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Sodium has only one stable isotope:</p>
+        <ul>
+            <li><strong>Sodium-23 (²³Na)</strong> - The only stable isotope, making up 100% of natural sodium. It has 11 protons and 12 neutrons.</li>
+        </ul>
+        <p>Sodium has several radioactive isotopes, with sodium-22 and sodium-24 being the most notable:</p>
+        <ul>
+            <li><strong>Sodium-22 (²²Na)</strong> - Radioactive isotope with half-life of 2.602 years; decays by positron emission; used as a positron source and tracer</li>
+            <li><strong>Sodium-24 (²⁴Na)</strong> - Radioactive isotope with half-life of 14.96 hours; decays by beta emission; used in medicine and industrial radiography</li>
+            <li><strong>Sodium-20 to Sodium-37</strong> - Various other radioactive isotopes with half-lives ranging from milliseconds to minutes</li>
+        </ul>
+        <p>Sodium-24 is particularly useful as a tracer in studies of sodium transport in biological systems and for detecting leaks in industrial pipelines.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Table Salt</strong> - Sodium chloride (NaCl) is essential for human nutrition and food preservation</li>
+            <li><strong>Chemical Industry</strong> - Production of sodium hydroxide (caustic soda), sodium carbonate (soda ash), and sodium bicarbonate (baking soda)</li>
+            <li><strong>Metallurgy</strong> - Reducing agent for producing titanium, zirconium, and other metals; heat transfer fluid in nuclear reactors</li>
+            <li><strong>Lighting</strong> - Sodium vapor lamps for street lighting (characteristic yellow light)</li>
+            <li><strong>Soaps and Detergents</strong> - Sodium compounds in soaps, detergents, and cleaning products</li>
+            <li><strong>Food Industry</strong> - Sodium nitrite as preservative; monosodium glutamate (MSG) as flavor enhancer</li>
+            <li><strong>Medicine</strong> - Sodium compounds in intravenous fluids, antacids, and pharmaceuticals</li>
+            <li><strong>Water Treatment</strong> - Sodium compounds for water softening and purification</li>
+            <li><strong>Glass Manufacturing</strong> - Sodium carbonate lowers melting point of silica</li>
+            <li><strong>Deicing</strong> - Sodium chloride for melting ice on roads and sidewalks</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Sodium is an essential nutrient for all animals and some plants:</p>
+        <ul>
+            <li><strong>Electrolyte Balance</strong> - Sodium ions are major extracellular cations; crucial for maintaining fluid balance and blood pressure</li>
+            <li><strong>Nerve Function</strong> - Sodium-potassium pump creates electrochemical gradients essential for nerve impulse transmission</li>
+            <li><strong>Muscle Contraction</strong> - Sodium influx initiates muscle contraction</li>
+            <li><strong>Nutrient Absorption</strong> - Sodium cotransport systems absorb glucose and amino acids in intestines</li>
+            <li><strong>Human Requirements</strong> - Minimum 500 mg/day needed; typical Western diet contains 3-5 g/day (mostly as NaCl)</li>
+            <li><strong>Hypertension</strong> - Excess sodium intake is linked to high blood pressure and cardiovascular disease</li>
+            <li><strong>Plant Nutrition</strong> - Some plants require sodium as a micronutrient; others are sensitive to excess sodium</li>
+            <li><strong>Regulation</strong> - Kidneys regulate sodium balance; hormones (aldosterone, ANP) control sodium excretion</li>
+        </ul>
+        <p>Sodium is so crucial to biology that its concentration is tightly regulated in all body fluids.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Sodium is the sixth most abundant element in Earth's crust (2.6% by weight). It never occurs free in nature due to its high reactivity. Major sources include:</p>
+        <ul>
+            <li><strong>Halite</strong> - Rock salt (NaCl) in evaporite deposits and salt domes</li>
+            <li><strong>Seawater</strong> - Contains about 1.08% sodium (as NaCl)</li>
+            <li><strong>Minerals</strong> - Feldspars (albite, anorthite), sodalite, cryolite, zeolites</li>
+            <li><strong>Brines</strong> - Salt lakes (Dead Sea, Great Salt Lake) and underground brine deposits</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Metallic sodium is produced by electrolysis of molten sodium chloride (Downs process) or sodium hydroxide (Castner process). Annual production is about 100,000 tons.</p>
+        <p><strong>Major Producers:</strong> China, United States, Germany, and France are major producers of metallic sodium and sodium compounds.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Sodium compounds have significant environmental effects:</p>
+        <ul>
+            <li><strong>Soil Salinization</strong> - Excess sodium from irrigation water accumulates in soil, reducing fertility</li>
+            <li><strong>Water Pollution</strong> - Road salt runoff increases sodium and chloride levels in freshwater ecosystems</li>
+            <li><strong>Plant Toxicity</strong> - High sodium concentrations are toxic to many plants, especially crops</li>
+            <li><strong>Aquatic Life</strong> - Increased salinity affects freshwater organisms adapted to low-salt conditions</li>
+            <li><strong>Drinking Water</strong> - High sodium in drinking water concerns for people on sodium-restricted diets</li>
+            <li><strong>Atmospheric Chemistry</strong> - Sea salt aerosols from ocean spray affect cloud formation and climate</li>
+            <li><strong>Mining Impacts</strong> - Salt mining can cause land subsidence and affect groundwater</li>
+        </ul>
+        <p>Balancing sodium's essential uses with environmental protection requires careful management, especially of road salt application and irrigation practices.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Sodium compounds have been known since ancient times. Salt (sodium chloride) was valued as a preservative and traded extensively. The Egyptians used natron (a mixture of sodium carbonate and bicarbonate) for mummification and cleaning.</p>
+        <p>In 1807, Sir Humphry Davy isolated sodium by passing an electric current through molten caustic soda (sodium hydroxide). This was one of the first elements isolated by electrolysis and demonstrated that alkalis contained metallic elements.</p>
+        <p>The industrial production of sodium began in 1855 when James Young and Matthew and William Benson developed a method using charcoal to reduce sodium carbonate. The modern electrolytic process was invented independently in 1886 by Hamilton Castner (using sodium hydroxide) and in 1924 by James Cloyd Downs (using sodium chloride).</p>
+        <p>Sodium's importance grew with the development of the sodium-cooled fast breeder reactor in the mid-20th century and its use in producing tetraethyllead (antiknock additive) and titanium metal.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Sodium is so reactive it must be stored under oil or in an inert atmosphere to prevent reaction with air or water</li>
+            <li>When sodium reacts with water, it produces hydrogen gas that can ignite, creating the classic "dancing sodium" demonstration</li>
+            <li>Sodium vapor lamps are so energy-efficient that they're used for most street lighting worldwide</li>
+            <li>The human body contains about 100 grams of sodium, mostly in blood and extracellular fluid</li>
+            <li>Sodium is used as a coolant in some nuclear reactors because it doesn't slow down neutrons as much as water does</li>
+            <li>The word "salary" comes from the Latin "salarium," money paid to Roman soldiers to buy salt</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Water Reactivity:</strong> Sodium reacts violently with water, producing hydrogen gas and heat that can cause explosions or fires. Never use water to extinguish sodium fires.</p>
+        <p><strong>Fire Hazard:</strong> Sodium metal ignites spontaneously in air if heated above 125°C. Burning sodium produces toxic sodium oxide fumes.</p>
+        <p><strong>Storage:</strong> Must be stored under mineral oil or in an inert atmosphere (argon, nitrogen) to prevent oxidation. Keep away from water and oxidizing agents.</p>
+        <p><strong>Health Effects:</strong> While sodium ions are essential nutrients, metallic sodium causes severe chemical burns on contact with skin or eyes.</p>
+        <p><strong>Fire Extinguishing:</strong> Use Class D fire extinguishers (for metal fires), dry sand, or specialized sodium fire extinguishing powders. Never use water, CO₂, or standard fire extinguishers.</p>
+        <p><strong>Environmental Concerns:</strong> Sodium compounds from road salt and industrial discharges can contaminate soil and water, affecting ecosystems.</p>
+        <p><strong>Dietary Considerations:</strong> Excessive sodium intake (more than 2.3 g/day for most adults) increases risk of hypertension, stroke, and cardiovascular disease.</p>
+    </div>
+</body>
+</html>
