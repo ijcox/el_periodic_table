@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">24</div>
+            <div class="symbol-large">Cr</div>
+        </div>
+        <div class="element-title">
+            <h1>Chromium</h1>
+            <div class="element-subtitle">Transition Metal • Group 6 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>24</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>51.996 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d⁵ 4s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Chromium is a hard, lustrous, steel-gray metal that takes a high polish and has a high melting point. It is the main additive in stainless steel, to which it adds anti-corrosive properties. The name "chromium" comes from the Greek word "chroma" meaning color, because chromium compounds are vividly colored.</p>
+        <p>Chromium was discovered in 1797 by French chemist Louis Nicolas Vauquelin in the mineral crocoite (lead chromate). He produced chromium oxide by mixing crocoite with hydrochloric acid. In 1798, he isolated chromium metal by heating the oxide with charcoal.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1907°C (3465°F, 2180 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2671°C (4840°F, 2944 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>7.19 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>6.3 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.449 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>21.0 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>347 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>8.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -2, -1, 0, +1, +2, +3, +4, +5, +6 (most common: +2, +3, +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.66 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>652.9 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>128 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>139 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>No data</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Chromium has four stable isotopes:</p>
+        <ul>
+            <li><strong>Chromium-52 (⁵²Cr)</strong> - Natural abundance of 83.789%. The most common isotope with 24 protons and 28 neutrons.</li>
+            <li><strong>Chromium-53 (⁵³Cr)</strong> - Natural abundance of 9.501%.</li>
+            <li><strong>Chromium-50 (⁵⁰Cr)</strong> - Natural abundance of 4.345%. Used in radiometric dating with manganese-53.</li>
+            <li><strong>Chromium-54 (⁵⁴Cr)</strong> - Natural abundance of 2.365%.</li>
+        </ul>
+        <p>Chromium also has several radioactive isotopes, with chromium-51 being the most notable:</p>
+        <ul>
+            <li><strong>Chromium-51 (⁵¹Cr)</strong> - Radioactive isotope with half-life of 27.7 days; used in medical diagnostics and industrial tracing</li>
+            <li><strong>Chromium-48 (⁴⁸Cr)</strong> - Short-lived isotope (21.56 hour half-life)</li>
+            <li><strong>Chromium-49 (⁴⁹Cr)</strong> - Short-lived isotope (42.3 minute half-life)</li>
+        </ul>
+        <p>The isotopic ratios of chromium provide important information about early solar system processes and nucleosynthesis.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Stainless Steel</strong> - 10.5-30% chromium provides corrosion resistance; about 85% of chromium use</li>
+            <li><strong>Chrome Plating</strong> - Electroplated chromium provides shiny, corrosion-resistant surface on automotive parts, plumbing fixtures, and tools</li>
+            <li><strong>Alloy Steels</strong> - Tool steels, high-speed steels, and other alloy steels contain chromium for hardness and wear resistance</li>
+            <li><strong>Pigments</strong> - Chrome yellow (lead chromate), chrome green (chromium oxide), and other colored compounds</li>
+            <li><strong>Leather Tanning</strong> - Chromium(III) sulfate converts animal hides into stable leather</li>
+            <li><strong>Wood Preservation</strong> - Chromated copper arsenate (CCA) for pressure-treated lumber (being phased out)</li>
+            <li><strong>Refractories</strong> - Chromite (FeCr₂O₄) for high-temperature furnace linings</li>
+            <li><strong>Catalysts</strong> - Chromium compounds as catalysts in chemical synthesis and polymerization</li>
+            <li><strong>Magnetic Recording Media</strong> - Chromium dioxide for audio tapes</li>
+            <li><strong>Medical Applications</strong> - Chromium-51 for labeling red blood cells and studying gastrointestinal protein loss</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Chromium has controversial but potentially important biological roles:</p>
+        <ul>
+            <li><strong>Glucose Metabolism</strong> - Chromium(III) may enhance insulin action; involved in glucose and lipid metabolism</li>
+            <li><strong>Essentiality Debate</strong> - While chromium is considered an essential trace element by some authorities, others question its essentiality for humans</li>
+            <li><strong>Chromodulin</strong> - Proposed chromium-binding oligopeptide that may amplify insulin signaling</li>
+            <li><strong>Dietary Sources</strong> - Broccoli, grape juice, meat, whole grains, and brewer's yeast; typical intake 20-40 μg/day</li>
+            <li><strong>Recommended Intake</strong> - Adequate Intake: 25-35 μg/day for adults; supplements popular but efficacy debated</li>
+            <li><strong>Deficiency</strong> - Rare; may contribute to impaired glucose tolerance and lipid metabolism</li>
+            <li><strong>Toxicity Contrast</strong> - Chromium(III) is relatively non-toxic and essential/non-essential; Chromium(VI) is highly toxic and carcinogenic</li>
+            <li><strong>Diabetes Research</strong> - Chromium supplements studied for improving glucose control in type 2 diabetes with mixed results</li>
+            <li><strong>Regulation</strong> - Tight regulation between chromium(III) (beneficial) and chromium(VI) (toxic) forms</li>
+        </ul>
+        <p>Chromium's biological role remains an active area of research with ongoing debates about its essentiality and therapeutic value.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Chromium is the 21st most abundant element in Earth's crust (100 ppm). It never occurs as native metal. The only commercially important ore is:</p>
+        <ul>
+            <li><strong>Chromite</strong> - FeCr₂O₄, a spinel group mineral containing chromium(III) oxide</li>
+        </ul>
+        <p>Other chromium minerals include:</p>
+        <ul>
+            <li><strong>Crocoite</strong> - PbCrO₄ (the mineral in which chromium was discovered)</li>
+            <li><strong>Chromite Deposits</strong> - Layered intrusions like the Bushveld Complex (South Africa) and Great Dyke (Zimbabwe)</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Chromium metal is produced through two main processes:</p>
+        <ol>
+            <li><strong>Aluminothermic Process</strong> - Reduction of chromium(III) oxide with aluminum powder (Goldschmidt process)</li>
+            <li><strong>Electrolysis</strong> - Of chromic acid solutions or molten salts</li>
+            <li><strong>Ferrochrome Production</strong> - Reduction of chromite with carbon in electric arc furnace produces ferrochromium for steelmaking</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 30 million tons of chromite ore annually. South Africa produces about 44%, followed by Kazakhstan, India, and Turkey.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Chromium has significant environmental impacts, particularly from hexavalent chromium:</p>
+        <ul>
+            <li><strong>Hexavalent Chromium Pollution</strong> - Cr(VI) is highly toxic, mobile, and carcinogenic; contaminates groundwater from industrial sites</li>
+            <li><strong>Mining Impacts</strong> - Chromite mining produces dust containing Cr(VI); waste rock and tailings can leach chromium</li>
+            <li><strong>Tannery Pollution</strong> - Leather tanning wastewater contains chromium that can contaminate water supplies</li>
+            <li><strong>Superfund Sites</strong> - Many chromium contamination sites are on EPA Superfund list (Hinkley, CA made famous by "Erin Brockovich")</li>
+            <li><strong>Atmospheric Emissions</strong> - Chromium compounds from industrial processes contribute to air pollution</li>
+            <li><strong>Soil Contamination</strong> - Chromium from industrial waste, coal ash, and treated wood can persist in soil</li>
+            <li><strong>Water Treatment</strong> - Reducing Cr(VI) to less toxic Cr(III) is common remediation approach</li>
+            <li><strong>Regulations</strong> - Strict limits on chromium in drinking water (100 μg/L total chromium, with Cr(VI) limits being established)</li>
+            <li><strong>CCA-Treated Wood</strong> - Chromated copper arsenate treated lumber leaches chromium and arsenic, affecting soil and groundwater</li>
+        </ul>
+        <p>Managing chromium pollution, especially Cr(VI), remains a major environmental challenge worldwide.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Chromium was discovered in 1797 by French chemist Louis Nicolas Vauquelin. He was analyzing a bright red mineral from Siberia called Siberian red lead (now known as crocoite, PbCrO₄).</p>
+        <p>Vauquelin produced chromium oxide (CrO₃) by mixing the mineral with potassium carbonate and dissolving the precipitate in acid. In 1798, he isolated chromium metal by heating the oxide with charcoal in a graphite crucible.</p>
+        <p>The name "chromium" comes from the Greek "chroma" meaning color, because chromium compounds exhibit vivid colors: chromium(III) oxide (green), potassium dichromate (orange), lead chromate (yellow), and chrome alum (violet).</p>
+        <p>Industrial production began in the mid-19th century. Chromium plating was invented in 1924 by Columbia University chemist Colin Garfield Fink. The development of stainless steel (containing at least 10.5% chromium) in the early 20th century revolutionized many industries.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Rubies get their red color from chromium impurities - about 1% chromium gives the characteristic red</li>
+            <li>The famous "chrome" on cars is actually a thin layer of chromium electroplated over nickel</li>
+            <li>Chromium's name comes from Greek "chroma" meaning color - fitting since its compounds are almost every color of the rainbow</li>
+            <li>The green color of emeralds also comes from chromium impurities</li>
+            <li>Chromium is so hard that it's used to make ruby and sapphire laser rods</li>
+            <li>The film "Erin Brockovich" was about hexavalent chromium contamination of drinking water in Hinkley, California</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Hexavalent Chromium [Cr(VI)]:</strong> Highly toxic, carcinogenic, and corrosive. Causes lung cancer, nasal septum perforation, skin ulcers, and allergic dermatitis. OSHA PEL: 5 μg/m³ as 8-hour TWA.</p>
+        <p><strong>Trivalent Chromium [Cr(III)]:</strong> Much less toxic, considered an essential nutrient. Still toxic at high doses but far less dangerous than Cr(VI).</p>
+        <p><strong>Chrome Plating Hazards:</strong> Chromic acid baths used in electroplating produce chromate mist; proper ventilation and PPE essential.</p>
+        <p><strong>Welding Stainless Steel:</strong> Produces hexavalent chromium in welding fumes; requires local exhaust ventilation and respiratory protection.</p>
+        <p><strong>Skin Contact:</strong> Chromium compounds can cause allergic contact dermatitis ("chrome ulcers") and skin burns.</p>
+        <p><strong>Environmental Contamination:</strong> Chromium(VI) is highly mobile in groundwater and difficult to remediate. Contaminated sites require extensive cleanup.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, remove contaminated clothing and wash with soap and water. For eye contact, flush with water for 15 minutes. Seek medical attention.</p>
+        <p><strong>Medical Monitoring:</strong> Workers with chromium exposure require regular medical surveillance including lung function tests and nasal examinations.</p>
+        <p><strong>Regulatory Compliance:</strong> Strict regulations govern chromium exposure in workplace and environment. Proper engineering controls and PPE are mandatory.</p>
+    </div>
+</body>
+</html>
