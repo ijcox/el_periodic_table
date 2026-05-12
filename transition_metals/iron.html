@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">26</div>
+            <div class="symbol-large">Fe</div>
+        </div>
+        <div class="element-title">
+            <h1>Iron</h1>
+            <div class="element-subtitle">Transition Metal • Group 8 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>26</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>55.845 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d⁶ 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Iron is a lustrous, ductile, malleable, silver-gray metal. It is the fourth most abundant element in Earth's crust and the most abundant element by mass on Earth, forming much of Earth's outer and inner core. Iron is the most widely used of all metals, comprising over 90% of worldwide metal production.</p>
+        <p>Iron has been used since ancient times, with the Iron Age beginning around 1200 BCE. The name "iron" comes from the Anglo-Saxon "iren" and earlier from the Celtic "isarnon." The chemical symbol Fe comes from the Latin "ferrum." Iron's importance in history is so profound that entire historical periods are named after it.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1538°C (2800°F, 1811 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2862°C (5182°F, 3134 K)</td>
+            </tr>
+            <tr>
+                <td>Density (α-iron)</td>
+                <td>7.874 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>6.98 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.449 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>13.81 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>340 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>4.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -2, -1, 0, +1, +2, +3, +4, +5, +6, +7 (most common: +2, +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.83 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>762.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>126 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>132 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>No data</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Iron has several allotropic forms that change with temperature:</p>
+        <ul>
+            <li><strong>Alpha Iron (α-Fe)</strong> - Body-centered cubic (bcc); ferromagnetic; stable below 912°C; relatively soft and ductile</li>
+            <li><strong>Gamma Iron (γ-Fe)</strong> - Face-centered cubic (fcc); paramagnetic; stable between 912°C and 1394°C; can dissolve more carbon (basis of steel heat treatment)</li>
+            <li><strong>Delta Iron (δ-Fe)</strong> - Body-centered cubic (bcc); stable between 1394°C and 1538°C (melting point)</li>
+            <li><strong>Epsilon Iron (ε-Fe)</strong> - Hexagonal close-packed (hcp); forms at very high pressures (over 10 GPa)</li>
+        </ul>
+        <p>These phase transitions are crucial for heat treatment of steel. The transformation from gamma to alpha iron allows carbon to be trapped in the structure, creating the hardened steel used in tools and machinery.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Construction and Infrastructure</strong> - Structural steel for buildings, bridges, and infrastructure; reinforced concrete</li>
+            <li><strong>Transportation</strong> - Automobiles, ships, trains, and aircraft components</li>
+            <li><strong>Machinery and Tools</strong> - Industrial machinery, agricultural equipment, hand tools, and machine tools</li>
+            <li><strong>Containers and Packaging</li> - Steel cans, shipping containers, and storage tanks</li>
+            <li><strong>Household Items</strong> - Appliances, furniture, cutlery, and cookware</li>
+            <li><strong>Weapons and Armor</strong> - Historically and currently for military applications</li>
+            <li><strong>Magnets</strong> - Iron is ferromagnetic and used in electromagnets, electric motors, and generators</li>
+            <li><strong>Catalysts</strong> - Iron compounds as catalysts in chemical industry (Haber process for ammonia)</li>
+            <li><strong>Pigments</strong> - Iron oxides for paints, coatings, and cosmetics (ochre, umber, sienna)</li>
+            <li><strong>Medical Applications</strong> - Iron supplements for anemia; magnetic iron oxide nanoparticles for MRI contrast and drug delivery</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Iron is essential for almost all living organisms and plays crucial roles in biology:</p>
+        <ul>
+            <li><strong>Oxygen Transport</strong> - Hemoglobin in red blood cells carries oxygen from lungs to tissues; myoglobin stores oxygen in muscles</li>
+            <li><strong>Electron Transport</strong> - Cytochromes in electron transport chain for cellular respiration and ATP production</li>
+            <li><strong>Enzyme Cofactor</strong> - Component of many enzymes including catalase, peroxidase, and nitrogenase</li>
+            <li><strong>DNA Synthesis</strong> - Ribonucleotide reductase requires iron for DNA synthesis</li>
+            <li><strong>Immune Function</strong> - Required for proper immune system function; iron withholding is antimicrobial defense</li>
+            <li><strong>Brain Development</strong> - Essential for neurodevelopment and cognitive function</li>
+            <li><strong>Human Requirements</strong> - Adults need 8-18 mg/day (more for menstruating women); rich sources include red meat, poultry, fish, legumes, and fortified foods</li>
+            <li><strong>Iron Homeostasis</strong> - Tightly regulated by absorption control (hepcidin), storage (ferritin), and transport (transferrin)</li>
+            <li><strong>Deficiency (Anemia)</strong> - Most common nutritional deficiency worldwide; causes fatigue, weakness, impaired immunity, and cognitive issues</li>
+            <li><strong>Toxicity (Hemochromatosis)</strong> - Iron overload damages liver, heart, pancreas, and other organs</li>
+        </ul>
+        <p>Iron is so essential that life on Earth would be impossible without it, particularly for oxygen-based life forms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Iron is the fourth most abundant element in Earth's crust (5.6% by weight) and the most abundant element by mass on Earth, forming much of the planet's outer and inner core. It occurs in:</p>
+        <ul>
+            <li><strong>Hematite</strong> - Fe₂O₃, the most important iron ore (about 70% iron)</li>
+            <li><strong>Magnetite</strong> - Fe₃O₄, magnetic iron ore (about 72% iron)</li>
+            <li><strong>Goethite and Limonite</strong> - FeO(OH)·nH₂O, hydrated iron oxides</li>
+            <li><strong>Siderite</strong> - FeCO₃, iron carbonate</li>
+            <li><strong>Taconite</strong> - Low-grade iron formation containing magnetite and hematite</li>
+            <li><strong>Meteorites</strong> - Iron-nickel alloys in iron meteorites</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Iron is produced in blast furnaces:</p>
+        <ol>
+            <li>Iron ore, coke (carbon), and limestone are fed into blast furnace</li>
+            <li>Coke burns to produce carbon monoxide which reduces iron oxide to iron</li>
+            <li>Limestone removes impurities as slag</li>
+            <li>Molten iron (pig iron) is tapped from bottom of furnace</li>
+            <li>Pig iron is refined into steel in basic oxygen furnace or electric arc furnace</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 1.8 billion tons of crude steel annually. China produces about 57%, followed by India, Japan, and United States.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Iron and steel production have significant environmental impacts:</p>
+        <ul>
+            <li><strong>Carbon Emissions</strong> - Steel production accounts for about 7-9% of global CO₂ emissions (from coke and process emissions)</li>
+            <li><strong>Energy Intensive</strong> - High temperatures (1500°C+) require substantial energy, often from fossil fuels</li>
+            <li><strong>Air Pollution</strong> - Releases particulates, sulfur oxides, nitrogen oxides, and volatile organic compounds</li>
+            <li><strong>Water Usage and Pollution</strong> - Large water requirements; wastewater contains suspended solids, oil, and heavy metals</li>
+            <li><strong>Mining Impacts</strong> - Open-pit iron mining causes landscape alteration, habitat loss, and water pollution</li>
+            <li><strong>Waste Generation</strong> - Slag, dust, sludge, and other byproducts requiring disposal</li>
+            <li><strong>Recycling Benefits</strong> - Steel is 100% recyclable; recycling uses 60-75% less energy than primary production</li>
+            <li><strong>Corrosion</strong> - Iron corrosion (rusting) causes economic losses but is natural process</li>
+            <li><strong>Innovation</strong> - Development of hydrogen-based steelmaking and carbon capture technologies to reduce environmental impact</li>
+        </ul>
+        <p>Transitioning to greener steel production is crucial for meeting climate goals while maintaining essential infrastructure.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Iron has been known and used since prehistoric times. The earliest known iron artifacts, from around 3200 BCE, were made from meteoric iron and were highly prized. The Iron Age began around 1200 BCE when iron smelting technology spread.</p>
+        <p>Ancient civilizations including the Hittites, Egyptians, and Chinese developed ironworking techniques. The Romans improved iron production and used it extensively for tools, weapons, and construction.</p>
+        <p>In the Middle Ages, water-powered hammers and blast furnaces were developed in Europe. The Industrial Revolution saw major advances with Henry Bessemer's converter (1856) allowing mass production of steel, and later the open hearth furnace and basic oxygen process.</p>
+        <p>In the 20th century, continuous casting and electric arc furnaces revolutionized steel production. Today, iron remains the backbone of industrial civilization, with ongoing innovations in production methods and applications.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Earth's core is mostly iron - about 85% of the core's weight is iron, generating our magnetic field</li>
+            <li>The Eiffel Tower was built from puddled iron, a form of wrought iron, and weighs about 10,100 tons</li>
+            <li>Iron is the heaviest element formed in normal stellar nucleosynthesis - all heavier elements require supernovae</li>
+            <li>Your blood contains about 3-4 grams of iron - mostly in hemoglobin</li>
+            <li>The word "iron" comes from the same root as "ire" (anger) because of iron's association with Mars, the god of war</li>
+            <li>Steel is iron with 0.2-2.1% carbon - this tiny amount of carbon makes iron 1000 times stronger</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Iron Dust and Fumes:</strong> Inhalation of iron oxide dust or fumes causes siderosis (iron lung), a benign pneumoconiosis. Welding fumes contain toxic compounds.</p>
+        <p><strong>Fire and Explosion Hazard:</strong> Fine iron powder (pyrophoric iron) can ignite spontaneously in air. Iron dust explosions can occur in enclosed spaces.</p>
+        <p><strong>Chemical Hazards:</strong> Iron reacts with acids producing hydrogen gas, which can form explosive mixtures. Some iron compounds are toxic or carcinogenic.</p>
+        <p><strong>Corrosion:</strong> Iron rusting weakens structures; regular inspection and maintenance of iron/steel structures is essential for safety.</p>
+        <p><strong>Nutritional Toxicity:</strong> Iron overdose is leading cause of fatal poisoning in children under 6. Symptoms: vomiting, diarrhea, shock, liver failure.</p>
+        <p><strong>Occupational Health:</strong> Steelworkers face hazards from heat, noise, heavy machinery, and chemical exposures. Proper PPE and safety protocols are essential.</p>
+        <p><strong>Environmental Contamination:</strong> Acid mine drainage from iron mining releases heavy metals and acidifies water systems.</p>
+        <p><strong>First Aid:</strong> For iron compound ingestion, do not induce vomiting; seek immediate medical attention. For iron dust inhalation, move to fresh air.</p>
+        <p><strong>Recycling Safety:</strong> Scrap metal processing involves hazards from sharp edges, heavy objects, and potential contaminants (asbestos, lead, etc.).</p>
+    </div>
+</body>
+</html>
