@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antimony</title>
+    <style>
+        /* Antimony is a metalloid */
+        .metalloid { background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #d4a574;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .info-card h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #d4a574;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">51</div>
+            <div class="symbol-large">Sb</div>
+        </div>
+        <div class="element-title">
+            <h1>Antimony</h1>
+            <div class="element-subtitle">Metalloid • Group 15 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>51</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>121.760 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d¹⁰ 5s² 5p³</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Antimony is a lustrous gray metalloid that exists in several allotropic forms. The most stable form is metallic antimony, which is brittle, flaky, and crystalline. Antimony is a poor conductor of heat and electricity. It is often found in nature as the sulfide mineral stibnite (Sb₂S₃), which has been used since ancient times as a cosmetic and medicine. Antimony compounds have been known for millennia, with one of the earliest known uses being kohl, an ancient eye cosmetic.</p>
+        <p>The name "antimony" comes from the Greek "anti" (against) and "monos" (alone), meaning "not alone," referring to its tendency to be found in combination with other elements. The chemical symbol "Sb" comes from the Latin "stibium," which in turn comes from the Greek "stibi," meaning "mark," referring to its use as an eyeliner. Antimony was recognized as an element in the 17th century, though its compounds had been used for thousands of years.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>630.63°C (1167.13°F, 903.78 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1587°C (2889°F, 1860 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>6.697 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.207 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>19.79 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>193.43 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>24.4 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>417 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>55 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -2, -1, 0, +1, +2, +3, +4, +5 (most common: +3, +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.05 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>834 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>145 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>139 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>206 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Rhombohedral</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Antimony has two stable isotopes:</p>
+        <ul>
+            <li><strong>Antimony-121 (¹²¹Sb)</strong> - 57.21% abundance</li>
+            <li><strong>Antimony-123 (¹²³Sb)</strong> - 42.79% abundance</li>
+        </ul>
+        <p>Antimony has several radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Antimony-124 (¹²⁴Sb)</strong> - Radioactive isotope with half-life of 60.20 days; used as gamma source and in neutron sources with beryllium</li>
+            <li><strong>Antimony-125 (¹²⁵Sb)</strong> - Radioactive isotope with half-life of 2.75856 years</li>
+            <li><strong>Antimony-122 (¹²²Sb)</strong> - Radioactive isotope with half-life of 2.7238 days</li>
+            <li><strong>Antimony-126 (¹²⁶Sb)</strong> - Radioactive isotope with half-life of 12.35 days</li>
+        </ul>
+        <p>Antimony-124 is used in some industrial applications and as a tracer in scientific research.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Flame Retardants</strong> - Antimony trioxide as synergist with halogenated flame retardants in plastics, textiles, and electronics</li>
+            <li><strong>Lead-Acid Batteries</strong> - Antimony hardens lead grids in car batteries (declining as maintenance-free batteries use calcium instead)</li>
+            <li><strong>Alloys</strong> - Lead-antimony alloys for bullets, solder, pewter, and bearings; tin-antimony-copper alloys (Britannia metal, pewter)</li>
+            <li><strong>Semiconductors</strong> - Antimony as dopant in silicon for n-type semiconductors; indium antimonide in infrared detectors</li>
+            <li><strong>Pigments</strong> - Antimony compounds in yellow pigments for paints, plastics, and ceramics (Naples yellow)</li>
+            <li><strong>Ceramics and Glass</strong> - Antimony oxide as fining agent to remove bubbles from glass; opacifier in ceramics</li>
+            <li><strong>Catalysts</strong> - Antimony compounds as catalysts in polyester production and other chemical processes</li>
+            <li><strong>Medicine</strong> - Antimony compounds historically used to treat parasitic infections (schistosomiasis, leishmaniasis); still used in some tropical diseases</li>
+            <li><strong>Small Arms Ammunition</strong> - Antimony-hardened lead for bullets</li>
+            <li><strong>Fireworks</strong> - Antimony sulfide for glitter effects in fireworks</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Antimony has no known essential biological role and is toxic:</p>
+        <ul>
+            <li><strong>Medicinal Use</strong> - Antimony compounds (tartar emetic, sodium stibogluconate, meglumine antimoniate) used to treat parasitic diseases:
+                <ul>
+                    <li>Leishmaniasis (kala-azar, cutaneous leishmaniasis)</li>
+                    <li>Schistosomiasis (bilharzia)</li>
+                </ul>
+            </li>
+            <li><strong>Toxicity</strong> - Antimony compounds toxic, especially trivalent forms. Symptoms similar to arsenic poisoning: nausea, vomiting, diarrhea, cardiac effects</li>
+            <li><strong>Mechanism</strong> - Binds to sulfhydryl groups in enzymes, disrupting cellular respiration</li>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Carcinogenicity</strong> - Antimony trioxide possibly carcinogenic to humans (IARC Group 2B)</li>
+            <li><strong>Environmental Exposure</strong> - From industrial emissions, contaminated water, and consumer products</li>
+            <li><strong>Occupational Exposure</strong> - Workers in smelting, mining, battery manufacturing, and flame retardant production at risk</li>
+            <li><strong>Historical Use</strong> - Antimony compounds used as emetics and purgatives in Renaissance medicine; antimony cups believed to have medicinal properties</li>
+            <li><strong>Biomarkers</strong> - Antimony levels in urine, blood, and hair used to assess exposure</li>
+        </ul>
+        <p>Antimony's primary biological significance is as a toxic element with some therapeutic applications in treating parasitic diseases.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Antimony is a relatively rare element (0.2 ppm in Earth's crust). It occurs in:</p>
+        <ul>
+            <li><strong>Stibnite</strong> - Sb₂S₃ (antimony trisulfide, the principal commercial source)</li>
+            <li><strong>Valentinite</strong> - Sb₂O₃ (antimony trioxide)</li>
+            <li><strong>Cervantite</strong> - Sb₂O₄ (antimony tetroxide)</li>
+            <li><strong>As Byproduct</strong> - Often recovered as byproduct of lead, silver, and gold mining</li>
+            <li><strong>In Seawater</strong> - 0.0002 mg/L concentration</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Antimony is extracted primarily from stibnite:</p>
+        <ol>
+            <li><strong>Mining</strong> - Underground mining of stibnite veins</li>
+            <li><strong>Concentration</strong> - Ore crushed and concentrated by flotation or gravity methods</li>
+            <li><strong>Roasting</strong> - Stibnite roasted to produce antimony oxide:
+                <ul>
+                    <li>2Sb₂S₃ + 9O₂ → 2Sb₂O₃ + 6SO₂</li>
+                </ul>
+            </li>
+            <li><strong>Reduction</strong> - Antimony oxide reduced with carbon:
+                <ul>
+                    <li>2Sb₂O₃ + 3C → 4Sb + 3CO₂</li>
+                </ul>
+            </li>
+            <li><strong>Alternative Process</strong> - Direct reduction of stibnite with iron:
+                <ul>
+                    <li>Sb₂S₃ + 3Fe → 2Sb + 3FeS</li>
+                </ul>
+            </li>
+            <li><strong>Refining</strong> - Crude antimony refined by electrolysis or chemical methods</li>
+            <li><strong>Secondary Production</strong> - Significant amounts recovered from lead-acid batteries and other scrap</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 150,000 tons annually. China produces about 80%, followed by Russia, Tajikistan, and Bolivia.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Antimony mining and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Waste</strong> - Antimony mining produces tailings that can contaminate soil and water</li>
+            <li><strong>Sulfur Dioxide Emissions</strong> - Roasting stibnite produces SO₂, a major air pollutant unless captured</li>
+            <li><strong>Water Contamination</strong> - Antimony from mining and industrial activities can contaminate groundwater</li>
+            <li><strong>Flame Retardants</strong> - Antimony trioxide in consumer products can be released during use and disposal</li>
+            <li><strong>Battery Recycling</strong> - Lead-acid battery recycling can release antimony if not properly controlled</li>
+            <li><strong>Soil Contamination</strong> - Historical mining sites continue to leach antimony into environment</li>
+            <li><strong>Atmospheric Transport</strong> - Fine antimony particles can be transported long distances in atmosphere</li>
+            <li><strong>Bioaccumulation</strong> - Antimony can accumulate in some organisms, though less than other heavy metals</li>
+            <li><strong>Regulations</strong> - Antimony regulated in drinking water (EU: 5 μg/L, US EPA: 6 μg/L)</li>
+            <li><strong>Remediation</strong> - Phytoremediation and chemical treatments for antimony-contaminated sites</li>
+        </ul>
+        <p>Antimony's environmental impact is significant, particularly from mining and its use in flame-retardant materials.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Antimony has been known since ancient times. Stibnite (Sb₂S₃) was used in ancient Egypt as early as 3100 BC as a cosmetic (kohl) for darkening eyebrows and eyelashes. The Ebers Papyrus (c. 1550 BC) mentions antimony compounds as medicines.</p>
+        <p>In the ancient world, antimony was confused with lead. The Greek word "stibi" meant "mark," referring to its use as eyeliner. The Latin "stibium" became the chemical symbol "Sb." The name "antimony" may come from the Greek "anti-monos" (not alone), or possibly from the Arabic "al-ithmid."</p>
+        <p>In the Middle Ages, antimony was studied by alchemists. Basil Valentine (possibly a mythical figure) wrote about antimony in the 15th century. Antimony compounds were used as emetics and purgatives. Antimony cups were believed to have medicinal properties when wine was left in them overnight.</p>
+        <p>Antimony was recognized as an element in the 17th century. Its industrial importance grew in the 19th century with applications in alloys, batteries, and later, flame retardants. Today, China dominates antimony production, controlling most of the world's supply.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>The chemical symbol "Sb" comes from the Latin "stibium," which comes from the Greek word for "mark" - it was used as eyeliner</li>
+            <li>Antimony was sometimes called "the monk-killer" because medieval monks used it as a laxative, sometimes fatally</li>
+            <li>Antimony expands when it solidifies, like water and bismuth</li>
+            <li>Some alchemists called antimony "the wolf of metals" because it "devours" other metals when alloyed with them</li>
+            <li>Antimony is used to treat some parasitic diseases that affect millions of people in tropical countries</li>
+            <li>China produces about 80% of the world's antimony</li>
+            <li>Antimony gives a glitter effect to some types of fireworks</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Toxicity:</strong> Antimony compounds toxic, especially trivalent forms. Symptoms: nausea, vomiting, diarrhea, abdominal pain, cardiac effects. Chronic exposure causes lung, heart, and gastrointestinal problems.</p>
+        <p><strong>Antimony Trioxide:</strong> Possible human carcinogen (IARC Group 2B). Inhalation causes lung cancer in rats.</p>
+        <p><strong>Stibine (SbH₃):</strong> Extremely toxic gas similar to arsine; causes hemolytic anemia, kidney damage. Formed when antimony contacts acids or when batteries are overcharged.</p>
+        <p><strong>Inhalation:</strong> Antimony dust and fumes cause respiratory irritation, pneumoconiosis ("antimony pneumoconiosis"). OSHA PEL: 0.5 mg/m³ as Sb.</p>
+        <p><strong>Skin Contact:</strong> Antimony compounds can cause skin irritation and dermatitis.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For ingestion, do NOT induce vomiting; give water or milk. Seek immediate medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, and appropriate respiratory protection when handling antimony compounds. Use local exhaust ventilation.</p>
+        <p><strong>Storage:</strong> Store away from acids to prevent stibine formation. Keep in well-ventilated area.</p>
+        <p><strong>Fire Fighting:</strong> For antimony fires, use dry chemical, sand, or special metal fire extinguishers. Water may cause violent reaction.</p>
+        <p><strong>Medical Use:</strong> Therapeutic antimony compounds for parasitic diseases have narrow therapeutic window; require medical supervision.</p>
+    </div>
+</body>
+</html>
