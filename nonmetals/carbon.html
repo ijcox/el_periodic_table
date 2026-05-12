@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #9b59b6;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .info-card h3 {
+            color: #9b59b6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">6</div>
+            <div class="symbol-large">C</div>
+        </div>
+        <div class="element-title">
+            <h1>Carbon</h1>
+            <div class="element-subtitle">Nonmetal • Group 14 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>6</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>12.011 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s² 2p²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Carbon is a chemical element that forms more compounds than all other elements combined. It is the basis of organic chemistry and life as we know it. Carbon exists in several allotropes including graphite, diamond, amorphous carbon, and fullerenes, each with dramatically different properties.</p>
+        <p>Carbon has been known since ancient times in the form of charcoal and soot. The name "carbon" comes from the Latin word "carbo" meaning coal or charcoal. Carbon is the fourth most abundant element in the universe by mass and the second most abundant element in the human body.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Sublimation Point (graphite)</td>
+                <td>3915°C (7079°F, 4188 K)</td>
+            </tr>
+            <tr>
+                <td>Triple Point</td>
+                <td>4600 K, 10.8 MPa</td>
+            </tr>
+            <tr>
+                <td>Density (graphite)</td>
+                <td>2.267 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (diamond)</td>
+                <td>3.515 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness (diamond)</td>
+                <td>10.0</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness (graphite)</td>
+                <td>1-2</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity (diamond)</td>
+                <td>900-2320 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Conductivity (graphite)</td>
+                <td>2-3 × 10⁵ S/m (parallel to layers)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -3, -2, -1, 0, +1, +2, +3, +4 (most common)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.55 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1086.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>70 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>76 pm (sp³), 73 pm (sp²), 69 pm (sp)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>170 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Carbon exhibits remarkable allotropism, existing in different structural forms:</p>
+        <ul>
+            <li><strong>Graphite</strong> - Most stable form under standard conditions; soft, black, slippery; good electrical conductor; layered structure with sp² hybridization</li>
+            <li><strong>Diamond</strong> - Extremely hard, transparent crystal; excellent thermal conductor; poor electrical conductor; tetrahedral sp³ hybridization</li>
+            <li><strong>Amorphous Carbon</strong> - Includes charcoal, coke, soot, and activated carbon; lacks long-range crystalline structure</li>
+            <li><strong>Fullerenes</strong> - Molecules composed entirely of carbon in hollow spheres (buckyballs), tubes (nanotubes), or other shapes</li>
+            <li><strong>Graphene</strong> - Single layer of graphite; two-dimensional material with exceptional strength and electrical properties</li>
+            <li><strong>Lonsdaleite</strong> - Hexagonal diamond formed under high pressure; found in meteorite impact sites</li>
+            <li><strong>Carbon Nanofoam</strong> - Low-density cluster assembly of carbon atoms</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Organic Chemistry</strong> - Basis of all organic compounds including fuels, plastics, pharmaceuticals, and biochemicals</li>
+            <li><strong>Energy Production</strong> - Coal, petroleum, and natural gas as fossil fuels; carbon electrodes in batteries</li>
+            <li><strong>Materials Science</strong> - Steel production (carbon steel), carbon fiber composites, carbon nanotubes</li>
+            <li><strong>Electronics</strong> - Graphite electrodes, carbon resistors, diamond heat sinks, graphene transistors</li>
+            <li><strong>Jewelry</strong> - Diamond gemstones valued for brilliance and hardness</li>
+            <li><strong>Environmental Applications</strong> - Activated carbon for water purification and air filtration</li>
+            <li><strong>Writing/Drawing</strong> - Graphite in pencils, charcoal for art</li>
+            <li><strong>Nuclear Technology</strong> - Graphite as neutron moderator in nuclear reactors</li>
+            <li><strong>Medicine</strong> - Carbon-14 dating, carbon nanotubes in drug delivery</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Carbon is the fundamental element of life on Earth:</p>
+        <ul>
+            <li><strong>Biochemical Basis</strong> - All known life is carbon-based; forms backbone of proteins, nucleic acids, carbohydrates, and lipids</li>
+            <li><strong>Human Composition</strong> - Carbon constitutes about 18% of human body mass (second only to oxygen)</li>
+            <li><strong>Photosynthesis</strong> - Plants convert atmospheric CO₂ into organic compounds using sunlight</li>
+            <li><strong>Cellular Respiration</strong> - Organisms release energy by oxidizing carbon compounds</li>
+            <li><strong>Carbon Cycle</strong> - Natural process moving carbon between atmosphere, oceans, soil, and living organisms</li>
+            <li><strong>Isotopes in Biology</strong> - Carbon-12 (98.9%), Carbon-13 (1.1%) stable; Carbon-14 (trace) radioactive for dating</li>
+            <li><strong>Medical Applications</strong> - Carbon compounds in pharmaceuticals; activated carbon for poison treatment</li>
+        </ul>
+        <p>Carbon's ability to form four stable covalent bonds and catenate (form chains with other carbon atoms) makes it uniquely suited for the complexity required by living systems.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Carbon is the 15th most abundant element in Earth's crust (200 ppm) and fourth most abundant in the universe. It occurs in:</p>
+        <ul>
+            <li><strong>Elemental Forms</strong> - Graphite, diamond, amorphous carbon</li>
+            <li><strong>Inorganic Compounds</strong> - Carbonates in minerals (limestone, dolomite, marble)</li>
+            <li><strong>Organic Deposits</strong> - Coal, petroleum, natural gas</li>
+            <li><strong>Atmosphere</strong> - Carbon dioxide (0.04%), methane, carbon monoxide</li>
+            <li><strong>Oceans</strong> - Dissolved carbon dioxide and carbonates</li>
+            <li><strong>Living Organisms</strong> - All biomass contains carbon</li>
+        </ul>
+        <p><strong>Production Methods:</strong> Industrial production varies by allotrope - graphite mined, diamonds mined or synthesized under high pressure/high temperature, fullerenes produced by laser ablation or arc discharge.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Carbon compounds play central roles in environmental issues:</p>
+        <ul>
+            <li><strong>Climate Change</strong> - Carbon dioxide and methane as major greenhouse gases from fossil fuel combustion</li>
+            <li><strong>Ocean Acidification</strong> - Increased atmospheric CO₂ dissolves in oceans, lowering pH</li>
+            <li><strong>Air Pollution</strong> - Carbon monoxide, soot, and volatile organic compounds affect air quality</li>
+            <li><strong>Deforestation</strong> - Reduces carbon sequestration by forests</li>
+            <li><strong>Carbon Sequestration</strong> - Technologies to capture and store atmospheric CO₂</li>
+            <li><strong>Renewable Alternatives</strong> - Biofuels, carbon-neutral energy sources</li>
+        </ul>
+        <p>Managing the carbon cycle is crucial for mitigating climate change while maintaining carbon's essential roles in industry and life.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Carbon in various forms has been known since antiquity. Charcoal and soot were used by early humans for drawing and as reducing agents in metal extraction. Diamonds were valued in India as early as 2500 BCE.</p>
+        <p>In 1722, René Antoine Ferchault de Réaumur demonstrated that iron transforms into steel through absorption of carbon. Carl Wilhelm Scheele showed in 1772 that graphite burns to form carbon dioxide. In 1779, Scheele established that graphite was a form of carbon rather than lead.</p>
+        <p>The recognition of carbon as an element is credited to Antoine Lavoisier in 1789. The discovery of fullerenes (buckyballs) by Harry Kroto, Robert Curl, and Richard Smalley in 1985 earned them the 1996 Nobel Prize in Chemistry. Andre Geim and Konstantin Novoselov isolated graphene in 2004, winning the 2010 Nobel Prize in Physics.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Carbon forms more compounds than all other elements combined (over 10 million known)</li>
+            <li>Diamond and graphite are both pure carbon but have opposite properties due to different atomic arrangements</li>
+            <li>Carbon nanotubes are about 100 times stronger than steel at one-sixth the weight</li>
+            <li>The carbon in your body was formed in stars through nuclear fusion</li>
+            <li>Graphite can conduct electricity because each carbon atom has a free electron</li>
+            <li>The Hope Diamond and other famous gems are crystallized forms of carbon</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Dust Hazards:</strong> Carbon black and other fine carbon powders can form explosive mixtures with air. Inhalation can cause respiratory irritation.</p>
+        <p><strong>Gas Hazards:</strong> Carbon monoxide (CO) is odorless, colorless, and highly toxic, binding to hemoglobin 200 times more strongly than oxygen.</p>
+        <p><strong>Asphyxiation Risk:</strong> Carbon dioxide in confined spaces can displace oxygen, causing suffocation. High concentrations (>5%) are dangerous.</p>
+        <p><strong>Fire Hazard:</strong> Most carbon allotropes are combustible. Graphite dust is flammable; activated carbon can spontaneously combust.</p>
+        <p><strong>Carcinogenicity:</strong> Some carbon compounds (benzene, polycyclic aromatic hydrocarbons) are carcinogenic. Carbon black is classified as possibly carcinogenic.</p>
+        <p><strong>Environmental Impact:</strong> Carbon dioxide emissions contribute to climate change; carbon particulates (soot) affect air quality and health.</p>
+    </div>
+</body>
+</html>
