@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #00bcd4;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .info-card h3 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #00bcd4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">18</div>
+            <div class="symbol-large">Ar</div>
+        </div>
+        <div class="element-title">
+            <h1>Argon</h1>
+            <div class="element-subtitle">Noble Gas • Group 18 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>18</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>39.948 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s² 3p⁶</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Argon is a colorless, odorless, tasteless, non-toxic, inert monatomic gas. It is the third most abundant gas in Earth's atmosphere (0.934% by volume), making it more than twice as abundant as water vapor and 23 times as abundant as carbon dioxide. Argon is the most abundant noble gas on Earth.</p>
+        <p>Argon was discovered in 1894 by Lord Rayleigh and Sir William Ramsay, who noticed that nitrogen extracted from air was denser than nitrogen obtained from chemical compounds. The name "argon" comes from the Greek word "argos" meaning "inactive" or "lazy," referring to its chemical inertness.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-189.34°C (-308.81°F, 83.81 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-185.85°C (-302.53°F, 87.30 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>1.784 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>1.40 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>-122.3°C, 4.86 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>1.18 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>6.43 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Triple Point</td>
+                <td>-189.34°C, 68.9 kPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0 (noble gas - extremely unreactive)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>No data (Pauling scale) - noble gas</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1520.6 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>71 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>106 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>188 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Argon has three stable isotopes:</p>
+        <ul>
+            <li><strong>Argon-40 (⁴⁰Ar)</strong> - Natural abundance of 99.600%. Produced by radioactive decay of potassium-40 in Earth's crust. Used in potassium-argon dating.</li>
+            <li><strong>Argon-36 (³⁶Ar)</strong> - Natural abundance of 0.334%. Primordial isotope produced in stars.</li>
+            <li><strong>Argon-38 (³⁸Ar)</strong> - Natural abundance of 0.066%. Primordial isotope produced in stars.</li>
+        </ul>
+        <p>Argon also has several radioactive isotopes, with argon-39 being the most notable:</p>
+        <ul>
+            <li><strong>Argon-39 (³⁹Ar)</strong> - Cosmogenic radionuclide with half-life of 269 years; used in groundwater dating and ocean circulation studies</li>
+            <li><strong>Argon-37 (³⁷Ar)</strong> - Short-lived isotope (35.04 day half-life); produced in nuclear explosions</li>
+            <li><strong>Argon-42 (⁴²Ar)</strong> - Short-lived isotope (32.9 year half-life)</li>
+        </ul>
+        <p>The isotopic composition of argon in Earth's atmosphere differs from that in the universe due to the continuous production of argon-40 from potassium-40 decay.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Welding and Metal Fabrication</strong> - Inert shielding gas for TIG (tungsten inert gas) and MIG (metal inert gas) welding</li>
+            <li><strong>Lighting</strong> - Fills incandescent and fluorescent light bulbs to prevent oxidation of filaments</li>
+            <li><strong>Scientific Research</strong> - Inert atmosphere for handling air-sensitive compounds; liquid argon for particle detectors</li>
+            <li><strong>Food and Beverage Industry</strong> - Modified atmosphere packaging to preserve freshness by displacing oxygen</li>
+            <li><strong>Window Insulation</strong> - Fills the space between double- and triple-pane windows for improved thermal insulation</li>
+            <li><strong>Fire Suppression</strong> - Inert gas fire suppression systems for protecting valuable equipment and documents</li>
+            <li><strong>Scuba Diving</strong> - Argon used to inflate drysuits due to its low thermal conductivity</li>
+            <li><strong>Geochronology</strong> - Potassium-argon and argon-argon dating methods for determining ages of rocks</li>
+            <li><strong>Semiconductor Manufacturing</strong> - Inert atmosphere for crystal growth and processing</li>
+            <li><strong>Medical Applications</strong> - Argon plasma coagulation for surgical procedures; cryosurgery with liquid argon</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Argon has no known biological role and is physiologically inert:</p>
+        <ul>
+            <li><strong>Non-toxic</strong> - Argon is non-toxic and does not participate in any known biological processes</li>
+            <li><strong>Asphyxiation Risk</strong> - Like other inert gases, argon can displace oxygen in confined spaces, posing an asphyxiation hazard</li>
+            <li><strong>Medical Use</strong> - Argon plasma coagulation (APC) uses ionized argon gas to control bleeding during endoscopic procedures</li>
+            <li><strong>Neuroprotective Effects</strong> - Some research suggests argon may have neuroprotective properties in certain medical conditions</li>
+            <li><strong>Anesthesia</strong> - Argon has anesthetic properties at high pressures, though not used clinically</li>
+            <li><strong>Environmental Presence</strong> - As 0.934% of atmosphere, constantly inhaled and exhaled without effect</li>
+            <li><strong>Research Applications</strong> - Used in some physiological studies as an inert tracer gas</li>
+        </ul>
+        <p>Due to its chemical inertness, argon poses no direct toxicological risks beyond displacement of oxygen in confined spaces.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Argon is the third most abundant gas in Earth's atmosphere (0.934% by volume, 1.288% by mass). It also occurs in:</p>
+        <ul>
+            <li><strong>Earth's Crust</strong> - Produced continuously by radioactive decay of potassium-40 in rocks</li>
+            <li><strong>Natural Gas</strong> - Some natural gas fields contain up to 9% argon</li>
+            <li><strong>Ocean Water</strong> - Dissolved argon in seawater</li>
+            <li><strong>Space</strong> - Produced in stars through nucleosynthesis; solar argon abundance is much lower than on Earth</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Most commercial argon is produced by fractional distillation of liquefied air. Because its boiling point (-186°C) is between those of oxygen (-183°C) and nitrogen (-196°C), it accumulates in the middle of air separation columns.</p>
+        <p><strong>Global Production:</strong> Annual production exceeds 700,000 tons, making it the most produced noble gas. Major producers include the United States, Russia, and European countries.</p>
+        <p><strong>Interesting Fact:</strong> The argon in Earth's atmosphere is constantly being produced by radioactive decay of potassium-40 in rocks at a rate of about 11 tons per second.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Argon has minimal environmental impact due to its inert nature and atmospheric stability:</p>
+        <ul>
+            <li><strong>Non-polluting</strong> - Argon does not react with other substances in the environment and does not contribute to pollution</li>
+            <li><strong>Atmospheric Stability</strong> - Remains in the atmosphere indefinitely; does not break down into harmful compounds</li>
+            <li><strong>Greenhouse Effect</strong> - Does not contribute to global warming as it is monatomic and transparent to infrared radiation</li>
+            <li><strong>Ozone Layer</strong> - Does not affect the ozone layer</li>
+            <li><strong>Energy Consumption</strong> - Production requires energy-intensive air liquefaction and distillation</li>
+            <li><strong>Resource Abundance</strong> - Essentially inexhaustible due to continuous production from potassium-40 decay</li>
+            <li><strong>Industrial Applications</strong> - Helps reduce energy consumption through improved insulation in windows</li>
+        </ul>
+        <p>Argon's primary environmental impact is the energy required for its production and distribution.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Argon was discovered in 1894 by Lord Rayleigh (John William Strutt) and Sir William Ramsay. Rayleigh noticed that nitrogen extracted from air was about 0.5% denser than nitrogen obtained from chemical compounds. He published this finding in 1892, calling it an "anomaly."</p>
+        <p>Ramsay hypothesized that atmospheric nitrogen contained a heavier gas. In 1894, they passed atmospheric nitrogen over hot magnesium (which reacts with nitrogen to form magnesium nitride), leaving behind a small amount of unreacted gas. Spectroscopic analysis showed lines that didn't match any known element.</p>
+        <p>They announced their discovery at a meeting of the British Association for the Advancement of Science on August 13, 1894. The name "argon" was suggested by Henry E. Roscoe and Arthur Schuster. For this discovery, Rayleigh received the 1904 Nobel Prize in Physics and Ramsay received the 1904 Nobel Prize in Chemistry.</p>
+        <p>Argon was the first noble gas to be discovered, leading Ramsay to search for and discover the other noble gases: helium, neon, krypton, and xenon.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Argon is continuously produced in rocks by radioactive decay of potassium-40 - about 11 tons per second worldwide</li>
+            <li>The argon in Earth's atmosphere is almost entirely argon-40 produced by radioactive decay, unlike argon in space which is mostly argon-36 and argon-38</li>
+            <li>Argon is about 1.4 times denser than air, so it settles in low-lying areas when released</li>
+            <li>Liquid argon is used in particle physics experiments like those at CERN to detect neutrinos and dark matter</li>
+            <li>Argon's chemical symbol is Ar, not A, because "A" was already used for argon in some older systems</li>
+            <li>Some winemakers use argon to protect wine from oxidation during aging and bottling</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Asphyxiation Hazard:</strong> Argon can displace oxygen in confined spaces, leading to oxygen deficiency without warning. Symptoms include dizziness, confusion, loss of consciousness, and death.</p>
+        <p><strong>Cryogenic Hazards:</strong> Liquid argon at -186°C causes severe frostbite and cryogenic burns upon contact with skin or eyes. Proper protective equipment is essential.</p>
+        <p><strong>Pressure Hazards:</strong> Argon cylinders are pressurized (up to 2400 psi) and can become dangerous projectiles if valves are damaged or improperly handled.</p>
+        <p><strong>Welding Safety:</strong> Argon used in welding can displace oxygen in work areas. Ensure adequate ventilation and monitor oxygen levels.</p>
+        <p><strong>Confined Space Entry:</strong> Always test atmosphere before entering spaces where argon may have accumulated. Use proper confined space entry procedures.</p>
+        <p><strong>First Aid:</strong> For asphyxiation, move to fresh air immediately and administer oxygen if available. For cryogenic exposure, remove contaminated clothing and flush affected area with lukewarm water.</p>
+        <p><strong>Storage:</strong> Store in well-ventilated areas away from heat sources. Keep cylinders upright and secured to prevent tipping.</p>
+        <p><strong>Environmental Considerations:</strong> Although argon itself is inert, the energy required for its production contributes to carbon emissions from power generation.</p>
+        <p><strong>Medical Use Safety:</strong> Argon plasma coagulation in medicine requires specialized training to avoid tissue damage.</p>
+    </div>
+</body>
+</html>
