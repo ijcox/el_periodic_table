@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantalum</title>
+    <style>
+        /* Tantalum is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">73</div>
+            <div class="symbol-large">Ta</div>
+        </div>
+        <div class="element-title">
+            <h1>Tantalum</h1>
+            <div class="element-subtitle">Transition Metal • Group 5 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>73</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>180.94788 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹⁴ 5d³ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant. It is part of the refractory metals group, known for high melting points and resistance to wear. Tantalum is extremely inert and is attacked by only a few chemicals (notably hydrofluoric acid). The element is named after King Tantalus from Greek mythology, reflecting how tantalum oxide "tantalizes" chemists by refusing to react with acids.</p>
+        <p>Tantalum was discovered in 1802 by Swedish chemist Anders Gustaf Ekeberg. He found it in minerals from Ytterby, Sweden and Kimito, Finland. However, many chemists thought tantalum was identical to niobium (discovered in 1801) until 1844 when German chemist Heinrich Rose proved they were distinct elements. Pure tantalum was first produced in 1864. The element gained importance during World War II for military applications and later for electronics.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>3017°C (5463°F, 3290 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>5458°C (9856°F, 5731 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>16.69 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.140 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>36.57 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>753 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>57.5 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>131 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>6.5</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>186 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -1, 0, +1, +2, +3, +4, +5 (most common: +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.5 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>761 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>145 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>170 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Body-centered cubic (bcc)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Tantalum has two naturally occurring isotopes:</p>
+        <ul>
+            <li><strong>Tantalum-181 (¹⁸¹Ta)</strong> - 99.988% abundance, stable</li>
+            <li><strong>Tantalum-180m (¹⁸⁰ᵐTa)</strong> - 0.012% abundance, metastable isomer with half-life > 1.2×10¹⁵ years</li>
+        </ul>
+        <p>Tantalum has several artificial radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Tantalum-182 (¹⁸²Ta)</strong> - Artificial isotope with half-life of 114.43 days; used as gamma source</li>
+            <li><strong>Tantalum-183 (¹⁸³Ta)</strong> - Artificial isotope with half-life of 5.1 days</li>
+            <li><strong>Tantalum-179 (¹⁷⁹Ta)</strong> - Artificial isotope with half-life of 1.82 years</li>
+            <li><strong>Tantalum-177 (¹⁷⁷Ta)</strong> - Artificial isotope with half-life of 56.56 hours</li>
+            <li><strong>Tantalum-178 (¹⁷⁸Ta)</strong> - Artificial isotope with half-life of 2.36 hours</li>
+        </ul>
+        <p>Tantalum-182 is used in industrial radiography and as a radioactive tracer.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Electronics</strong> - Tantalum capacitors for smartphones, computers, automotive electronics, medical devices</li>
+            <li><strong>Chemical Equipment</strong> - Tantalum linings and heat exchangers for corrosive chemical processing</li>
+            <li><strong>Medical Implants</strong> - Tantalum in bone implants, surgical instruments, cranial repair plates</li>
+            <li><strong>Superalloys</strong> - Tantalum in nickel-based superalloys for jet engines and rocket components</li>
+            <li><strong>Cutting Tools</strong> - Tantalum carbide in cutting tools and wear-resistant parts</li>
+            <li><strong>Optical Glass</strong> - Tantalum oxide in high-refractive-index glass for camera lenses</li>
+            <li><strong>Nuclear Reactors</strong> - Tantalum as structural material and neutron shielding</li>
+            <li><strong>Jewelry</strong> - Tantalum for wedding bands and other jewelry (hypoallergenic)</li>
+            <li><strong>Sputtering Targets</strong> - Tantalum targets for thin-film deposition in semiconductor manufacturing</li>
+            <li><strong>Research</strong> - Tantalum in high-temperature materials and corrosion-resistant applications</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Tantalum has no essential biological role but has important medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Medical Implants</strong> - Tantalum used in orthopedic implants, dental implants, cranial plates</li>
+            <li><strong>Biocompatibility</strong> - Excellent biocompatibility; inert, non-toxic, non-irritating</li>
+            <li><strong>Bone Integration</strong> - Porous tantalum (Trabecular Metal™) promotes bone ingrowth</li>
+            <li><strong>Radiopacity</strong> - High density makes tantalum visible on X-rays, useful for monitoring implants</li>
+            <li><strong>Toxicity</strong> - Tantalum compounds have very low toxicity; metal is biologically inert</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in tantalum processing may be exposed to tantalum dust</li>
+            <li><strong>Plants</strong> - Tantalum uptake by plants limited; toxicity at high concentrations</li>
+            <li><strong>Medical Devices</strong> - Used in stents, markers, and other medical devices</li>
+        </ul>
+        <p>Tantalum's biological significance is primarily its medical use in implants due to its excellent biocompatibility.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Tantalum is relatively rare in Earth's crust (2 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Tantalite [(Fe,Mn)Ta₂O₆], columbite-tantalite (coltan), microlite</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in Democratic Republic of Congo, Rwanda, Brazil, Australia, Canada</li>
+            <li><strong>Seawater</strong> - Very low concentration (2 ng/L)</li>
+            <li><strong>In Rocks</strong> - Often found with niobium; about as abundant as uranium or tungsten</li>
+            <li><strong>Conflict Mineral</strong> - Tantalum from Central Africa sometimes associated with conflict financing</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Tantalum is produced from tantalite and coltan ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Tantalite or coltan mined (often artisanal mining in Central Africa)</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated by gravity separation</li>
+            <li><strong>Digestion</strong> - Concentrate treated with hydrofluoric acid and sulfuric acid to dissolve tantalum</li>
+            <li><strong>Solvent Extraction</strong> - Tantalum separated from niobium using methyl isobutyl ketone (MIBK)</li>
+            <li><strong>Precipitation</strong> - Tantalum precipitated as oxide or fluoride</li>
+            <li><strong>Reduction</strong> - Tantalum oxide reduced with sodium or tantalum fluoride reduced with sodium</li>
+            <li><strong>Electrolysis</strong> - Alternative method: electrolysis of molten potassium tantalum fluoride</li>
+            <li><strong>Purification</strong> - Additional purification by electron beam melting or sintering</li>
+            <li><strong>Powder Production</strong> - For capacitors, tantalum powder produced by sodium reduction</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 1,800 tons annually. Major producers: Rwanda, Democratic Republic of Congo, Brazil.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Tantalum production and use have several environmental and ethical considerations:</p>
+        <ul>
+            <li><strong>Conflict Mineral</strong> - Tantalum from Central Africa sometimes finances armed conflict</li>
+            <li><strong>Artisanal Mining</strong> - Small-scale mining can cause environmental damage and poor working conditions</li>
+            <li><strong>Dodd-Frank Act</strong> - US legislation requires companies to disclose use of conflict minerals</li>
+            <li><strong>Electronics Waste</strong> - Tantalum in electronics requires proper recycling</li>
+            <li><strong>Recycling</strong> - Tantalum recycling from electronic waste growing but still limited</li>
+            <li><strong>Chemical Processing</strong> - Hydrofluoric acid used in processing is highly hazardous</li>
+            <li><strong>Medical Benefits</strong> - Tantalum implants improve quality of life for patients</li>
+            <li><strong>Technology Enabler</strong> - Tantalum capacitors essential for miniaturized electronics</li>
+            <li><strong>Supply Chain Transparency</strong> - Increasing demand for ethically sourced tantalum</li>
+            <li><strong>Environmental Toxicity</strong> - Tantalum compounds generally low environmental toxicity</li>
+        </ul>
+        <p>Tantalum presents significant ethical challenges related to conflict minerals, balanced against its essential role in modern technology and medicine.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1802, Swedish chemist Anders Gustaf Ekeberg was analyzing minerals from Ytterby, Sweden and Kimito, Finland. He discovered a new heavy mineral that was resistant to acids. He named it "tantalum" after Tantalus, the mythological Greek king who was punished by being placed in a pool of water that receded when he tried to drink, with fruit trees overhead whose branches moved away when he tried to eat. The name reflected how tantalum oxide "tantalized" chemists by refusing to dissolve in acids.</p>
+        <p>However, many chemists, including English chemist William Hyde Wollaston, believed tantalum was identical to columbium (now called niobium), which had been discovered the previous year. The controversy continued for decades.</p>
+        <p>In 1844, German chemist Heinrich Rose finally proved that tantalum and niobium were distinct elements. He showed that the mineral contained two different acids: tantalic acid and niobic acid. Pure tantalum metal was first produced in 1864 by Swedish chemist Christian Wilhelm Blomstrand, who reduced tantalum chloride with hydrogen.</p>
+        <p>Tantalum's importance grew during World War II when it was used for radar equipment and other military electronics. The development of tantalum capacitors in the 1950s made the element crucial for the electronics revolution.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Tantalum capacitors are in virtually every smartphone, laptop, and car - about 40 billion produced annually</li>
+            <li>The element is named after Tantalus from Greek mythology, reflecting how it "tantalizes" chemists</li>
+            <li>Tantalum is so corrosion-resistant that it can handle all acids except hydrofluoric acid</li>
+            <li>Porous tantalum implants actually encourage bone to grow into them, creating a strong bond</li>
+            <li>Tantalum has the fourth highest melting point of all elements (3017°C)</li>
+            <li>Your smartphone contains about 40 milligrams of tantalum in its capacitors</li>
+            <li>Tantalum jewelry is popular because it's hypoallergenic and has a unique blue-gray color</li>
+            <li>The Democratic Republic of Congo produces about 30% of the world's tantalum, much from artisanal mines</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Tantalum compounds have very low toxicity. Metal dust may be irritant.</p>
+        <p><strong>Metal Dust:</strong> Tantalum powder flammable. Fine powder can form explosive mixtures with air.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of tantalum dust may cause lung irritation. Chronic exposure may cause pneumoconiosis.</p>
+        <p><strong>Chemical Processing:</strong> Hydrofluoric acid used in tantalum processing is extremely hazardous.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling tantalum compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Medical Implants:</strong> Tantalum implants generally safe and biocompatible. Follow medical advice for implant care.</p>
+        <p><strong>Storage:</strong> Store metal powder in airtight containers. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Tantalum powder flammable. Use Class D extinguisher for metal fires. Do not use water on burning tantalum powder.</p>
+        <p><strong>Conflict Mineral Considerations:</strong> Follow regulations (Dodd-Frank Act, OECD guidelines) for sourcing conflict-free tantalum.</p>
+        <p><strong>Environmental:</strong> Tantalum compounds generally low environmental concern. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of tantalum compounds and contaminated materials.</p>
+        <p><strong>Supply Chain Ethics:</strong> Ensure ethical sourcing from conflict-free regions. Support responsible mining initiatives.</p>
+        <p><strong>Recycling:</strong> Recycle tantalum from electronic waste to reduce demand for newly mined material.</p>
+    </div>
+</body>
+</html>
