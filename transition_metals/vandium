@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanadium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">23</div>
+            <div class="symbol-large">V</div>
+        </div>
+        <div class="element-title">
+            <h1>Vanadium</h1>
+            <div class="element-subtitle">Transition Metal • Group 5 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>23</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>50.942 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d³ 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Vanadium is a hard, silvery-gray, ductile transition metal. It forms a protective oxide layer that makes it corrosion-resistant. Vanadium is named after Vanadis, the Scandinavian goddess of beauty, because of its beautiful multicolored compounds.</p>
+        <p>Vanadium was discovered twice: first in 1801 by Andrés Manuel del Río who called it "erythronium," and independently in 1830 by Nils Gabriel Sefström who named it vanadium. The element was isolated in 1867 by Sir Henry Enfield Roscoe. Most vanadium is used as an alloying agent in steel.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1910°C (3470°F, 2183 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3407°C (6165°F, 3680 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>6.11 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>5.5 g/cm³ (estimated)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.489 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>21.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>444 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>7.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -1, 0, +1, +2, +3, +4, +5 (most common: +2, +3, +4, +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.63 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>650.9 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>135 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>153 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>No data</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Vanadium has one stable isotope and one naturally occurring radioactive isotope:</p>
+        <ul>
+            <li><strong>Vanadium-51 (⁵¹V)</strong> - Natural abundance of 99.75%. The stable isotope with 23 protons and 28 neutrons.</li>
+            <li><strong>Vanadium-50 (⁵⁰V)</strong> - Natural abundance of 0.25%. Radioactive with extremely long half-life of 1.5×10¹⁷ years (150 quadrillion years).</li>
+        </ul>
+        <p>Vanadium also has several artificial radioactive isotopes:</p>
+        <ul>
+            <li><strong>Vanadium-48 (⁴⁸V)</strong> - Radioactive isotope with half-life of 15.97 days; used as tracer in medical and industrial applications</li>
+            <li><strong>Vanadium-49 (⁴⁹V)</strong> - Radioactive isotope with half-life of 330 days</li>
+            <li><strong>Vanadium-52 (⁵²V)</strong> - Short-lived isotope (3.74 minute half-life)</li>
+        </ul>
+        <p>Vanadium-50's incredibly long half-life makes it essentially stable for most practical purposes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Steel Alloys</strong> - About 85% of vanadium production goes to steel; ferrovanadium adds strength, toughness, and wear resistance</li>
+            <li><strong>Tool Steels</strong> - High-speed steels for cutting tools contain 1-5% vanadium</li>
+            <li><strong>Aerospace Alloys</strong> - Titanium-6Al-4V (6% aluminum, 4% vanadium) is the most common titanium alloy</li>
+            <li><strong>Vanadium Redox Flow Batteries</strong> - Large-scale energy storage systems for renewable energy integration</li>
+            <li><strong>Catalysts</strong> - Vanadium pentoxide (V₂O₅) for sulfuric acid production and in catalytic converters</li>
+            <li><strong>Ceramics</strong> - Vanadium compounds produce yellow, blue, and green colors in ceramics and glass</li>
+            <li><strong>Superconductors</strong> - Vanadium-gallium tape for superconducting magnets</li>
+            <li><strong>Chemical Industry</strong> - Vanadium compounds as catalysts for oxidation reactions</li>
+            <li><strong>Medical Applications</strong> - Vanadium compounds investigated for diabetes treatment; radioactive isotopes for medical imaging</li>
+            <li><strong>Nuclear Applications</strong> - Vanadium alloys for nuclear reactor components due to low neutron absorption</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Vanadium has limited but interesting biological roles:</p>
+        <ul>
+            <li><strong>Essential for Some Organisms</strong> - Required by some bacteria, algae, fungi, and possibly some animals</li>
+            <li><strong>Vanadium Nitrogenase</strong> - Alternative to molybdenum nitrogenase in some nitrogen-fixing bacteria</li>
+            <li><strong>Vanabins</strong> - Vanadium-binding proteins in sea squirts (ascidians) that concentrate vanadium up to 10 million times</li>
+            <li><strong>Mushroom Pigments</strong> - Amavadin, a vanadium compound in some poisonous mushrooms</li>
+            <li><strong>Potential Medical Uses</strong> - Vanadium compounds show insulin-mimetic properties and are studied for diabetes treatment</li>
+            <li><strong>Human Nutrition</strong> - Not considered essential for humans; typical dietary intake is 6-18 μg/day</li>
+            <li><strong>Toxicity</strong> - Vanadium compounds are toxic at high doses; occupational exposure primarily through inhalation</li>
+            <li><strong>Environmental Exposure</strong> - Naturally present in some foods; higher in mushrooms, shellfish, and some grains</li>
+            <li><strong>Biochemical Activity</strong> - Vanadium ions can mimic phosphate and affect enzyme systems</li>
+        </ul>
+        <p>While not essential for humans, vanadium's biological chemistry is active area of research, particularly for diabetes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Vanadium is the 20th most abundant element in Earth's crust (120 ppm). It rarely occurs as native metal. Major sources include:</p>
+        <ul>
+            <li><strong>Patronite</strong> - VS₄, the most important vanadium mineral historically</li>
+            <li><strong>Vanadinite</strong> - Pb₅(VO₄)₃Cl, a lead vanadate mineral</li>
+            <li><strong>Carnotite</strong> - K₂(UO₂)₂(VO₄)₂·3H₂O, uranium-vanadium ore</li>
+            <li><strong>Magnetite</strong> - Some iron ores contain vanadium (especially titanomagnetite)</li>
+            <li><strong>As Byproduct</strong> - Most vanadium comes as byproduct of uranium, phosphate, and iron ore processing</li>
+            <li><strong>Fossil Fuels</strong> - Some crude oils and coal contain vanadium (especially Venezuelan heavy oil)</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Vanadium is produced through several processes:</p>
+        <ol>
+            <li><strong>From Magnetite</strong> - Roasting with sodium salts, leaching, and precipitation as ammonium metavanadate</li>
+            <li><strong>From Petroleum Residue</strong> - Ash from burning vanadium-containing oil</li>
+            <li><strong>Reduction</strong> - Calcium reduction of vanadium pentoxide in pressure vessel</li>
+            <li><strong>Aluminothermic Process</strong> - Reduction with aluminum</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 85,000 tons annually. China produces about 62%, followed by Russia, South Africa, and Brazil.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Vanadium production and use have environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impacts</strong> - Vanadium mining, especially from uranium ores, produces radioactive waste</li>
+            <li><strong>Fossil Fuel Combustion</strong> - Burning vanadium-containing oils releases vanadium oxides that contribute to particulate pollution</li>
+            <li><strong>Catalyst Production</strong> - Vanadium pentoxide production generates waste requiring proper management</li>
+            <li><strong>Steel Production Benefits</strong> - Vanadium in high-strength steel reduces material needs and weight in construction and transportation</li>
+            <li><strong>Energy Storage</strong> - Vanadium redox batteries enable renewable energy integration but require mining</li>
+            <li><strong>Water Pollution</strong> - Mining and processing can release vanadium into water systems; vanadium is toxic to aquatic life at high concentrations</li>
+            <li><strong>Air Quality</strong> - Industrial emissions contribute to particulate matter; vanadium compounds are respiratory irritants</li>
+            <li><strong>Recycling</strong> - Vanadium in steel is largely recycled when steel is recycled; dedicated vanadium recycling is limited</li>
+        </ul>
+        <p>Vanadium's role in enabling stronger, lighter materials and energy storage must be balanced against mining and production impacts.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Vanadium was discovered in 1801 by Spanish mineralogist Andrés Manuel del Río in brown lead ore (now called vanadinite) from Mexico. He named it "erythronium" (from Greek "erythros" meaning red) due to the red color of its salts when heated with acids.</p>
+        <p>In 1805, French chemist Hippolyte-Victor Collet-Descotils incorrectly declared that erythronium was actually chromium. Del Río accepted this assessment and didn't pursue his discovery.</p>
+        <p>In 1830, Swedish chemist Nils Gabriel Sefström rediscovered vanadium in iron ore from Taberg, Sweden. He named it "vanadium" after Vanadis, the Scandinavian goddess of beauty, because of its beautiful multicolored compounds. Friedrich Wöhler confirmed it was the same element del Río had found.</p>
+        <p>In 1867, Sir Henry Enfield Roscoe isolated the metal by reducing vanadium chloride (VCl₂) with hydrogen. Industrial production began in the early 20th century with the development of vanadium steel.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Vanadium steel was used in the Ford Model T - the chassis contained vanadium steel that was both lighter and stronger</li>
+            <li>Some sea squirts (ascidians) concentrate vanadium in their blood to levels 10 million times higher than seawater</li>
+            <li>Vanadium compounds exhibit a wide range of colors - hence the name from Vanadis, goddess of beauty</li>
+            <li>The Damascus steel used in legendary swords likely contained vanadium from specific Indian iron ores</li>
+            <li>Vanadium-50 has a half-life of 150 quadrillion years - making it essentially stable despite being radioactive</li>
+            <li>Vanadium redox flow batteries can be "recharged" by simply replacing the electrolyte liquid</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Toxicity:</strong> Vanadium compounds are toxic, especially by inhalation. Vanadium pentoxide dust is the most hazardous form.</p>
+        <p><strong>Respiratory Effects:</strong> Inhalation causes respiratory irritation, bronchitis, and potentially pneumonia. Occupational exposure limit: 0.05 mg/m³ for V₂O₅ dust.</p>
+        <p><strong>Systemic Effects:</strong> Chronic exposure can cause green tongue (vanadium tongue), gastrointestinal disturbances, and neurological effects.</p>
+        <p><strong>Environmental Toxicity:</strong> Vanadium is toxic to plants and aquatic life at elevated concentrations. Industrial discharges require monitoring.</p>
+        <p><strong>Fire Hazard:</strong> Vanadium powder is flammable and can form explosive mixtures with air. Use appropriate dust control measures.</p>
+        <p><strong>Chemical Reactivity:</strong> Vanadium compounds can be strong oxidizing agents. Vanadium pentoxide reacts violently with some reducing agents.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. Seek medical attention.</p>
+        <p><strong>Occupational Protection:</strong> Use proper ventilation, respiratory protection, and personal protective equipment when handling vanadium compounds.</p>
+        <p><strong>Medical Monitoring:</strong> Workers with potential vanadium exposure should have regular medical checkups including respiratory function tests.</p>
+    </div>
+</body>
+</html>
