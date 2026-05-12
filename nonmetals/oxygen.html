@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxygen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #9b59b6;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .info-card h3 {
+            color: #9b59b6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">8</div>
+            <div class="symbol-large">O</div>
+        </div>
+        <div class="element-title">
+            <h1>Oxygen</h1>
+            <div class="element-subtitle">Nonmetal • Group 16 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>8</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>15.999 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s² 2p⁴</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Oxygen is a colorless, odorless, tasteless gas that makes up about 21% of Earth's atmosphere and is essential for most life on Earth. It is the third most abundant element in the universe by mass and the most abundant element in Earth's crust.</p>
+        <p>Oxygen was discovered independently by Carl Wilhelm Scheele in 1772 and Joseph Priestley in 1774. Antoine Lavoisier named the element "oxygen" from Greek words meaning "acid former" (oxy genes), believing it was a component of all acids. Oxygen supports combustion and is necessary for cellular respiration in most living organisms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-218.79°C (-361.82°F, 54.36 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-182.96°C (-297.33°F, 90.19 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>1.429 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>1.141 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>-118.57°C, 5.043 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>0.444 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>6.82 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Triple Point</td>
+                <td>-218.79°C, 0.1463 kPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, 0, +1, +2 (most common: -2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>3.44 (Pauling scale) - second highest of all elements</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1313.9 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>60 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>66 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>152 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Oxygen has several allotropes (different molecular forms):</p>
+        <ul>
+            <li><strong>Dioxygen (O₂)</strong> - The common form comprising 21% of Earth's atmosphere; paramagnetic due to two unpaired electrons</li>
+            <li><strong>Ozone (O₃)</strong> - A pale blue gas with a distinct sharp smell; forms a protective layer in the stratosphere that absorbs UV radiation</li>
+            <li><strong>Tetraoxygen (O₄)</strong> - A metastable form first theorized in 1924 and confirmed in 2001</li>
+            <li><strong>Atomic Oxygen (O)</strong> - Highly reactive individual oxygen atoms; common in upper atmosphere and space</li>
+            <li><strong>Solid Oxygen</strong> - Exists in six different crystalline phases under various pressure and temperature conditions</li>
+        </ul>
+        <p>Ozone is particularly important for life on Earth as the ozone layer protects against harmful ultraviolet radiation from the sun.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Medical Applications</strong> - Oxygen therapy for patients with respiratory conditions; life support in hospitals</li>
+            <li><strong>Metallurgy</strong> - Basic oxygen steelmaking (BOS process) accounts for about 60% of world steel production</li>
+            <li><strong>Welding and Cutting</strong> - Oxy-fuel welding and cutting torches use oxygen with acetylene or other fuels</li>
+            <li><strong>Water Treatment</strong> - Oxygenation of wastewater and polluted water bodies</li>
+            <li><strong>Chemical Industry</strong> - Production of ethylene oxide, propylene oxide, and other chemicals</li>
+            <li><strong>Space Exploration</strong> - Life support systems in spacecraft and spacesuits; oxidizer in rocket propellants</li>
+            <li><strong>Aquaculture</strong> - Oxygenation of fish farms and aquatic habitats</li>
+            <li><strong>Pulp and Paper</strong> - Oxygen delignification in paper bleaching processes</li>
+            <li><strong>Glass Manufacturing</strong> - Oxygen-enriched air increases furnace temperatures and efficiency</li>
+            <li><strong>Emergency Services</strong> - Supplemental oxygen for firefighters and emergency responders</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Oxygen is essential for most life on Earth through several critical biological processes:</p>
+        <ul>
+            <li><strong>Cellular Respiration</strong> - Final electron acceptor in aerobic respiration, producing ATP energy for cells</li>
+            <li><strong>Photosynthesis</strong> - Released as a byproduct when plants and algae convert carbon dioxide and water into carbohydrates</li>
+            <li><strong>Human Physiology</strong> - Required for metabolism; blood hemoglobin transports oxygen throughout the body</li>
+            <li><strong>Oxygen Debt</strong> - Temporary oxygen deficiency following strenuous exercise</li>
+            <li><strong>Reactive Oxygen Species</strong> - Superoxide, hydrogen peroxide, and hydroxyl radicals play roles in cell signaling and immune response</li>
+            <li><strong>Oxidative Stress</strong> - Imbalance between free radicals and antioxidants contributes to aging and diseases</li>
+            <li><strong>Evolutionary Impact</strong> - The Great Oxygenation Event about 2.4 billion years ago dramatically changed Earth's atmosphere and enabled complex life</li>
+        </ul>
+        <p>While essential for aerobic organisms, oxygen can be toxic at high concentrations (oxygen toxicity) and to anaerobic organisms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Oxygen is the most abundant element in Earth's crust (46.6% by mass) and the third most abundant in the universe. It occurs in:</p>
+        <ul>
+            <li><strong>Atmosphere</strong> - 20.95% by volume as O₂ gas</li>
+            <li><strong>Water</strong> - 88.8% by mass in H₂O; oceans contain dissolved oxygen</li>
+            <li><strong>Earth's Crust</strong> - Mostly in silicate and oxide minerals (SiO₂, Al₂O₃, Fe₂O₃, etc.)</li>
+            <li><strong>Biosphere</strong> - Component of all water, carbohydrates, fats, proteins, and nucleic acids in living organisms</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Most industrial oxygen is produced by fractional distillation of liquefied air. Other methods include pressure swing adsorption and electrolysis of water.</p>
+        <p><strong>Global Production:</strong> Over 100 million tons of oxygen are produced annually, making it one of the most produced industrial gases.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Oxygen and its compounds play crucial roles in environmental processes:</p>
+        <ul>
+            <li><strong>Ozone Layer</strong> - Stratospheric ozone protects Earth from harmful UV radiation; depletion by CFCs is a major environmental concern</li>
+            <li><strong>Water Quality</strong> - Dissolved oxygen levels indicate water quality and support aquatic life</li>
+            <li><strong>Climate Change</strong> - Oxygen isotopes are used as proxies in paleoclimate studies</li>
+            <li><strong>Combustion Products</strong> - Oxygen supports combustion of fossil fuels, producing CO₂ and contributing to climate change</li>
+            <li><strong>Oxidizing Agent</strong> - Participates in atmospheric chemistry, forming smog and acid rain when combined with pollutants</li>
+            <li><strong>Biogeochemical Cycles</strong> - Integral part of carbon, nitrogen, and sulfur cycles</li>
+        </ul>
+        <p>Maintaining adequate oxygen levels in aquatic ecosystems and protecting the ozone layer are critical environmental priorities.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Oxygen was discovered independently by Swedish pharmacist Carl Wilhelm Scheele around 1772 (he called it "fire air") and English chemist Joseph Priestley on August 1, 1774 (he called it "dephlogisticated air"). Priestley published his findings first, in 1775.</p>
+        <p>French chemist Antoine Lavoisier conducted extensive experiments with oxygen between 1775 and 1780, disproving the phlogiston theory and demonstrating oxygen's role in combustion and respiration. He named the element "oxygen" from Greek words meaning "acid producer," incorrectly believing it was a component of all acids.</p>
+        <p>Liquid oxygen was first produced in 1877 by Louis Paul Cailletet in France and Raoul Pictet in Switzerland. The industrial production of oxygen via air liquefaction was developed by Carl von Linde in 1895.</p>
+        <p>In 1985, the discovery of the ozone hole over Antarctica by British scientists Joseph Farman, Brian Gardiner, and Jonathan Shanklin highlighted oxygen's crucial environmental role.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Oxygen is the third most abundant element in the universe, after hydrogen and helium</li>
+            <li>Without oxygen, fire wouldn't exist - it supports combustion but doesn't burn itself</li>
+            <li>The blue color of Earth when seen from space is due to sunlight scattered by our oxygen-rich atmosphere</li>
+            <li>Liquid oxygen is pale blue and magnetic (paramagnetic)</li>
+            <li>Mount Everest climbers carry supplemental oxygen because the summit has only one-third the oxygen at sea level</li>
+            <li>Oxygen makes up about 65% of the human body by mass, mostly in water molecules</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Fire and Explosion Hazard:</strong> Oxygen vigorously supports combustion. Materials that burn in air will burn more violently in pure oxygen. Oxygen-enriched atmospheres greatly increase fire risk.</p>
+        <p><strong>Oxygen Toxicity:</strong> Breathing pure oxygen at high pressures can cause convulsions, vision changes, and respiratory damage. Limits: 50 kPa partial pressure maximum for prolonged exposure.</p>
+        <p><strong>Cryogenic Hazards:</strong> Liquid oxygen at -183°C causes severe frostbite on contact with skin. Protective equipment is essential.</p>
+        <p><strong>Chemical Burns:</strong> Ozone and other oxygen allotropes are strong oxidizers that can damage tissues.</p>
+        <p><strong>Pressure Hazards:</strong> Oxygen cylinders are pressurized (up to 200 bar) and can become dangerous projectiles if damaged.</p>
+        <p><strong>Material Compatibility:</strong> Some materials become flammable or explosive in oxygen-rich environments. Special compatibility testing is required.</p>
+        <p><strong>Medical Use Caution:</strong> Oxygen therapy requires prescription and monitoring; inappropriate use can mask underlying conditions or cause oxygen toxicity.</p>
+    </div>
+</body>
+</html>
