@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassium</title>
+    <style>
+        /* Hassium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">108</div>
+            <div class="symbol-large">Hs</div>
+        </div>
+        <div class="element-title">
+            <h1>Hassium</h1>
+            <div class="element-subtitle">Transition Metal • Group 8 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>108</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[269] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d⁶ 7s² (predicted)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (presumed)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Hassium is a synthetic chemical element and a member of the transactinide series. It is a highly radioactive metal that does not occur naturally and can only be produced in particle accelerators. Hassium is expected to be a solid under normal conditions and is predicted to have properties similar to osmium, directly above it in group 8 of the periodic table, though significant differences are expected due to relativistic effects.</p>
+        <p>Hassium was first synthesized in 1984 by a German research team at the Gesellschaft für Schwerionenforschung (GSI) in Darmstadt, led by Peter Armbruster and Gottfried Münzenberg. The element was named after the German state of Hesse (Latin: Hassia), where the GSI laboratory is located. This continued the tradition of naming elements after geographical locations, following dubnium (Dubna, Russia) and berkelium (Berkeley, USA).</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>Unknown (estimated to be high, similar to osmium)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Density (predicted)</td>
+                <td>40.7 g/cm³ (would be the densest element if confirmed)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (presumed)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be metallic)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (predicted, like osmium)</td>
+            </tr>
+        </table>
+        <p>Hassium is predicted to be the densest of all elements if its predicted density of 40.7 g/cm³ is confirmed. This extreme density results from relativistic effects that contract atomic orbitals and increase electron density around the nucleus.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+8 (most stable and characteristic), +6, +5, +4, +3, +2, 0 (predicted)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>733.3 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>126 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>134 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>Expected to resemble osmium and ruthenium (Group 8 metals)</td>
+            </tr>
+        </table>
+        <p>Hassium is predicted to form a stable +8 oxidation state, like osmium, and would form volatile tetraoxide (HsO₄), which should be even more stable than osmium tetroxide (OsO₄) due to relativistic effects. This volatility makes HsO₄ a promising candidate for chemical studies despite hassium's short half-lives. Hassium is also expected to form carbonyl complexes like Hassium carbonyl (Hs(CO)₅). The chemistry of hassium is of particular interest because relativistic effects are predicted to be exceptionally strong for this element, potentially making its chemistry differ significantly from osmium.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Hassium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Hassium-263 (²⁶³Hs)</strong> - Half-life: 0.74 milliseconds (alpha decay, spontaneous fission)</li>
+            <li><strong>Hassium-264 (²⁶⁴Hs)</strong> - Half-life: 0.54 milliseconds (spontaneous fission)</li>
+            <li><strong>Hassium-265 (²⁶⁵Hs)</strong> - Half-life: 2.0 milliseconds (alpha decay)</li>
+            <li><strong>Hassium-265m (²⁶⁵ᵐHs)</strong> - Half-life: 0.75 milliseconds (alpha decay, isomeric state)</li>
+            <li><strong>Hassium-266 (²⁶⁶Hs)</strong> - Half-life: 2.3 milliseconds (spontaneous fission)</li>
+            <li><strong>Hassium-267 (²⁶⁷Hs)</strong> - Half-life: 55 milliseconds (alpha decay)</li>
+            <li><strong>Hassium-269 (²⁶⁹Hs)</strong> - Half-life: 9.7 seconds (alpha decay) - Most stable known isotope</li>
+            <li><strong>Hassium-270 (²⁷⁰Hs)</strong> - Half-life: 3.6 seconds (alpha decay)</li>
+            <li><strong>Hassium-271 (²⁷¹Hs)</strong> - Half-life: ~40 seconds (alpha decay, tentative)</li>
+            <li><strong>Hassium-273 (²⁷³Hs)</strong> - Half-life: 0.5 seconds (alpha decay)</li>
+            <li><strong>Hassium-275 (²⁷⁵Hs)</strong> - Half-life: 0.3 seconds (alpha decay)</li>
+            <li><strong>Hassium-277 (²⁷⁷Hs)</strong> - Half-life: 2-12 minutes (spontaneous fission, tentative; may be part of "island of stability")</li>
+        </ul>
+        <p>Hassium-269 is the most stable known isotope with a half-life of approximately 9.7 seconds. There are reports of hassium-277 with a half-life of several minutes, which if confirmed, would be exceptionally long for a superheavy element and might indicate proximity to the "island of stability."</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends in heavy nuclei, particularly near the "island of stability"</li>
+            <li><strong>Chemical Studies</strong> - Examination of group 8 chemistry under extreme relativistic effects</li>
+            <li><strong>Relativistic Chemistry</strong> - Research into how relativity influences chemical properties in the heaviest elements</li>
+            <li><strong>Density Studies</strong> - Theoretical and experimental investigation of extreme density predictions</li>
+            <li><strong>Island of Stability Research</strong> - Key element in research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of transactinide chemistry and nuclear synthesis</li>
+        </ul>
+        <p>Like all transactinide elements, hassium has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Hassium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha and spontaneous fission radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities and too short half-lives for biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+            <li><strong>Tetraoxide Hazard</strong> - If HsO₄ could be produced in quantity, it would likely be highly toxic like OsO₄</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, hassium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Hassium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Cold Fusion Reactions</strong>:
+                <br>²⁰⁸Pb + ⁵⁸Fe → ²⁶⁵Hs + n (original GSI discovery reaction)
+                <br>²⁰⁸Pb + ⁵⁸Fe → ²⁶⁴Hs + 2n</li>
+            <li><strong>Hot Fusion Reactions</strong>:
+                <br>²⁴⁸Cm + ²⁶Mg → ²⁷⁰Hs + 4n
+                <br>²⁴⁹Cf + ²⁶Mg → ²⁷¹Hs + 4n</li>
+            <li><strong>Other Reactions</strong>:
+                <br>²⁵⁴Es + ²²Ne → ²⁷²Hs + 4n
+                <br>²⁵⁷Fm + ²²Ne → ²⁷⁵Hs + 4n</li>
+            <li><strong>Separation</strong> - Hassium atoms separated using gas-phase thermochromatography, particularly exploiting the predicted volatility of HsO₄. Recoil separation techniques are also used.</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors, often requiring correlation with daughter decays.</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms per month of beam time).</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Gesellschaft für Schwerionenforschung (GSI, Germany), Joint Institute for Nuclear Research (Dubna, Russia), Lawrence Berkeley National Laboratory (USA), RIKEN (Japan). Total world production is only a few dozen atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Hassium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay quickly (milliseconds to seconds)</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+            <li><strong>Oxide Hazard</strong> - If HsO₄ could be produced, it would require careful handling like OsO₄</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and generally short half-life, hassium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of hassium further established GSI Darmstadt as a leading center for superheavy element research:</p>
+        <p><strong>Discovery (1984):</strong> A team at the Gesellschaft für Schwerionenforschung (GSI) in Darmstadt, Germany, led by Peter Armbruster and Gottfried Münzenberg, synthesized hassium by bombarding lead-208 with iron-58 ions. They detected three atoms of hassium-265, which decayed by alpha emission with a half-life of 1.8 milliseconds. The discovery was reported in 1984.</p>
+        <p><strong>Confirmation and Competing Claims:</strong> Soviet researchers at the Joint Institute for Nuclear Research (JINR) in Dubna had attempted to synthesize element 108 earlier by different methods but their evidence was less conclusive. The GSI work was confirmed by subsequent experiments at GSI and other laboratories.</p>
+        <p><strong>Naming Controversy:</strong> The GSI team proposed the name "hassium" (from Hassia, the Latin name for the German state of Hesse where Darmstadt is located). Soviet researchers had proposed the name "oganessianium" (Og) in honor of Yuri Oganessian. The IUPAC/IUPAP Transfermium Working Group (TWG) recognized the GSI team's priority and recommended the name "hassium" in 1992.</p>
+        <p><strong>Final Adoption (1997):</strong> After the usual period of review and comment, IUPAC officially adopted the name "hassium" with symbol Hs in 1997. This continued the tradition of naming elements after geographical locations associated with their discovery.</p>
+        <p><strong>Chemical Studies (2000s):</strong> In 2001, a team at GSI conducted the first chemical studies on hassium, investigating the volatility of hassium tetroxide (HsO₄). These experiments provided evidence that hassium behaves similarly to osmium, its lighter congener, forming a volatile tetraoxide.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Hassium is predicted to be the densest of all elements at 40.7 g/cm³, though this has not been experimentally confirmed</li>
+            <li>The element is named after the German state of Hesse (Latin: Hassia) where it was discovered</li>
+            <li>Hassium tetroxide (HsO₄) is predicted to be more volatile and stable than osmium tetroxide (OsO₄)</li>
+            <li>Only about 100 atoms of hassium have ever been produced worldwide</li>
+            <li>Hassium-277 may have a half-life of several minutes, which would be exceptionally long for a superheavy element</li>
+            <li>The element's chemistry has been studied using gas-phase chromatography of HsO₄</li>
+            <li>Hassium was the first element where chemical properties were studied using only a few atoms</li>
+            <li>The discovery of hassium helped establish Germany as a major center for superheavy element research</li>
+            <li>Hassium's predicted extreme density results from relativistic effects that contract electron orbitals</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of hassium are highly radioactive. Primary hazards are alpha radiation and spontaneous fission (which produces neutrons and fission fragments).</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Several isotopes undergo spontaneous fission producing neutrons and fission fragments requiring neutron shielding.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Tetraoxide Hazard:</strong> Hassium tetroxide (HsO₄) would be highly toxic if produced in quantity, similar to osmium tetroxide (OsO₄), which is volatile, toxic, and damages eyes and respiratory system.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. Chemical studies require specialized apparatus for volatile compounds.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release, especially for volatile compounds.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections. Additional protection would be needed for volatile tetraoxide studies.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
