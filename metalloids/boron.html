@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boron</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #d4a574;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .info-card h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #d4a574;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">5</div>
+            <div class="symbol-large">B</div>
+        </div>
+        <div class="element-title">
+            <h1>Boron</h1>
+            <div class="element-subtitle">Metalloid • Group 13 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>5</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>10.81 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s² 2p¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Boron is a metalloid element that exists in several allotropic forms. It is a poor electrical conductor at room temperature but a good conductor at high temperatures. Boron is never found as a free element in nature but occurs as orthoboric acid in certain volcanic spring waters and as borates in minerals like borax and colemanite.</p>
+        <p>Boron was discovered in 1808 by Sir Humphry Davy and independently by Joseph Louis Gay-Lussac and Louis Jacques Thénard. The name "boron" comes from the Arabic word "buraq" and the Persian word "burah," both referring to borax.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>2076°C (3769°F, 2349 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3927°C (7101°F, 4200 K)</td>
+            </tr>
+            <tr>
+                <td>Density (crystalline)</td>
+                <td>2.34 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (amorphous)</td>
+                <td>2.37 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>9.3 (crystalline form)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>50.2 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>480 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>27.4 W/(m·K)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-5, -1, +1, +2, +3 (most common)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.04 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>800.6 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>87 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>84 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>192 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Boron has two naturally occurring stable isotopes:</p>
+        <ul>
+            <li><strong>Boron-10 (¹⁰B)</strong> - Natural abundance of 19.9%. Important for its high neutron absorption cross-section, used in nuclear reactors and radiation shielding.</li>
+            <li><strong>Boron-11 (¹¹B)</strong> - Natural abundance of 80.1%. The more common isotope with 5 protons and 6 neutrons.</li>
+        </ul>
+        <p>Boron-10 is particularly valuable in nuclear technology because it absorbs thermal neutrons efficiently, producing lithium-7 and an alpha particle. This property makes it useful in control rods for nuclear reactors and in neutron detection equipment.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Glass and Ceramics</strong> - Borosilicate glass (Pyrex) is heat-resistant; boron compounds improve durability of ceramics</li>
+            <li><strong>Detergents and Bleaches</strong> - Borax and sodium perborate are used in laundry products</li>
+            <li><strong>Agriculture</strong> - Essential micronutrient for plant growth; boron deficiency affects crop yields</li>
+            <li><strong>Nuclear Applications</strong> - Boron-10 in control rods, radiation shielding, and neutron detectors</li>
+            <li><strong>Flame Retardants</strong> - Boron compounds inhibit combustion in plastics and textiles</li>
+            <li><strong>High-Strength Materials</strong> - Boron fibers and boron nitride (harder than diamond in some forms)</li>
+            <li><strong>Semiconductors</strong> - Boron doping of silicon to create p-type semiconductors</li>
+            <li><strong>Medical Applications</strong> - Boron neutron capture therapy for certain cancers</li>
+            <li><strong>Rocket Fuel</strong> - Boron compounds in high-energy fuels</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Boron is an essential micronutrient for plants and possibly for animals and humans:</p>
+        <ul>
+            <li><strong>Plant Health</strong> - Essential for cell wall formation, root development, and fruit set in plants</li>
+            <li><strong>Human Health</strong> - May play roles in bone health, brain function, and immune response; optimal intake around 1-3 mg/day</li>
+            <li><strong>Animal Nutrition</strong> - Required in trace amounts for proper growth and development in some animals</li>
+            <li><strong>Enzyme Cofactor</strong> - May function as a cofactor for certain enzymatic reactions</li>
+            <li><strong>Cell Signaling</strong> - Involved in cell membrane function and signal transduction</li>
+            <li><strong>Deficiency Effects</strong> - In plants: poor growth, death of growing points; in animals: affects bone development</li>
+        </ul>
+        <p>While not classified as essential for humans by all authorities, growing evidence suggests important physiological roles.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Boron is not found free in nature but occurs as borates in evaporite deposits. Major minerals include:</p>
+        <ul>
+            <li><strong>Borax</strong> (Na₂B₄O₇·10H₂O) - Most important commercial source</li>
+            <li><strong>Kernite</strong> (Na₂B₄O₇·4H₂O) - Another significant source</li>
+            <li><strong>Colemanite</strong> (Ca₂B₆O₁₁·5H₂O)</li>
+            <li><strong>Ulexite</strong> (NaCaB₅O₉·8H₂O)</li>
+        </ul>
+        <p><strong>Major Deposits:</strong> Turkey (largest reserves), United States (California, Nevada), Chile, Argentina, Russia, and China.</p>
+        <p><strong>Production Methods:</strong> Boron is extracted from borate minerals through various processes including crushing, dissolving in hot water, and crystallization. Elemental boron is produced by reduction of boron oxide with magnesium.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Boron mining and use present several environmental considerations:</p>
+        <ul>
+            <li><strong>Water Contamination</strong> - Boron compounds can leach into groundwater from mining operations</li>
+            <li><strong>Plant Toxicity</strong> - High boron concentrations are toxic to many plants, affecting agricultural areas near mines</li>
+            <li><strong>Ecological Effects</strong> - Can accumulate in aquatic ecosystems, affecting certain species</li>
+            <li><strong>Waste Management</strong> - Tailings from borate mining require proper containment</li>
+            <li><strong>Recycling</strong> - Limited recycling of boron-containing materials</li>
+        </ul>
+        <p>Despite these concerns, boron's essential role in agriculture and its unique properties in high-technology applications make it a valuable resource with managed environmental impacts.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Boron compounds have been known for thousands of years, with borax used in goldsmithing in Babylon around 3000 BCE and by Egyptians for mummification. Marco Polo brought borax from Tibet to Europe in the 13th century.</p>
+        <p>The element was first isolated in 1808 by Sir Humphry Davy in London through electrolysis of boracic acid, and independently by French chemists Joseph Louis Gay-Lussac and Louis Jacques Thénard by reduction of boric acid with potassium.</p>
+        <p>Pure crystalline boron was not produced until 1909 when American chemist Ezekiel Weintraub succeeded in preparing 99% pure boron. The development of boron fibers for aerospace applications began in the 1960s.</p>
+        <p>Today, boron and its compounds are essential in numerous technologies from agriculture to nuclear energy to materials science.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Boron has the highest melting point of the metalloids (2076°C)</li>
+            <li>Borax was used in the 19th century as a food preservative before its toxicity was recognized</li>
+            <li>Boron nitride can exist in a form (cubic boron nitride) that is almost as hard as diamond</li>
+            <li>The green color in some fireworks comes from boron compounds</li>
+            <li>Boron is essential for the growth of plants but toxic in high concentrations</li>
+            <li>Boron fibers have a higher specific strength (strength-to-weight ratio) than steel or aluminum</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Toxicity:</strong> Boron compounds range from relatively non-toxic (boric acid) to highly toxic (boron halides). Elemental boron dust is irritating to eyes, skin, and respiratory system.</p>
+        <p><strong>Ingestion Risk:</strong> Large amounts of boron compounds can cause acute poisoning with symptoms including nausea, vomiting, and diarrhea. Chronic exposure may affect fertility and development.</p>
+        <p><strong>Environmental Toxicity:</strong> High boron concentrations in soil or water can be toxic to plants, affecting agricultural productivity.</p>
+        <p><strong>Fire and Explosion Hazard:</strong> Boron dust can form explosive mixtures with air. Some boron compounds are pyrophoric (ignite spontaneously in air).</p>
+        <p><strong>Chemical Reactivity:</strong> Boron halides (BF₃, BCl₃) react violently with water producing corrosive acids.</p>
+        <p><strong>Medical Use Caution:</strong> While boric acid has antiseptic properties, internal use should be avoided due to toxicity risks.</p>
+    </div>
+</body>
+</html>
