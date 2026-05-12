@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhenium</title>
+    <style>
+        /* Rhenium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">75</div>
+            <div class="symbol-large">Re</div>
+        </div>
+        <div class="element-title">
+            <h1>Rhenium</h1>
+            <div class="element-subtitle">Transition Metal • Group 7 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>75</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>186.207 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹⁴ 5d⁵ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Rhenium is a rare, silvery-white, heavy transition metal. It has the third highest melting point of all elements (3186°C) after tungsten and carbon. Rhenium is one of the densest elements and has the widest range of oxidation states of any known element (-3 to +7). The element is named after the Rhine River in Europe. Rhenium was the last stable element to be discovered and is one of the rarest elements in Earth's crust.</p>
+        <p>Rhenium was discovered in 1925 by German chemists Walter Noddack, Ida Tacke (who later married Noddack), and Otto Berg. They detected it in platinum ores and the mineral columbite using X-ray spectroscopy. The discovery was controversial initially because the element was so rare, but it was confirmed in 1928 when they isolated 1 gram of rhenium from 660 kg of molybdenite. Rhenium was the last element with a stable isotope to be discovered.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>3186°C (5767°F, 3459 K) - 3rd highest of all elements</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>5596°C (10105°F, 5869 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>21.02 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.137 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>60.43 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>704 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>48.0 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>193 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>7.0</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>463 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -1, 0, +1, +2, +3, +4, +5, +6, +7 (most common: +4, +6, +7)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.9 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>760 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>135 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>159 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Rhenium has one stable isotope and one naturally occurring radioactive isotope:</p>
+        <ul>
+            <li><strong>Rhenium-185 (¹⁸⁵Re)</strong> - 37.4% abundance, stable</li>
+            <li><strong>Rhenium-187 (¹⁸⁷Re)</strong> - 62.6% abundance, radioactive with half-life of 4.12×10¹⁰ years</li>
+        </ul>
+        <p>Rhenium has several artificial radioactive isotopes with important applications:</p>
+        <ul>
+            <li><strong>Rhenium-186 (¹⁸⁶Re)</strong> - Medical isotope with half-life of 3.718 days; used in cancer therapy</li>
+            <li><strong>Rhenium-188 (¹⁸⁸Re)</strong> - Medical isotope with half-life of 17.0 hours; used in cancer therapy</li>
+            <li><strong>Rhenium-184 (¹⁸⁴Re)</strong> - Artificial isotope with half-life of 38.0 days</li>
+            <li><strong>Rhenium-183 (¹⁸³Re)</strong> - Artificial isotope with half-life of 70.0 days</li>
+            <li><strong>Rhenium-182 (¹⁸²Re)</strong> - Artificial isotope with half-life of 64.0 hours</li>
+        </ul>
+        <p>The rhenium-osmium dating method uses the decay of rhenium-187 to osmium-187 for geological dating.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Superalloys</strong> - Rhenium in nickel-based superalloys for jet engine turbine blades</li>
+            <li><strong>Catalysts</strong> - Rhenium-platinum catalysts in petroleum refining for high-octane gasoline</li>
+            <li><strong>Medical Therapy</strong> - Rhenium-186 and rhenium-188 for cancer treatment (bone pain, liver cancer)</li>
+            <li><strong>Electrical Contacts</strong> - Rhenium in electrical contacts, semiconductors, and thermocouples</li>
+            <li><strong>Filaments</strong> - Rhenium filaments in mass spectrometers and flash lamps</li>
+            <li><strong>Jewelry</strong> - Rhenium in platinum-rhenium jewelry alloys</li>
+            <li><strong>Research</strong> - Rhenium in high-temperature materials and superconducting alloys</li>
+            <li><strong>X-ray Tubes</strong> - Rhenium targets in medical X-ray tubes</li>
+            <li><strong>Nuclear Medicine</strong> - Rhenium isotopes in radiopharmaceuticals for targeted therapy</li>
+            <li><strong>Geological Dating</strong> - Rhenium-osmium dating for rocks and meteorites</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Rhenium has no essential biological role but has important medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Cancer Therapy</strong> - Rhenium-186 and rhenium-188 used in targeted radionuclide therapy</li>
+            <li><strong>Medical Applications</strong> - Treatment of bone metastases, liver cancer, rheumatoid arthritis</li>
+            <li><strong>Mechanism</strong> - Beta emission kills cancer cells; gamma emission allows imaging</li>
+            <li><strong>Advantages</strong> - Rhenium-188 can be produced from tungsten-188 generator (in-house production)</li>
+            <li><strong>Toxicity</strong> - Rhenium compounds generally low toxicity; similar to platinum group metals</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in rhenium processing may be exposed to rhenium dust</li>
+            <li><strong>Plants</strong> - Rhenium uptake by plants limited; toxicity at high concentrations</li>
+            <li><strong>Research</strong> - Rhenium complexes investigated for anticancer and diagnostic applications</li>
+        </ul>
+        <p>Rhenium's biological significance is primarily its medical use in cancer therapy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Rhenium is one of the rarest elements in Earth's crust (0.7 ppb):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Not found as native element; occurs in molybdenite (MoS₂) and some copper ores</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in Chile, United States, Kazakhstan, Peru, Armenia</li>
+            <li><strong>Seawater</strong> - Extremely low concentration (0.0084 ng/L)</li>
+            <li><strong>In Rocks</strong> - One of the rarest stable elements; about as abundant as ruthenium or rhodium</li>
+            <li><strong>Association</strong> - Typically occurs with molybdenum in porphyry copper deposits</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Rhenium is produced as a byproduct of molybdenum and copper mining:</p>
+        <ol>
+            <li><strong>Mining</strong> - Copper-molybdenum ores mined (porphyry copper deposits)</li>
+            <li><strong>Ore Processing</strong> - Ore crushed, ground, and concentrated by flotation</li>
+            <li><strong>Roasting</strong> - Molybdenite concentrate roasted to molybdenum trioxide; rhenium volatilizes as rhenium heptoxide (Re₂O₇)</li>
+            <li><strong>Scrubbing</strong> - Rhenium oxide captured in scrubber solutions as perrhenic acid (HReO₄)</li>
+            <li><strong>Purification</strong> - Solution purified by solvent extraction or ion exchange</li>
+            <li><strong>Precipitation</strong> - Ammonium perrhenate (NH₄ReO₄) precipitated</li>
+            <li><strong>Reduction</strong> - Ammonium perrhenate reduced with hydrogen: 2NH₄ReO₄ + 7H₂ → 2Re + 8H₂O + 2NH₃</li>
+            <li><strong>Powder Production</strong> - Typically produced as powder, then pressed and sintered</li>
+            <li><strong>Alternative Source</strong> - Also recovered from spent platinum-rhenium catalysts</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 50 tons annually. Chile is largest producer (52% of world supply).</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Rhenium production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Copper and molybdenum mining causes significant environmental damage</li>
+            <li><strong>Byproduct Production</strong> - Rhenium production as byproduct reduces additional mining impact</li>
+            <li><strong>Catalyst Recovery</strong> - Spent petroleum refining catalysts are important source of recycled rhenium</li>
+            <li><strong>Medical Benefits</strong> - Rhenium-188 therapy improves cancer treatment with targeted approach</li>
+            <li><strong>Aviation Efficiency</strong> - Rhenium superalloys improve jet engine efficiency, reducing fuel consumption</li>
+            <li><strong>Petroleum Refining</strong> - Rhenium catalysts produce higher-octane gasoline with less lead</li>
+            <li><strong>Limited Recycling</strong> - Rhenium recycling from superalloys difficult but improving</li>
+            <li><strong>Toxicity</strong> - Rhenium compounds generally low environmental toxicity</li>
+            <li><strong>Radioisotopes</strong> - Medical rhenium isotopes require proper radioactive waste management</li>
+            <li><strong>Resource Scarcity</strong> - Rhenium extremely rare; critical for aerospace and medical applications</li>
+        </ul>
+        <p>Rhenium presents relatively low environmental concerns, with benefits in medical treatment and energy efficiency.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1925, German chemists Walter Noddack, Ida Tacke (who later married Noddack), and Otto Berg were searching for the missing elements 43 and 75 predicted by Dmitri Mendeleev's periodic table. They used X-ray spectroscopy, a technique recently developed by English physicist Henry Moseley.</p>
+        <p>They examined numerous minerals and detected element 75 in platinum ores and the mineral columbite. They named it "rhenium" after the Rhine River (Rhenus in Latin). The discovery was announced at a meeting of German chemists in 1925.</p>
+        <p>Initially, there was skepticism because the element was so rare and difficult to detect. To prove their discovery, the Noddacks processed 660 kg of molybdenite over three years, finally isolating 1 gram of rhenium in 1928. This confirmed the discovery and made rhenium the last stable element to be discovered.</p>
+        <p>Rhenium remained a laboratory curiosity until the 1950s when its value in high-temperature alloys was recognized. The development of rhenium-containing superalloys revolutionized jet engine technology, and rhenium's use in petroleum catalysts made it economically important.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Rhenium was the last stable element to be discovered (1925)</li>
+            <li>It has the widest range of oxidation states of any element (-3 to +7)</li>
+            <li>Rhenium has the third highest melting point of all elements (3186°C)</li>
+            <li>The element is named after the Rhine River in Europe</li>
+            <li>Rhenium-188 can be produced from a tungsten-188 generator, making it available for hospitals</li>
+            <li>Adding just 3% rhenium to nickel superalloys allows jet engines to run 100°C hotter</li>
+            <li>Rhenium is one of the rarest elements in Earth's crust - about 1 part per billion</li>
+            <li>Chile produces over half the world's rhenium as a byproduct of copper mining</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Rhenium compounds have low toxicity. Metal dust may be irritant.</p>
+        <p><strong>Metal Dust:</strong> Rhenium powder flammable. Fine powder can form explosive mixtures with air.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of rhenium dust may cause lung irritation.</p>
+        <p><strong>Chemical Compounds:</strong> Some rhenium compounds toxic; rhenium heptoxide (Re₂O₇) highly toxic and corrosive.</p>
+        <p><strong>Cancer Therapy:</strong> Rhenium-186 and rhenium-188 used medically under controlled conditions.</p>
+        <p><strong>Radiation Safety:</strong> Radioactive rhenium isotopes require radiation safety protocols.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling rhenium compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Storage:</strong> Store metal powder in airtight containers. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Rhenium powder flammable. Use Class D extinguisher for metal fires. Do not use water on burning rhenium powder.</p>
+        <p><strong>Radioactive Waste:</strong> Medical rhenium isotopes generate radioactive waste requiring proper disposal.</p>
+        <p><strong>Environmental:</strong> Rhenium compounds generally low environmental concern. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of rhenium compounds and contaminated materials. Radioactive rhenium requires special disposal.</p>
+        <p><strong>Medical Regulations:</strong> Rhenium-188 therapy subject to medical regulations and quality control.</p>
+        <p><strong>Recycling:</strong> Recycle rhenium from spent catalysts and superalloy scrap.</p>
+    </div>
+</body>
+</html>
