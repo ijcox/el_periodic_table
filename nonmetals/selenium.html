@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium</title>
+    <style>
+        /* Selenium is a nonmetal */
+        .nonmetal { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #9b59b6;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .info-card h3 {
+            color: #9b59b6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">34</div>
+            <div class="symbol-large">Se</div>
+        </div>
+        <div class="element-title">
+            <h1>Selenium</h1>
+            <div class="element-subtitle">Nonmetal • Group 16 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>34</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>78.971 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s² 4p⁴</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Selenium is a nonmetal with properties intermediate between sulfur and tellurium. It exists in several allotropic forms, the most stable of which is a gray crystalline form that has a metallic luster. Selenium exhibits photoconductivity - its electrical conductivity increases when exposed to light. The element is essential to most life forms in trace amounts but is toxic in larger quantities.</p>
+        <p>Selenium was discovered in 1817 by Swedish chemists Jöns Jacob Berzelius and Johan Gottlieb Gahn. They found it as an impurity in sulfuric acid produced at a Swedish factory. Berzelius initially thought it was tellurium, but upon further investigation realized it was a new element. He named it "selenium" from the Greek word "selēnē" meaning "moon," to match tellurium (from "tellus," Latin for "earth").</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point (gray)</td>
+                <td>221°C (430°F, 494 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>685°C (1265°F, 958 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gray)</td>
+                <td>4.81 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.321 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>6.69 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>95.48 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>0.519 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>10⁹ Ω·m (at 20°C, dark)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, 0, +1, +2, +3, +4, +5, +6 (most common: -2, +4, +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.55 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>941.0 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>115 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>120 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>190 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal (gray selenium)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Selenium has six stable isotopes:</p>
+        <ul>
+            <li><strong>Selenium-74 (⁷⁴Se)</strong> - 0.86% abundance</li>
+            <li><strong>Selenium-76 (⁷⁶Se)</strong> - 9.23% abundance</li>
+            <li><strong>Selenium-77 (⁷⁷Se)</strong> - 7.60% abundance</li>
+            <li><strong>Selenium-78 (⁷⁸Se)</strong> - 23.69% abundance</li>
+            <li><strong>Selenium-80 (⁸⁰Se)</strong> - 49.80% abundance</li>
+            <li><strong>Selenium-82 (⁸²Se)</strong> - 8.82% abundance (very long half-life > 10²⁰ years)</li>
+        </ul>
+        <p>Selenium has several radioactive isotopes with medical and research applications:</p>
+        <ul>
+            <li><strong>Selenium-75 (⁷⁵Se)</strong> - Radioactive isotope with half-life of 119.78 days; used in gamma radiography and medical imaging</li>
+            <li><strong>Selenium-79 (⁷⁹Se)</strong> - Radioactive isotope with half-life of 327,000 years; fission product in nuclear reactors</li>
+            <li><strong>Selenium-72 (⁷²Se)</strong> - Radioactive isotope with half-life of 8.40 days</li>
+            <li><strong>Selenium-73 (⁷³Se)</strong> - Radioactive isotope with half-life of 7.15 hours</li>
+        </ul>
+        <p>Selenium-75 is used industrially for non-destructive testing and medically for imaging the pancreas.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Glass Manufacturing</strong> - Selenium compounds decolorize glass (remove green tint from iron impurities) and produce red glass</li>
+            <li><strong>Photocopiers and Laser Printers</strong> - Selenium photoconductive drums in xerography (historically important, now largely replaced)</li>
+            <li><strong>Photovoltaic Cells</strong> - Cadmium selenide and copper indium gallium selenide (CIGS) thin-film solar cells</li>
+            <li><strong>Rectifiers</strong> - Selenium rectifiers convert AC to DC (historically important, now largely obsolete)</li>
+            <li><strong>Pigments</strong> - Cadmium selenide for red, orange, and yellow pigments in plastics, ceramics, and glass</li>
+            <li><strong>Nutritional Supplements</strong> - Selenium supplements and selenium-enriched yeast for dietary selenium</li>
+            <li><strong>Stainless Steel</strong> - Selenium improves machinability of stainless steel</li>
+            <li><strong>Rubber Vulcanization</strong> - Selenium improves heat resistance and reduces curing time</li>
+            <li><strong>Shampoos and Antidandruff Agents</strong> - Selenium sulfide in medicated shampoos for dandruff and seborrheic dermatitis</li>
+            <li><strong>Catalysts</strong> - Selenium compounds as catalysts in chemical reactions, especially oxidation reactions</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Selenium is an essential trace element for humans and many other organisms:</p>
+        <ul>
+            <li><strong>Selenoproteins</strong> - About 25 human proteins contain selenium as selenocysteine (21st amino acid)</li>
+            <li><strong>Antioxidant Enzymes</strong> - Glutathione peroxidases protect cells from oxidative damage by reducing hydrogen peroxide and lipid hydroperoxides</li>
+            <li><strong>Thyroid Function</strong> - Deiodinases convert thyroid hormone T4 to active T3; selenium deficiency impairs thyroid function</li>
+            <li><strong>Immune Function</strong> - Selenium enhances immune response and may reduce viral mutation rates</li>
+            <li><strong>Human Requirements</strong> - RDA: 55 μg/day for adults; upper limit: 400 μg/day</li>
+            <li><strong>Dietary Sources</strong> - Brazil nuts, seafood, organ meats, muscle meats, cereals, dairy products</li>
+            <li><strong>Selenium Deficiency</strong> - Causes Keshan disease (cardiomyopathy) and Kashin-Beck disease (osteoarthritis) in selenium-deficient regions of China</li>
+            <li><strong>Selenium Toxicity</strong> - Selenosis causes hair loss, nail brittleness, garlic breath odor, neurological abnormalities</li>
+            <li><strong>Cancer Prevention</strong> - Some studies suggest selenium may reduce cancer risk, but results are mixed</li>
+            <li><strong>HIV/AIDS</strong> - Selenium deficiency associated with faster HIV progression; supplementation may slow disease progression</li>
+        </ul>
+        <p>Selenium has a narrow range between deficiency and toxicity, making balanced intake important.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Selenium is the 66th most abundant element in Earth's crust (0.05 ppm). It occurs:</p>
+        <ul>
+            <li><strong>As Trace Element</strong> - In sulfide ores of copper, lead, and other metals</li>
+            <li><strong>Selenide Minerals</strong> - Rare minerals like clausthalite (PbSe), naumannite (Ag₂Se), and tiemannite (HgSe)</li>
+            <li><strong>Byproduct Source</strong> - Over 90% of selenium comes from anode slimes from electrolytic copper refining</li>
+            <li><strong>Soil Variability</strong> - Selenium content in soils varies dramatically worldwide, causing deficiency or toxicity in food chains</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Selenium is recovered as a byproduct:</p>
+        <ol>
+            <li><strong>From Copper Refining</strong> - Selenium concentrated in anode slimes during electrolytic copper refining</li>
+            <li><strong>Roasting</strong> - Anode slimes roasted with soda ash or sulfuric acid to volatilize selenium as selenium dioxide</li>
+            <li><strong>Recovery</strong> - Selenium dioxide dissolved in water and reduced with sulfur dioxide to precipitate elemental selenium</li>
+            <li><strong>Purification</strong> - Distillation or sublimation produces high-purity selenium</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 3,000 tons annually. China, Japan, and Belgium are major producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Selenium has significant environmental impacts due to its essential but toxic nature:</p>
+        <ul>
+            <li><strong>Agricultural Drainage</strong> - Selenium in irrigation drainage caused bird deformities at Kesterson Reservoir, California</li>
+            <li><strong>Coal Combustion</strong> - Coal contains selenium; combustion releases it into environment</li>
+            <li><strong>Mining Waste</strong> - Selenium leaching from mine waste, especially phosphate and coal mines</li>
+            <li><strong>Bioaccumulation</strong> - Selenium accumulates in aquatic food chains, causing reproductive failure in fish and waterbirds</li>
+            <li><strong>Soil Deficiency</strong> - Low selenium soils in parts of China, Russia, Europe cause human and animal deficiencies</li>
+            <li><strong>Soil Toxicity</strong> - High selenium soils in parts of US, Canada, China cause livestock poisoning (alkali disease, blind staggers)</li>
+            <li><strong>Atmospheric Transport</strong> - Volatile selenium compounds (dimethyl selenide) emitted by plants and microorganisms</li>
+            <li><strong>Bioremediation</strong> - Some plants (selenium hyperaccumulators) and microbes can remove selenium from contaminated water</li>
+            <li><strong>Regulations</strong> - EPA water quality criterion: 5 μg/L for freshwater; 71 μg/L for saltwater</li>
+        </ul>
+        <p>Selenium pollution represents a classic case of an essential element becoming an environmental contaminant at elevated concentrations.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Selenium was discovered in 1817 by Swedish chemists Jöns Jacob Berzelius and Johan Gottlieb Gahn. They were investigating a reddish sediment that formed in lead chambers at a sulfuric acid plant in Gripsholm, Sweden. The sediment had properties similar to tellurium (discovered earlier), but closer examination revealed differences.</p>
+        <p>Berzelius initially thought the substance was tellurium, but found its properties didn't match perfectly. After careful study, he concluded it was a new element with properties between sulfur and tellurium. He named it selenium from "selēnē," Greek for moon, to match tellurium (from "tellus," Latin for earth).</p>
+        <p>In 1873, Willoughby Smith discovered selenium's photoconductivity, leading to its use in early light sensors and photocells. The invention of the selenium rectifier in the 1930s and its use in xerography in the 1930s-1950s established important industrial applications.</p>
+        <p>The essential biological role of selenium was discovered in the 1950s, and selenium deficiency diseases were identified in the 1960s-1970s in China. Today, selenium is recognized as both an essential nutrient and an environmental contaminant.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Brazil nuts are the richest dietary source of selenium; just one nut can provide the daily requirement</li>
+            <li>Selenium was used in the first solar cell, built by Charles Fritts in 1883</li>
+            <li>The element's name comes from the Greek word for moon, to match tellurium (Earth)</li>
+            <li>Selenium gives the distinct odor to skunk spray (along with sulfur compounds)</li>
+            <li>Some plants growing in selenium-rich soils can accumulate enough selenium to be toxic to livestock</li>
+            <li>Selenium is used to make ruby-red glass and enamels</li>
+            <li>The photoconductive property of selenium led to the invention of the photocopier</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Selenium Compounds:</strong> Hydrogen selenide (H₂Se) extremely toxic (more toxic than hydrogen cyanide); selenium hexafluoride (SeF₆) corrosive.</p>
+        <p><strong>Elemental Selenium:</strong> Low toxicity but dust may irritate respiratory system. Selenium fumes from heating cause "selenium fever."</p>
+        <p><strong>Selenium Deficiency:</strong> Causes Keshan disease (cardiomyopathy) and Kashin-Beck disease (osteoarthritis); affects millions in low-selenium regions.</p>
+        <p><strong>Selenium Toxicity (Selenosis):</strong> Chronic intake >900 μg/day causes hair loss, nail brittleness, garlic breath, neurological abnormalities.</p>
+        <p><strong>Acute Poisoning:</strong> Lethal dose: several grams of selenium compounds. Symptoms: garlic breath, metallic taste, lung edema, cardiac failure.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in copper refining, electronics, glass manufacturing at risk. OSHA PEL: 0.2 mg/m³.</p>
+        <p><strong>Dietary Supplements:</strong> Upper limit: 400 μg/day for adults. Brazil nuts extremely high in selenium (68-91 μg per nut).</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For ingestion, drink water or milk. Seek medical attention for significant exposure.</p>
+        <p><strong>Antidote:</strong> No specific antidote; supportive care. Vitamin C and other antioxidants may help.</p>
+        <p><strong>Environmental:</strong> Selenium bioaccumulates in aquatic ecosystems; causes reproductive failure in birds and fish.</p>
+    </div>
+</body>
+</html>
