@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barium</title>
+    <style>
+        /* Barium is an alkaline earth metal */
+        .alkaline-earth { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f39c12;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .info-card h3 {
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">56</div>
+            <div class="symbol-large">Ba</div>
+        </div>
+        <div class="element-title">
+            <h1>Barium</h1>
+            <div class="element-subtitle">Alkaline Earth Metal • Group 2 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>56</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>137.327 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Barium is a soft, silvery-white alkaline earth metal that is never found in nature as a free element due to its high chemical reactivity. It oxidizes rapidly in air and reacts vigorously with water to produce hydrogen gas. Barium compounds are notable for their high density - barium sulfate is used as a weighting agent in drilling fluids and as a radiocontrast agent in medical imaging.</p>
+        <p>Barium was first isolated in 1808 by Sir Humphry Davy in England through the electrolysis of molten barium salts. The element's name comes from the Greek word "barys" meaning "heavy," reflecting the high density of its compounds. Barium minerals have been known since the Middle Ages, with barite (barium sulfate) called "heavy spar" due to its high density.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>727°C (1341°F, 1000 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1870°C (3398°F, 2143 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>3.51 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.204 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>7.12 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>140.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>18.4 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>332 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>1.25</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>13 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2 (only stable oxidation state)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.89 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>502.9 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>215 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>215 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>268 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Body-centered cubic (BCC)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Barium has seven stable isotopes:</p>
+        <ul>
+            <li><strong>Barium-130 (¹³⁰Ba)</strong> - 0.106% abundance</li>
+            <li><strong>Barium-132 (¹³²Ba)</strong> - 0.101% abundance</li>
+            <li><strong>Barium-134 (¹³⁴Ba)</strong> - 2.417% abundance</li>
+            <li><strong>Barium-135 (¹³⁵Ba)</strong> - 6.592% abundance</li>
+            <li><strong>Barium-136 (¹³⁶Ba)</strong> - 7.854% abundance</li>
+            <li><strong>Barium-137 (¹³⁷Ba)</strong> - 11.23% abundance</li>
+            <li><strong>Barium-138 (¹³⁸Ba)</strong> - 71.70% abundance</li>
+        </ul>
+        <p>Barium has several radioactive isotopes, some with important applications:</p>
+        <ul>
+            <li><strong>Barium-133 (¹³³Ba)</strong> - Medical isotope with half-life of 10.51 years; used in calibration sources</li>
+            <li><strong>Barium-140 (¹⁴⁰Ba)</strong> - Fission product with half-life of 12.75 days; daughter of lanthanum-140</li>
+            <li><strong>Barium-131 (¹³¹Ba)</strong> - Medical isotope with half-life of 11.5 days; used in nuclear medicine</li>
+            <li><strong>Barium-137m (¹³⁷ᵐBa)</strong> - Metastable isomer with half-life of 2.55 minutes; daughter of cesium-137</li>
+        </ul>
+        <p>Barium isotopes are used in geological dating and as tracers in environmental studies.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Medical Imaging</strong> - Barium sulfate as radiocontrast agent for X-ray imaging of digestive system (barium swallow, barium enema)</li>
+            <li><strong>Drilling Fluids</strong> - Barite (barium sulfate) added to drilling mud to increase density and control well pressure</li>
+            <li><strong>Fireworks and Pyrotechnics</strong> - Barium compounds produce green colors in fireworks (barium chloride, barium nitrate)</li>
+            <li><strong>Glass Manufacturing</strong> - Barium oxide increases refractive index of glass (optical glass, CRT television tubes)</li>
+            <li><strong>Getter in Vacuum Tubes</strong> - Barium used to remove last traces of gas in vacuum tubes and cathode ray tubes</li>
+            <li><strong>Rubber and Plastic</strong> - Barium compounds as filler and to improve properties</li>
+            <li><strong>Permanent Magnets</strong> - Barium ferrite in ceramic magnets for speakers, motors, and magnetic recording</li>
+            <li><strong>Rat Poison</strong> - Barium carbonate historically used as rat poison (now largely replaced)</li>
+            <li><strong>Spark Plugs</strong> - Barium oxide in electrode coating improves electron emission</li>
+            <li><strong>Research</strong> - Barium titanate in piezoelectric devices and as high-permittivity dielectric</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Barium has no essential biological role but has significant toxicological importance:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Chemical Similarity to Calcium</strong> - Barium ions similar size to calcium ions; can interfere with calcium-dependent processes</li>
+            <li><strong>Toxicity</strong> - Soluble barium compounds highly toxic; insoluble barium sulfate non-toxic due to low solubility</li>
+            <li><strong>Mechanism of Toxicity</strong> - Barium blocks potassium channels, causing hypokalemia (low blood potassium), muscle paralysis, cardiac arrhythmias</li>
+            <li><strong>Medical Use</strong> - Barium sulfate used diagnostically; non-absorbed, passes through digestive system unchanged</li>
+            <li><strong>Treatment for Poisoning</strong> - Potassium administration counteracts barium toxicity; magnesium sulfate may precipitate barium as sulfate</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources; most exposure occupational or accidental</li>
+            <li><strong>Occupational Hazards</strong> - Workers in mining, drilling, glass manufacturing at risk of barium exposure</li>
+            <li><strong>Water Contamination</strong> - Barium in drinking water regulated by EPA; maximum contaminant level 2 mg/L</li>
+            <li><strong>Plants</strong> - Barium accumulates in some plants but not essential; can be toxic at high concentrations</li>
+        </ul>
+        <p>Barium's main biological significance is its toxicity when soluble compounds are ingested, and its safe use as barium sulfate in medical imaging.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Barium is relatively abundant in Earth's crust (425 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Barite (barium sulfate, BaSO₄) and witherite (barium carbonate, BaCO₃) primary ores</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in China, India, United States, Morocco, Mexico</li>
+            <li><strong>Seawater</strong> - Low concentration (13 μg/L)</li>
+            <li><strong>In Rocks</strong> - Found in igneous and sedimentary rocks</li>
+            <li><strong>Association</strong> - Often associated with lead-zinc deposits</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Barium is produced from barite ore:</p>
+        <ol>
+            <li><strong>Mining</strong> - Barite mined from open-pit or underground mines</li>
+            <li><strong>Beneficiation</strong> - Ore crushed, ground, and purified by flotation, gravity separation, or magnetic separation</li>
+            <li><strong>Conversion to Sulfide</strong> - Barite reduced with carbon at high temperature: BaSO₄ + 4C → BaS + 4CO</li>
+            <li><strong>Alternative Process</strong> - Barite reduced with methane: BaSO₄ + 2CH₄ → BaS + 2CO + 4H₂</li>
+            <li><strong>Conversion to Compounds</strong> - Barium sulfide converted to other compounds: BaS + H₂O → Ba(OH)₂ + H₂S</li>
+            <li><strong>Metal Production</strong> - Barium oxide reduced with aluminum at high temperature: 3BaO + 2Al → 3Ba + Al₂O₃</li>
+            <li><strong>Purification</strong> - Barium metal purified by distillation or other methods</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 8-9 million tons of barite annually. China largest producer (50% of world supply).</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Barium production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Barite mining can cause habitat destruction, erosion, water contamination</li>
+            <li><strong>Water Pollution</strong> - Soluble barium compounds can contaminate groundwater; regulated in drinking water</li>
+            <li><strong>Toxicity to Aquatic Life</strong> - Barium toxic to fish and aquatic organisms; varies with water chemistry</li>
+            <li><strong>Drilling Fluid Discharge</strong> - Barite in drilling fluids can accumulate on seafloor near offshore drilling</li>
+            <li><strong>Natural Background</strong> - Barium naturally present in some groundwater, especially in areas with barite deposits</li>
+            <li><strong>Waste Management</strong> - Barium-containing waste from various industries requires proper disposal</li>
+            <li><strong>Soil Contamination</strong> - Industrial activities can increase soil barium levels</li>
+            <li><strong>Remediation</strong> - Barium contamination treated by precipitation as insoluble sulfate or carbonate</li>
+            <li><strong>Regulations</strong> - Barium regulated under Clean Water Act, Safe Drinking Water Act, and other regulations</li>
+            <li><strong>Recycling</strong> - Limited recycling of barium-containing materials</li>
+        </ul>
+        <p>Proper management of barium-containing wastes is essential to prevent environmental contamination.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Barium minerals have been known since the Middle Ages. Barite (barium sulfate) was known as "heavy spar" or "Bologna stone" and was noted for its unusual weight and phosphorescent properties when heated.</p>
+        <p>In 1774, Swedish chemist Carl Wilhelm Scheele distinguished barite from calcium sulfate (gypsum). He showed that barite contained a new earth (oxide), which he called "terra ponderosa" (heavy earth).</p>
+        <p>The element was first isolated in 1808 by Sir Humphry Davy in London. Using his newly developed technique of electrolysis, Davy isolated barium metal by electrolyzing molten barium salts. He announced his discovery at a lecture to the Royal Society on June 30, 1808.</p>
+        <p>Davy named the element "barium" from the Greek word "barys" meaning "heavy," referring to the high density of baryta (barium oxide). The metal itself remained a laboratory curiosity until the 20th century when its compounds found widespread industrial applications.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Barium sulfate is so insoluble that it passes through the digestive system unchanged, making it safe for medical X-rays</li>
+            <li>The famous Bologna stones that glowed in the dark after heating were made of barium sulfate</li>
+            <li>Barium gives fireworks their characteristic green color - one of the most vivid colors in pyrotechnics</li>
+            <li>Barite is so dense that a small piece feels surprisingly heavy for its size</li>
+            <li>Barium titanate has a dielectric constant over 1,000 times that of air, making it valuable in electronics</li>
+            <li>The world's largest barite deposit is in China, which produces over 50% of the world's supply</li>
+            <li>Barium carbonate was once a popular rat poison called "Wetherill's Poison"</li>
+            <li>Barium metal is so reactive it's stored under oil like other alkali and alkaline earth metals</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Toxicity:</strong> Soluble barium compounds highly toxic. Insoluble barium sulfate non-toxic due to low solubility. Toxicity depends on solubility.</p>
+        <p><strong>Soluble Compounds:</strong> Barium chloride, barium nitrate, barium hydroxide, barium acetate highly toxic. Ingestion causes vomiting, abdominal pain, diarrhea, muscle paralysis, cardiac arrhythmias, death.</p>
+        <p><strong>Mechanism:</strong> Barium ions block potassium channels, causing hypokalemia (low blood potassium). Muscle weakness progresses to paralysis, including respiratory muscles.</p>
+        <p><strong>Medical Use:</strong> Barium sulfate safe for diagnostic use because insoluble. Must be pure, free of soluble barium impurities.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of barium dust causes "baritosis" - benign pneumoconiosis with no symptoms. Different from silicosis.</p>
+        <p><strong>Water Contamination:</strong> Barium in drinking water regulated. EPA maximum contaminant level: 2 mg/L.</p>
+        <p><strong>First Aid:</strong> For ingestion of soluble compounds, induce vomiting only if conscious. Give magnesium sulfate or sodium sulfate to precipitate barium as sulfate. Seek immediate medical attention. Monitor potassium levels.</p>
+        <p><strong>Treatment:</strong> Potassium administration crucial to counteract effects. Supportive care for symptoms. Dialysis may be needed.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling barium compounds. Use fume hood for powders.</p>
+        <p><strong>Storage:</strong> Store soluble barium compounds separately from food and drink. Label clearly as poisonous.</p>
+        <p><strong>Disposal:</strong> Barium waste hazardous. Convert to insoluble barium sulfate before disposal. Follow local regulations.</p>
+        <p><strong>Fire Hazard:</strong> Barium metal flammable. Burns with green flame. Use Class D extinguisher for metal fires.</p>
+        <p><strong>Environmental:</strong> Prevent release to environment. Barium compounds toxic to aquatic life.</p>
+    </div>
+</body>
+</html>
