@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berkelium</title>
+    <style>
+        /* Berkelium is an actinide */
+        .actinide { background: linear-gradient(135deg, #607d8b 0%, #455a64 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #607d8b;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #607d8b;
+        }
+        
+        .info-card h3 {
+            color: #607d8b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #607d8b;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">97</div>
+            <div class="symbol-large">Bk</div>
+        </div>
+        <div class="element-title">
+            <h1>Berkelium</h1>
+            <div class="element-subtitle">Actinide • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>97</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[247] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f⁹ 7s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Berkelium is a synthetic radioactive chemical element with the symbol Bk and atomic number 97. It is a member of the actinide series and is named after Berkeley, California, the city where it was discovered. Berkelium is a soft, silvery-white, paramagnetic metal that is relatively stable in air at room temperature but reacts with oxygen, steam, and acids.</p>
+        <p>The element was first produced in December 1949 by Stanley G. Thompson, Albert Ghiorso, and Glenn T. Seaborg at the University of California, Berkeley. They bombarded americium-241 with alpha particles in the 60-inch cyclotron. Berkelium is primarily produced in minute quantities for scientific research, with no practical applications outside of serving as a target material for producing heavier elements.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>986°C (1807°F, 1259 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2627°C (4761°F, 2900 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Density (alpha form, room temp)</td>
+                <td>14.78 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>~7.92 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>10 W/(m·K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Double hexagonal close-packed (alpha form)</td>
+            </tr>
+        </table>
+        <p>Most physical properties of berkelium are estimates based on its position in the periodic table and limited experimental data. Direct measurements are challenging due to the element's rarity, radioactivity, and the difficulty of obtaining pure samples in sufficient quantity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2, +3, +4, +5 (most common: +3, +4)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>601 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>170 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>Unknown</td>
+            </tr>
+        </table>
+        <p>Berkelium exhibits oxidation states +3 and +4 in aqueous solutions, with +3 being the most stable. Berkelium(III) compounds are green in solution, while berkelium(IV) compounds are yellow. The chemistry of berkelium is similar to that of the other actinides and its lanthanide homolog terbium. Berkelium metal reacts with oxygen, steam, and acids, but is relatively stable in dry air at room temperature.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Berkelium has no stable isotopes. The most important isotopes are:</p>
+        <ul>
+            <li><strong>Berkelium-247 (²⁴⁷Bk)</strong> - Half-life of 1,380 years, alpha decay, most stable isotope</li>
+            <li><strong>Berkelium-248 (²⁴⁸Bk)</strong> - Half-life of >9 years, alpha and beta decay</li>
+            <li><strong>Berkelium-249 (²⁴⁹Bk)</strong> - Half-life of 330 days, beta decay to californium-249, most commonly used isotope</li>
+            <li><strong>Berkelium-250 (²⁵⁰Bk)</strong> - Half-life of 3.217 hours, beta decay</li>
+            <li><strong>Berkelium-245 (²⁴⁵Bk)</strong> - Half-life of 4.94 days, electron capture and alpha decay</li>
+            <li><strong>Berkelium-246 (²⁴⁶Bk)</strong> - Half-life of 1.8 days, alpha and beta decay</li>
+        </ul>
+        <p>Berkelium-249 is the most commonly used isotope in research due to its relatively convenient half-life and production pathway. It is produced by neutron irradiation of curium-244 or americium-243 in high-flux nuclear reactors.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <p>Berkelium has no practical applications outside scientific research:</p>
+        <ul>
+            <li><strong>Production of Heavier Elements</strong> - Target material for synthesizing elements 98-103 (californium, einsteinium, fermium, mendelevium, nobelium, lawrencium)</li>
+            <li><strong>Scientific Research</strong> - Study of actinide chemistry, particularly the +4 oxidation state</li>
+            <li><strong>Nuclear Physics</strong> - Study of nuclear properties and decay processes</li>
+            <li><strong>Calibration</strong> - Source for calibration of radiation detectors</li>
+        </ul>
+        <p>Berkelium's primary importance is as a "stepping stone" for producing heavier transuranium elements. Milligram quantities of berkelium-249 are used as targets in heavy ion accelerators to produce elements like mendelevium, nobelium, and lawrencium.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Berkelium has no biological role and is highly toxic:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>High Radiotoxicity</strong> - Alpha and beta radiation from berkelium isotopes</li>
+            <li><strong>Chemical Toxicity</strong> - Heavy metal toxicity similar to other actinides</li>
+            <li><strong>Bone Seeker</strong> - If internalized, accumulates in bones like other actinides</li>
+            <li><strong>Extreme Rarity</strong> - Only produced in minute quantities in specialized facilities</li>
+            <li><strong>Research Only</strong> - Only encountered in specialized nuclear research laboratories</li>
+        </ul>
+        <p>Due to its artificial production in extremely small quantities, berkelium poses no biological risk to the general population and is only handled by researchers in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Berkelium does not occur naturally:</p>
+        <ul>
+            <li><strong>Artificial Element</strong> - Produced artificially in nuclear reactors and particle accelerators</li>
+            <li><strong>Trace Amounts</strong> - Possibly formed in supernova explosions but not found on Earth</li>
+        </ul>
+        <p><strong>Artificial Production:</strong> Berkelium is produced artificially:</p>
+        <ol>
+            <li><strong>Neutron Irradiation</strong> - Curium or americium irradiated with neutrons in high-flux reactors:
+                <ul>
+                    <li>²⁴⁴Cm + n → ²⁴⁵Cm → ²⁴⁵Bk (beta decay)</li>
+                    <li>²⁴³Am + n → ²⁴⁴Am → ²⁴⁴Cm → various decays → ²⁴⁹Bk</li>
+                </ul>
+            </li>
+            <li><strong>Alpha Particle Bombardment</strong> - Americium-241 bombarded with alpha particles (original discovery method)</li>
+            <li><strong>Separation</strong> - Berkelium separated from other actinides by ion exchange chromatography</li>
+            <li><strong>Purification</strong> - Multiple purification steps due to chemical similarity to other actinides</li>
+        </ol>
+        <p><strong>Production Scale:</strong> Milligram quantities produced. Total world production estimated at less than 1 gram. Production occurs at only a few facilities worldwide, primarily Oak Ridge National Laboratory (USA) and Research Institute of Atomic Reactors (Russia).</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Berkelium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>Artificial Element</strong> - Does not occur naturally in environment</li>
+            <li><strong>Extremely Limited Production</strong> - Produced in minute quantities (milligrams)</li>
+            <li><strong>Controlled Facilities</strong> - Produced and handled only in specialized nuclear facilities</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could cause environmental release</li>
+            <li><strong>Research Waste</strong> - Generated in very small amounts; carefully managed as radioactive waste</li>
+            <li><strong>Regulations</strong> - Strictly regulated as radioactive material</li>
+        </ul>
+        <p>Given its artificial nature and the extremely small quantities involved, berkelium poses no significant environmental risk.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Berkelium was first produced in December 1949 by Stanley G. Thompson, Albert Ghiorso, and Glenn T. Seaborg at the University of California, Berkeley. They bombarded americium-241 with alpha particles (helium ions) in the 60-inch cyclotron, producing berkelium-243 along with two free neutrons.</p>
+        <p>The discovery was part of a systematic study of transuranium elements following World War II. The element was named after Berkeley, California, where it was discovered, continuing the tradition of naming elements after places (e.g., americium after America, californium after California).</p>
+        <p>The first weighable amount of berkelium (about 3 micrograms of berkelium-249) was produced in 1958 by prolonged neutron irradiation of plutonium, americium, and curium in a nuclear reactor. The first macroscopic sample (about 1 milligram) was produced in 1962. Berkelium-249, with its 330-day half-life, became the isotope most used in research.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Berkelium is named after Berkeley, California, where it was discovered</li>
+            <li>It was the fifth transuranium element to be discovered</li>
+            <li>Berkelium-247 has a half-life of 1,380 years - relatively long for a transuranium element</li>
+            <li>The first visible amount (micrograms) wasn't produced until 1958, nine years after discovery</li>
+            <li>Berkelium compounds can be green (Bk³⁺) or yellow (Bk⁴⁺) in solution</li>
+            <li>Less than one gram of berkelium has ever been produced worldwide</li>
+            <li>Berkelium is used as a target to produce even heavier elements like lawrencium</li>
+            <li>The element is so rare that a price is not established; research samples are allocated, not sold</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>High Radiotoxicity:</strong> Berkelium highly radioactive. Alpha and beta emitter.</p>
+        <p><strong>Internal Hazard:</strong> Particularly dangerous if internalized (inhaled, ingested). Accumulates in bones.</p>
+        <p><strong>Chemical Toxicity:</strong> Heavy metal toxicity similar to other actinides.</p>
+        <strong>Extreme Rarity:</strong> Only produced in milligram quantities; exposure risk limited to research facilities.</p>
+        <p><strong>Protective Equipment:</strong> Use in glove boxes with inert atmosphere. Full protective suits. Strict contamination control.</p>
+        <p><strong>Radiation Protection:</strong> Lead shielding for gamma radiation from decay products.</p>
+        <p><strong>Storage:</strong> Store in double-contained sealed containers. Specialized facilities required.</p>
+        <p><strong>Disposal:</strong> High-level radioactive waste. Special disposal facilities required.</p>
+        <p><strong>First Aid:</strong> For contamination: immediate decontamination, medical evaluation. Chelation therapy may help for internal contamination.</p>
+        <p><strong>Regulations:</strong> Strictly regulated as radioactive material and nuclear material. Special licenses required.</p>
+        <p><strong>Research Only:</strong> Only handled in specialized nuclear research facilities by trained personnel.</p>
+    </div>
+</body>
+</html>
