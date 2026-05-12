@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #00bcd4; 
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .info-card h3 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #00bcd4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">2</div>
+            <div class="symbol-large">He</div>
+        </div>
+        <div class="element-title">
+            <h1>Helium</h1>
+            <div class="element-subtitle">Noble Gas • Group 18 • Period 1</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>2</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>4.0026 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>1s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Helium is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas that heads the noble gas group in the periodic table. Its boiling point is the lowest among all the elements, and it exists only as a gas except in extreme conditions.</p>
+        <p>Helium was first detected on August 18, 1868, as a bright yellow line with a wavelength of 587.49 nanometers in the spectrum of the Sun's chromosphere, making it the first element discovered outside Earth. It was named after the Greek Titan of the Sun, Helios.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-272.20°C (-457.96°F, 0.95 K) at 2.5 MPa</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-268.93°C (-452.07°F, 4.22 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at STP)</td>
+                <td>0.1786 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid, at b.p.)</td>
+                <td>0.125 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (solid, at 1.1 K)</td>
+                <td>0.145 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>-267.96°C, 0.227 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>0.0138 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>0.0829 kJ/mol</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0 (does not form stable compounds)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>No data (Pauling scale) - noble gas</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>2372.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>28 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>140 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Helium has two stable isotopes:</p>
+        <ul>
+            <li><strong>Helium-4 (⁴He)</strong> - The most common isotope, making up 99.99986% of naturally occurring helium. It has two protons and two neutrons.</li>
+            <li><strong>Helium-3 (³He)</strong> - Contains two protons and one neutron. It makes up about 0.00014% of natural helium on Earth but is more abundant in lunar soil and gas giants.</li>
+        </ul>
+        <p>Helium-3 has unique properties including superfluidity at temperatures near absolute zero and is used in cryogenics and nuclear fusion research.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Cryogenics</strong> - Essential for cooling superconducting magnets in MRI machines, NMR spectrometers, and particle accelerators</li>
+            <li><strong>Pressurization and Purging</strong> - Used in rocket propulsion systems and to purge fuel tanks</li>
+            <li><strong>Welding</strong> - Provides inert shielding atmosphere for arc welding of materials like aluminum and stainless steel</li>
+            <li><strong>Breathing Mixtures</strong> - Used in deep-sea diving (heliox) to prevent nitrogen narcosis and oxygen toxicity</li>
+            <li><strong>Balloons and Airships</strong> - Lifting gas for weather balloons, party balloons, and blimps due to its non-flammability</li>
+            <li><strong>Leak Detection</strong> - Used as a tracer gas to detect leaks in high-vacuum systems and containers</li>
+            <li><strong>Chromatography</strong> - Carrier gas in gas chromatography</li>
+            <li><strong>Scientific Research</strong> - Used in studies of superfluidity, quantum mechanics, and low-temperature physics</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Helium has no known biological role and is not essential for life. However, it has important medical and scientific applications:</p>
+        <ul>
+            <li>Used in respiratory treatments for conditions like asthma and COPD when mixed with oxygen (heliox)</li>
+            <li>Critical for cooling superconducting magnets in MRI machines used for medical imaging</li>
+            <li>Non-toxic and inert, but can displace oxygen in enclosed spaces, posing an asphyxiation risk</li>
+            <li>When inhaled, temporarily changes voice timbre by increasing the speed of sound in vocal cords</li>
+            <li>Used in lung diffusion tests to measure gas transfer in the lungs</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Helium is the second most abundant element in the observable universe (about 24% by elemental mass), but relatively rare on Earth. Most terrestrial helium is created by the radioactive decay of heavier elements like uranium and thorium.</p>
+        <p><strong>Production Methods:</strong></p>
+        <ul>
+            <li><strong>Natural Gas Extraction</strong> - Most commercial helium is extracted from natural gas fields, particularly in the United States, Qatar, and Algeria</li>
+            <li><strong>Fractional Distillation</strong> - Separating helium from other gases at low temperatures</li>
+            <li><strong>Air Separation</strong> - Extracting helium from air, though this is less common due to low concentration (5.2 ppm)</li>
+            <li><strong>Radioactive Decay</strong> - Naturally produced by alpha decay of radioactive elements in Earth's crust</li>
+        </ul>
+        <p><strong>Conservation:</strong> Helium is a non-renewable resource on Earth and can escape the planet's gravity into space once released into the atmosphere.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Helium is environmentally inert and does not contribute to ozone depletion, global warming, or air pollution. It is non-toxic and does not react with other elements in the environment.</p>
+        <p>The primary environmental concern is resource depletion. Helium is a finite resource on Earth, and once released into the atmosphere, it can escape into space. Conservation and recycling of helium, particularly in scientific and medical applications, are increasingly important.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Helium was first detected on August 18, 1868, by French astronomer Jules Janssen during a total solar eclipse in Guntur, India. He observed a yellow line in the Sun's spectrum that didn't match any known element.</p>
+        <p>Later that year, English astronomer Norman Lockyer independently observed the same yellow line and proposed it was caused by a new element, which he named helium after the Greek sun god Helios. Terrestrial helium was first isolated in 1895 by Sir William Ramsay from cleveite, a uranium mineral.</p>
+        <p>Helium was first liquefied by Heike Kamerlingh Onnes in 1908, and its superfluidity was discovered by Pyotr Kapitsa in 1937.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Helium is the second most abundant element in the universe, making up about 24% of elemental mass</li>
+            <li>Helium was first discovered in the Sun's spectrum before being found on Earth, hence its name from Helios, the Greek sun god</li>
+            <li>Helium gas is the second lightest gas, with a density of only 0.1786 g/L at standard conditions</li>
+            <li>Helium has the lowest boiling point of any element at -268.93°C (-452°F), just above absolute zero</li>
+            <li>Liquid helium is used to cool superconducting magnets in MRI machines and particle accelerators</li>
+            <li>Helium is a non-renewable resource on Earth and can escape the planet's gravity into space</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Asphyxiation Risk:</strong> Helium is non-toxic but displaces oxygen in enclosed spaces, creating a serious asphyxiation hazard. It is odorless and colorless with no warning signs.</p>
+        <p><strong>Storage:</strong> Must be stored in well-ventilated areas away from heat sources. High-pressure cylinders require proper handling and securing.</p>
+        <p><strong>Voice Alteration Hazard:</strong> Inhaling helium directly from pressurized tanks can cause lung injury, embolism, or asphyxiation due to oxygen displacement.</p>
+        <p><strong>Cryogenic Hazards:</strong> Liquid helium is extremely cold (-269°C) and can cause severe frostbite or cryogenic burns on contact with skin or eyes.</p>
+    </div>
+</body>
+</html>
