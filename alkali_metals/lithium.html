@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lithium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .info-card h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">3</div>
+            <div class="symbol-large">Li</div>
+        </div>
+        <div class="element-title">
+            <h1>Lithium</h1>
+            <div class="element-subtitle">Alkali Metal • Group 1 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>3</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>6.941 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Lithium is a soft, silvery-white alkali metal that is the lightest metal and lightest solid element. Under standard conditions, it is the least dense metal and floats on water (though it reacts vigorously with it). Lithium is highly reactive and flammable, and must be stored in mineral oil to prevent oxidation.</p>
+        <p>Discovered in 1817 by Johan August Arfwedson in the mineral petalite, lithium is named from the Greek word "lithos" meaning stone. It is found in trace amounts in nearly all igneous rocks and in many mineral springs.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>180.54°C (356.97°F, 453.69 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1342°C (2448°F, 1615 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>0.534 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid, at m.p.)</td>
+                <td>0.512 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>3220°C, 67 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>3.00 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>136 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>0.6</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+1 (strongly basic oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.98 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>520.2 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>152 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>128 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>182 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Lithium has two stable isotopes:</p>
+        <ul>
+            <li><strong>Lithium-6 (⁶Li)</strong> - Natural abundance of 7.59%. It has low neutron absorption cross-section and is used in nuclear fusion research.</li>
+            <li><strong>Lithium-7 (⁷Li)</strong> - Natural abundance of 92.41%. It is the more common isotope with three protons and four neutrons.</li>
+        </ul>
+        <p>Both isotopes have among the lowest atomic masses and binding energies per nucleon of all stable nuclides. Lithium-6 is valuable for producing tritium in nuclear weapons and as a neutron absorber.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Batteries</strong> - Lithium-ion batteries power most portable electronics, electric vehicles, and grid storage systems</li>
+            <li><strong>Psychiatric Medication</strong> - Lithium carbonate and citrate are used to treat bipolar disorder and depression</li>
+            <li><strong>Metallurgy</strong> - Used as an alloying agent with aluminum and magnesium to improve strength and reduce weight</li>
+            <li><strong>Glass and Ceramics</strong> - Lithium oxide improves thermal shock resistance in cookware and laboratory glassware</li>
+            <li><strong>Greases</strong> - Lithium soap-based greases are water-resistant and stable at high temperatures</li>
+            <li><strong>Air Treatment</strong> - Lithium chloride and bromide are used in air conditioning and dehumidification systems</li>
+            <li><strong>Nuclear Fusion</strong> - Lithium-6 deuteride is used as fuel in thermonuclear weapons</li>
+            <li><strong>Organic Chemistry</strong> - Organolithium compounds are important reagents in chemical synthesis</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Lithium has no known essential biological role in plants or animals, but has significant medical applications:</p>
+        <ul>
+            <li>Used as a mood stabilizer in psychiatric treatment, particularly for bipolar disorder</li>
+            <li>Affects neurotransmitter release and second messenger systems in the brain</li>
+            <li>May increase gray matter volume in certain brain regions</li>
+            <li>Trace amounts are found in all organisms, but function is unknown</li>
+            <li>Lithium salts occur naturally in some mineral springs and drinking water</li>
+            <li>Requires careful therapeutic monitoring due to narrow therapeutic index</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Lithium is relatively rare in the Earth's crust (about 20 ppm), but widely distributed in trace amounts. Major sources include:</p>
+        <ul>
+            <li><strong>Brine Deposits</strong> - Salt flats in Chile, Argentina, Bolivia, and China contain lithium-rich brines</li>
+            <li><strong>Pegmatites</strong> - Hard rock mining of spodumene (LiAlSi₂O₆) in Australia, Canada, and Africa</li>
+            <li><strong>Clay Deposits</strong> - Lithium-bearing clays in the United States</li>
+            <li><strong>Geothermal Brines</strong> - Extracted from geothermal power plants</li>
+        </ul>
+        <p><strong>Production Methods:</strong> Lithium is primarily extracted through evaporation of brine solutions or mining and processing of lithium minerals like spodumene and lepidolite.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Lithium mining and processing present several environmental concerns:</p>
+        <ul>
+            <li><strong>Water Usage</strong> - Brine extraction requires large amounts of water in arid regions</li>
+            <li><strong>Chemical Pollution</strong> - Processing can release chemicals into local water supplies</li>
+            <li><strong>Habitat Disruption</strong> - Mining operations can damage local ecosystems</li>
+            <li><strong>Carbon Footprint</strong> - Traditional mining and processing have significant energy requirements</li>
+        </ul>
+        <p>However, lithium-ion batteries are crucial for renewable energy storage and electric vehicles, helping reduce overall carbon emissions compared to fossil fuels.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Lithium was discovered in 1817 by Swedish chemist Johan August Arfwedson while analyzing the mineral petalite (LiAlSi₄O₁₀) from the island of Utö, Sweden. The mineral produced alkali salts that didn't match known potassium or sodium compounds.</p>
+        <p>Arfwedson's mentor, Jöns Jakob Berzelius, named the new element "lithion/lithina" from Greek "lithos" (stone) because it was discovered in a mineral, unlike potassium and sodium which had been found in plant ashes. The first isolation of elemental lithium was achieved by William Thomas Brande and Sir Humphry Davy in 1821 through electrolysis of lithium oxide.</p>
+        <p>Commercial production began in 1923 by the German company Metallgesellschaft through electrolysis of a mixture of lithium chloride and potassium chloride.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Lithium is the lightest metal and least dense solid element at room temperature</li>
+            <li>Lithium floats on water (density 0.534 g/cm³) but reacts vigorously with it</li>
+            <li>Lithium-ion batteries revolutionized portable electronics and won the 2019 Nobel Prize in Chemistry</li>
+            <li>About 75% of the world's lithium reserves are in the "Lithium Triangle" of Chile, Argentina, and Bolivia</li>
+            <li>Lithium is produced in stars during nucleosynthesis and in cosmic ray spallation</li>
+            <li>The psychiatric use of lithium was discovered accidentally in 1949 by Australian psychiatrist John Cade</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Flammability:</strong> Lithium metal is highly flammable and can ignite spontaneously in air, especially when powdered. It burns with an intense white flame.</p>
+        <p><strong>Reactivity with Water:</strong> Reacts vigorously with water to produce hydrogen gas and lithium hydroxide, which can ignite the hydrogen.</p>
+        <p><strong>Storage:</strong> Must be stored under mineral oil or inert atmosphere to prevent oxidation. Keep away from water and oxidizing agents.</p>
+        <p><strong>Medical Use:</strong> Therapeutic lithium requires careful blood level monitoring as toxicity can occur at levels only slightly above therapeutic range.</p>
+        <p><strong>Battery Safety:</strong> Damaged lithium-ion batteries can experience thermal runaway, leading to fires or explosions.</p>
+    </div>
+</body>
+</html>
