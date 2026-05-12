@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promethium</title>
+    <style>
+        /* Promethium is a lanthanide */
+        .lanthanide { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #ff9800;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .info-card h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">61</div>
+            <div class="symbol-large">Pm</div>
+        </div>
+        <div class="element-title">
+            <h1>Promethium</h1>
+            <div class="element-subtitle">Lanthanide • Period 6 • Radioactive</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>61</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[145] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f⁵ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Promethium is a radioactive metallic element in the lanthanide series. It is the only radioactive lanthanide and one of only two radioactive elements followed by stable elements on the periodic table (the other being technetium). All isotopes of promethium are radioactive, with none having half-lives longer than 17.7 years (Pm-145). The element does not occur naturally on Earth in appreciable amounts; trace quantities exist in uranium ores as a fission product.</p>
+        <p>Promethium was first produced and characterized in 1945 at Oak Ridge National Laboratory by Jacob A. Marinsky, Lawrence E. Glendenin, and Charles D. Coryell, who isolated it from fission products of uranium fuel irradiated in a nuclear reactor. The element was named after Prometheus, the Titan in Greek mythology who stole fire from the gods and gave it to humanity, symbolizing the "dawn" of nuclear energy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1042°C (1908°F, 1315 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3000°C (5432°F, 3273 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>7.26 g/cm³ (estimated)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.18 J/(g·K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>7.7 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>290 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>15 W/(m·K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>750 nΩ·m (at 20°C, estimated)</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Double hexagonal close-packed (estimated)</td>
+            </tr>
+        </table>
+        <p class="warning-box"><strong>Note:</strong> Many physical properties of promethium are estimated due to its radioactivity and scarcity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.13 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>540 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>183 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>199 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Double hexagonal close-packed (dhcp) for α-Pm, Body-centered cubic (bcc) for β-Pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>All isotopes of promethium are radioactive. The most important isotopes include:</p>
+        <ul>
+            <li><strong>Promethium-145 (¹⁴⁵Pm)</strong> - Longest half-life: 17.7 years; electron capture decay to neodymium-145</li>
+            <li><strong>Promethium-147 (¹⁴⁷Pm)</strong> - Most commonly used isotope; half-life: 2.6234 years; beta decay to samarium-147</li>
+            <li><strong>Promethium-148 (¹⁴⁸Pm)</strong> - Half-life: 5.37 days; beta decay to samarium-148</li>
+            <li><strong>Promethium-148m (¹⁴⁸ᵐPm)</strong> - Metastable isomer; half-life: 41.29 days</li>
+            <li><strong>Promethium-149 (¹⁴⁹Pm)</strong> - Half-life: 53.08 hours; beta decay to samarium-149</li>
+            <li><strong>Promethium-151 (¹⁵¹Pm)</strong> - Half-life: 28.40 hours; beta decay to samarium-151</li>
+        </ul>
+        <p>Promethium-147 is the most commercially important isotope due to its suitable half-life and beta emission without significant gamma radiation.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Nuclear Batteries</strong> - Promethium-147 in radioisotope thermoelectric generators (RTGs) for spacecraft and remote installations</li>
+            <li><strong>Luminous Paint</strong> - Promethium-147 as phosphor activator in self-luminous signs and markings (replaces radium)</li>
+            <li><strong>Thickness Gauges</strong> - Promethium-147 beta particles used to measure thickness of thin materials in industry</li>
+            <li><strong>Research</strong> - Promethium as tracer in chemical and metallurgical research</li>
+            <li><strong>Atomic Batteries</strong> - Promethium-147 in pacemaker batteries (historical use, replaced by lithium batteries)</li>
+            <li><strong>Smoke Detectors</strong> - Small amounts in some ionization-type smoke detectors (alternative to americium-241)</li>
+            <li><strong>Neutron Sources</strong> - When mixed with beryllium, produces neutrons for research and well logging</li>
+            <li><strong>Medical Research</strong> - Promethium compounds investigated for potential in radiation therapy</li>
+            <li><strong>Calibration Sources</strong> - Promethium-147 used to calibrate radiation detection equipment</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Promethium has no biological role and is hazardous due to its radioactivity:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Radiotoxicity</strong> - Internal exposure particularly hazardous as promethium concentrates in bone (similar to other lanthanides)</li>
+            <li><strong>Beta Radiation</strong> - Promethium-147 emits beta particles (electrons) which can damage tissues</li>
+            <li><strong>Medical Use</strong> - Historical use in pacemaker batteries; current use limited due to radiation hazards</li>
+            <li><strong>Environmental Concerns</strong> - Promethium from nuclear fallout and waste can enter environment</li>
+            <li><strong>Occupational Hazards</strong> - Workers handling promethium require radiation protection</li>
+            <li><strong>Bone Seeking</strong> - Like other lanthanides, promethium accumulates in bone if ingested or inhaled</li>
+            <li><strong>Treatment</strong> - Chelation therapy may help remove promethium from body</li>
+            <li><strong>Half-life in Body</strong> - Biological half-life depends on chemical form; combined with physical half-life determines effective half-life</li>
+            <li><strong>Research</strong> - Promethium-147 used in biological tracer studies</li>
+        </ul>
+        <p>Promethium's biological significance is primarily as a radioactive hazard rather than any beneficial role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Promethium does not occur naturally in appreciable amounts:</p>
+        <ul>
+            <li><strong>Trace Amounts</strong> - Minute quantities exist in uranium ores as fission product (about 4×10⁻¹⁵ g/kg of pitchblende)</li>
+            <li><strong>Fission Product</strong> - Produced in nuclear reactors from fission of uranium-235 and plutonium-239</li>
+            <li><strong>Artificial Element</strong> - Considered artificial for practical purposes; all promethium used is manufactured</li>
+            <li><strong>Cosmic Production</strong> - Possibly produced in supernovae; may exist in some stars</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Promethium is produced artificially in nuclear reactors:</p>
+        <ol>
+            <li><strong>Nuclear Fission</strong> - Uranium-235 or plutonium-239 fission produces promethium as fission product</li>
+            <li><strong>Neutron Capture</strong> - Neodymium-146 captures neutrons to form neodymium-147, which decays to promethium-147</li>
+            <li><strong>Chemical Separation</strong> - Promethium separated from other fission products using ion exchange chromatography</li>
+            <li><strong>Purification</strong> - Multiple purification steps to isolate promethium from other rare earth elements</li>
+            <li><strong>Specific Isotope Production</strong> - Different isotopes produced by varying irradiation conditions</li>
+            <li><strong>Form Conversion</strong> - Converted to desired chemical form (oxide, chloride, etc.)</li>
+        </ol>
+        <p><strong>Global Production:</strong> Very limited production, estimated at a few hundred grams annually worldwide. Production occurs in nuclear facilities in United States, Russia, and possibly other nuclear powers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Promethium production and use have significant environmental considerations:</p>
+        <ul>
+            <li><strong>Radioactive Waste</strong> - Promethium is component of high-level nuclear waste from reactors</li>
+            <li><strong>Nuclear Fallout</strong> - Promethium isotopes produced in nuclear weapons tests; part of global radioactive contamination</li>
+            <li><strong>Waste Management</strong> - Promethium-containing waste requires long-term radioactive waste management</li>
+            <li><strong>Environmental Persistence</strong> - Promethium-145 has 17.7 year half-life; remains hazardous for decades</li>
+            <li><strong>Bioaccumulation Potential</strong> - Can enter food chain if released to environment</li>
+            <li><strong>Radiation Hazard</strong> - Environmental releases pose radiation risks to ecosystems</li>
+            <li><strong>Regulation</strong> - Strictly regulated under nuclear materials controls and environmental protection laws</li>
+            <li><strong>Space Applications</strong> - Promethium RTGs in spacecraft could potentially contaminate environment if re-entry occurs</li>
+            <li><strong>Limited Natural Occurrence</strong> - Not naturally abundant, so environmental levels primarily from human activities</li>
+            <li><strong>Monitoring</strong> - Environmental monitoring for promethium around nuclear facilities</li>
+        </ul>
+        <p>Promethium's environmental impact is primarily as a radioactive contaminant from nuclear activities.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The existence of element 61 was predicted by Czech chemist Bohuslav Brauner in 1902. Several claims of discovery were made in the early 20th century, but all proved false. The most notable false discovery was "illinium" claimed by American chemists B. Smith Hopkins and Leonor Michaelis in 1926.</p>
+        <p>Promethium was first definitely produced and identified in 1945 at Oak Ridge National Laboratory (then Clinton Laboratory) by Jacob A. Marinsky, Lawrence E. Glendenin, and Charles D. Coryell. They isolated it from fission products of uranium fuel that had been irradiated in the Graphite Reactor.</p>
+        <p>The discovery was not announced until 1947. The name "promethium" was suggested by Grace Coryell (Charles Coryell's wife) and accepted in 1949. The name refers to Prometheus, who stole fire from the gods in Greek mythology, symbolizing both the great potential and danger of nuclear energy.</p>
+        <p>Metallic promethium was first prepared in 1963 by reducing promethium fluoride (PmF₃) with lithium. Only about 1 gram of promethium is extracted from spent nuclear fuel each year worldwide.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Promethium is the only radioactive lanthanide and one of only two radioactive elements followed by stable elements</li>
+            <li>The element was named after Prometheus, who stole fire from the gods - representing nuclear energy</li>
+            <li>Promethium-147 was used in the first nuclear-powered pacemakers in the 1970s</li>
+            <li>Only about 1 gram of promethium is produced from nuclear waste each year worldwide</li>
+            <li>Promethium compounds glow in the dark with a pale blue or green light due to radioactivity exciting phosphors</li>
+            <li>The element was predicted to exist 43 years before it was actually discovered</li>
+            <li>Promethium was the last naturally occurring element to be discovered (though it doesn't occur naturally in appreciable amounts)</li>
+            <li>Some watch dials and instrument panels in the 1960s used promethium-based paint instead of radium</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radiation Hazard:</strong> All promethium isotopes radioactive. Handle with appropriate radiation safety precautions.</p>
+        <p><strong>Beta Radiation:</strong> Promethium-147 emits beta particles (maximum energy 0.223 MeV). External hazard mainly to skin. Internal hazard if ingested or inhaled.</p>
+        <p><strong>Gamma Radiation:</strong> Some promethium isotopes emit gamma rays. Pm-148m emits significant gamma radiation.</p>
+        <p><strong>Internal Hazard:</strong> Promethium accumulates in bone if ingested or inhaled. Bone-seeking radionuclide.</p>
+        <p><strong>First Aid:</strong> For contamination, remove contaminated clothing. Wash skin with soap and water. For inhalation, move to fresh air. Seek medical attention for significant exposures.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, lab coat, safety glasses. Use fume hoods or glove boxes for handling. Monitor with radiation detectors.</p>
+        <p><strong>Radiation Monitoring:</strong> Use appropriate radiation monitoring equipment. Film badges, dosimeters for personnel monitoring.</p>
+        <p><strong>Storage:</strong> Store in designated radiation areas. Use proper shielding (plastic for beta radiation). Label clearly with radiation symbol.</p>
+        <p><strong>Waste Disposal:</strong> Promethium waste must be disposed as radioactive waste. Follow nuclear regulatory requirements.</p>
+        <p><strong>Transport:</strong> Transport according to regulations for radioactive materials. Special packaging required.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear regulatory controls (NRC in US, equivalent agencies elsewhere).</p>
+        <p><strong>Fire Hazard:</strong> Burning promethium can spread radioactive contamination. Use appropriate extinguishing methods.</p>
+        <p><strong>Environmental:</strong> Prevent environmental releases. Follow strict containment procedures.</p>
+    </div>
+</body>
+</html>
