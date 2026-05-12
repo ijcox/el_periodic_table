@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitrogen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #9b59b6;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .info-card h3 {
+            color: #9b59b6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">7</div>
+            <div class="symbol-large">N</div>
+        </div>
+        <div class="element-title">
+            <h1>Nitrogen</h1>
+            <div class="element-subtitle">Nonmetal • Group 15 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>7</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>14.007 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s² 2p³</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Nitrogen is a colorless, odorless, tasteless diatomic gas that makes up about 78% of Earth's atmosphere by volume. It is an essential element for all living organisms as a component of proteins, nucleic acids, and other biological molecules.</p>
+        <p>Nitrogen was discovered in 1772 by Scottish physician Daniel Rutherford, who called it "noxious air" or "fixed air." The name "nitrogen" comes from the Greek words "nitron" and "genes" meaning "niter-forming." Antoine Lavoisier suggested the name "azote" meaning "without life," which is preserved in names like "azide" and "azo compound."</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-210.0°C (-346.0°F, 63.15 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-195.8°C (-320.4°F, 77.36 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>1.2506 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>0.808 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>-146.9°C, 3.39 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>0.72 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>5.57 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Triple Point</td>
+                <td>-210.0°C, 12.6 kPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -2, -1, +1, +2, +3, +4, +5 (most common: -3, +3, +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>3.04 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1402.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>65 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>71 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>155 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Nitrogen has two stable isotopes:</p>
+        <ul>
+            <li><strong>Nitrogen-14 (¹⁴N)</strong> - Natural abundance of 99.634%. The most common isotope with 7 protons and 7 neutrons.</li>
+            <li><strong>Nitrogen-15 (¹⁵N)</strong> - Natural abundance of 0.366%. Used as a tracer in scientific research and in NMR spectroscopy.</li>
+        </ul>
+        <p>Nitrogen also has several radioactive isotopes, with nitrogen-13 being the most notable:</p>
+        <ul>
+            <li><strong>Nitrogen-13 (¹³N)</strong> - Radioactive isotope with half-life of 9.97 minutes; used in positron emission tomography (PET scans)</li>
+            <li><strong>Nitrogen-16 (¹⁶N)</strong> - Highly radioactive (7.13 second half-life); produced in nuclear reactors</li>
+            <li><strong>Nitrogen-17 (¹⁷N)</strong> - Short-lived isotope (4.173 second half-life)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Fertilizers</strong> - Ammonia and nitrate compounds provide essential nitrogen for plant growth</li>
+            <li><strong>Food Preservation</strong> - Nitrogen gas used in packaging to displace oxygen and prevent spoilage</li>
+            <li><strong>Industrial Processes</strong> - Production of ammonia via Haber-Bosch process; nitric acid manufacture</li>
+            <li><strong>Cryogenics</strong> - Liquid nitrogen for freezing, cooling, and preserving biological samples</li>
+            <li><strong>Electronics</strong> - Inert atmosphere for semiconductor manufacturing and soldering</li>
+            <li><strong>Explosives</strong> - Nitroglycerin, TNT, nitroguanidine, and other nitrogen-containing explosives</li>
+            <li><strong>Medical Applications</strong> - Nitrous oxide as anesthetic; nitrogen in medical gas mixtures</li>
+            <li><strong>Materials Science</strong> - Nitriding steel surfaces for hardness; production of nylon and other polymers</li>
+            <li><strong>Fire Suppression</strong> - Nitrogen systems for protecting valuable equipment from fire</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Nitrogen is essential for all living organisms and is a key component of many biological molecules:</p>
+        <ul>
+            <li><strong>Proteins and Amino Acids</strong> - Nitrogen is part of the amino group (-NH₂) in all amino acids</li>
+            <li><strong>Nucleic Acids</strong> - DNA and RNA contain nitrogenous bases (adenine, guanine, cytosine, thymine, uracil)</li>
+            <li><strong>Chlorophyll</strong> - Essential for photosynthesis in plants</li>
+            <li><strong>Nitrogen Cycle</strong> - Complex natural process involving nitrogen fixation, ammonification, nitrification, and denitrification</li>
+            <li><strong>Nitrogen Fixation</strong> - Conversion of atmospheric N₂ to usable forms by bacteria (Rhizobium) and industrial processes</li>
+            <li><strong>Human Health</strong> - Required for protein synthesis; nitrogen balance important for metabolism</li>
+            <li><strong>Eutrophication</strong> - Excess nitrogen runoff causes algal blooms and dead zones in water bodies</li>
+        </ul>
+        <p>Despite nitrogen's abundance in the atmosphere, most organisms cannot use N₂ directly and depend on nitrogen fixation by specialized bacteria or industrial processes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Nitrogen is the most abundant pure element in Earth's atmosphere (78.08% by volume, 75.5% by mass). It also occurs in:</p>
+        <ul>
+            <li><strong>Mineral Deposits</strong> - Chile saltpeter (NaNO₃) and other nitrate minerals</li>
+            <li><strong>Organic Matter</strong> - All living organisms contain nitrogen compounds</li>
+            <li><strong>Soil</strong> - As ammonium and nitrate ions</li>
+            <li><strong>Water</strong> - Dissolved nitrogen gas and nitrogen compounds</li>
+            <li><strong>Space</li> - Found in interstellar clouds and planetary atmospheres</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Most industrial nitrogen is produced by fractional distillation of liquefied air. The Haber-Bosch process (invented 1909-1910) fixes atmospheric nitrogen to produce ammonia, revolutionizing agriculture.</p>
+        <p><strong>Major Producers:</strong> Global production exceeds 150 million tons annually, with China, India, Russia, and the United States as major producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Nitrogen compounds have significant environmental effects:</p>
+        <ul>
+            <li><strong>Eutrophication</strong> - Excess fertilizer runoff causes algal blooms that deplete oxygen in water bodies</li>
+            <li><strong>Air Pollution</strong> - Nitrogen oxides (NOₓ) contribute to smog, acid rain, and respiratory problems</li>
+            <li><strong>Greenhouse Gases</strong> - Nitrous oxide (N₂O) is a potent greenhouse gas (298 times more potent than CO₂)</li>
+            <li><strong>Ozone Depletion</</strong> - Nitrous oxide is now the largest ozone-depleting substance emitted by humans</li>
+            <li><strong>Nitrogen Saturation</strong> - Excess nitrogen deposition alters soil chemistry and forest ecosystems</li>
+            <li><strong>Water Contamination</strong> - Nitrate contamination of groundwater from agricultural runoff</li>
+        </ul>
+        <p>Managing nitrogen use in agriculture while minimizing environmental impacts is a major sustainability challenge.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Nitrogen was discovered in 1772 by Scottish physician Daniel Rutherford, who found that a mouse could not live in air from which carbon dioxide had been removed, and that this "noxious air" did not support combustion. He called it "noxious air" or "fixed air" (not to be confused with carbon dioxide, which Joseph Black called "fixed air").</p>
+        <p>Around the same time, Carl Wilhelm Scheele, Henry Cavendish, and Joseph Priestley also studied this component of air. Scheele called it "foul air." Antoine Lavoisier recognized it as an element and named it "azote" from Greek "a-" (without) and "zoe" (life).</p>
+        <p>The modern name "nitrogen" was suggested by Jean-Antoine Chaptal in 1790, recognizing its presence in niter (potassium nitrate). The Haber-Bosch process, developed in the early 20th century, allowed industrial-scale fixation of atmospheric nitrogen, fundamentally changing agriculture and enabling population growth.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Nitrogen makes up about 78% of the air you breathe but is mostly inert in this form</li>
+            <li>Liquid nitrogen boils at -196°C (-321°F) and is used to instantly freeze items</li>
+            <li>The Haber-Bosch process for fixing nitrogen is considered one of the most important inventions of the 20th century</li>
+            <li>Nitrogen narcosis ("rapture of the deep") affects divers at depth, causing impaired judgment</li>
+            <li>Lightning fixes atmospheric nitrogen, creating nitrates that fertilize soil</li>
+            <li>Nitrogen is the fifth most abundant element in the solar system and Milky Way galaxy</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Asphyxiation Hazard:</strong> Nitrogen gas can displace oxygen in confined spaces, leading to unconsciousness and death without warning symptoms.</p>
+        <p><strong>Cryogenic Burns:</strong> Liquid nitrogen causes severe frostbite upon contact with skin or eyes. Protective equipment is essential when handling.</p>
+        <p><strong>Pressure Hazards:</strong> Rapid vaporization of liquid nitrogen can cause explosive pressure buildup in sealed containers.</p>
+        <p><strong>Chemical Hazards:</strong> Many nitrogen compounds are explosive (nitroglycerin, TNT, ammonium nitrate) or toxic (cyanide, ammonia, nitrogen oxides).</p>
+        <p><strong>Nitrogen Narcosis:</strong> Divers breathing compressed air experience intoxicating effects at depths below 30 meters (100 feet).</p>
+        <p><strong>Decompression Sickness:</strong> Rapid ascent can cause nitrogen bubbles to form in the bloodstream ("the bends").</p>
+        <p><strong>Environmental Impact:</strong> Nitrogen runoff from agriculture causes water pollution and ecosystem damage through eutrophication.</p>
+    </div>
+</body>
+</html>
