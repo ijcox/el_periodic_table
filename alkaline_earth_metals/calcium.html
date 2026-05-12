@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f39c12;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .info-card h3 {
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">20</div>
+            <div class="symbol-large">Ca</div>
+        </div>
+        <div class="element-title">
+            <h1>Calcium</h1>
+            <div class="element-subtitle">Alkaline Earth Metal • Group 2 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>20</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>40.078 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Calcium is a soft gray alkaline earth metal that is the fifth most abundant element in Earth's crust and the third most abundant metal after aluminum and iron. It is essential for living organisms, particularly in cell physiology and skeletal mineralization.</p>
+        <p>Calcium was known as early as the first century when the Ancient Romans prepared lime as calcium oxide. It was first isolated in 1808 by Sir Humphry Davy through the electrolysis of a mixture of lime (CaO) and mercuric oxide. The name comes from the Latin "calx" meaning lime, which was obtained from heating limestone.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>842°C (1548°F, 1115 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1484°C (2703°F, 1757 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>1.55 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>1.378 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.647 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>8.54 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>154.7 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>1.75</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+1, +2 (strongly basic oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.00 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>589.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (2nd)</td>
+                <td>1145.4 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>197 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>176 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>231 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Calcium has five stable isotopes:</p>
+        <ul>
+            <li><strong>Calcium-40 (⁴⁰Ca)</strong> - Natural abundance of 96.941%. The most common isotope with 20 protons and 20 neutrons.</li>
+            <li><strong>Calcium-44 (⁴⁴Ca)</strong> - Natural abundance of 2.086%.</li>
+            <li><strong>Calcium-42 (⁴²Ca)</strong> - Natural abundance of 0.647%.</li>
+            <li><strong>Calcium-48 (⁴⁸Ca)</strong> - Natural abundance of 0.187%. Double magic nucleus; used in superheavy element research.</li>
+            <li><strong>Calcium-43 (⁴³Ca)</strong> - Natural abundance of 0.135%. Used in NMR spectroscopy.</li>
+        </ul>
+        <p>Calcium also has several radioactive isotopes, with calcium-41 being the most notable with a half-life of 99,400 years. Calcium-48 is particularly important in nuclear physics for synthesizing superheavy elements.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Construction</strong> - Calcium compounds in cement, concrete, mortar, plaster, and limestone building blocks</li>
+            <li><strong>Metallurgy</strong> - Deoxidizer, desulfurizer, and alloying element in steel, aluminum, copper, and lead alloys</li>
+            <li><strong>Food and Nutrition</strong> - Calcium carbonate as dietary supplement; calcium phosphate in baking powder; calcium chloride as firming agent</li>
+            <li><strong>Medicine</strong> - Calcium supplements for bone health; calcium gluconate for treating hypocalcemia and hydrofluoric acid burns</li>
+            <li><strong>Agriculture</strong> - Lime (calcium oxide) to neutralize acidic soils; calcium fertilizers for plant growth</li>
+            <li><strong>Paper Industry</strong> - Calcium carbonate as filler and coating for paper</li>
+            <li><strong>Water Treatment</strong> - Lime for water softening and pH adjustment</li>
+            <li><strong>Chemical Industry</strong> - Production of calcium carbide (for acetylene), calcium hypochlorite (bleach), and other chemicals</li>
+            <li><strong>Glass Manufacturing</strong> - Calcium carbonate as flux to lower melting temperature</li>
+            <li><strong>Environmental Applications</strong> - Flue gas desulfurization using lime to remove SO₂ from power plant emissions</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Calcium is essential for all living organisms and plays crucial roles in biological systems:</p>
+        <ul>
+            <li><strong>Bone and Teeth Structure</strong> - Hydroxyapatite (Ca₁₀(PO₄)₆(OH)₂) provides rigidity to bones and teeth; 99% of body calcium is in skeleton</li>
+            <li><strong>Cell Signaling</strong> - Calcium ions act as second messengers in signal transduction pathways</li>
+            <li><strong>Muscle Contraction</strong> - Calcium binding to troponin enables actin-myosin interaction in muscle fibers</li>
+            <li><strong>Blood Clotting</strong> - Calcium is cofactor for several clotting factors in coagulation cascade</li>
+            <li><strong>Nerve Function</strong> - Calcium influx triggers neurotransmitter release at synapses</li>
+            <li><strong>Enzyme Cofactor</strong> - Required for many enzymes including lipase, ATPase, and some proteases</li>
+            <li><strong>Cardiac Function</strong> - Regulates heart muscle contraction and electrical conduction</li>
+            <li><strong>Human Requirements</strong> - Adults need 1000-1300 mg/day; rich sources include dairy, leafy greens, fortified foods, and fish with bones</li>
+            <li><strong>Calcium Homeostasis</strong> - Tightly regulated by parathyroid hormone, calcitonin, and vitamin D</li>
+            <li><strong>Deficiency (Hypocalcemia)</strong> - Causes osteoporosis, osteomalacia, muscle cramps, and cardiac issues</li>
+        </ul>
+        <p>Calcium is so crucial that its concentration in blood is maintained within narrow limits (8.5-10.2 mg/dL).</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Calcium is the fifth most abundant element in Earth's crust (4.1% by weight). It occurs in numerous minerals including:</p>
+        <ul>
+            <li><strong>Calcite and Aragonite</strong> - Calcium carbonate (CaCO₃) in limestone, marble, and chalk</li>
+            <li><strong>Gypsum</strong> - Calcium sulfate dihydrate (CaSO₄·2H₂O)</li>
+            <li><strong>Fluorite</strong> - Calcium fluoride (CaF₂)</li>
+            <li><strong>Apatite</strong> - Calcium phosphate with fluoride or chloride</li>
+            <li><strong>Wollastonite</strong> - Calcium silicate (CaSiO₃)</li>
+            <li><strong>Dolomite</strong> - Calcium magnesium carbonate (CaMg(CO₃)₂)</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Metallic calcium is produced by:</p>
+        <ol>
+            <li><strong>Electrolysis</strong> - Of molten calcium chloride (similar to sodium production)</li>
+            <li><strong>Thermal Reduction</strong> - Of calcium oxide with aluminum at high temperature (Pidgeon process variant)</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 20,000 tons of metallic calcium annually, plus millions of tons of calcium compounds. China is the largest producer, followed by Russia and United States.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Calcium mining and use have mixed environmental impacts:</p>
+        <ul>
+            <li><strong>Mining Impacts</strong> - Quarrying limestone and marble causes landscape alteration, dust pollution, and habitat destruction</li>
+            <li><strong>Cement Production</strong> - Accounts for about 8% of global CO₂ emissions (from limestone calcination and fuel combustion)</li>
+            <li><strong>Water Hardness</strong> - Calcium and magnesium ions cause water hardness, increasing soap consumption and scale formation</li>
+            <li><strong>Soil Amendment</strong> - Agricultural lime improves soil pH but can affect local water chemistry</li>
+            <li><strong>Ocean Acidification</strong> - Increased atmospheric CO₂ reduces calcium carbonate saturation in oceans, affecting shell-forming organisms</li>
+            <li><strong>Carbon Sequestration</strong> - Weathering of calcium silicate minerals naturally removes CO₂ from atmosphere</li>
+            <li><strong>Flue Gas Desulfurization</strong> - Lime scrubbing reduces SO₂ emissions but produces calcium sulfate waste</li>
+            <li><strong>Recycling</strong> - Concrete recycling reduces need for new limestone mining</li>
+        </ul>
+        <p>Calcium's role in both contributing to (cement production) and mitigating (carbon sequestration) climate change makes it environmentally complex.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Calcium compounds have been used since prehistoric times. Lime (calcium oxide) was produced by heating limestone and used in mortar by ancient Egyptians, Greeks, and Romans. The Romans used calcium oxide in concrete that could harden underwater.</p>
+        <p>In 1755, Joseph Black performed classic experiments on limestone, quicklime, and carbon dioxide. In 1808, Sir Humphry Davy isolated calcium metal by electrolyzing a mixture of lime and mercuric oxide, then distilling off the mercury from the calcium amalgam.</p>
+        <p>In the 19th century, calcium's role in biology began to be understood. In 1883, Sidney Ringer discovered the importance of calcium ions for heart muscle contraction. In the early 20th century, calcium's role in blood clotting and bone health was established.</p>
+        <p>Industrial production of calcium metal began in the early 20th century. Today, calcium and its compounds are essential in construction, metallurgy, agriculture, and medicine.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>The average human body contains about 1 kg of calcium, mostly in bones and teeth</li>
+            <li>Calcium is produced in large stars through silicon burning process just before supernova explosions</li>
+            <li>Eggshells are about 94% calcium carbonate - the same mineral as limestone and marble</li>
+            <li>Stalactites and stalagmites in caves are made of calcium carbonate deposited by dripping water</li>
+            <li>Some animals like birds and reptiles store calcium in special bones called medullary bones for eggshell production</li>
+            <li>The White Cliffs of Dover are made of chalk, a soft form of calcium carbonate from ancient marine organisms</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Fire Hazard:</strong> Calcium metal reacts with water producing hydrogen gas and heat. Fine calcium powder can ignite spontaneously in air.</p>
+        <p><strong>Chemical Reactivity:</strong> Reacts with acids producing hydrogen gas. Reacts violently with strong oxidizing agents.</p>
+        <p><strong>Storage:</strong> Store in airtight containers under inert atmosphere or mineral oil. Keep away from water, acids, and oxidizing agents.</p>
+        <p><strong>Dust Hazard:</strong> Calcium dust is irritating to eyes, skin, and respiratory system. Can form explosive mixtures with air.</p>
+        <p><strong>Quicklime Burns:</strong> Calcium oxide (quicklime) reacts exothermically with water, causing severe chemical and thermal burns.</p>
+        <p><strong>Medical Considerations:</strong> While calcium ions are essential, excessive calcium supplementation can cause hypercalcemia with symptoms including kidney stones, constipation, and cardiac issues.</p>
+        <p><strong>First Aid:</strong> For calcium metal fires, use Class D extinguishers. For skin contact with quicklime, brush off dry powder before flushing with water.</p>
+        <p><strong>Environmental Concerns:</strong> Limestone quarrying affects landscapes and ecosystems. Cement production is a major source of CO₂ emissions.</p>
+        <p><strong>Occupational Safety:</strong> Workers in cement and lime industries need protection from dust and appropriate ventilation.</p>
+    </div>
+</body>
+</html>
