@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krypton</title>
+    <style>
+        /* Krypton is a noble gas */
+        .noble-gas { background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #00bcd4;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .info-card h3 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #00bcd4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">36</div>
+            <div class="symbol-large">Kr</div>
+        </div>
+        <div class="element-title">
+            <h1>Krypton</h1>
+            <div class="element-subtitle">Noble Gas • Group 18 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>36</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>83.798 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s² 4p⁶</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Krypton is a colorless, odorless, tasteless noble gas that occurs in trace amounts in Earth's atmosphere. Like other noble gases, krypton is chemically inert under normal conditions, but it can form compounds with fluorine under extreme conditions. Krypton is known for its brilliant green and orange spectral lines, which are used in certain specialized lighting applications.</p>
+        <p>Krypton was discovered in 1898 by Scottish chemist Sir William Ramsay and English chemist Morris Travers while they were studying liquefied air. They had previously discovered argon and helium. After removing oxygen, nitrogen, and argon from a sample of air, they found a small amount of a heavier gas, which they named "krypton" from the Greek word "kryptos" meaning "hidden."</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-157.36°C (-251.25°F, 115.79 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-153.22°C (-243.80°F, 119.93 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>3.749 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>2.413 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity (Cp)</td>
+                <td>0.248 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>1.64 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>9.08 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>0.00943 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Critical Temperature</td>
+                <td>-63.8°C (209.4 K)</td>
+            </tr>
+            <tr>
+                <td>Critical Pressure</td>
+                <td>54.3 atm (5.50 MPa)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +2 (rare compounds)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>3.00 (Pauling scale, theoretical)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1350.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>88 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>202 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (fcc)</td>
+            </tr>
+            <tr>
+                <td>Known Compounds</td>
+                <td>Krypton difluoride (KrF₂), krypton tetrafluoride (KrF₄, theoretical)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Krypton has six stable isotopes:</p>
+        <ul>
+            <li><strong>Krypton-78 (⁷⁸Kr)</strong> - 0.35% abundance</li>
+            <li><strong>Krypton-80 (⁸⁰Kr)</strong> - 2.28% abundance</li>
+            <li><strong>Krypton-82 (⁸²Kr)</strong> - 11.58% abundance</li>
+            <li><strong>Krypton-83 (⁸³Kr)</strong> - 11.49% abundance</li>
+            <li><strong>Krypton-84 (⁸⁴Kr)</strong> - 57.00% abundance</li>
+            <li><strong>Krypton-86 (⁸⁶Kr)</strong> - 17.30% abundance</li>
+        </ul>
+        <p>Krypton has several radioactive isotopes, some with important applications:</p>
+        <ul>
+            <li><strong>Krypton-85 (⁸⁵Kr)</strong> - Radioactive isotope with half-life of 10.756 years; fission product, used in leak detection and thickness gauges</li>
+            <li><strong>Krypton-81 (⁸¹Kr)</strong> - Radioactive isotope with half-life of 229,000 years; used in groundwater dating and ice core dating</li>
+            <li><strong>Krypton-79 (⁷⁹Kr)</strong> - Radioactive isotope with half-life of 35.04 hours</li>
+            <li><strong>Krypton-76 (⁷⁶Kr)</strong> - Radioactive isotope with half-life of 14.8 hours</li>
+        </ul>
+        <p>Krypton-85 is produced in nuclear reactors and nuclear weapons testing; its atmospheric concentration serves as a tracer for nuclear activities.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Lighting</strong> - Krypton gas in fluorescent lamps, flash lamps for high-speed photography, and some specialized incandescent bulbs</li>
+            <li><strong>Lasers</strong> - Krypton gas in certain ion lasers (krypton ion laser) that produce red, yellow, and green light</li>
+            <li><strong>Window Insulation</strong> - Krypton gas fill in double- and triple-pane windows for superior thermal insulation compared to argon</li>
+            <li><strong>International Prototype of the Meter</strong> - From 1960 to 1983, the meter was defined as 1,650,763.73 wavelengths of the orange-red emission line of krypton-86</li>
+            <li><strong>Medical Imaging</strong> - Hyperpolarized krypton-83 for magnetic resonance imaging (MRI) of lungs</li>
+            <li><strong>Leak Detection</strong> - Krypton-85 as tracer gas for detecting leaks in sealed systems</li>
+            <li><strong>Thickness Gauges</strong> - Krypton-85 in industrial thickness gauges for thin materials</li>
+            <li><strong>Plasma Displays</strong> - Krypton-xenon mixtures in some plasma display panels</li>
+            <li><strong>Environmental Tracers</strong> - Krypton-85 and krypton-81 for dating groundwater and ice cores</li>
+            <li><strong>Scientific Research</strong> - Krypton in particle physics experiments and as a calibration standard</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Krypton has no known biological role and is generally inert:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Krypton participates in no known biological processes</li>
+            <li><strong>Physiological Inertness</strong> - Like other noble gases, krypton is chemically inert in biological systems</li>
+            <li><strong>Anesthetic Properties</strong> - Krypton has weak anesthetic properties at high pressures (4-5 atmospheres)</li>
+            <li><strong>Narcotic Potency</strong> - Krypton is about 2-3 times more narcotic than nitrogen under pressure; not used medically due to cost</li>
+            <li><strong>Metabolic Inertness</strong> - Krypton is not metabolized by the body</li>
+            <li><strong>Environmental Exposure</strong> - Humans are exposed to trace amounts (1 ppm in air); no health effects at normal concentrations</li>
+            <li><strong>Medical Imaging</strong> - Hyperpolarized krypton-83 MRI allows visualization of lung air spaces without radiation exposure</li>
+            <li><strong>Radiation Hazard</strong> - Radioactive krypton-85 poses inhalation hazard; beta emitter that can be harmful if concentrated</li>
+            <li><strong>Asphyxiation Risk</strong> - Like any gas, krypton can displace oxygen in confined spaces, causing asphyxiation</li>
+        </ul>
+        <p>Krypton's biological significance is limited to its physical properties (anesthetic at high pressure) and medical imaging applications.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Krypton occurs naturally:</p>
+        <ul>
+            <li><strong>Earth's Atmosphere</strong> - 1.14 ppm (parts per million) by volume; about 5×10⁻⁶% of atmosphere</li>
+            <li><strong>Cosmic Abundance</strong> - Produced by cosmic ray spallation and in supernovae</li>
+            <li><strong>Nuclear Processes</strong> - Some krypton isotopes produced by fission of uranium and other heavy elements</li>
+            <li><strong>Meteorites</strong> - Found in some meteorites in trace amounts</li>
+            <li><strong>Natural Gas</strong> - Trace amounts in some natural gas deposits</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Krypton is extracted from air:</p>
+        <ol>
+            <li><strong>Air Liquefaction</strong> - Air cooled and compressed until it liquefies</li>
+            <li><strong>Fractional Distillation</strong> - Liquid air distilled to separate components based on boiling points</li>
+            <li><strong>Krypton-Xenon Fraction</strong> - Krypton and xenon collected together as they have similar boiling points</li>
+            <li><strong>Separation</strong> - Krypton separated from xenon by further distillation or adsorption</li>
+            <li><strong>Purification</strong> - Chemical purification to remove traces of other gases</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 10,000 liters annually. Major producers: Air Liquide, Linde, Air Products.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Krypton has minimal environmental impact but some specific considerations:</p>
+        <ul>
+            <li><strong>Atmospheric Tracer</strong> - Krypton-85 serves as indicator of nuclear activities; atmospheric levels increased during nuclear testing era</li>
+            <li><strong>Greenhouse Gas Potential</strong> - Krypton has greenhouse effect but negligible due to extremely low atmospheric concentration</li>
+            <li><strong>Nuclear Industry</strong> - Krypton-85 released from nuclear reactors and fuel reprocessing plants</li>
+            <li><strong>Radioactive Krypton</strong> - Krypton-85 beta emitter with 10.8 year half-life; disperses quickly in atmosphere</li>
+            <li><strong>Energy Efficiency</strong> - Krypton in window insulation reduces energy consumption for heating and cooling</li>
+            <li><strong>Resource Extraction</strong> - Krypton production as byproduct of oxygen/nitrogen production; minimal additional environmental impact</li>
+            <li><strong>No Ozone Depletion</strong> - Krypton does not participate in ozone destruction cycles</li>
+            <li><strong>No Bioaccumulation</strong> - Krypton does not accumulate in biological systems</li>
+            <li><strong>Monitoring</strong> - Atmospheric krypton-85 monitored as part of nuclear non-proliferation efforts</li>
+        </ul>
+        <p>Krypton's main environmental significance is as a tracer for nuclear activities and as a component in energy-efficient technologies.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Krypton was discovered on May 30, 1898, by Scottish chemist Sir William Ramsay and English chemist Morris Travers at University College London. They were studying the residue left after evaporating nearly all components of liquid air.</p>
+        <p>After discovering argon in 1894 and helium in 1895, Ramsay and Travers continued investigating atmospheric gases. They liquefied air and carefully boiled it off, collecting the less volatile fractions. In the fraction that boiled between oxygen and argon, they found a new gas with distinctive spectral lines, particularly a brilliant green line and a yellow line.</p>
+        <p>They named the new gas "krypton" from the Greek "kryptos" meaning "hidden," because it had remained hidden in air for so long. Within weeks of discovering krypton, they discovered neon and xenon using similar methods.</p>
+        <p>In 1960, the International System of Units (SI) defined the meter in terms of the orange-red spectral line of krypton-86. This definition lasted until 1983 when it was replaced by the current definition based on the speed of light.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Superman's home planet is named Krypton, though the element krypton is not found there (it's in Earth's atmosphere)</li>
+            <li>From 1960 to 1983, the meter was officially defined using light emitted by krypton-86 atoms</li>
+            <li>Krypton is about 2.8 times denser than air, so it sinks in air (unlike helium which rises)</li>
+            <li>The word "krypton" comes from the Greek "kryptos" meaning "hidden" - it was hidden in air for centuries</li>
+            <li>Some car headlights contain krypton gas to produce brighter, whiter light</li>
+            <li>Krypton was used in the original definition of the meter (1,650,763.73 wavelengths of krypton-86 light)</li>
+            <li>Krypton is used in some energy-efficient windows because it's a better insulator than argon</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Asphyxiation Hazard:</strong> Krypton can displace oxygen in confined spaces, leading to oxygen deficiency. Symptoms: dizziness, confusion, loss of consciousness, death.</p>
+        <p><strong>High Pressure Hazards:</strong> Krypton cylinders under high pressure (up to 2000 psi); improper handling can cause explosive decompression.</p>
+        <p><strong>Cryogenic Hazards:</strong> Liquid krypton at -153°C causes severe frostbite on contact with skin.</p>
+        <p><strong>Chemical Inertness:</strong> Krypton is chemically inert under normal conditions; no chemical toxicity.</p>
+        <p><strong>Radioactive Krypton-85:</strong> Beta emitter with 10.8 year half-life; inhalation hazard from nuclear facilities. Limits air concentration to control exposure.</p>
+        <p><strong>Anesthetic Effects:</strong> At pressures above 4 atmospheres, krypton acts as an anesthetic; can impair judgment similar to nitrogen narcosis.</p>
+        <p><strong>First Aid:</strong> For oxygen deficiency, move to fresh air immediately. Administer oxygen if breathing is difficult. Seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use appropriate respiratory protection in oxygen-deficient atmospheres. Wear insulated gloves when handling liquid krypton.</p>
+        <p><strong>Storage:</strong> Store in well-ventilated area away from heat sources. Secure cylinders to prevent falling.</p>
+        <p><strong>Ventilation:</strong> Ensure adequate ventilation when using krypton in enclosed spaces to prevent oxygen displacement.</p>
+    </div>
+</body>
+</html>
