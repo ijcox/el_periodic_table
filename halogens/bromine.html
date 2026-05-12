@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bromine</title>
+    <style>
+        /* Bromine is a halogen */
+        .halogen { background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e91e63;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .info-card h3 {
+            color: #e91e63;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e91e63;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">35</div>
+            <div class="symbol-large">Br</div>
+        </div>
+        <div class="element-title">
+            <h1>Bromine</h1>
+            <div class="element-subtitle">Halogen • Group 17 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>35</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>79.904 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s² 4p⁵</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Liquid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Bromine is a reddish-brown liquid at room temperature, the only nonmetallic element and one of only two elements (along with mercury) that is liquid under standard conditions. It evaporates easily to form a reddish-brown vapor with a strong, chlorine-like odor. Bromine is less reactive than chlorine but more reactive than iodine among the halogens.</p>
+        <p>Bromine was discovered independently by two chemists: Carl Jacob Löwig in 1825 and Antoine Jérôme Balard in 1826. Balard published his results first and is generally credited with the discovery. He isolated bromine from brine (salt water) residues and named it "brome" from the Greek word "bromos" meaning "stench" due to its strong, unpleasant odor.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-7.2°C (19.0°F, 265.9 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>58.8°C (137.8°F, 332.0 K)</td>
+            </tr>
+            <tr>
+                <td>Density (liquid)</td>
+                <td>3.1028 g/cm³ (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Liquid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.474 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>5.286 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>15.438 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>0.122 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>7.8×10¹⁰ Ω·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Viscosity</td>
+                <td>0.95 mPa·s (at 25°C)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, +1, +3, +4, +5, +7 (most common: -1, +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.96 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1139.9 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>115 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>120 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>185 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Orthorhombic (solid)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Bromine has two stable isotopes:</p>
+        <ul>
+            <li><strong>Bromine-79 (⁷⁹Br)</strong> - 50.69% abundance</li>
+            <li><strong>Bromine-81 (⁸¹Br)</strong> - 49.31% abundance</li>
+        </ul>
+        <p>Bromine has several radioactive isotopes, with bromine-82 being medically important:</p>
+        <ul>
+            <li><strong>Bromine-82 (⁸²Br)</strong> - Radioactive isotope with half-life of 35.30 hours; used in medical imaging and industrial radiography</li>
+            <li><strong>Bromine-77 (⁷⁷Br)</strong> - Radioactive isotope with half-life of 57.04 hours</li>
+            <li><strong>Bromine-76 (⁷⁶Br)</strong> - Radioactive isotope with half-life of 16.2 hours</li>
+            <li><strong>Bromine-75 (⁷⁵Br)</strong> - Radioactive isotope with half-life of 1.63 hours</li>
+        </ul>
+        <p>Bromine isotopes are used in positron emission tomography (PET) and single-photon emission computed tomography (SPECT) imaging.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Flame Retardants</strong> - Brominated flame retardants in electronics, furniture, textiles, and building materials</li>
+            <li><strong>Drilling Fluids</strong> - Calcium bromide and zinc bromide in oil and gas well drilling fluids</li>
+            <li><strong>Photography</strong> - Silver bromide in photographic film and papers (declining use with digital photography)</li>
+            <li><strong>Water Treatment</strong> - Bromine compounds as disinfectants for swimming pools, hot tubs, and cooling towers</li>
+            <li><strong>Pesticides</strong> - Methyl bromide as soil fumigant (phasing out due to ozone depletion), ethylene dibromide as fumigant</li>
+            <li><strong>Pharmaceuticals</strong> - Bromine in sedatives (barbiturates), antihistamines, and other drugs</li>
+            <li><strong>Gasoline Additives</strong> - Ethylene dibromide as lead scavenger in leaded gasoline (phased out)</li>
+            <li><strong>Dyes</strong> - Bromine in certain dyes, especially brominated indigo (Tyrian purple)</li>
+            <li><strong>Chemical Synthesis</strong> - Bromine as reagent in organic chemistry for bromination reactions</li>
+            <li><strong>Bleaching</strong> - Bromine compounds in paper and textile bleaching</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Bromine has no known essential role in human physiology but has some biological occurrences:</p>
+        <ul>
+            <li><strong>Not Essential</strong> - No evidence bromine is essential for humans or animals</li>
+            <li><strong>Bromide Ion</strong> - Bromide (Br⁻) accumulates in body fluids; historical use as sedative and anticonvulsant</li>
+            <li><strong>Marine Organisms</strong> - Many marine organisms produce brominated organic compounds as defense chemicals</li>
+            <li><strong>Eosinophils</strong> - Human eosinophils (white blood cells) use bromine to produce hypobromous acid as antimicrobial agent</li>
+            <li><strong>Vanadium Bromoperoxidase</strong> - Enzymes in marine algae that brominate organic compounds using hydrogen peroxide</li>
+            <li><strong>Toxicity</strong> - Elemental bromine highly toxic and corrosive; causes severe burns to skin and mucous membranes</li>
+            <li><strong>Bromism</strong> - Chronic bromide poisoning from excessive bromide intake; causes neurological symptoms, skin rash</li>
+            <li><strong>Goitrogen</strong> - Bromide interferes with iodine uptake by thyroid gland, potentially causing goiter</li>
+            <li><strong>Environmental Accumulation</strong> - Brominated compounds accumulate in food chains, especially marine organisms</li>
+            <li><strong>Medical Uses</strong> - Historically used as sedative; currently used in some topical medications</li>
+        </ul>
+        <p>While not essential, bromine participates in some biological processes, particularly in marine ecosystems and human immune cells.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Bromine is the 46th most abundant element in Earth's crust (2.4 ppm). It occurs:</p>
+        <ul>
+            <li><strong>Seawater</strong> - 65 ppm in seawater (as bromide ion)</li>
+            <li><strong>Salt Lakes and Brines</strong> - Great Salt Lake (Utah), Dead Sea, underground brines</li>
+            <li><strong>Carnallite</strong> - KMgCl₃·6H₂O (potassium magnesium chloride hydrate, contains bromide)</li>
+            <li><strong>As Impurity</strong> - In chloride salts and evaporite deposits</li>
+            <li><strong>Marine Organisms</strong> - Some marine algae and invertebrates produce brominated compounds</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Bromine is extracted from brine sources:</p>
+        <ol>
+            <li><strong>Oxidation</strong> - Bromide-rich brine treated with chlorine gas: 2Br⁻ + Cl₂ → Br₂ + 2Cl⁻</li>
+            <li><strong>Blowing Out</strong> - Air blown through solution to strip out bromine vapor</li>
+            <li><strong>Absorption</strong> - Bromine vapor absorbed in sodium carbonate solution or sulfur dioxide</li>
+            <li><strong>Recovery</strong> - Bromine recovered from absorption solution</li>
+            <li><strong>Purification</strong> - Distillation produces pure bromine</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 500,000 tons annually. United States, Israel, and China are major producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Bromine compounds have significant environmental impacts:</p>
+        <ul>
+            <li><strong>Ozone Depletion</strong> - Bromine atoms from halons and methyl bromide are 60 times more destructive to ozone than chlorine atoms</li>
+            <li><strong>Brominated Flame Retardants</strong> - Persistent organic pollutants that bioaccumulate; some are endocrine disruptors</li>
+            <li><strong>Marine Pollution</strong> - Organobromine compounds from marine organisms enter food chains</li>
+            <li><strong>Methyl Bromide</strong> - Soil fumigant that depletes stratospheric ozone; phased out under Montreal Protocol</li>
+            <li><strong>Halons</strong> - Brominated fire extinguishing agents extremely destructive to ozone layer; production banned</li>
+            <li><strong>PBDEs</strong> - Polybrominated diphenyl ethers accumulate in human tissue, breast milk; linked to developmental issues</li>
+            <li><strong>Drilling Fluid Disposal</strong> - Bromide-containing drilling fluids can contaminate groundwater</li>
+            <li><strong>Atmospheric Chemistry</strong> - Bromine compounds participate in ozone destruction in polar regions (bromine explosion events)</li>
+            <li><strong>Regulations</strong> - Many brominated compounds restricted or banned due to environmental and health concerns</li>
+        </ul>
+        <p>Bromine's environmental impact is primarily through its compounds that persist in the environment and affect atmospheric chemistry.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Bromine was discovered in 1825-1826. Carl Jacob Löwig, a chemistry student at Heidelberg University, isolated bromine from mineral water from Bad Kreuznach in 1825. Before he could publish, Antoine Jérôme Balard, a young pharmacist in Montpellier, France, discovered bromine independently in 1826.</p>
+        <p>Balard found bromine in the ash of seaweed (Fucus and Laminaria). He treated the ash with chlorine and extracted a red liquid with properties between chlorine and iodine. He named it "brome" from the Greek "bromos" meaning "stench." Balard published his discovery in 1826 and is generally credited as the discoverer.</p>
+        <p>Initially, bromine had few uses. In the 19th century, it found applications in photography (silver bromide) and medicine (potassium bromide as sedative). The development of brominated flame retardants in the 20th century and ethylene dibromide as gasoline additive greatly increased demand.</p>
+        <p>Environmental concerns about brominated compounds emerged in the late 20th century, leading to restrictions on many applications, particularly those affecting the ozone layer.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Bromine is one of only two liquid elements at room temperature (the other is mercury)</li>
+            <li>The Dead Sea contains about 0.4% bromine, making it a major commercial source</li>
+            <li>Bromine comes from the Greek word "bromos" meaning "stench" - it has a strong, unpleasant odor</li>
+            <li>Tyrian purple, the famous dye of ancient Phoenicia, is a bromine-containing compound from sea snails</li>
+            <li>Bromine was once widely used as a sedative; "bromide" became slang for a boring, conventional person</li>
+            <li>Some car headlights contain bromine compounds to make the glass more heat-resistant</li>
+            <li>Bromine is used in some hot tubs instead of chlorine because it's more stable at high temperatures</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Extreme Hazard:</strong> Bromine liquid and vapor are highly toxic and corrosive. Causes severe burns to skin, eyes, and respiratory tract.</p>
+        <p><strong>Inhalation:</strong> Bromine vapor extremely irritating; causes coughing, choking, headache, dizziness, pulmonary edema. LC50 (rat): 750 ppm for 1 hour.</p>
+        <p><strong>Skin Contact:</strong> Liquid bromine causes deep, painful burns that heal slowly. Penetrates skin rapidly.</p>
+        <p><strong>Eye Contact:</strong> Causes severe burns and potential permanent eye damage.</p>
+        <p><strong>Ingestion:</strong> Causes severe burns to mouth, throat, esophagus, and stomach; potentially fatal.</p>
+        <p><strong>Chronic Exposure:</strong> Causes bromism (bromide poisoning): neurological symptoms, skin rash (bromoderma), mental confusion.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air immediately. For skin contact, wash with copious water for 15 minutes. For eye contact, flush with water for 15 minutes. Seek immediate medical attention for all exposures.</p>
+        <p><strong>Protective Equipment:</strong> Use chemical-resistant gloves, face shield, impermeable clothing, and respiratory protection when handling bromine.</p>
+        <p><strong>Storage:</strong> Store in sealed containers in cool, well-ventilated area away from combustibles and reducing agents. Bromine reacts violently with many substances.</p>
+        <p><strong>Spill Response:</strong> Evacuate area. Use appropriate respirator. Absorb with inert material. Neutralize with sodium thiosulfate or sodium sulfite solution.</p>
+    </div>
+</body>
+</html>
