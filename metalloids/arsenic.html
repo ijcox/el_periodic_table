@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenic</title>
+    <style>
+        /* Arsenic is a metalloid */
+        .metalloid { background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #d4a574;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .info-card h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #d4a574;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">33</div>
+            <div class="symbol-large">As</div>
+        </div>
+        <div class="element-title">
+            <h1>Arsenic</h1>
+            <div class="element-subtitle">Metalloid • Group 15 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>33</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>74.9216 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s² 4p³</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Arsenic is a metalloid that exists in several allotropic forms, though the gray form is the most common. It is notorious for its toxicity and has been used throughout history as a poison. However, arsenic also has important industrial uses and is an essential trace element for some animals. In its pure form, arsenic is a steel-gray, brittle solid that tarnishes in air.</p>
+        <p>Arsenic has been known since antiquity. The Greek philosopher Theophrastus recognized two arsenic sulfide minerals: realgar (As₄S₄) and orpiment (As₂S₃). Albertus Magnus is often credited with isolating arsenic around 1250 AD. The name "arsenic" comes from the Greek word "arsenikon" meaning "yellow orpiment" or from the Persian word "zarnikh" meaning "yellow," which became "arsenicum" in Latin.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point (at 28 atm)</td>
+                <td>817°C (1503°F, 1090 K)</td>
+            </tr>
+            <tr>
+                <td>Sublimation Point</td>
+                <td>615°C (1137°F, 888 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gray form)</td>
+                <td>5.727 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.329 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>24.44 kJ/mol (gray)</td>
+            </tr>
+            <tr>
+                <td>Heat of Sublimation</td>
+                <td>32.4 kJ/mol (gray)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>50.2 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>333 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>3.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-3, -2, -1, 0, +1, +2, +3, +4, +5 (most common: -3, +3, +5)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.18 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>947.0 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>115 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>119 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>185 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Rhombohedral (gray arsenic)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Arsenic has one stable isotope:</p>
+        <ul>
+            <li><strong>Arsenic-75 (⁷⁵As)</strong> - The only stable isotope, making up 100% of natural arsenic</li>
+        </ul>
+        <p>Arsenic has several radioactive isotopes, with arsenic-74 being medically important:</p>
+        <ul>
+            <li><strong>Arsenic-74 (⁷⁴As)</strong> - Radioactive isotope with half-life of 17.77 days; used in PET imaging research</li>
+            <li><strong>Arsenic-73 (⁷³As)</strong> - Radioactive isotope with half-life of 80.30 days</li>
+            <li><strong>Arsenic-72 (⁷²As)</strong> - Radioactive isotope with half-life of 26.0 hours</li>
+            <li><strong>Arsenic-71 (⁷¹As)</strong> - Radioactive isotope with half-life of 65.28 hours</li>
+            <li><strong>Arsenic-76 (⁷⁶As)</strong> - Radioactive isotope with half-life of 1.094 days</li>
+            <li><strong>Arsenic-77 (⁷⁷As)</strong> - Radioactive isotope with half-life of 1.62 days</li>
+        </ul>
+        <p>Arsenic-74 is produced in cyclotrons and has potential for imaging tumors that accumulate arsenic.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Wood Preservation</strong> - Chromated copper arsenate (CCA) for pressure-treated lumber (phased out in residential uses)</li>
+            <li><strong>Semiconductors</strong> - Arsenic as dopant in silicon and germanium semiconductors (n-type doping)</li>
+            <li><strong>Gallium Arsenide</strong> - GaAs for high-speed integrated circuits, LEDs, laser diodes, and solar cells</li>
+            <li><strong>Lead Alloys</strong> - Arsenic hardens lead for lead-acid battery grids and lead shot</li>
+            <li><strong>Pesticides</strong> - Historically used in insecticides, herbicides, and rodenticides; now heavily restricted</li>
+            <li><strong>Glass Manufacturing</strong> - Arsenic trioxide as decolorizer and fining agent to remove bubbles</li>
+            <li><strong>Copper Alloys</strong> - Small amounts improve corrosion resistance of copper and brass</li>
+            <li><strong>Veterinary Medicine</strong> - Roxarsone and other organoarsenic compounds as feed additives for poultry and swine (phased out)</li>
+            <li><strong>Medical Treatment</strong> - Arsenic trioxide (Trisenox®) for acute promyelocytic leukemia</li>
+            <li><strong>Pigments</strong> - Paris green (copper acetoarsenite) and Scheele's green historically used as pigments</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Arsenic is highly toxic to most organisms but has some biological roles:</p>
+        <ul>
+            <li><strong>Essentiality Debate</strong> - Possibly essential at trace levels for some animals (rats, goats, pigs), not proven for humans</li>
+            <li><strong>Human Toxicity</strong> - Arsenic disrupts cellular respiration by inhibiting enzymes; binds to sulfhydryl groups in proteins</li>
+            <li><strong>Acute Poisoning</strong> - Causes vomiting, abdominal pain, diarrhea, followed by numbness, muscle cramps, and death</li>
+            <li><strong>Chronic Exposure</strong> - Causes skin lesions, hyperkeratosis, peripheral neuropathy, cardiovascular disease, and various cancers</li>
+            <li><strong>Arsenic in Drinking Water</strong> - Major public health problem in Bangladesh, West Bengal, and other regions; causes arsenicosis</li>
+            <li><strong>Methylation</strong> - Humans metabolize inorganic arsenic to methylated forms (MMA, DMA) for excretion</li>
+            <li><strong>Arsenic-based Life</strong> - GFAJ-1 bacterium claimed to substitute arsenic for phosphorus in DNA; claim controversial and not widely accepted</li>
+            <li><strong>Therapeutic Uses</strong> - Arsenic trioxide effective against acute promyelocytic leukemia; historically used to treat syphilis and trypanosomiasis</li>
+            <li><strong>Dietary Sources</strong> - Seafood (especially shellfish) contains organic arsenic compounds (arsenobetaine) of low toxicity</li>
+            <li><strong>Arsenic Resistance</strong> - Some bacteria have arsenic detoxification systems (ars operon)</li>
+        </ul>
+        <p>Arsenic's toxicity has made it infamous as a poison, but it also has important medical applications in cancer treatment.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Arsenic is the 53rd most abundant element in Earth's crust (1.8 ppm). It occurs in:</p>
+        <ul>
+            <li><strong>Arsenopyrite</strong> - FeAsS (iron arsenic sulfide, the most common arsenic mineral)</li>
+            <li><strong>Realgar</strong> - As₄S₄ (red arsenic sulfide)</li>
+            <li><strong>Orpiment</strong> - As₂S₃ (yellow arsenic sulfide)</li>
+            <li><strong>Arsenolite</strong> - As₂O₃ (arsenic trioxide, oxidation product of arsenic minerals)</li>
+            <li><strong>As Impurity</strong> - In many metal ores, especially copper, lead, and gold ores</li>
+            <li><strong>Groundwater</strong> - Natural arsenic contamination in groundwater affects millions of people worldwide</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Arsenic is produced as a byproduct:</p>
+        <ol>
+            <li><strong>From Metal Ores</strong> - Arsenic volatilized during roasting of arsenic-containing ores</li>
+            <li><strong>Condensation</strong> - Arsenic trioxide condenses in flue dust collection systems</li>
+            <li><strong>Reduction</strong> - Arsenic trioxide reduced with carbon to produce elemental arsenic</li>
+            <li><strong>Purification</strong> - Sublimation produces high-purity arsenic</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 50,000 tons annually (as arsenic trioxide). China produces about 70%, followed by Chile and Morocco.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Arsenic contamination is a major global environmental health problem:</p>
+        <ul>
+            <li><strong>Groundwater Contamination</strong> - Natural arsenic in groundwater affects over 200 million people in 70+ countries</li>
+            <li><strong>Mining Legacy</strong> - Historical gold mining (especially in California) left arsenic-contaminated sites</li>
+            <li><strong>Smelting Emissions</strong> - Copper and lead smelters release arsenic into air</li>
+            <li><strong>Wood Treatment</strong> - CCA-treated wood leaches arsenic into soil; disposal concerns</li>
+            <li><strong>Agricultural Use</strong> - Historical use of arsenic pesticides contaminated soils</li>
+            <li><strong>Food Chain Accumulation</li>
+            <li><strong>Rice Contamination</strong> - Rice efficiently absorbs arsenic from soil and water; major dietary source</li>
+            <li><strong>Remediation</strong> - Technologies include coagulation-filtration, adsorption, ion exchange, and membrane processes</li>
+            <li><strong>Regulations</strong> - WHO drinking water guideline: 10 μg/L; many countries use 50 μg/L (older standard)</li>
+            <li><strong>Bioremediation</strong> - Some plants and bacteria can accumulate or transform arsenic</li>
+        </ul>
+        <p>Arsenic in drinking water represents one of the largest mass poisonings in history, particularly affecting Bangladesh and West Bengal.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Arsenic has been known since antiquity. The bronze age used arsenic to harden copper. The Greek philosopher Theophrastus (c. 371–287 BC) described the minerals realgar and orpiment. The Chinese used arsenic compounds in bronze casting as early as the 5th century BC.</p>
+        <p>Albertus Magnus (Albert the Great, 1193–1280) is often credited with isolating arsenic around 1250 AD. He obtained it by heating soap with orpiment. The elemental nature of arsenic was recognized in the 17th century.</p>
+        <p>Arsenic became infamous as a poison in the Middle Ages and Renaissance. It was known as "inheritance powder" due to its use in eliminating relatives. Its symptoms resembled natural diseases, making detection difficult before the Marsh test (1836).</p>
+        <p>In the 20th century, arsenic found extensive use in agriculture and industry. Environmental and health concerns led to restrictions, but medical applications emerged, notably arsenic trioxide for leukemia treatment (approved by FDA in 2000).</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Napoleon Bonaparte may have been poisoned with arsenic, based on analysis of his hair</li>
+            <li>The "Marsh test" (1836) was the first reliable method to detect arsenic in human tissue</li>
+            <li>Some 19th century women ate arsenic to improve their complexion (caused pallor)</li>
+            <li>Certain seaweeds contain arsenic concentrations 100,000 times higher than seawater</li>
+            <li>Wallpaper in Victorian times sometimes contained arsenic pigments, potentially releasing toxic vapors</li>
+            <li>The element's name comes from the Persian word "zarnikh" meaning "yellow" (for orpiment)</li>
+            <li>Arsenic was the first chemical weapon, used in smoke form in ancient China</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Extreme Toxicity:</strong> Arsenic is highly toxic; inorganic arsenic compounds are human carcinogens (lung, skin, bladder cancer).</p>
+        <p><strong>Acute Poisoning:</strong> Lethal dose: 100-200 mg arsenic trioxide. Symptoms: vomiting, diarrhea, abdominal pain, followed by multi-organ failure.</p>
+        <p><strong>Chronic Exposure:</strong> Causes skin lesions (hyperkeratosis, pigmentation changes), peripheral neuropathy, cardiovascular disease, diabetes.</p>
+        <p><strong>Arsine Gas (AsH₃):</strong> Extremely toxic hemolytic agent; OSHA PEL: 0.05 ppm. Causes hemolysis, kidney failure, death.</p>
+        <p><strong>Occupational Exposure:</strong> Smelter workers, pesticide applicators, semiconductor manufacturers at risk. OSHA PEL: 0.01 mg/m³ for inorganic arsenic.</p>
+        <p><strong>Drinking Water:</strong> WHO guideline: 10 μg/L. Long-term exposure to >50 μg/L causes significant health risks.</p>
+        <p><strong>Rice and Food:</strong> Rice accumulates arsenic; limit consumption for infants and young children. Rinse rice and cook in excess water.</p>
+        <p><strong>First Aid:</strong> For ingestion, do NOT induce vomiting. Give activated charcoal if advised by poison control. Seek immediate medical attention.</p>
+        <p><strong>Antidote:</strong> Dimercaprol (BAL), succimer (DMSA), or dimercaptosuccinic acid for acute poisoning.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, eye protection, and respiratory protection when handling arsenic compounds.</p>
+    </div>
+</body>
+</html>
