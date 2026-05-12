@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinc</title>
+    <style>
+        /* Zinc is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">30</div>
+            <div class="symbol-large">Zn</div>
+        </div>
+        <div class="element-title">
+            <h1>Zinc</h1>
+            <div class="element-subtitle">Transition Metal • Group 12 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>30</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>65.38 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Zinc is a slightly brittle metal at room temperature with a silvery-greyish appearance when oxidation is removed. It is the first element in group 12 of the periodic table and is an essential trace element for all living organisms. Zinc is the 24th most abundant element in Earth's crust and has five stable isotopes.</p>
+        <p>Zinc has been used since ancient times, with brass (an alloy of copper and zinc) being produced as early as the 3rd millennium BC. The element was recognized as distinct from other metals by Indian metallurgists before 1000 AD. Zinc was isolated in Europe by Andreas Sigismund Marggraf in 1746, who demonstrated it was a new metal.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>419.5°C (787.1°F, 692.7 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>907°C (1665°F, 1180 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>7.14 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.388 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>7.32 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>115 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>59.0 nΩ·m (at 20°C)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, 0, +1, +2 (most common: +2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.65 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>906.4 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>134 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>122 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>139 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Zinc has five stable isotopes:</p>
+        <ul>
+            <li><strong>Zinc-64 (⁶⁴Zn)</strong> - 48.6% abundance</li>
+            <li><strong>Zinc-66 (⁶⁶Zn)</strong> - 27.9% abundance</li>
+            <li><strong>Zinc-67 (⁶⁷Zn)</strong> - 4.1% abundance</li>
+            <li><strong>Zinc-68 (⁶⁸Zn)</strong> - 18.8% abundance</li>
+            <li><strong>Zinc-70 (⁷⁰Zn)</strong> - 0.6% abundance (very long half-life > 1.3×10¹⁸ years)</li>
+        </ul>
+        <p>Zinc has several radioactive isotopes with zinc-65 being the most important:</p>
+        <ul>
+            <li><strong>Zinc-65 (⁶⁵Zn)</strong> - Radioactive isotope with half-life of 244.26 days; used in medical imaging and as a tracer</li>
+            <li><strong>Zinc-72 (⁷²Zn)</strong> - Radioactive isotope with half-life of 46.5 hours</li>
+            <li><strong>Zinc-69m (⁶⁹ᵐZn)</strong> - Metastable isotope with half-life of 13.76 hours</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Galvanization</strong> - Zinc coating on steel (galvanized steel) to prevent rusting; accounts for about 50% of zinc use</li>
+            <li><strong>Brass Production</strong> - Alloy with copper (typically 55% copper, 45% zinc) for musical instruments, hardware, and decorative items</li>
+            <li><strong>Die-Casting Alloys</strong> - Zinc alloys for die-casting small precision parts (automotive, hardware, toys)</li>
+            <li><strong>Batteries</strong> - Zinc-carbon and zinc-air batteries; zinc as anode material</li>
+            <li><strong>Zinc Oxide</strong> - Used in rubber manufacturing, paints, pharmaceuticals, and sunscreens</li>
+            <li><strong>Nutritional Supplements</strong> - Zinc sulfate and other compounds to prevent zinc deficiency</li>
+            <li><strong>Roofing Material</strong> - Zinc sheets and tiles for architectural applications</li>
+            <li><strong>Chemical Industry</strong> - Zinc compounds as catalysts, pigments, and wood preservatives</li>
+            <li><strong>Sacrificial Anodes</strong> - Zinc blocks to protect ships and pipelines from corrosion (cathodic protection)</li>
+            <li><strong>Penny Coins</strong> - Modern US pennies are 97.5% zinc with copper plating</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Zinc is an essential trace element for all living organisms:</p>
+        <ul>
+            <li><strong>Enzyme Cofactor</strong> - Zinc is required by over 300 enzymes including carbonic anhydrase, alcohol dehydrogenase, and RNA polymerase</li>
+            <li><strong>Human Requirements</strong> - Adults need 8-11 mg/day; pregnant and lactating women need 11-12 mg/day</li>
+            <li><strong>Immune Function</strong> - Essential for normal development and function of immune cells</li>
+            <li><strong>Wound Healing</strong> - Required for collagen synthesis and cell division</li>
+            <li><strong>Sense of Taste and Smell</strong> - Zinc deficiency impairs taste (hypogeusia) and smell (hyposmia)</li>
+            <li><strong>DNA Synthesis</strong> - Required for DNA synthesis and cell division</li>
+            <li><strong>Dietary Sources</strong> - Oysters, red meat, poultry, beans, nuts, whole grains, dairy products</li>
+            <li><strong>Deficiency</strong> - Causes growth retardation, delayed sexual maturation, skin lesions, diarrhea, and impaired immune function</li>
+            <li><strong>Zinc Fingers</strong> - Structural motifs in proteins that interact with DNA, RNA, and other proteins</li>
+            <li><strong>Toxicity</strong> - Excessive zinc intake causes nausea, vomiting, loss of appetite, abdominal cramps, and copper deficiency</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Zinc is the 24th most abundant element in Earth's crust (75 ppm). It occurs primarily as:</p>
+        <ul>
+            <li><strong>Sphalerite</strong> - (Zn,Fe)S, zinc sulfide, the most important zinc ore</li>
+            <li><strong>Smithsonite</strong> - ZnCO₃, zinc carbonate</li>
+            <li><strong>Hemimorphite</strong> - Zn₄Si₂O₇(OH)₂·H₂O</li>
+            <li><strong>Zincite</strong> - ZnO, zinc oxide</li>
+            <li><strong>Franklinite</strong> - (Zn,Fe,Mn)(Fe,Mn)₂O₄</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Zinc is produced through two main processes:</p>
+        <ol>
+            <li><strong>Electrolytic Process</strong> (about 80% of production):
+                <ul>
+                    <li>Roasting zinc sulfide concentrate to zinc oxide</li>
+                    <li>Leaching with sulfuric acid</li>
+                    <li>Purification by solvent extraction or cementation</li>
+                    <li>Electrowinning to produce high purity zinc (99.995%)</li>
+                </ul>
+            </li>
+            <li><strong>Pyrometallurgical Process</strong> (Imperial Smelting):
+                <ul>
+                    <li>Sintering of roasted concentrate</li>
+                    <li>Reduction with coke in blast furnace</li>
+                    <li>Condensation of zinc vapor</li>
+                </ul>
+            </li>
+        </ol>
+        <p><strong>Global Production:</strong> About 13 million tons annually. China produces about 35%, followed by Peru, Australia, United States, and Canada.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Zinc mining and production have both positive and negative environmental impacts:</p>
+        <ul>
+            <li><strong>Corrosion Prevention</strong> - Zinc galvanization extends steel life, reducing need for replacement and resource consumption</li>
+            <li><strong>Water Pollution</strong> - Acid mine drainage from sulfide ores releases zinc and other metals</li>
+            <li><strong>Soil Contamination</strong> - Zinc from mining, smelting, and waste disposal can accumulate in soils</li>
+            <li><strong>Aquatic Toxicity</strong> - Zinc is toxic to aquatic organisms at high concentrations</li>
+            <li><strong>Recycling</strong> - Zinc is highly recyclable; about 30% of zinc comes from recycled materials</li>
+            <li><strong>Energy Consumption</strong> - Zinc production is energy intensive, especially electrolytic process</li>
+            <li><strong>Byproduct Recovery</strong> - Modern zinc plants recover valuable byproducts like lead, silver, and cadmium</li>
+            <li><strong>Emission Controls</strong> - Modern smelters capture sulfur dioxide to produce sulfuric acid</li>
+            <li><strong>Agricultural Use</strong> - Zinc is essential micronutrient in fertilizers for zinc-deficient soils</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Zinc alloys have been used since antiquity. Brass (copper-zinc alloy) was produced in the ancient world by smelting copper with zinc ores. The Romans used brass for coins and ornaments as early as 30 BC.</p>
+        <p>Metallic zinc was produced in India as early as the 9th century AD and in China by the 16th century. The ancient Indians had developed a distillation process for zinc production at Zawar, Rajasthan, as early as 1200 AD.</p>
+        <p>In Europe, zinc was recognized as a separate metal in the 16th century. Paracelsus (1493-1541) described it as a new metal. The element was isolated in Europe by Andreas Sigismund Marggraf in 1746, who described its properties and showed it was different from other known metals.</p>
+        <p>The first large-scale zinc smelter in Europe was established in Bristol, England in 1743. The development of the electrolytic process in the early 20th century made high-purity zinc production economical.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>A single zinc penny contains enough zinc to cover a small nail with a protective coating</li>
+            <li>Zinc is the second most common trace metal in the human body after iron</li>
+            <li>The largest producers of zinc are China, Peru, and Australia</li>
+            <li>Zinc's name comes from the German "Zink", possibly meaning "pointed" (referring to the shape of zinc crystals)</li>
+            <li>The Statue of Liberty contains about 80 tons of zinc in its copper skin</li>
+            <li>Zinc is the only metal that is a blue-gray color</li>
+            <li>Zinc oxide has been used in sunscreens since the 1940s</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Zinc Fume Fever:</strong> Inhalation of freshly formed zinc oxide fumes causes metal fume fever - flu-like symptoms with fever, chills, nausea, and headache. Symptoms appear 4-12 hours after exposure and last 24-48 hours.</p>
+        <p><strong>Zinc Chloride Smoke:</strong> Used in smoke screens and military applications; highly toxic if inhaled, causing respiratory damage.</p>
+        <p><strong>Dietary Toxicity:</strong> Excessive zinc intake (>150 mg/day) causes nausea, vomiting, loss of appetite, abdominal cramps, diarrhea, and headaches.</p>
+        <p><strong>Copper Deficiency:</strong> High zinc intake interferes with copper absorption, leading to copper deficiency anemia and neurological problems.</p>
+        <p><strong>Zinc Phosphide:</strong> Rodenticide that releases phosphine gas in stomach acid; highly toxic if ingested.</p>
+        <p><strong>Occupational Exposure:</strong> Welders, galvanizers, and brass foundry workers are at risk for zinc fume fever. Proper ventilation and respiratory protection are essential.</p>
+        <p><strong>Environmental Toxicity:</strong> Zinc is toxic to aquatic life at concentrations above 0.12 mg/L for freshwater organisms.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For ingestion, drink water or milk. Seek medical attention for significant exposure.</p>
+        <p><strong>Storage:</strong> Zinc powder is flammable; store in cool, dry place away from oxidizers and acids.</p>
+    </div>
+</body>
+</html>
