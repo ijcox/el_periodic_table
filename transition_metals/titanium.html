@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">22</div>
+            <div class="symbol-large">Ti</div>
+        </div>
+        <div class="element-title">
+            <h1>Titanium</h1>
+            <div class="element-subtitle">Transition Metal • Group 4 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>22</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>47.867 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d² 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Titanium is a strong, lustrous, corrosion-resistant transition metal with a silver color. It has the highest strength-to-weight ratio of any metallic element. Titanium is as strong as steel but 45% lighter, and twice as strong as aluminum but only 60% heavier.</p>
+        <p>Titanium was discovered in 1791 by the clergyman and mineralogist William Gregor as an impurity in the mineral ilmenite. It was named by Martin Heinrich Klaproth after the Titans of Greek mythology. Pure titanium was first produced in 1910 by Matthew A. Hunter. Commercial production began in the 1940s.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1668°C (3034°F, 1941 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3287°C (5949°F, 3560 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>4.506 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>4.11 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.523 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>14.15 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>425 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>6.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, 0, +1, +2, +3, +4 (most common: +4)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.54 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>658.8 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>147 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>160 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>No data</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Titanium has two allotropic forms:</p>
+        <ul>
+            <li><strong>Alpha (α) Titanium</strong> - Hexagonal close-packed (hcp) crystal structure; stable below 882°C; more ductile but less strong</li>
+            <li><strong>Beta (β) Titanium</strong> - Body-centered cubic (bcc) crystal structure; stable above 882°C; stronger but less ductile</li>
+        </ul>
+        <p>The alpha-beta transition temperature (882°C) can be altered by alloying elements:</p>
+        <ul>
+            <li><strong>Alpha Stabilizers</strong> - Aluminum, oxygen, nitrogen, carbon (raise transition temperature)</li>
+            <li><strong>Beta Stabilizers</strong> - Vanadium, molybdenum, niobium, tantalum, iron, chromium, nickel (lower transition temperature)</li>
+        </ul>
+        <p>Most commercial titanium alloys are alpha-beta alloys that combine the best properties of both phases.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Aerospace</strong> - Aircraft frames, engines, and components (especially military aircraft); about 80% of titanium production goes to aerospace</li>
+            <li><strong>Medical Implants</strong> - Joint replacements, dental implants, bone plates, and surgical instruments due to biocompatibility and corrosion resistance</li>
+            <li><strong>Chemical Industry</strong> - Heat exchangers, reactors, and piping for corrosive environments</li>
+            <li><strong>Military Applications</strong> - Armor plating, naval ships, submarines, and missiles</li>
+            <li><strong>Sports Equipment</strong> - Golf clubs, tennis rackets, bicycle frames, and camping gear</li>
+            <li><strong>Jewelry</strong> - Titanium rings, watches, and other jewelry (often anodized to produce colors)</li>
+            <li><strong>Architecture</strong> - Cladding for buildings (Guggenheim Museum Bilbao, Beijing National Stadium)</li>
+            <li><strong>Automotive</strong> - High-performance cars (connecting rods, valves, exhaust systems)</li>
+            <li><strong>Consumer Electronics</strong> - Laptop cases, mobile phone frames, eyeglass frames</li>
+            <li><strong>Pigments</strong> - Titanium dioxide (TiO₂) for white paint, plastics, paper, and sunscreen</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Titanium has no known biological role but is exceptionally biocompatible:</p>
+        <ul>
+            <li><strong>Biocompatibility</strong> - Excellent compatibility with human tissue; forms protective oxide layer that prevents corrosion and rejection</li>
+            <li><strong>Medical Implants</strong> - Used for dental implants, joint replacements, bone plates, and pacemaker cases; osseointegration allows bone to grow into titanium</li>
+            <li><strong>Low Reactivity</strong> - Does not react with bodily fluids; non-toxic and non-allergenic</li>
+            <li><strong>Dental Applications</strong> - Titanium implants have success rates over 95% after 10 years</li>
+            <li><strong>Surgical Instruments</strong> - Lightweight and corrosion-resistant; can be repeatedly sterilized</li>
+            <li><strong>No Essential Function</strong> - Not required for any biological processes; not absorbed or metabolized</li>
+            <li><strong>Environmental Exposure</strong> - Naturally present in soil and water at low levels; dietary intake is minimal</li>
+            <li><strong>Toxicity</strong> - Generally considered non-toxic; titanium dioxide nanoparticles under investigation for potential health effects</li>
+        </ul>
+        <p>Titanium's biocompatibility makes it the material of choice for many permanent medical implants.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Titanium is the ninth most abundant element in Earth's crust (0.63% by weight) and the fourth most abundant structural metal after aluminum, iron, and magnesium. It occurs in:</p>
+        <ul>
+            <li><strong>Ilmenite</strong> - FeTiO₃, the most important ore (90% of titanium production)</li>
+            <li><strong>Rutile</strong> - TiO₂, higher grade but less common ore</li>
+            <li><strong>Anatase and Brookite</strong> - Other TiO₂ polymorphs</li>
+            <li><strong>Titanite (Sphene)</strong> - CaTiSiO₅</li>
+            <li><strong>Perovskite</strong> - CaTiO₃</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Titanium metal production is complex and energy-intensive:</p>
+        <ol>
+            <li><strong>Kroll Process</strong> - Reduction of titanium tetrachloride (TiCl₄) with magnesium at 800-850°C (produces titanium sponge)</li>
+            <li><strong>Hunter Process</strong> - Reduction with sodium (less common today)</li>
+            <li><strong>Electrolysis</strong> - Emerging processes using molten salt electrolysis (FFC Cambridge process)</li>
+            <li><strong>Melting</strong> - Titanium sponge is melted in vacuum arc furnaces to produce ingots</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 210,000 tons of titanium metal annually, plus 6 million tons of titanium dioxide pigment. Major producers include China, Japan, Russia, and Kazakhstan.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Titanium production has significant environmental aspects:</p>
+        <ul>
+            <li><strong>Energy Intensive</strong> - Kroll process requires high temperatures and is batch process (not continuous)</li>
+            <li><strong>Chlorine Emissions</strong> - Titanium tetrachloride production uses chlorine; accidental releases form hydrochloric acid clouds</li>
+            <li><strong>Carbon Footprint</strong> - High energy consumption contributes to greenhouse gas emissions</li>
+            <li><strong>Mining Impacts</strong> - Titanium mining (especially beach sand mining) affects coastal ecosystems</li>
+            <li><strong>Titanium Dioxide Production</strong> - Sulfate process produces large amounts of dilute sulfuric acid waste; chloride process produces chlorine compounds</li>
+            <li><strong>Lightweight Benefits</strong> - Titanium's light weight reduces fuel consumption in transportation (especially aerospace)</li>
+            <li><strong>Recyclability</strong> - Titanium is fully recyclable; aircraft grade scrap is valuable</li>
+            <li><strong>Water Usage</strong> - Mining and processing require significant water</li>
+            <li><strong>Nanoparticle Concerns</strong> - Titanium dioxide nanoparticles in sunscreen and cosmetics raise environmental persistence questions</li>
+        </ul>
+        <p>Despite production challenges, titanium's durability and recyclability offer long-term environmental benefits.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Titanium was discovered in 1791 by Reverend William Gregor in Cornwall, England. He found black sand (ilmenite) that attracted magnets and contained a new metal oxide. He called it "menachanite."</p>
+        <p>In 1795, German chemist Martin Heinrich Klaproth independently discovered the element in rutile from Hungary. He named it "titanium" after the Titans of Greek mythology. He confirmed it was the same element as Gregor's menachanite.</p>
+        <p>Pure titanium was first produced in 1910 by Matthew A. Hunter at Rensselaer Polytechnic Institute by heating TiCl₄ with sodium in a steel bomb (Hunter process). In 1932, William J. Kroll developed the magnesium reduction process (Kroll process) that became the commercial standard.</p>
+        <p>Commercial production began in the 1940s, driven by military needs. The SR-71 Blackbird (first flown 1964) was about 93% titanium. Today, titanium is essential in aerospace, medical, and industrial applications.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>The SR-71 Blackbird spy plane was made mostly of titanium and could fly at Mach 3+ (over 2,200 mph)</li>
+            <li>Titanium is so biocompatible that bone will actually grow into and fuse with titanium implants</li>
+            <li>Titanium dioxide is the whitest known pigment - whiter than fresh snow</li>
+            <li>Titanium is as strong as steel but 45% lighter, and twice as strong as aluminum but only 60% heavier</li>
+            <li>When anodized, titanium produces brilliant colors without dyes - the colors come from light interference in the oxide layer</li>
+            <li>The Titanic would have been named "Titanic" regardless of the element - both names come from Greek mythology</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Titanium Powder:</strong> Fine titanium powder is flammable and can form explosive mixtures with air. Use appropriate dust control and explosion-proof equipment.</p>
+        <p><strong>Titanium Tetrachloride (TiCl₄):</strong> Highly corrosive liquid that reacts violently with water producing hydrochloric acid fumes. Causes severe burns and respiratory damage.</p>
+        <p><strong>Welding and Machining:</strong> Titanium welding requires inert gas shielding (argon) to prevent oxidation. Machining produces fine chips that can ignite.</p>
+        <p><strong>Titanium Dioxide Nanoparticles:</strong> Inhalation of fine TiO₂ powder may cause respiratory issues. Nanoparticles in sunscreen are generally considered safe but under ongoing study.</p>
+        <p><strong>Fire Fighting:</strong> Titanium fires require Class D extinguishers (for metal fires). Never use water on burning titanium.</p>
+        <p><strong>Medical Implants:</strong> While generally safe, titanium implants can cause allergic reactions in rare cases. Implant failure usually results from mechanical issues rather than biocompatibility.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in titanium production need protection from chlorine, titanium tetrachloride, and metal dust.</p>
+        <p><strong>Environmental Releases:</strong> Titanium tetrachloride spills create dense hydrochloric acid clouds. Proper containment and emergency procedures are essential.</p>
+        <p><strong>First Aid:</strong> For TiCl₄ exposure, remove contaminated clothing, flush with water, and seek immediate medical attention. For titanium dust inhalation, move to fresh air.</p>
+    </div>
+</body>
+</html>
