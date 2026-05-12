@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver</title>
+    <style>
+        /* Silver is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">47</div>
+            <div class="symbol-large">Ag</div>
+        </div>
+        <div class="element-title">
+            <h1>Silver</h1>
+            <div class="element-subtitle">Transition Metal • Group 11 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>47</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>107.8682 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d¹⁰ 5s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Silver is a lustrous, white, ductile, and malleable transition metal. It has the highest electrical conductivity, thermal conductivity, and reflectivity of any metal. Silver has been known since ancient times and has been used for thousands of years as a precious metal for jewelry, utensils, currency, and ornamental objects. The metal occurs naturally in its pure, free form (native silver) and in various minerals such as argentite and chlorargyrite.</p>
+        <p>Silver was one of the first metals discovered by humans, along with gold, copper, lead, and iron. Archaeological evidence suggests silver was first extracted from lead ores in Anatolia (modern Turkey) around 3000 BC. The metal played a crucial role in the development of early civilizations and global trade. The chemical symbol "Ag" comes from the Latin word "argentum," which is derived from the Proto-Indo-European root *h₂erǵ- meaning "white" or "shining."</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>961.78°C (1763.2°F, 1234.93 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2162°C (3924°F, 2435 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>10.49 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.235 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>11.28 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>250.58 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>429 W/(m·K) (highest of any metal)</td>
+            </tr>
+            <tr>
+                <td>Electrical Conductivity</td>
+                <td>63.0×10⁶ S/m (highest of any metal)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>15.87 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>83 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, +1, +2, +3, +4 (most common: +1)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.93 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>731.0 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>144 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>145 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>172 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (fcc)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Silver has two stable isotopes:</p>
+        <ul>
+            <li><strong>Silver-107 (¹⁰⁷Ag)</strong> - 51.839% abundance</li>
+            <li><strong>Silver-109 (¹⁰⁹Ag)</strong> - 48.161% abundance</li>
+        </ul>
+        <p>Silver has several radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Silver-110m (¹¹⁰ᵐAg)</strong> - Radioactive isomer with half-life of 249.79 days; used in brachytherapy</li>
+            <li><strong>Silver-111 (¹¹¹Ag)</strong> - Radioactive isotope with half-life of 7.45 days</li>
+            <li><strong>Silver-105 (¹⁰⁵Ag)</strong> - Radioactive isotope with half-life of 41.29 days</li>
+            <li><strong>Silver-108 (¹⁰⁸Ag)</strong> - Radioactive isotope with half-life of 2.37 minutes</li>
+            <li><strong>Silver-110 (¹¹⁰Ag)</strong> - Radioactive isotope with half-life of 24.6 seconds</li>
+        </ul>
+        <p>Silver-110m is used in some medical applications and research, but silver isotopes are less commonly used than other metal isotopes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Jewelry and Silverware</strong> - Sterling silver (92.5% silver, 7.5% copper) for jewelry, cutlery, and decorative items</li>
+            <li><strong>Photography</strong> - Silver halides in photographic film and paper (declining with digital photography)</li>
+            <li><strong>Electronics</strong> - Silver in electrical contacts, switches, and conductors; silver paste in photovoltaic cells</li>
+            <li><strong>Currency</strong> - Silver coins and bullion as investment and currency</li>
+            <li><strong>Medicine</strong> - Silver sulfadiazine for burn treatment; silver nanoparticles as antimicrobial agents</li>
+            <li><strong>Mirrors and Reflective Coatings</strong> - Silver coatings for mirrors, optical instruments, and solar reflectors</li>
+            <li><strong>Catalysts</strong> - Silver as catalyst in ethylene oxide production and formaldehyde production</li>
+            <li><strong>Brazing and Soldering</strong> - Silver alloys for high-strength brazing and soldering</li>
+            <li><strong>Water Purification</strong> - Silver ions and nanoparticles for water disinfection</li>
+            <li><strong>Dental Alloys</strong> - Silver amalgam for dental fillings (declining due to mercury concerns)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Silver has no known essential biological role in humans but has significant antimicrobial properties:</p>
+        <ul>
+            <li><strong>Antimicrobial Properties</strong> - Silver ions disrupt bacterial cell membranes, interfere with metabolic processes, and damage DNA</li>
+            <li><strong>Medical Applications</strong> - Silver sulfadiazine cream for burn treatment; silver-coated medical devices to prevent infections</li>
+            <li><strong>Water Purification</strong> - Silver ions used to disinfect water in spacecraft, pools, and wells</li>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes in humans</li>
+            <li><strong>Silver Toxicity</strong> - Chronic exposure to silver compounds can cause argyria - permanent blue-gray skin discoloration</li>
+            <li><strong>Dietary Sources</strong> - Trace amounts in foods; human body contains about 0.001 mg/kg body weight</li>
+            <li><strong>Antibiotic Resistance</strong> - Silver effective against antibiotic-resistant bacteria (MRSA, etc.)</li>
+            <li><strong>Wound Healing</strong> - Silver dressings promote wound healing and prevent infection</li>
+            <li><strong>Environmental Impact</strong> - Silver nanoparticles from consumer products entering environment; effects on ecosystems studied</li>
+        </ul>
+        <p>Silver's antimicrobial properties make it valuable in medicine and hygiene, though it has no metabolic role in humans.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Silver occurs in various forms:</p>
+        <ul>
+            <li><strong>Native Silver</strong> - Elemental silver in pure form (rare)</li>
+            <li><strong>Argentite</strong> - Ag₂S (silver sulfide, the most important silver ore)</li>
+            <li><strong>Chlorargyrite</strong> - AgCl (horn silver)</li>
+            <li><strong>As Byproduct</strong> - About 70% of silver produced as byproduct of copper, lead, zinc, and gold mining</li>
+            <li><strong>In Seawater</strong> - 0.0001 mg/L concentration</li>
+            <li><strong>In Earth's Crust</strong> - 0.075 ppm abundance</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Silver is extracted through several processes:</p>
+        <ol>
+            <li><strong>Mining</strong> - Silver mined from primary silver deposits or as byproduct of other metal mining</li>
+            <li><strong>Ore Processing</strong> - Ore crushed and concentrated by flotation or gravity separation</li>
+            <li><strong>Cyanide Process</strong> - Most common method: silver dissolved in sodium cyanide solution:
+                <ul>
+                    <li>4Ag + 8NaCN + O₂ + 2H₂O → 4Na[Ag(CN)₂] + 4NaOH</li>
+                </ul>
+            </li>
+            <li><strong>Recovery</strong> - Silver precipitated from solution with zinc or aluminum:
+                <ul>
+                    <li>2Na[Ag(CN)₂] + Zn → 2Ag + Na₂[Zn(CN)₄]</li>
+                </ul>
+            </li>
+            <li><strong>Refining</strong> - Crude silver refined by electrolysis (Moebius or Thum-Balbach process) or chemical methods</li>
+            <li><strong>Recycling</strong> - Significant amounts recovered from photographic waste, electronics, jewelry scrap, and coins</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 27,000 tons annually. Mexico is largest producer (23%), followed by Peru, China, and Chile.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Silver mining and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Cyanide Use</strong> - Cyanide process for silver extraction creates toxic waste; requires careful management</li>
+            <li><strong>Mining Waste</strong> - Silver mining produces tailings that can contain heavy metals</li>
+            <li><strong>Photographic Waste</strong> - Silver from photographic processing historically contaminated water; declining with digital photography</li>
+            <li><strong>Silver Nanoparticles</strong> - Increasing use in consumer products (clothing, appliances) raises concerns about environmental release</li>
+            <li><strong>Antimicrobial Resistance</strong> - Widespread use of silver antimicrobials could promote resistance</li>
+            <li><strong>Aquatic Toxicity</strong> - Silver toxic to aquatic organisms, especially in ionic form; regulated in wastewater</li>
+            <li><strong>Recycling</strong> - High recycling rates from industrial sources (electronics, photography); lower from consumer products</li>
+            <li><strong>Energy Use</strong> - Silver refining requires significant energy, especially electrolytic refining</li>
+            <li><strong>Historical Pollution</strong> - Old silver mines continue to leach metals into environment</li>
+        </ul>
+        <p>Silver's antimicrobial benefits must be balanced against potential environmental impacts from mining and nanoparticle release.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Silver has been known since prehistoric times. Archaeological evidence suggests silver mining and smelting began around 3000 BC in Anatolia (modern Turkey). The metal was extracted from lead ores using cupellation, a process still used today in principle.</p>
+        <p>Silver played a crucial role in ancient civilizations. The Greeks mined silver at Laurium, which financed Athens' fleet in the Persian Wars. The Romans operated silver mines throughout their empire, with Spain being a major source. The Spanish discovery of vast silver deposits in the Americas (Potosi, Mexico) in the 16th century dramatically increased global silver supply and funded Spanish empire.</p>
+        <p>The chemical symbol "Ag" comes from the Latin "argentum," related to the Greek "argyros" meaning "shining white." Silver's monetary use dates back thousands of years; the British pound sterling originally represented one pound of sterling silver.</p>
+        <p>Silver's applications expanded with technological developments: photography (1830s), electrical industry (late 1800s), and medicine (20th century). Today, while photographic use has declined, new applications in electronics, medicine, and green technology continue to drive demand.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Silver has the highest electrical conductivity of any element - even higher than copper</li>
+            <li>The word "silver" comes from the Anglo-Saxon "seolfor"; the chemical symbol "Ag" comes from Latin "argentum"</li>
+            <li>Sterling silver is 92.5% silver and 7.5% copper - the copper makes it harder and more durable</li>
+            <li>Some people can develop argyria - a permanent blue-gray skin discoloration from silver accumulation</li>
+            <li>Silver kills bacteria by disrupting their cell membranes and interfering with their metabolism</li>
+            <li>The Greek currency "drachma" originally meant "a handful of silver"</li>
+            <li>Silver is mentioned in the Bible more than gold, often symbolizing purity and redemption</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Silver Compounds:</strong> Some silver compounds toxic if ingested. Silver nitrate caustic and can cause severe burns.</p>
+        <p><strong>Argyria:</strong> Chronic exposure to silver compounds can cause permanent blue-gray skin discoloration (argyria). Not harmful to health but cosmetically disfiguring.</p>
+        <p><strong>Silver Nanoparticles:</strong> Potential inhalation hazard; effects on human health still being studied.</p>
+        <p><strong>Silver Nitrate:</strong> Highly caustic; causes severe burns to skin and eyes. Stains skin brown-black.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in silver refining, photography, and jewelry making at risk. OSHA PEL: 0.01 mg/m³ for metal dust.</p>
+        <p><strong>First Aid:</strong> For skin contact with silver nitrate, wash with plenty of water. For eye contact, flush with water for 15 minutes. Seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, and ventilation when handling silver compounds. Use fume hood for silver nitrate.</p>
+        <p><strong>Storage:</strong> Store silver nitrate in dark containers (light-sensitive). Keep away from organic materials and reducing agents.</p>
+        <p><strong>Environmental:</strong> Silver toxic to aquatic life; limit discharge to waterways. Silver nanoparticles from consumer products entering environment.</p>
+        <p><strong>Medical Use:</strong> Silver sulfadiazine can cause allergic reactions in some people. Monitor for argyria with long-term use.</p>
+    </div>
+</body>
+</html>
