@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihonium</title>
+    <style>
+        /* Nihonium is a post-transition metal */
+        .post-transition { background: linear-gradient(135deg, #16a085 0%, #138d75 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #16a085;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #16a085 0%, #138d75 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #16a085;
+        }
+        
+        .info-card h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #16a085;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">113</div>
+            <div class="symbol-large">Nh</div>
+        </div>
+        <div class="element-title">
+            <h1>Nihonium</h1>
+            <div class="element-subtitle">Post-Transition Metal • Group 13 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>113</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[286] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹ (predicted)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (predicted, but may have low melting point)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Nihonium is a synthetic chemical element and a member of the transactinide series. It is a highly radioactive element that does not occur naturally and can only be produced in particle accelerators. Nihonium is the first element in group 13 and is expected to have properties similar to thallium, directly above it in the periodic table, though relativistic effects may cause significant deviations.</p>
+        <p>Nihonium was first synthesized in 2003-2004 by a joint Russian-American team at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia, and independently in 2004 by a Japanese team at RIKEN. After years of priority dispute, the Japanese team was credited with discovery. The element was named "nihonium" after "Nihon," one of the two ways to say "Japan" in Japanese. This made nihonium the first element discovered in an Asian country and the first named after a country in Asia.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>Unknown (predicted to be around 430°C, similar to thallium)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown (predicted to be around 1100°C)</td>
+            </tr>
+            <tr>
+                <td>Density (predicted)</td>
+                <td>16 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (predicted)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown (predicted to be poor)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be semiconductor or poor metal)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown (likely soft like other group 13 metals)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Unknown (may be hexagonal like thallium or different due to relativistic effects)</td>
+            </tr>
+        </table>
+        <p>Nihonium's physical properties are difficult to predict due to strong relativistic effects that are expected to dominate its behavior. Unlike lighter group 13 elements (boron, aluminum, gallium, indium, thallium), nihonium may show significant deviations from expected trends due to contraction of the 7s orbital and expansion of the 7p orbital.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+3, +1 (predicted; +1 may be more stable than +3 due to "inert pair effect")</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>704.9 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>170 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>136 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>Predicted to resemble thallium but with stronger relativistic effects</td>
+            </tr>
+        </table>
+        <p>Nihonium's chemistry is predicted to be dominated by relativistic effects and the "inert pair effect," which is particularly strong in heavy group 13 elements. Unlike boron and aluminum which favor the +3 oxidation state, nihonium is expected to favor the +1 oxidation state, similar to thallium. The +3 state may be unstable or nonexistent for nihonium. Nihonium is predicted to be more metallic than thallium and may form stable monovalent compounds like NhOH (nihonium hydroxide) and NhCl (nihonium chloride). The Nh⁺ ion is expected to be more stable than Tl⁺ due to relativistic stabilization of the 7s² electron pair.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Nihonium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Nihonium-278 (²⁷⁸Nh)</strong> - Half-life: 0.34 milliseconds (alpha decay)</li>
+            <li><strong>Nihonium-282 (²⁸²Nh)</strong> - Half-life: 0.073 seconds (alpha decay)</li>
+            <li><strong>Nihonium-283 (²⁸³Nh)</strong> - Half-life: 0.10 seconds (alpha decay)</li>
+            <li><strong>Nihonium-284 (²⁸⁴Nh)</strong> - Half-life: 0.48 seconds (alpha decay)</li>
+            <li><strong>Nihonium-285 (²⁸⁵Nh)</strong> - Half-life: 2.1 seconds (alpha decay)</li>
+            <li><strong>Nihonium-286 (²⁸⁶Nh)</strong> - Half-life: 9.5 seconds (alpha decay) - Most stable known isotope</li>
+            <li><strong>Nihonium-287 (²⁸⁷Nh)</strong> - Half-life: 5.5 seconds? (alpha decay, tentative)</li>
+            <li><strong>Nihonium-290 (²⁹⁰Nh)</strong> - Half-life: 2.0 seconds? (alpha decay, tentative)</li>
+        </ul>
+        <p>Nihonium-286 is the most stable known isotope with a half-life of approximately 9.5 seconds. The relatively short half-lives of nihonium isotopes have prevented detailed chemical studies so far, though theoretical predictions are extensive. Some calculations suggest that more neutron-rich isotopes with longer half-lives may exist near the "island of stability."</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends in heavy nuclei</li>
+            <li><strong>Theoretical Chemistry</strong> - Testing predictions about relativistic effects and the inert pair effect</li>
+            <li><strong>Relativistic Effects Research</strong> - Study of how relativity influences chemical properties in group 13 elements</li>
+            <li><strong>Island of Stability Research</strong> - Research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of transactinide chemistry and nuclear synthesis</li>
+            <li><strong>National Pride</strong> - Symbol of scientific achievement for Japan</li>
+        </ul>
+        <p>Like all transactinide elements, nihonium has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Nihonium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities and too short half-lives for biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+            <li><strong>Chemical Toxicity</strong> - If stable compounds could be formed, they might have chemical toxicity similar to thallium compounds</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, nihonium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Nihonium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Hot Fusion Reactions (Dubna method):</strong>
+                <br>²⁴³Am + ⁴⁸Ca → ²⁸⁸Nh + 3n (original Dubna synthesis, 2003)
+                <br>²⁴³Am + ⁴⁸Ca → ²⁸⁷Nh + 4n</li>
+            <li><strong>Cold Fusion Reactions (RIKEN method):</strong>
+                <br>²⁰⁹Bi + ⁷⁰Zn → ²⁷⁸Nh + n (original RIKEN synthesis, 2004)
+                <br>²⁰⁹Bi + ⁷⁰Zn → ²⁷⁹Nh (no neutrons)</li>
+            <li><strong>Other Reactions:</strong>
+                <br>²⁴⁸Cm + ⁵¹V → ²⁹⁶Nh + 3n (theoretical)
+                <br>²⁴⁹Bk + ⁵⁰Ti → ²⁹⁶Nh + 3n (theoretical)</li>
+            <li><strong>Separation</strong> - Nihonium atoms separated using gas-filled recoil separators. The GARIS (Gas-filled Recoil Ion Separator) at RIKEN was crucial for the Japanese discovery.</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors, often requiring correlation with daughter decays through alpha decay chains to roentgenium and meitnerium.</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms per year of beam time).</li>
+        </ol>
+        <p><strong>Production Sites:</strong> RIKEN (Japan - primary site), Joint Institute for Nuclear Research (Dubna, Russia), Lawrence Berkeley National Laboratory (USA). Total world production is only about 10-20 atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Nihonium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay quickly (milliseconds to seconds)</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and generally short half-life, nihonium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of nihonium marked a significant achievement for Asian science:</p>
+        <p><strong>Early Claims (2003):</strong> A joint Russian-American team at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia, claimed discovery of element 113 in August 2003. They bombarded americium-243 with calcium-48 ions and reported detecting atoms that decayed through a chain to dubnium.</p>
+        <p><strong>Japanese Discovery (2004):</strong> A team at RIKEN in Japan, led by Kōsuke Morita, independently synthesized element 113 in July 2004. They used a different approach, bombarding bismuth-209 with zinc-70 ions. The RIKEN team produced only a few atoms but provided strong evidence through decay chains.</p>
+        <p><strong>Priority Dispute:</strong> For nearly a decade, both teams claimed discovery. The Dubna team had produced more atoms earlier, but the RIKEN team provided clearer decay chains. The IUPAC/IUPAP Joint Working Party evaluated the claims.</p>
+        <p><strong>Official Recognition (2015):</strong> In December 2015, IUPAC announced that credit for discovery would be awarded to the RIKEN team, recognizing their more definitive evidence. This made element 113 the first element discovered in Asia.</p>
+        <p><strong>Naming (2016):</strong> The RIKEN team proposed the name "nihonium" with symbol Nh, from "Nihon," meaning Japan. The name was approved by IUPAC in November 2016. This was particularly significant as it recognized Japan's growing role in fundamental scientific research.</p>
+        <p><strong>Significance:</strong> Nihonium's discovery represented a breakthrough for Japanese science and demonstrated that superheavy element research was no longer dominated by just a few Western and Russian laboratories. It also completed the naming of all elements up to 118 at that time.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Nihonium is the first element discovered in an Asian country (Japan)</li>
+            <li>The name comes from "Nihon," one of two ways to say "Japan" in Japanese</li>
+            <li>Only about 10-20 atoms of nihonium have ever been produced worldwide</li>
+            <li>The discovery was credited to RIKEN in Japan after a decade-long priority dispute with a Russian-American team</li>
+            <li>Nihonium completes the group 13 elements in the periodic table</li>
+            <li>The element's most stable isotope has a half-life of about 9.5 seconds</li>
+            <li>Nihonium is predicted to favor the +1 oxidation state over +3, continuing the trend in group 13</li>
+            <li>The discovery of nihonium was a source of national pride for Japan and recognized with a postage stamp</li>
+            <li>RIKEN's discovery marked Japan's entry into the exclusive club of element discoverers</li>
+            <li>Nihonium was officially named in 2016, along with three other new elements</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of nihonium are highly radioactive. Primary hazard is alpha radiation.</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Some isotopes may undergo spontaneous fission producing neutrons and fission fragments.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. The short half-lives require extremely fast experimental setups.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
