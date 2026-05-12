@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fermium</title>
+    <style>
+        /* Fermium is an actinide */
+        .actinide { background: linear-gradient(135deg, #607d8b 0%, #455a64 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #607d8b;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #607d8b;
+        }
+        
+        .info-card h3 {
+            color: #607d8b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #607d8b;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">100</div>
+            <div class="symbol-large">Fm</div>
+        </div>
+        <div class="element-title">
+            <h1>Fermium</h1>
+            <div class="element-subtitle">Actinide • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>100</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[257] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹² 7s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (predicted)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Fermium is a synthetic radioactive chemical element with the symbol Fm and atomic number 100. It is the eighth transuranium element and a member of the actinide series. The element was named in honor of Enrico Fermi, the Italian-American physicist who created the world's first nuclear reactor. Fermium is highly radioactive and must be handled with extreme care; only trace amounts have ever been produced.</p>
+        <p>The element was discovered as a component of the debris from the first hydrogen bomb test in November 1952 (Ivy Mike test). It was identified by Albert Ghiorso and colleagues at the Lawrence Berkeley National Laboratory in debris collected from the test. Fermium was the heaviest element discovered from nuclear weapon debris and represented a significant milestone in transuranium element research.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1527°C (2781°F, 1800 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Density (estimated)</td>
+                <td>Unknown (likely 9.7-10 g/cm³)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (predicted)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (predicted)</td>
+            </tr>
+        </table>
+        <p>All physical properties of fermium are theoretical predictions or estimates based on its position in the periodic table. No macroscopic samples of fermium metal have ever been produced, and all studies have been conducted at the tracer level. The metal is predicted to be relatively soft and malleable, similar to other late actinides.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>627 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>Unknown</td>
+            </tr>
+        </table>
+        <p>Fermium exhibits oxidation states +2 and +3 in compounds, with +3 being the most stable and common. Fermium(III) is the predominant state in aqueous solution. The chemistry of fermium is similar to that of the other actinides and its lanthanide homolog erbium. Due to its intense radioactivity, short half-lives, and minute available quantities, chemical studies of fermium are extremely limited and have been conducted only at tracer concentrations.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Fermium has no stable isotopes. The most important isotopes are:</p>
+        <ul>
+            <li><strong>Fermium-257 (²⁵⁷Fm)</strong> - Half-life of 100.5 days, alpha decay and spontaneous fission, most stable isotope</li>
+            <li><strong>Fermium-253 (²⁵³Fm)</strong> - Half-life of 3.00 days, electron capture</li>
+            <li><strong>Fermium-254 (²⁵⁴Fm)</strong> - Half-life of 3.240 hours, electron capture and alpha decay</li>
+            <li><strong>Fermium-255 (²⁵⁵Fm)</strong> - Half-life of 20.07 hours, alpha decay and electron capture</li>
+            <li><strong>Fermium-256 (²⁵⁶Fm)</strong> - Half-life of 2.63 hours, spontaneous fission and alpha decay</li>
+            <li><strong>Fermium-252 (²⁵²Fm)</strong> - Half-life of 25.39 hours, electron capture and alpha decay</li>
+            <li><strong>Fermium-250 (²⁵⁰Fm)</strong> - Half-life of 30 minutes, electron capture</li>
+        </ul>
+        <p>Fermium-257 is the longest-lived isotope and has been produced in the greatest quantities (picograms). Most fermium isotopes have half-lives of hours to days, making chemical and physical studies extremely challenging.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <p>Fermium has no practical applications outside scientific research:</p>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of heavy element chemistry and nuclear properties</li>
+            <li><strong>Nuclear Physics</strong> - Study of nuclear decay processes, spontaneous fission, and heavy element synthesis</li>
+            <li><strong>Production of Heavier Elements</strong> - As a precursor for producing even heavier elements (though limited by availability)</li>
+            <li><strong>Basic Science</strong> - Testing nuclear models and understanding the limits of the periodic table</li>
+        </ul>
+        <p>Fermium's importance is purely scientific. It represents a milestone in human ability to create and study elements beyond uranium and provides insights into nuclear structure and the stability of superheavy elements.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Fermium has no biological role and is highly toxic:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Extreme Radiotoxicity</strong> - Alpha radiation and spontaneous fission from fermium isotopes</li>
+            <li><strong>Artificial Element</strong> - Does not exist in nature except as intentionally produced</li>
+            <li><strong>Minute Quantities</strong> - Only picograms (trillionths of a gram) have ever been produced</li>
+            <li><strong>Research Only</strong> - Only exists in specialized nuclear research facilities</li>
+            <li><strong>No Exposure Risk</strong> - General population has no exposure risk due to controlled production</li>
+        </ul>
+        <p>Due to its artificial production in picogram quantities and controlled handling in research facilities, fermium poses no biological risk to the general population.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Fermium does not occur naturally:</p>
+        <ul>
+            <li><strong>Artificial Element</strong> - Produced artificially in nuclear reactors and nuclear explosions</li>
+            <li><strong>Nuclear Explosions</strong> - First discovered in hydrogen bomb debris</li>
+            <li><strong>R-Process</strong> - Possibly produced in supernova explosions via rapid neutron capture but not found on Earth</li>
+        </ul>
+        <p><strong>Artificial Production:</strong> Fermium is produced in minute quantities:</p>
+        <ol>
+            <li><strong>Neutron Irradiation</strong> - Successive neutron capture on plutonium in high-flux reactors:
+                <ul>
+                    <li>²³⁹Pu → 17-18 neutron captures → fermium isotopes</li>
+                    <li>Extremely low yields due to multiple neutron captures required</li>
+                </ul>
+            </li>
+            <li><strong>From Einsteinium</strong> - Einsteinium-253 irradiated with neutrons produces fermium-255</li>
+            <li><strong>Separation</strong> - Fermium separated from other actinides by ion exchange chromatography</li>
+            <li><strong>Challenges</strong> - Extremely low yields, short half-lives, intense radioactivity</li>
+        </ol>
+        <p><strong>Production Scale:</strong> Picogram quantities produced. Total world production is measured in picograms (10⁻¹² grams). The largest amount ever produced was about 200 picograms of fermium-257.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Fermium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>Artificial Element</strong> - Does not occur naturally in environment</li>
+            <li><strong>Extremely Limited Production</strong> - Produced in picogram quantities</li>
+            <li><strong>Controlled Facilities</strong> - Produced and handled only in specialized nuclear facilities</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could cause environmental release</li>
+            <li><strong>Short Half-lives</strong> - Most isotopes decay quickly (hours to days)</li>
+            <li><strong>Research Waste</strong> - Generated in vanishingly small amounts; carefully managed</li>
+        </ul>
+        <p>Given its artificial nature, extremely small production quantities, and short half-lives, fermium poses no significant environmental risk.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Fermium was discovered in 1952 as a component of the debris from the first hydrogen bomb test (Ivy Mike, November 1, 1952). The discovery team at the Lawrence Berkeley National Laboratory, led by Albert Ghiorso, identified the new element in filter papers from drones that flew through the radioactive cloud.</p>
+        <p>Fermium was the heaviest element found in the bomb debris, requiring the intense neutron flux of a thermonuclear explosion for its formation via rapid successive neutron captures on uranium-238. The discovery was kept secret until 1955 due to Cold War security concerns. The element was named "fermium" after Enrico Fermi, who had died in 1954.</p>
+        <p>The first intentional production of fermium in a laboratory occurred in 1954 by neutron irradiation of plutonium in a nuclear reactor. However, the yields were extremely small. Fermium-257, the most stable isotope, was discovered in 1957. To date, only picogram quantities of fermium have ever been produced, and no visible amount of the element has ever been assembled.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Fermium is named after Enrico Fermi, creator of the first nuclear reactor</li>
+            <li>It was discovered in the debris of the first hydrogen bomb explosion</li>
+            <li>Fermium was the heaviest element discovered from nuclear weapon debris</li>
+            <li>Only picograms (trillionths of a gram) of fermium have ever been produced</li>
+            <li>The element was kept secret for three years due to Cold War tensions</li>
+            <li>Fermium-257 has a half-life of 100.5 days - relatively long for such a heavy element</li>
+            <li>No visible amount of fermium has ever been assembled; all studies are at tracer level</li>
+            <li>Fermium marks the point where element production shifted from nuclear reactors to particle accelerators</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Extreme Radiotoxicity:</strong> Fermium highly radioactive. Alpha emitter; some isotopes undergo spontaneous fission.</p>
+        <p><strong>Spontaneous Fission:</strong> Fermium-256 decays primarily by spontaneous fission, emitting neutrons.</p>
+        <p><strong>Internal Hazard:</strong> Particularly dangerous if internalized. Would accumulate in bones.</p>
+        <strong>Minute Quantities:</strong> Only picograms produced; exposure risk limited to research facilities.</p>
+        <p><strong>Short Half-lives:</strong> Most isotopes decay quickly, creating intense radiation fields.</p>
+        <p><strong>Protective Equipment:</strong> Use in specially designed facilities with remote handling. All work at tracer levels.</p>
+        <p><strong>Radiation Protection:</strong> Heavy shielding required. Remote handling essential.</p>
+        <p><strong>Storage:</strong> Not stored for long periods due to short half-lives.</p>
+        <p><strong>Disposal:</strong> High-level radioactive waste, but small quantities and short half-lives limit long-term concerns.</p>
+        <p><strong>First Aid:</strong> For contamination: immediate decontamination, medical evaluation. Theoretical concern only due to minute quantities.</p>
+        <p><strong>Regulations:</strong> Strictly regulated as radioactive material and nuclear material. Special licenses required.</p>
+    </div>
+</body>
+</html>
