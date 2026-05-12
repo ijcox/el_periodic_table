@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptunium</title>
+    <style>
+        /* Neptunium is an actinide */
+        .actinide { background: linear-gradient(135deg, #607d8b 0%, #455a64 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #607d8b;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #607d8b;
+        }
+        
+        .info-card h3 {
+            color: #607d8b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #607d8b;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">93</div>
+            <div class="symbol-large">Np</div>
+        </div>
+        <div class="element-title">
+            <h1>Neptunium</h1>
+            <div class="element-subtitle">Actinide • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>93</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>237.05 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f⁴ 6d¹ 7s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Neptunium is a radioactive actinide metal with the symbol Np and atomic number 93. It was the first transuranium element to be synthesized and is named after the planet Neptune, following the naming trend established by uranium (Uranus). Neptunium is a silvery metallic element that tarnishes when exposed to air, forming an oxide layer.</p>
+        <p>Neptunium-237 is the most stable isotope, with a half-life of 2.14 million years. Trace amounts of neptunium are found naturally in uranium ores as a result of neutron capture reactions, but it is primarily produced artificially in nuclear reactors. Neptunium plays a role in nuclear waste management and has potential applications in nuclear weapons and specialized scientific instruments.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>644°C (1191°F, 917 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3902°C (7056°F, 4175 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Density (near room temperature)</td>
+                <td>20.45 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.12 J/(g·K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>5.19 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>336 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>6.3 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>1.22 μΩ·m (at 22°C)</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Orthorhombic (alpha phase, room temperature)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2, +3, +4, +5, +6, +7 (most common: +4, +5, +6)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.36 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>604.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>155 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>190 pm</td>
+            </tr>
+        </table>
+        <p>Neptunium exhibits multiple oxidation states, with +4, +5, and +6 being the most common in aqueous solutions. Neptunium chemistry is complex due to these multiple oxidation states and the tendency of some states to disproportionate. Neptunium compounds include oxides, halides, and various coordination complexes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Neptunium has no stable isotopes. The most important isotopes are:</p>
+        <ul>
+            <li><strong>Neptunium-237 (²³⁷Np)</strong> - Half-life of 2.144 million years, alpha decay to protactinium-233, most stable isotope</li>
+            <li><strong>Neptunium-239 (²³⁹Np)</strong> - Half-life of 2.356 days, beta decay to plutonium-239</li>
+            <li><strong>Neptunium-236 (²³⁶Np)</strong> - Two isomers:
+                <ul>
+                    <li>²³⁶ᵐNp - Half-life of 22.5 hours</li>
+                    <li>²³⁶Np - Half-life of 154,000 years</li>
+                </ul>
+            </li>
+            <li><strong>Neptunium-235 (²³⁵Np)</strong> - Half-life of 396.1 days</li>
+            <li><strong>Neptunium-238 (²³⁸Np)</strong> - Half-life of 2.117 days</li>
+        </ul>
+        <p>Neptunium-237 is the most important isotope due to its relatively long half-life. It is produced in nuclear reactors from uranium-235 and uranium-236 through neutron capture and beta decay.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Nuclear Weapons</strong> - Neptunium-237 can be used to produce plutonium-238 for nuclear weapons</li>
+            <li><strong>Radioisotope Thermoelectric Generators</strong> - Neptunium-237 considered as potential heat source</li>
+            <li><strong>Neutron Detection</strong> - Neptunium-237 used in neutron detectors</li>
+            <li><strong>Scientific Research</strong> - Study of actinide chemistry and nuclear physics</li>
+            <li><strong>Smoke Detectors</strong> - Some ionization smoke detectors contain neptunium-237 (alternative to americium-241)</li>
+            <li><strong>Nuclear Waste Management</strong> - Important component of spent nuclear fuel; subject of separation and transmutation studies</li>
+            <li><strong>Calibration</strong> - Standard source for gamma spectroscopy calibration</li>
+        </ul>
+        <p>Most applications of neptunium are in specialized scientific and nuclear fields. Its primary significance is as a component of nuclear waste and potential material for nuclear applications.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Neptunium has no biological role and is highly toxic:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>High Radiotoxicity</strong> - All isotopes radioactive; alpha and beta emissions</li>
+            <li><strong>Chemical Toxicity</strong> - Heavy metal toxicity similar to other actinides</li>
+            <li><strong>Bone Seeker</strong> - If internalized, accumulates in bones like other actinides</li>
+            <li><strong>Liver Accumulation</strong> - Also accumulates in liver, causing damage</li>
+            <li><strong>Environmental Presence</strong> - Trace amounts from atmospheric nuclear testing and nuclear accidents</li>
+            <li><strong>Research Only</strong> - Only encountered in specialized nuclear facilities</li>
+        </ul>
+        <p>Due to its artificial production and controlled use, neptunium poses minimal biological risk to the general population.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Neptunium occurs in trace amounts in nature:</p>
+        <ul>
+            <li><strong>Uranium Ores</strong> - Formed by neutron capture on uranium-235 from spontaneous fission neutrons</li>
+            <li><strong>Nuclear Fallout</strong> - Present in environment from atmospheric nuclear testing</li>
+            <li><strong>Extremely Rare</strong> - Natural abundance estimated at 1 part per 10¹⁴ in uranium ores</li>
+        </ul>
+        <p><strong>Artificial Production:</strong> Neptunium is produced artificially in nuclear reactors:</p>
+        <ol>
+            <li><strong>Neutron Capture</strong> - Uranium-235 captures neutrons to form uranium-236, which captures another neutron to form uranium-237:
+                <ul>
+                    <li>²³⁵U + n → ²³⁶U</li>
+                    <li>²³⁶U + n → ²³⁷U (beta decay, half-life 6.75 days)</li>
+                    <li>²³⁷U → ²³⁷Np + e⁻</li>
+                </ul>
+            </li>
+            <li><strong>Alternative Route</strong> - Uranium-238 captures neutrons to form neptunium-237 via uranium-239 and neptunium-239</li>
+            <li><strong>Separation</strong> - Neptunium separated from spent nuclear fuel by chemical processes</li>
+            <li><strong>Purification</strong> - Further purification for specific applications</li>
+        </ol>
+        <p><strong>Production Scale:</strong> Kilogram quantities produced as byproduct of nuclear power generation. Global inventory estimated at tens of tonnes in spent nuclear fuel.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Neptunium's environmental impact is primarily through nuclear waste:</p>
+        <ul>
+            <li><strong>Nuclear Waste Component</strong> - Significant component of spent nuclear fuel; long-lived (2.14 million year half-life)</li>
+            <li><strong>Mobility</strong> - Neptunium(V) forms soluble compounds that can migrate in groundwater</li>
+            <li><strong>Nuclear Accidents</strong> - Released in nuclear accidents (e.g., Chernobyl, Fukushima)</li>
+            <li><strong>Atmospheric Testing</strong> - Global distribution from atmospheric nuclear weapons testing</li>
+            <li><strong>Waste Management Challenge</strong> - Long half-life makes disposal in geological repositories necessary</li>
+            <li><strong>Transmutation Research</strong> - Studied for possible transmutation to shorter-lived isotopes</li>
+            <li><strong>Environmental Monitoring</strong> - Monitored as part of environmental radioactivity surveillance</li>
+        </ul>
+        <p>Neptunium-237's long half-life and potential mobility make it a significant concern for long-term nuclear waste management.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Neptunium was the first synthetic transuranium element discovered. It was synthesized in 1940 by Edwin McMillan and Philip Abelson at the University of California, Berkeley. They bombarded uranium-238 with slow neutrons and identified neptunium-239, which has a half-life of 2.356 days and decays to plutonium-239.</p>
+        <p>The discovery was made using the 60-inch cyclotron at Berkeley. McMillan and Abelson named the element "neptunium" after the planet Neptune, continuing the planetary naming theme established by uranium (Uranus). McMillan shared the 1951 Nobel Prize in Chemistry with Glenn Seaborg for their discoveries in transuranium elements.</p>
+        <p>Neptunium-237, the most stable isotope, was discovered later in 1942. It is produced in nuclear reactors and became available in weighable quantities during the Manhattan Project. The first macroscopic sample of neptunium metal was produced in 1944.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Neptunium was the first synthetic transuranium element discovered</li>
+            <li>It is named after the planet Neptune, following uranium (Uranus)</li>
+            <li>Trace amounts occur naturally in uranium ores from neutron capture</li>
+            <li>Neptunium-237 has a half-life of 2.14 million years</li>
+            <li>The first visible amount of neptunium (a few micrograms) was isolated in 1944</li>
+            <li>Neptunium is used in some smoke detectors as an alternative to americium</li>
+            <li>It was discovered using the same 60-inch cyclotron that discovered many other transuranium elements</li>
+            <li>Neptunium compounds can have unusual colors, including pink, purple, and olive green</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>High Radiotoxicity:</strong> Neptunium highly radioactive. Neptunium-237 alpha emitter with 2.14 million year half-life.</p>
+        <p><strong>Internal Hazard:</strong> Particularly dangerous if internalized. Accumulates in bones and liver.</p>
+        <p><strong>Chemical Toxicity:</strong> Heavy metal toxicity similar to other actinides.</p>
+        <strong>Criticality Hazard:</strong> Neptunium-237 can achieve criticality with appropriate moderator (though less easily than plutonium-239).</p>
+        <p><strong>Powder Hazard:</strong> Neptunium powder pyrophoric - can ignite spontaneously in air.</p>
+        <p><strong>Protective Equipment:</strong> Use in glove boxes or fume hoods. Wear gloves, lab coat, safety glasses. Respiratory protection for dust.</p>
+        <p><strong>Radiation Protection:</strong> Lead shielding for gamma radiation from decay products.</p>
+        <p><strong>Storage:</strong> Store in sealed containers with adequate shielding. Store under inert atmosphere if powdered.</p>
+        <p><strong>Disposal:</strong> High-level radioactive waste. Special disposal facilities required.</p>
+        <p><strong>First Aid:</strong> For contamination: remove contaminated clothing, wash skin thoroughly, seek medical attention.</p>
+        <p><strong>Regulations:</strong> Strictly regulated as radioactive material and nuclear material. Special licenses required.</p>
+    </div>
+</body>
+</html>
