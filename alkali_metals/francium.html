@@ -1,0 +1,421 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francium</title>
+    <style>
+        /* Francium is an alkali metal */
+        .alkali { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .info-card h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">87</div>
+            <div class="symbol-large">Fr</div>
+        </div>
+        <div class="element-title">
+            <h1>Francium</h1>
+            <div class="element-subtitle">Alkali Metal • Group 1 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>87</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[223] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 7s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (predicted)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Francium is a highly radioactive alkali metal with the symbol Fr and atomic number 87. It is the second-rarest naturally occurring element (after astatine) and the last element discovered in nature, rather than by synthesis. Francium is extremely unstable, with its most stable isotope, francium-223, having a half-life of only 22 minutes.</p>
+        <p>Francium is the heaviest alkali metal and is expected to have properties similar to cesium, though its extreme radioactivity and short half-life make it difficult to study. It is so rare that it's estimated there is only about 20-30 grams of francium in the Earth's crust at any one time. The largest amount of francium ever assembled was only about 300,000 atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>27°C (81°F, 300 K) (predicted)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>677°C (1251°F, 950 K) (predicted)</td>
+            </tr>
+            <tr>
+                <td>Density</td>
+                <td>~2.48 g/cm³ (predicted)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (predicted to melt slightly above room temperature)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>~2 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>~65 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>15 W/(m·K) (estimated, based on cesium)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Appearance</td>
+                <td>Presumably metallic, but never seen in bulk</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Body-centered cubic (predicted, like other alkali metals)</td>
+            </tr>
+        </table>
+        <p>Most properties are theoretical predictions based on francium's position in the periodic table. Direct measurements are nearly impossible due to its extreme radioactivity and scarcity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+1 (only known)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.79 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>~380 kJ/mol (estimated, lowest of all elements)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>260 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>~348 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>348 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Electron Affinity</td>
+                <td>~44 kJ/mol (estimated)</td>
+            </tr>
+        </table>
+        <p>Francium is expected to be the most reactive alkali metal, with chemical properties similar to cesium but even more extreme. It should react violently with water, air, and halogens. However, its chemistry has only been studied at the tracer level.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Francium has no stable isotopes. All isotopes are radioactive:</p>
+        <ul>
+            <li><strong>Francium-223 (²²³Fr)</strong> - Half-life of 22.00 minutes, beta decay to radium-223, alpha decay to astatine-219, most stable isotope</li>
+            <li><strong>Francium-212 (²¹²Fr)</strong> - Half-life of 20.0 minutes, beta decay</li>
+            <li><strong>Francium-221 (²²¹Fr)</strong> - Half-life of 4.8 minutes, alpha decay</li>
+            <li><strong>Francium-222 (²²²Fr)</strong> - Half-life of 14.2 minutes, beta decay</li>
+            <li><strong>Francium-224 (²²⁴Fr)</strong> - Half-life of 3.33 minutes</li>
+            <li><strong>Francium-225 (²²⁵Fr)</strong> - Half-life of 4.0 minutes</li>
+            <li><strong>Francium-226 (²²⁶Fr)</strong> - Half-life of 49 seconds</li>
+            <li><strong>34 other isotopes</strong> - With half-lives from microseconds to seconds</li>
+        </ul>
+        <p>Francium-223 occurs naturally as a decay product of uranium-235. It is also produced artificially in nuclear reactions.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <p>Francium has no practical applications due to its extreme rarity and short half-life:</p>
+        <ul>
+            <li><strong>Research</strong> - Study of atomic structure, particularly testing theories of atomic physics</li>
+            <li><strong>Spectroscopy</strong> - Study of francium's atomic spectra to test quantum electrodynamics</li>
+            <li><strong>Fundamental Physics</strong> - Tests of fundamental symmetries in physics</li>
+            <li><strong>Educational</strong> - Example of extreme radioactivity and rarity in chemistry education</li>
+        </ul>
+        <p>Due to its extreme scarcity and radioactivity, francium has no commercial applications and is only studied in specialized research laboratories.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Francium has no biological role:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Extreme Rarity</strong> - Far too rare to have any biological significance</li>
+            <li><strong>Radioactivity</strong> - All isotopes radioactive; would be toxic if encountered</li>
+            <li><strong>Biological Behavior</strong> - Expected to behave like other alkali metals (sodium, potassium) if stable</li>
+            <li><strong>No Exposure Risk</strong> - Natural abundance so low that human exposure is negligible</li>
+            <li><strong>Research Use</strong> - Only studied in specialized physics laboratories</li>
+        </ul>
+        <p>Given that the total amount of francium in Earth's crust is less than 30 grams at any time, it poses no biological risk and has no role in biological systems.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Francium is extremely rare in nature:</p>
+        <ul>
+            <li><strong>Decay Product</strong> - Occurs in uranium-235 decay chain (actinium-227 → thorium-227 → francium-223)</li>
+            <li><strong>Abundance</strong> - Estimated 20-30 grams in Earth's entire crust at any time</li>
+            <li><strong>Transient Existence</strong> - Constantly produced and decaying; never accumulates</li>
+            <li><strong>Distribution</strong> - Trace amounts in uranium ores</li>
+        </ul>
+        <p><strong>Artificial Production:</strong> Francium is produced artificially in particle accelerators:</p>
+        <ol>
+            <li><strong>Nuclear Reactions</strong> - Gold-197 bombarded with oxygen-18:
+                <ul>
+                    <li>¹⁹⁷Au + ¹⁸O → ²¹⁰Fr + 5n</li>
+                </ul>
+            </li>
+            <li><strong>Other Methods</strong> - Various targets bombarded with protons, deuterons, or alpha particles</li>
+            <li><strong>Separation</strong> - Francium separated from target material by chemical methods</li>
+            <li><strong>Isolation</strong> - Typically studied as isolated atoms or ions in traps</li>
+        </ol>
+        <p><strong>Production Scale:</strong> Minute quantities - typically thousands to millions of atoms per experiment. Largest amount ever produced: about 300,000 atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Francium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>Extreme Rarity</strong> - Natural abundance too low to have any environmental significance</li>
+            <li><strong>Short Half-life</strong> - Rapid decay prevents accumulation in environment</li>
+            <li><strong>Production Impact</strong> - Artificial production in such small quantities has no environmental impact</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could cause environmental release</li>
+            <li><strong>Research Safety</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>Waste Management</strong> - Generated in such small amounts that waste is negligible</li>
+            <li><strong>Regulatory Status</strong> - Regulated as radioactive material but poses minimal risk</li>
+        </ul>
+        <p>Francium's environmental impact is essentially zero due to its extreme rarity and the minute quantities involved in research.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Francium was the last element discovered in nature. Before its discovery, it was referred to as "eka-caesium." Several claims of discovery were made but later disproven.</p>
+        <p>Francium was finally discovered in 1939 by French chemist Marguerite Perey at the Curie Institute in Paris. She was purifying a sample of actinium-227 and noticed radiation with an energy of 80 keV. She determined this radiation came from a decay product of actinium-227, which was francium-223. Perey initially named it "actinium-K" and later proposed the name "catium" for its predicted high tendency to form cations.</p>
+        <p>The name "francium" was adopted in 1946 in honor of France (Perey's homeland). Perey was nominated for the Nobel Prize five times but never received it, though she did become the first woman elected to the French Academy of Sciences in 1962. She died of cancer in 1975, likely caused by her work with radioactive materials.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Francium is the second rarest naturally occurring element (after astatine)</li>
+            <li>Only about 20-30 grams exist in Earth's crust at any time</li>
+            <li>It was the last naturally occurring element to be discovered</li>
+            <li>The largest amount ever assembled was about 300,000 atoms</li>
+            <li>It's named after France, the discoverer's homeland</li>
+            <li>Francium is predicted to be liquid at room temperature (melting point ~27°C)</li>
+            <li>It should be the most reactive alkali metal, but this has never been demonstrated</li>
+            <li>Marguerite Perey discovered it at age 30 while working as a lab technician</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All francium isotopes radioactive. Francium-223 decays by alpha and beta emission.</p>
+        <p><strong>Extreme Rarity:</strong> Natural abundance so low that exposure risk is negligible.</p>
+        <p><strong>Research Hazards:</strong> Only hazard in research settings where artificially produced.</p>
+        <strong>Radiation Protection:</strong> Standard radiation safety precautions when working with radioactive materials.</p>
+        <p><strong>Chemical Reactivity:</strong> Predicted to be extremely reactive (like cesium but more so). Would react violently with water and air.</p>
+        <p><strong>Handling Precautions:</strong> Only handled in specialized research facilities with appropriate safety measures.</p>
+        <p><strong>Quantity Limitations:</strong> Only produced in minute quantities (atoms, not grams).</p>
+        <p><strong>Storage:</strong> Not stored; produced as needed for experiments.</p>
+        <p><strong>Disposal:</strong> Radioactive waste from production disposed according to regulations.</p>
+        <p><strong>First Aid:</strong> No specific first aid procedures established due to extreme rarity.</p>
+        <p><strong>Regulations:</strong> Regulated as radioactive material but poses minimal practical risk.</p>
+        <p><strong>General Safety:</strong> For the general public, francium poses no health risk due to its extreme rarity.</p>
+    </div>
+</body>
+</html>
