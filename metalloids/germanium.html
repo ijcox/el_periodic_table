@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germanium</title>
+    <style>
+        /* Germanium is a metalloid */
+        .metalloid { background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #d4a574;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .info-card h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #d4a574;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">32</div>
+            <div class="symbol-large">Ge</div>
+        </div>
+        <div class="element-title">
+            <h1>Germanium</h1>
+            <div class="element-subtitle">Metalloid • Group 14 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>32</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>72.630 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s² 4p²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Germanium is a lustrous, hard, grayish-white metalloid in the carbon group. It is chemically similar to its group neighbors silicon and tin. Like silicon, germanium is a semiconductor with electrical properties between those of metals and insulators. The element is brittle and crystalline at room temperature but becomes ductile upon heating.</p>
+        <p>Germanium was one of the elements whose existence was predicted by Dmitri Mendeleev in 1871. He called it "eka-silicon" based on its position in his periodic table. The element was discovered by German chemist Clemens Winkler in 1886, who isolated it from the mineral argyrodite. Winkler named it "germanium" after his homeland, Germany.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>938.25°C (1720.85°F, 1211.40 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2833°C (5131°F, 3106 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>5.323 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.320 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>36.94 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>334 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>60.2 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>1 Ω·m (at 20°C, semiconductor)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>6.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -3, -2, -1, 0, +1, +2, +3, +4 (most common: +4)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.01 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>762 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>125 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>120 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>211 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered diamond cubic</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Germanium has five naturally occurring isotopes:</p>
+        <ul>
+            <li><strong>Germanium-70 (⁷⁰Ge)</strong> - 20.52% abundance</li>
+            <li><strong>Germanium-72 (⁷²Ge)</strong> - 27.45% abundance</li>
+            <li><strong>Germanium-73 (⁷³Ge)</strong> - 7.76% abundance</li>
+            <li><strong>Germanium-74 (⁷⁴Ge)</strong> - 36.52% abundance</li>
+            <li><strong>Germanium-76 (⁷⁶Ge)</strong> - 7.75% abundance</li>
+        </ul>
+        <p>Germanium has several radioactive isotopes with medical and research applications:</p>
+        <ul>
+            <li><strong>Germanium-68 (⁶⁸Ge)</strong> - Radioactive isotope with half-life of 270.95 days; parent isotope for gallium-68 generator used in PET imaging</li>
+            <li><strong>Germanium-71 (⁷¹Ge)</strong> - Radioactive isotope with half-life of 11.43 days; used in neutrino detection experiments</li>
+            <li><strong>Germanium-69 (⁶⁹Ge)</strong> - Radioactive isotope with half-life of 39.05 hours</li>
+        </ul>
+        <p>Germanium-76 undergoes double beta decay with a half-life of about 1.78×10²¹ years, making it useful for neutrino physics experiments.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Semiconductors</strong> - Early transistors (point-contact transistors, 1947) and diodes; still used in some high-speed and high-frequency devices</li>
+            <li><strong>Fiber Optics</strong> - Germanium dioxide as dopant in optical fiber cores to increase refractive index</li>
+            <li><strong>Infrared Optics</strong> - Germanium lenses and windows for thermal imaging cameras, night vision systems, and infrared spectroscopy</li>
+            <li><strong>Polyethylene Terephthalate (PET)</strong> - Germanium dioxide as catalyst in production of PET plastic for bottles and fibers</li>
+            <li><strong>Solar Cells</strong> - Germanium substrates for multi-junction solar cells (space applications, concentrated photovoltaics)</li>
+            <li><strong>Phosphors</strong> - Germanium compounds in some fluorescent lamps and cathode ray tubes</li>
+            <li><strong>Alloys</strong> - Germanium-silver alloys for dental amalgams; germanium added to some aluminum and magnesium alloys</li>
+            <li><strong>Chemotherapy</strong> - Spirogermanium and other germanium compounds investigated as anticancer agents</li>
+            <li><strong>Gamma-ray Detectors</strong> - High-purity germanium detectors for gamma-ray spectroscopy in nuclear physics and security screening</li>
+            <li><strong>Neutrino Detectors</strong> - Germanium in detectors for solar neutrino experiments (GALLEX, SAGE)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Germanium has no known essential biological role in humans but has some interesting biological interactions:</p>
+        <ul>
+            <li><strong>Not Essential</strong> - No evidence germanium is essential for any living organism</li>
+            <li><strong>Germanium-132</strong> - Carboxyethylgermanium sesquioxide, marketed as nutritional supplement with unproven health claims</li>
+            <li><strong>Alleged Benefits</strong> - Supplements claimed to boost immune system, fight cancer, relieve pain; no scientific evidence supports these claims</li>
+            <li><strong>Toxicity</strong> - Inorganic germanium compounds can be toxic; germanium dioxide causes kidney damage with prolonged use</li>
+            <li><strong>Organic Germanium</strong> - Some organogermanium compounds less toxic but still potentially harmful with long-term use</li>
+            <li><strong>Case Reports</strong> - Germanium supplement use associated with kidney failure, muscle weakness, and peripheral neuropathy</li>
+            <li><strong>Regulation</strong> - Germanium supplements banned or restricted in many countries due to safety concerns</li>
+            <li><strong>Environmental Exposure</strong> - Natural dietary intake estimated at 0.4-1.5 mg/day; higher near industrial sources</li>
+            <li><strong>Research</strong> - Some germanium compounds investigated for potential anticancer and immunomodulatory effects</li>
+        </ul>
+        <p>Germanium supplements should be avoided due to potential kidney toxicity and lack of proven benefits.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Germanium is the 52nd most abundant element in Earth's crust (1.5 ppm). It occurs:</p>
+        <ul>
+            <li><strong>Argyrodite</strong> - Ag₈GeS₆ (silver germanium sulfide, the mineral in which germanium was discovered)</li>
+            <li><strong>Germanite</strong> - Cu₁₃Fe₂Ge₂S₁₆ (copper iron germanium sulfide)</li>
+            <li><strong>As Trace Element</strong> - In zinc ores (sphalerite), copper ores, and some coal deposits</li>
+            <li><strong>Byproduct Source</strong> - Most germanium recovered as byproduct of zinc production or from fly ash of certain coal combustion</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Germanium is produced through several processes:</p>
+        <ol>
+            <li><strong>From Zinc Ores</strong> - Germanium concentrates during zinc smelting; recovered from flue dusts and residues</li>
+            <li><strong>From Coal Fly Ash</strong> - Certain coals (especially from China and Russia) contain germanium; recovered from combustion fly ash</li>
+            <li><strong>Purification</strong> - Germanium tetrachloride (GeCl₄) distilled and hydrolyzed to germanium dioxide (GeO₂)</li>
+            <li><strong>Reduction</strong> - Germanium dioxide reduced with hydrogen to produce elemental germanium</li>
+            <li><strong>Zone Refining</strong> - Produces ultra-high purity germanium (>99.9999999%) for semiconductor applications</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 140 tons annually. China produces about 70%, followed by Russia, United States, and Belgium.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Germanium production and use have moderate environmental impacts:</p>
+        <ul>
+            <li><strong>Byproduct Recovery</strong> - Most germanium recovered as byproduct, minimizing additional mining</li>
+            <li><strong>Coal Combustion</strong> - Germanium recovery from coal fly ash provides additional value from waste stream</li>
+            <li><strong>Energy Intensive</strong> - High-purity germanium production requires significant energy, especially zone refining</li>
+            <li><strong>Recycling</strong> - Germanium recycled from scrap infrared optics and semiconductor wafers (limited scale)</li>
+            <li><strong>Low Toxicity</strong> - Elemental germanium and germanium dioxide have low environmental toxicity</li>
+            <li><strong>Germanium Tetrachloride</strong> - Production intermediate that hydrolyzes to hydrochloric acid and germanium dioxide</li>
+            <li><strong>Strategic Material</strong> - Germanium classified as critical material by EU and USA due to limited supply and important applications</li>
+            <li><strong>Supply Concentration</strong> - Production concentrated in few countries creates supply chain vulnerabilities</li>
+            <li><strong>E-Waste</strong> - Germanium in electronic devices rarely recovered due to small quantities per device</li>
+        </ul>
+        <p>Germanium's use in energy-efficient technologies (fiber optics, infrared imaging) provides environmental benefits that may offset production impacts.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1871, Dmitri Mendeleev predicted the existence and properties of an element he called "eka-silicon" to fill the gap below silicon in his periodic table. He predicted it would have atomic weight about 72, density 5.5 g/cm³, and form a dioxide with density 4.7 g/cm³.</p>
+        <p>In 1886, Clemens Winkler at the Freiberg University of Mining and Technology in Germany discovered germanium in the mineral argyrodite. The mineral's composition didn't match known elements, and Winkler isolated a new element that matched Mendeleev's predictions remarkably well. Winkler named it germanium after Germany.</p>
+        <p>For decades, germanium remained a laboratory curiosity. Its semiconductor properties were discovered in the 1920s, but it wasn't until 1947 that the first transistor was made from germanium at Bell Labs (the point-contact transistor by Bardeen, Brattain, and Shockley).</p>
+        <p>Germanium dominated early semiconductor industry until the 1960s when silicon replaced it due to silicon's lower cost, higher temperature operation, and superior oxide properties. Today, germanium finds specialized applications where its unique properties are essential.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Germanium is transparent to infrared light but opaque to visible light, making it ideal for infrared optics</li>
+            <li>The first transistor ever made (1947) used germanium, not silicon</li>
+            <li>Germanium has the unusual property of expanding when it freezes, like water and gallium</li>
+            <li>Some "health food" stores sell germanium supplements despite their known kidney toxicity</li>
+            <li>High-purity germanium detectors can identify individual gamma-ray energies with exceptional precision</li>
+            <li>Germanium was used in the first solar cell in space (Vanguard 1 satellite, 1958)</li>
+            <li>The name "germanium" comes from "Germania," the Latin name for Germany</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Germanium Supplements:</strong> Avoid germanium dietary supplements; linked to kidney failure, muscle weakness, and nerve damage with long-term use.</p>
+        <p><strong>Germanium Dioxide:</strong> Most toxic germanium compound; causes kidney damage with repeated exposure. OSHA PEL: 0.6 mg/m³ as Ge.</p>
+        <p><strong>Germanium Tetrachloride:</strong> Corrosive liquid that hydrolyzes to hydrochloric acid and germanium dioxide; causes severe burns to skin and eyes.</p>
+        <p><strong>Germanium Hydride (Germane):</strong> Toxic gas similar to arsine; causes hemolysis (red blood cell destruction).</p>
+        <p><strong>Dust Inhalation:</strong> Germanium metal dust may cause respiratory irritation; use local exhaust ventilation.</p>
+        <p><strong>Skin Contact:</strong> Generally low hazard but may cause irritation in sensitive individuals.</p>
+        <p><strong>Environmental:</strong> Germanium compounds have low to moderate environmental toxicity; germanium tetrachloride toxic to aquatic life.</p>
+        <p><strong>Regulatory Status:</strong> Germanium supplements banned in many countries; regulated as food additive in others.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes.</p>
+        <p><strong>Medical Monitoring:</strong> Workers with germanium exposure should have regular kidney function tests.</p>
+    </div>
+</body>
+</html>
