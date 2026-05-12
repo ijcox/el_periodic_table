@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strontium</title>
+    <style>
+        /* Strontium is an alkaline earth metal */
+        .alkaline-earth { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f39c12;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .info-card h3 {
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">38</div>
+            <div class="symbol-large">Sr</div>
+        </div>
+        <div class="element-title">
+            <h1>Strontium</h1>
+            <div class="element-subtitle">Alkaline Earth Metal • Group 2 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>38</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>87.62 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 5s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Strontium is a soft, silvery-white alkaline earth metal that is highly reactive chemically. The metal turns yellow when exposed to air due to the formation of strontium oxide and strontium nitride. Like other alkaline earth metals, strontium reacts vigorously with water to produce strontium hydroxide and hydrogen gas. Strontium compounds are known for producing bright red flames and are used in fireworks and flares.</p>
+        <p>Strontium was discovered in 1790 by Adair Crawford in the mineral strontianite from Strontian, Scotland. The element was isolated by Sir Humphry Davy in 1808 using electrolysis. The name "strontium" comes from the village of Strontian in Scotland, where the mineral strontianite was first found.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>777°C (1431°F, 1050 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1382°C (2520°F, 1655 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>2.64 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.301 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>7.43 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>141 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>35.4 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>132 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>1.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+1, +2 (most common: +2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.95 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>549.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>215 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>195 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>249 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (fcc)</td>
+            </tr>
+            <tr>
+                <td>Flame Color</td>
+                <td>Crimson red</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Strontium has four stable isotopes:</p>
+        <ul>
+            <li><strong>Strontium-84 (⁸⁴Sr)</strong> - 0.56% abundance</li>
+            <li><strong>Strontium-86 (⁸⁶Sr)</strong> - 9.86% abundance</li>
+            <li><strong>Strontium-87 (⁸⁷Sr)</strong> - 7.00% abundance (radiogenic from rubidium-87 decay)</li>
+            <li><strong>Strontium-88 (⁸⁸Sr)</strong> - 82.58% abundance</li>
+        </ul>
+        <p>Strontium has several radioactive isotopes with important applications:</p>
+        <ul>
+            <li><strong>Strontium-90 (⁹⁰Sr)</strong> - Radioactive isotope with half-life of 28.79 years; fission product, used in radioisotope thermoelectric generators and cancer therapy</li>
+            <li><strong>Strontium-89 (⁸⁹Sr)</strong> - Radioactive isotope with half-life of 50.57 days; used in cancer therapy for bone pain</li>
+            <li><strong>Strontium-85 (⁸⁵Sr)</strong> - Radioactive isotope with half-life of 64.84 days; used in medical imaging</li>
+            <li><strong>Strontium-82 (⁸²Sr)</strong> - Radioactive isotope with half-life of 25.36 days; parent for rubidium-82 generator for PET imaging</li>
+        </ul>
+        <p>Strontium-90 is a dangerous component of nuclear fallout due to its chemical similarity to calcium and long half-life.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Fireworks and Flares</strong> - Strontium carbonate and nitrate produce brilliant red color in pyrotechnics</li>
+            <li><strong>Ferrite Magnets</strong> - Strontium ferrite in permanent magnets for speakers, motors, and refrigerator magnets</li>
+            <li><strong>Medical Applications</strong> - Strontium ranelate for osteoporosis treatment; radioactive strontium-89 for bone cancer pain relief</li>
+            <li><strong>Glass for Color TV Tubes</strong> - Strontium carbonate in glass to block X-ray emission from cathode ray tubes</li>
+            <li><strong>Zinc Refining</strong> - Strontium removes lead impurities during zinc production</li>
+            <li><strong>Aluminum-Silicon Alloys</strong> - Strontium modifies silicon structure, improving mechanical properties</li>
+            <li><strong>Radioisotope Thermoelectric Generators</strong> - Strontium-90 as heat source for remote power generation (lighthouses, weather stations)</li>
+            <li><strong>Toothpaste for Sensitive Teeth</strong> - Strontium chloride in some desensitizing toothpastes</li>
+            <li><strong>Ceramics</strong> - Strontium compounds in ceramic glazes and ferroelectric materials</li>
+            <li><strong>Geological Dating</strong> - Strontium isotope ratios used in archaeology and geology</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Strontium has limited biological role but significant medical applications:</p>
+        <ul>
+            <li><strong>Calcium Analog</strong> - Strontium ions (Sr²⁺) mimic calcium ions (Ca²⁺) in biological systems</li>
+            <li><strong>No Essential Role</strong> - Not considered essential for human health</li>
+            <li><strong>Bone Seeking</strong> - Strontium accumulates in bones and teeth, similar to calcium</li>
+            <li><strong>Medical Treatment</strong> - Strontium ranelate increases bone formation and reduces bone resorption; used for osteoporosis</li>
+            <li><strong>Radioactive Therapy</strong> - Strontium-89 and strontium-90 used to treat bone cancers and metastases</li>
+            <li><strong>Dental Health</strong> - Strontium chloride in toothpaste reduces dental hypersensitivity</li>
+            <li><strong>Dietary Sources</strong> - Found in seafood, whole grains, leafy vegetables, and dairy products</li>
+            <li><strong>Toxicity</strong> - Generally low toxicity; excessive strontium can interfere with calcium metabolism</li>
+            <li><strong>Strontium-90 Hazard</strong> - Radioactive strontium-90 incorporated into bone; emits beta particles causing bone cancer and leukemia</li>
+            <li><strong>Research</strong> - Stable strontium isotopes used in studies of calcium metabolism and bone biology</li>
+        </ul>
+        <p>Strontium's similarity to calcium allows it to participate in bone metabolism, making it useful both therapeutically and diagnostically.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Strontium is the 15th most abundant element in Earth's crust (370 ppm). It occurs in:</p>
+        <ul>
+            <li><strong>Strontianite</strong> - SrCO₃ (strontium carbonate, the original discovery mineral)</li>
+            <li><strong>Celestine</strong> - SrSO₄ (strontium sulfate, the principal commercial source)</li>
+            <li><strong>As Trace Element</strong> - In calcium minerals, seawater (8 mg/L), and some brines</li>
+            <li><strong>Nuclear Fallout</strong> - Strontium-90 produced by nuclear fission and present in fallout</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Strontium is extracted from celestine:</p>
+        <ol>
+            <li><strong>Mining</strong> - Celestine mined by open-pit or underground methods</li>
+            <li><strong>Conversion</strong> - Strontium sulfate converted to carbonate or other compounds</li>
+            <li><strong>Reduction</strong> - Strontium oxide reduced with aluminum at high temperature</li>
+            <li><strong>Purification</strong> - Strontium metal purified by distillation or electrolysis</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 300,000 tons annually (as strontium minerals). China, Spain, and Mexico are major producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Strontium has environmental significance primarily through its radioactive isotopes:</p>
+        <ul>
+            <li><strong>Nuclear Fallout</strong> - Strontium-90 from atmospheric nuclear testing contaminated global environment</li>
+            <li><strong>Bioaccumulation</strong> - Strontium-90 accumulates in food chains, especially in bones of animals and humans</li>
+            <li><strong>Chernobyl and Fukushima</strong> - Strontium-90 released in nuclear accidents; persists in environment due to 29-year half-life</li>
+            <li><strong>Mining Impact</strong> - Celestine mining can disturb local ecosystems</li>
+            <li><strong>Water Contamination</strong> - Strontium in groundwater from natural sources and industrial activities</li>
+            <li><strong>Radioactive Waste</strong> - Strontium-90 in nuclear waste requires long-term management</li>
+            <li><strong>Atmospheric Transport</strong> - Strontium-90 from nuclear facilities can travel long distances</li>
+            <li><strong>Remediation</strong> - Technologies to remove strontium from contaminated water include ion exchange and precipitation</li>
+            <li><strong>Monitoring</strong> - Environmental strontium-90 levels monitored as indicator of nuclear contamination</li>
+        </ul>
+        <p>Strontium-90 represents one of the most dangerous components of radioactive fallout due to its long half-life and biological behavior.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1790, Adair Crawford, a Scottish physician, analyzed a mineral from the lead mines near Strontian, Scotland. He realized it was different from barium minerals and proposed it contained a new earth (oxide of a new element).</p>
+        <p>In 1793, Thomas Charles Hope confirmed Crawford's findings and named the new mineral "strontites." He studied its properties and distinctive red flame color. For many years, strontium was known only as its compounds.</p>
+        <p>In 1808, Sir Humphry Davy isolated strontium metal by electrolysis of a mixture containing strontium chloride and mercuric oxide. He used the same method he had recently developed to isolate sodium and potassium.</p>
+        <p>Throughout the 19th century, strontium found use in sugar refining (to remove impurities) and later in pyrotechnics. The discovery of radioactive strontium-90 in the 20th century brought new significance to the element, both as a hazard and as a useful radioisotope.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Strontium gives the bright red color to emergency flares and fireworks</li>
+            <li>The human body contains about 320 mg of strontium, mostly in bones</li>
+            <li>Strontium-90 was found in baby teeth during nuclear testing era, leading to nuclear test ban movement</li>
+            <li>Some osteoporosis medications contain strontium, which helps build stronger bones</li>
+            <li>Strontium is named after the Scottish village of Strontian where it was discovered</li>
+            <li>Strontium ferrite magnets are the black magnets commonly used on refrigerator doors</li>
+            <li>Before digital displays, old TV screens contained strontium to block X-rays</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Chemical Reactivity:</strong> Strontium metal reacts vigorously with water, producing flammable hydrogen gas and corrosive strontium hydroxide.</p>
+        <p><strong>Fire Hazard:</strong> Finely divided strontium can ignite spontaneously in air. Store under mineral oil or inert gas.</p>
+        <p><strong>Corrosive Compounds:</strong> Strontium hydroxide is strongly alkaline and causes severe burns to skin and eyes.</p>
+        <p><strong>Inhalation:</strong> Strontium dust can cause respiratory irritation and, in chronic exposure, "strontium lung" similar to other metal dust diseases.</p>
+        <p><strong>Radioactive Strontium-90:</strong> Beta emitter that accumulates in bone; internal exposure hazard from ingestion or inhalation. Can cause bone cancer and leukemia.</p>
+        <p><strong>First Aid:</strong> For skin contact with compounds, wash with plenty of water. For inhalation, move to fresh air. Seek medical attention for significant exposures.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, eye protection, and dust masks when handling strontium compounds. Use fume hood for powdered forms.</p>
+        <p><strong>Fire Fighting:</strong> For strontium fires, use Class D extinguishers (metal fire extinguishers). Do NOT use water, CO₂, or foam.</p>
+        <p><strong>Storage:</strong> Store strontium metal under mineral oil or argon. Keep away from water, acids, and oxidizers.</p>
+        <p><strong>Radioactive Materials:</strong> Handle radioactive strontium isotopes with appropriate radiation protection and monitoring.</p>
+    </div>
+</body>
+</html>
