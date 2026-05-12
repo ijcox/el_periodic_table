@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawrencium</title>
+    <style>
+        /* Lawrencium is an actinide */
+        .actinide { background: linear-gradient(135deg, #607d8b 0%, #455a64 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #607d8b;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #607d8b;
+        }
+        
+        .info-card h3 {
+            color: #607d8b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #607d8b;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">103</div>
+            <div class="symbol-large">Lr</div>
+        </div>
+        <div class="element-title">
+            <h1>Lawrencium</h1>
+            <div class="element-subtitle">Actinide • Group 3 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>103</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[262] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d¹ 7s² (predicted)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (presumed)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Lawrencium is a synthetic, highly radioactive chemical element and the last member of the actinide series. It is a transuranium element that does not occur naturally and can only be produced in particle accelerators. Lawrencium is expected to be a solid metal under normal conditions, but only a few atoms have ever been produced, so many of its properties are predicted based on its position in the periodic table.</p>
+        <p>Lawrencium was first synthesized on February 14, 1961, by the team of Albert Ghiorso, Torbjørn Sikkeland, Almon Larsh, and Robert M. Latimer at the Lawrence Berkeley National Laboratory (then the Lawrence Radiation Laboratory). The element was named in honor of Ernest O. Lawrence, inventor of the cyclotron particle accelerator. There was a significant priority dispute between American and Soviet scientists over its discovery, but the IUPAC ultimately recognized the Berkeley team's work.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1627°C (2961°F, 1900 K) (estimated)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Density (predicted)</td>
+                <td>9.84 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (presumed)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be metallic)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+3 (most stable and common), +2, +1 (observed in gas phase)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>478.6 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>188 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>161 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Unknown (possibly hexagonal close-packed)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Lawrencium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Lawrencium-252 (²⁵²Lr)</strong> - Half-life: 0.36 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-253 (²⁵³Lr)</strong> - Half-life: 0.57 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-254 (²⁵⁴Lr)</strong> - Half-life: 13 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-255 (²⁵⁵Lr)</strong> - Half-life: 22 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-256 (²⁵⁶Lr)</strong> - Half-life: 27 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-257 (²⁵⁷Lr)</strong> - Half-life: 0.65 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-258 (²⁵⁸Lr)</strong> - Half-life: 4.1 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-259 (²⁵⁹Lr)</strong> - Half-life: 6.2 seconds (alpha decay)</li>
+            <li><strong>Lawrencium-260 (²⁶⁰Lr)</strong> - Half-life: 2.7 minutes (electron capture, alpha decay)</li>
+            <li><strong>Lawrencium-261 (²⁶¹Lr)</strong> - Half-life: 39 minutes (predicted)</li>
+            <li><strong>Lawrencium-262 (²⁶²Lr)</strong> - Half-life: 3.6 hours (alpha decay, spontaneous fission) - Most stable known isotope</li>
+            <li><strong>Lawrencium-263 (²⁶³Lr)</strong> - Half-life: Unknown (predicted to be long-lived)</li>
+            <li><strong>Lawrencium-264 (²⁶⁴Lr)</strong> - Half-life: Unknown (predicted)</li>
+            <li><strong>Lawrencium-266 (²⁶⁶Lr)</strong> - Half-life: 11 hours (predicted, may be island of stability)</li>
+        </ul>
+        <p>Lawrencium-262 is the most stable known isotope with a half-life of 3.6 hours. Research continues to find longer-lived isotopes that might be part of the predicted "island of stability" for superheavy elements.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of properties of superheavy elements and nuclear physics</li>
+            <li><strong>Nuclear Structure Studies</strong> - Investigation of stability and decay properties of heavy nuclei</li>
+            <li><strong>Chemical Studies</strong> - Limited experiments on chemical behavior of transactinides</li>
+            <li><strong>Island of Stability Research</strong> - Part of research into predicted region of enhanced stability for superheavy elements</li>
+            <li><strong>Education</strong> - Example of synthetic element production and nuclear chemistry</li>
+        </ul>
+        <p>Lawrencium has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high radioactivity. Only minute amounts (a few atoms at a time) have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Lawrencium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature; no biological role</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity would make it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Does not occur naturally on Earth; only produced artificially</li>
+            <li><strong>No Environmental Presence</strong> - Not present in environment; no ecological role</li>
+            <li><strong>Radiation Hazard</strong> - Alpha emissions would be damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities for biochemical research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to short half-life and production difficulty</li>
+        </ul>
+        <p>As a synthetic element produced only in laboratories in atom quantities, lawrencium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Lawrencium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production:</strong> Lawrencium is produced in particle accelerators:</p>
+        <ol>
+            <li><strong>Target Preparation</strong> - A target of heavy actinide elements (californium, berkelium, or einsteinium) is prepared</li>
+            <li><strong>Accelerator Bombardment</strong> - The target is bombarded with light ions in a heavy-ion accelerator</li>
+            <li><strong>First Synthesis (1961)</strong> - Californium-249 target bombarded with boron-10 and boron-11 ions</li>
+            <li><strong>Modern Production</strong> - Typically uses berkelium-249 target bombarded with oxygen-18 ions</li>
+            <li><strong>Reaction Example</strong>:
+                <br>²⁴⁹Bk + ¹⁸O → ²⁶³Lr + 4n
+                <br>or ²⁵²Cf + ¹¹B → ²⁵⁸Lr + 5n</li>
+            <li><strong>Separation</strong> - Lawrencium atoms are separated using physical and chemical methods (gas-phase chromatography, recoil techniques)</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns</li>
+            <li><strong>Quantity</strong> - Production rates are extremely low (a few atoms per experiment)</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Lawrence Berkeley National Laboratory (USA), Joint Institute for Nuclear Research (Dubna, Russia), GSI Helmholtz Centre (Germany), RIKEN (Japan). Total world production is only a few hundred atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Lawrencium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Radioactive decay eliminates produced atoms quickly</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and short half-life, lawrencium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Lawrencium was first synthesized on February 14, 1961, at the Lawrence Berkeley National Laboratory (then called the Lawrence Radiation Laboratory) by a team consisting of Albert Ghiorso, Torbjørn Sikkeland, Almon Larsh, and Robert M. Latimer.</p>
+        <p>The team bombarded a target of three micrograms of californium (containing isotopes californium-249, californium-250, californium-251, and californium-252) with boron-10 and boron-11 ions in the Heavy Ion Linear Accelerator (HILAC). They detected alpha particles with an energy of 8.6 MeV and a half-life of about 4.2 seconds, which they attributed to lawrencium-257 or lawrencium-258.</p>
+        <p>In 1965, Soviet scientists at the Joint Institute for Nuclear Research in Dubna reported producing lawrencium by bombarding americium-243 with oxygen-18. They suggested different decay properties and claimed priority. The dispute continued for years.</p>
+        <p>In 1992, the IUPAC Transfermium Working Group (TWG) recognized the Berkeley team as discoverers. The element was named lawrencium (symbol Lr) after Ernest O. Lawrence, inventor of the cyclotron and founder of the laboratory where it was discovered. The name was officially adopted in 1997.</p>
+        <p>Later experiments in the 1970s and 1980s produced longer-lived isotopes, allowing for initial chemical studies that confirmed lawrencium behaves as a typical trivalent actinide, similar to lutetium.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Lawrencium was the last actinide to be discovered, completing the actinide series</li>
+            <li>Only about 50,000 atoms of lawrencium have ever been produced worldwide</li>
+            <li>The element is named for Ernest O. Lawrence, inventor of the cyclotron particle accelerator</li>
+            <li>Lawrencium was involved in a Cold War priority dispute between American and Soviet scientists</li>
+            <li>Its chemical properties were first studied in 1970 using only about 20 atoms</li>
+            <li>Lawrencium-262 has the longest known half-life at 3.6 hours</li>
+            <li>Some predicted isotopes of lawrencium might be part of the theoretical "island of stability"</li>
+            <li>The element completes the 5f electron shell with 14 electrons</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of lawrencium are highly radioactive. Primary hazards are alpha radiation and spontaneous fission.</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Some isotopes undergo spontaneous fission producing neutrons and fission fragments.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques in gas phase or solution; remote handling essential.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections: lab coats, gloves, monitoring. Heavy shielding not typically needed due to small quantities.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
