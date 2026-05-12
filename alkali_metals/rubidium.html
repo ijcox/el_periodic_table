@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubidium</title>
+    <style>
+        /* Rubidium is an alkali metal */
+        .alkali { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .info-card h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">37</div>
+            <div class="symbol-large">Rb</div>
+        </div>
+        <div class="element-title">
+            <h1>Rubidium</h1>
+            <div class="element-subtitle">Alkali Metal • Group 1 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>37</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>85.468 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 5s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Rubidium is a soft, silvery-white metallic element of the alkali metal group. It is highly reactive, similar to other alkali metals like sodium and potassium. Rubidium ignites spontaneously in air and reacts violently with water, producing hydrogen gas which can ignite. The metal has a low melting point and is so soft it can be cut with a knife.</p>
+        <p>Rubidium was discovered in 1861 by German chemists Robert Bunsen and Gustav Kirchhoff using the newly developed technique of flame spectroscopy. They found it in the mineral lepidolite by observing two deep red spectral lines that had never been seen before. The name "rubidium" comes from the Latin word "rubidus" meaning "deep red," referring to the color of its spectral lines.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>39.30°C (102.74°F, 312.45 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>688°C (1270°F, 961 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>1.532 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.363 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>2.19 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>69 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>58.2 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>128 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>0.3</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, +1 (most common: +1)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>0.82 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>403.0 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>248 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>220 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>303 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Body-centered cubic (bcc)</td>
+            </tr>
+            <tr>
+                <td>Flame Color</td>
+                <td>Violet-red</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Rubidium has two naturally occurring isotopes:</p>
+        <ul>
+            <li><strong>Rubidium-85 (⁸⁵Rb)</strong> - 72.17% abundance, stable</li>
+            <li><strong>Rubidium-87 (⁸⁷Rb)</strong> - 27.83% abundance, radioactive with half-life of 4.92×10¹⁰ years (49.2 billion years)</li>
+        </ul>
+        <p>Rubidium-87 is important for geological dating:</p>
+        <ul>
+            <li><strong>Rubidium-Strontium Dating</strong> - ⁸⁷Rb decays to stable ⁸⁷Sr by beta decay; used to date rocks and minerals</li>
+            <li><strong>Half-life</strong> - 49.2 billion years, suitable for dating very old rocks (billions of years)</li>
+        </ul>
+        <p>Other radioactive isotopes include:</p>
+        <ul>
+            <li><strong>Rubidium-82 (⁸²Rb)</strong> - Radioactive isotope with half-life of 1.27 minutes; used in cardiac PET imaging</li>
+            <li><strong>Rubidium-83 (⁸³Rb)</strong> - Radioactive isotope with half-life of 86.2 days</li>
+            <li><strong>Rubidium-84 (⁸⁴Rb)</strong> - Radioactive isotope with half-life of 32.9 days</li>
+            <li><strong>Rubidium-86 (⁸⁶Rb)</strong> - Radioactive isotope with half-life of 18.642 days; used as tracer</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Atomic Clocks</strong> - Rubidium vapor cells in rubidium atomic clocks; maintain time within 1 second per 1,000 years</li>
+            <li><strong>Medical Imaging</strong> - Rubidium-82 in positron emission tomography (PET) for myocardial perfusion imaging (heart scans)</li>
+            <li><strong>Specialty Glasses</strong> - Rubidium carbonate in fiber optic cables and night vision devices</li>
+            <li><strong>Photoelectric Cells</strong> - Rubidium compounds in photoelectric cells and photomultiplier tubes</li>
+            <li><strong>Getter in Vacuum Tubes</strong> - Rubidium removes trace gases in vacuum tubes</li>
+            <li><strong>Fireworks</strong> - Rubidium compounds produce violet-red colors in fireworks and flares</li>
+            <li><strong>Research</strong> - Rubidium in physics research, particularly in Bose-Einstein condensates and atomic physics experiments</li>
+            <li><strong>Chemical Synthesis</strong> - Rubidium compounds as catalysts in some organic reactions</li>
+            <li><strong>Geological Dating</strong> - Rubidium-strontium dating of rocks and minerals</li>
+            <li><strong>Ion Propulsion</strong> - Experimental use in ion thrusters for spacecraft</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Rubidium has limited biological significance but some interesting interactions:</p>
+        <ul>
+            <li><strong>Potassium Analog</strong> - Rubidium ions (Rb⁺) mimic potassium ions (K⁺) in biological systems due to similar size and charge</li>
+            <li><strong>No Essential Role</strong> - Rubidium is not essential for any known biological processes</li>
+            <li><strong>Trace Element</strong> - Human body contains about 0.36 g of rubidium (similar to zinc and copper amounts)</li>
+            <li><strong>Dietary Sources</strong> - Found in coffee, black tea, fruits, vegetables, and some mineral waters</li>
+            <li><strong>Metabolic Studies</strong> - Rubidium-86 as radioactive tracer to study potassium transport in cells</li>
+            <li><strong>Pharmacological Effects</strong> - Rubidium chloride studied as potential antidepressant; affects neurotransmitter systems</li>
+            <li><strong>Toxicity</strong> - Generally low toxicity due to similarity to potassium; excess can displace potassium in biological systems</li>
+            <li><strong>Excretion</strong> - Rubidium excreted primarily in urine, with biological half-life of 31-46 days in humans</li>
+            <li><strong>Tissue Distribution</strong> - Highest concentrations in muscle, brain, red blood cells, and liver</li>
+            <li><strong>Research Applications</strong> - Used in studies of ion transport, membrane potentials, and neurological function</li>
+        </ul>
+        <p>While not essential, rubidium's similarity to potassium makes it useful in biological research and gives it low toxicity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Rubidium is the 23rd most abundant element in Earth's crust (90 ppm). It occurs:</p>
+        <ul>
+            <li><strong>In Minerals</strong> - Lepidolite (up to 3.5% Rb₂O), pollucite, carnallite, and zinnwaldite</li>
+            <li><strong>As Trace Element</strong> - In potassium minerals like sylvite (KCl) and in seawater (0.2 mg/L)</li>
+            <li><strong>Always with Potassium</strong> - Rubidium never forms its own minerals; always occurs with potassium due to similar chemical properties</li>
+            <li><strong>Brines</strong> - Some underground brines contain recoverable rubidium</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Rubidium is produced as byproduct:</p>
+        <ol>
+            <li><strong>From Lepidolite</strong> - Ore crushed and treated with hot sulfuric acid</li>
+            <li><strong>Fractional Crystallization</strong> - Rubidium separated from potassium and cesium by fractional crystallization of alum or other salts</li>
+            <li><strong>Reduction</strong> - Rubidium carbonate or chloride reduced with calcium or magnesium at high temperature</li>
+            <li><strong>Purification</strong> - Distillation under vacuum produces pure rubidium metal</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 2-4 tons annually. Canada, Zimbabwe, and Namibia are major producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Rubidium has minimal environmental impact due to its low production and natural occurrence:</p>
+        <ul>
+            <li><strong>Low Production Volume</strong> - Small annual production minimizes environmental footprint</li>
+            <li><strong>Natural Abundance</strong> - Already present in environment at trace levels</li>
+            <li><strong>Byproduct Recovery</strong> - Most rubidium recovered as byproduct of lithium or cesium production</li>
+            <li><strong>Low Toxicity</strong> - Similar toxicity to potassium; not considered environmental hazard</li>
+            <li><strong>Radioactive Isotope</strong> - Natural rubidium-87 contributes to background radiation</li>
+            <li><strong>Mining Impact</strong> - Minimal additional impact as recovered from existing mining operations</li>
+            <li><strong>Biogeochemical Cycling</strong> - Rubidium cycles through environment similarly to potassium</li>
+            <li><strong>No Bioaccumulation</strong> - Does not accumulate in food chains</li>
+            <li><strong>Waste Considerations</strong> - Rubidium compounds should be disposed as hazardous waste due to reactivity with water</li>
+        </ul>
+        <p>Rubidium's environmental impact is negligible compared to more widely used metals, due to its limited applications and production.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Rubidium was discovered in 1861 by German chemists Robert Bunsen and Gustav Kirchhoff at the University of Heidelberg. They were using their newly invented spectroscope to analyze the mineral lepidolite.</p>
+        <p>When they examined the mineral's spectrum, they observed two deep red spectral lines that didn't correspond to any known element. They realized they had discovered a new element and named it "rubidium" from the Latin "rubidus" meaning "deep red," referring to the color of these spectral lines.</p>
+        <p>Bunsen isolated rubidium metal in 1863 by reducing rubidium tartrate with carbon. He was able to produce only a few grams, making it one of the first elements discovered through spectroscopy.</p>
+        <p>For many years, rubidium remained a laboratory curiosity with few practical applications. Its uses expanded in the 20th century with the development of atomic clocks, vacuum tube technology, and later, medical imaging applications.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Rubidium melts at just 39.3°C (102.7°F) - on a hot day, it would melt in your hand</li>
+            <li>The human body contains more rubidium than some essential elements like copper and zinc</li>
+            <li>Rubidium was the second element discovered using spectroscopy (after cesium)</li>
+            <li>Some atomic clocks use rubidium and are accurate to within 1 second per 1,000 years</li>
+            <li>Rubidium is so reactive it will burst into flame if exposed to air</li>
+            <li>The name comes from the Latin "rubidus" meaning "deep red" - the color of its spectral lines</li>
+            <li>Rubidium-87 is naturally radioactive with a half-life longer than the age of the universe</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Extreme Reactivity:</strong> Rubidium reacts violently with water, producing hydrogen gas that can ignite explosively. Store under mineral oil or argon.</p>
+        <p><strong>Pyrophoric:</strong> Rubidium metal ignites spontaneously in air, especially if powdered. Use in inert atmosphere (argon or nitrogen).</p>
+        <p><strong>Skin Contact:</strong> Causes severe chemical burns due to reaction with moisture on skin. Produces corrosive rubidium hydroxide.</p>
+        <p><strong>Eye Contact:</strong> Can cause severe burns and permanent eye damage.</p>
+        <p><strong>Inhalation:</strong> Dust or fumes cause respiratory irritation, chemical pneumonitis.</p>
+        <p><strong>Ingestion:</strong> Reacts violently with moisture in mouth and stomach; causes severe internal burns.</p>
+        <p><strong>Radioactive Hazard:</strong> Natural rubidium contains 27.8% radioactive rubidium-87; handle as low-level radioactive material.</p>
+        <p><strong>First Aid:</strong> For skin contact, brush off dry metal, then wash with copious water. Do NOT use water on burning rubidium. For inhalation, move to fresh air. Seek immediate medical attention for all exposures.</p>
+        <p><strong>Fire Fighting:</strong> Use Class D fire extinguishers (for metal fires). Do NOT use water, CO₂, or halon. Use dry sand, dry salt, or special metal fire extinguishing powder.</p>
+        <p><strong>Storage:</strong> Store under mineral oil or argon in cool, dry place away from water and oxidizers. Keep away from heat sources.</p>
+    </div>
+</body>
+</html>
