@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scandium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">21</div>
+            <div class="symbol-large">Sc</div>
+        </div>
+        <div class="element-title">
+            <h1>Scandium</h1>
+            <div class="element-subtitle">Transition Metal • Group 3 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>21</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>44.956 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹ 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Scandium is a soft, silvery-white metallic element that is classified as a transition metal, though it often shows more similarity to the rare earth elements. It is the first element in the d-block of the periodic table. Scandium is relatively rare and expensive, but has important applications in high-performance materials.</p>
+        <p>Scandium was predicted by Dmitri Mendeleev in 1869 as "eka-boron" and was discovered in 1879 by Swedish chemist Lars Fredrik Nilson in the minerals euxenite and gadolinite. He named it "scandium" after Scandinavia. Pure metallic scandium wasn't produced until 1937.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1541°C (2806°F, 1814 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2836°C (5137°F, 3109 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>2.985 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>2.80 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.568 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>14.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>332.7 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>No data (soft metal)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+1, +2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.36 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>633.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>162 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>170 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>211 pm (estimated)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Scandium has only one stable isotope:</p>
+        <ul>
+            <li><strong>Scandium-45 (⁴⁵Sc)</strong> - The only stable isotope, making up 100% of natural scandium. It has 21 protons and 24 neutrons.</li>
+        </ul>
+        <p>Scandium has several radioactive isotopes, with scandium-46 being the most notable:</p>
+        <ul>
+            <li><strong>Scandium-46 (⁴⁶Sc)</strong> - Radioactive isotope with half-life of 83.79 days; used as tracer in oil refinery industry</li>
+            <li><strong>Scandium-47 (⁴⁷Sc)</strong> - Radioactive isotope with half-life of 3.35 days; potential for targeted cancer therapy</li>
+            <li><strong>Scandium-44 (⁴⁴Sc)</strong> - Radioactive isotope with half-life of 3.97 hours; used in PET imaging</li>
+        </ul>
+        <p>Scandium-46 is particularly useful as a gamma ray source and tracer due to its suitable half-life and decay characteristics.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Aluminum-Scandium Alloys</strong> - Small amounts (0.1-0.5%) dramatically increase strength, weldability, and corrosion resistance; used in aerospace and sports equipment</li>
+            <li><strong>High-Intensity Discharge Lamps</strong> - Scandium iodide produces very bright white light similar to sunlight; used in stadium lighting and film production</li>
+            <li><strong>Fuel Cells</strong> - Scandium-stabilized zirconia as electrolyte in solid oxide fuel cells (SOFCs)</li>
+            <li><strong>Lasers</strong> - Scandium-containing garnets (GSGG) for high-power lasers</li>
+            <li><strong>Electronics</strong> - Scandium oxide as dielectric in certain electronic components</li>
+            <li><strong>Sports Equipment</strong> - Scandium-aluminum alloys in high-performance bicycle frames, baseball bats, and golf clubs</li>
+            <li><strong>Nuclear Applications</strong> - Scandium-46 as radioactive tracer in oil industry</li>
+            <li><strong>Medical Imaging</strong> - Scandium-44 for positron emission tomography (PET)</li>
+            <li><strong>Catalysts</strong> - Scandium compounds as catalysts in organic chemistry and petroleum refining</li>
+            <li><strong>Ceramics</strong> - Scandium oxide improves properties of certain ceramics</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Scandium has no known biological role and is generally considered non-essential:</p>
+        <ul>
+            <li><strong>Non-essential Element</strong> - Not known to participate in any biological processes in plants, animals, or humans</li>
+            <li><strong>Low Abundance in Biology</strong> - Extremely low concentrations in living organisms; not accumulated by biological systems</li>
+            <li><strong>Toxicity Studies</strong> - Generally considered to have low toxicity, though comprehensive studies are limited</li>
+            <li><strong>Environmental Exposure</strong> - Natural exposure is minimal due to scarcity; occupational exposure in mining and processing requires monitoring</li>
+            <li><strong>Medical Research</strong> - Radioisotopes (scandium-44, -47) being investigated for medical imaging and therapy</li>
+            <li><strong>Biological Chemistry</strong> - Scandium(III) ions can mimic calcium(III) in some chemical systems but not biologically</li>
+            <li><strong>Regulation</strong> - No established dietary requirements or exposure limits due to rarity and lack of biological role</li>
+        </ul>
+        <p>Due to its rarity and expense, scandium exposure is limited to specific industrial settings rather than general environmental exposure.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Scandium is relatively rare, ranking as the 50th most abundant element in Earth's crust (about 22 ppm). It is more abundant than lead but much less concentrated. Scandium occurs in trace amounts in many minerals:</p>
+        <ul>
+            <li><strong>Thortveitite</strong> - (Sc,Y)₂Si₂O₇, the principal scandium mineral but very rare</li>
+            <li><strong>Euxenite</strong> - (Y,Ca,Ce,U,Th)(Nb,Ta,Ti)₂O₆</li>
+            <li><strong>Gadolinite</strong> - Y₂FeBe₂Si₂O₁₀</li>
+            <li><strong>Bazzite</strong> - Be₃Sc₂Si₆O₁₈ (rare beryllium-scandium cyclosilicate)</li>
+            <li><strong>As Byproduct</strong> - Most scandium is recovered as byproduct of uranium, tungsten, tin, and rare earth mining</li>
+            <li><strong>Laterite Ores</strong> - Some nickel laterite deposits contain recoverable scandium</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Scandium is produced through complex extraction processes:</p>
+        <ol>
+            <li>Leaching of ores with acids</li>
+            <li>Solvent extraction to concentrate scandium</li>
+            <li>Precipitation as scandium oxalate or hydroxide</li>
+            <li>Conversion to scandium fluoride or chloride</li>
+            <li>Reduction with calcium or magnesium to produce metal</li>
+        </ol>
+        <p><strong>Global Production:</strong> Only 15-20 tons annually, mostly from China, Russia, Ukraine, and Kazakhstan. High purity scandium (99.99%) is very expensive ($3000-5000/kg).</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Scandium mining and production have limited but specific environmental impacts:</p>
+        <ul>
+            <li><strong>Mining Byproduct</strong> - Most scandium comes as byproduct of other mining, so environmental impact is tied to primary mining operations</li>
+            <li><strong>Chemical Processing</strong> - Extraction uses strong acids and generates chemical waste requiring proper treatment</li>
+            <li><strong>Energy Intensive</strong> - Production requires significant energy for extraction and reduction processes</li>
+            <li><strong>Limited Scale</strong> - Small production volumes mean overall environmental impact is limited compared to major metals</li>
+            <li><strong>Recycling Potential</strong> - Scandium from end-of-life products could be recycled but current volumes are too small for economic recovery</li>
+            <li><strong>Water Usage</strong> - Hydrometallurgical processing requires water, though less than many other metals</li>
+            <li><strong>Waste Management</strong> - Tailings from scandium extraction may contain other elements requiring proper disposal</li>
+            <li><strong>Lightweight Benefits</strong> - Scandium-aluminum alloys reduce weight in transportation, potentially saving fuel and reducing emissions</li>
+        </ul>
+        <p>The environmental impact of scandium is primarily associated with its production as a byproduct of other mining operations rather than dedicated scandium mining.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Scandium's existence was first predicted by Dmitri Mendeleev in 1869. Using his periodic law, he predicted an element between calcium and titanium with atomic weight about 44, which he called "eka-boron."</p>
+        <p>In 1879, Swedish chemist Lars Fredrik Nilson discovered scandium while analyzing the minerals euxenite and gadolinite. He isolated about 2 grams of scandium oxide (Sc₂O₃) and named it after Scandinavia. Per Teodor Cleve later showed it was Mendeleev's predicted eka-boron.</p>
+        <p>Metallic scandium was first prepared in 1937 by Fischer, Brünger, and Grieneisen by electrolysis of molten scandium chloride with potassium and lithium chlorides at 700-800°C. High purity (99%) scandium was produced in 1960 by the reduction of scandium fluoride with calcium metal.</p>
+        <p>Commercial applications developed slowly due to scarcity and high cost. The first significant use was in scandium-aluminum alloys for Soviet military aircraft in the 1970s. Today, applications are growing as production increases and costs decrease.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Scandium was the first element to be predicted by Mendeleev's periodic table before it was discovered</li>
+            <li>Despite being a transition metal, scandium behaves more like the rare earth elements in many ways</li>
+            <li>Scandium-aluminum alloys are as strong as titanium but lighter and easier to work with</li>
+            <li>The only mine ever operated specifically for scandium (the Zhovti Vody mine in Ukraine) closed in 2017</li>
+            <li>Scandium iodide produces the most natural-looking artificial light of any element</li>
+            <li>Some high-end bicycle frames contain scandium-aluminum alloys for the perfect balance of strength and lightness</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Limited Toxicity Data:</strong> Scandium compounds are generally considered to have low to moderate toxicity, but comprehensive studies are limited due to the element's rarity.</p>
+        <p><strong>Dust Hazard:</strong> Scandium metal dust may be flammable or explosive. Fine powder can ignite spontaneously in air.</p>
+        <p><strong>Chemical Compounds:</strong> Some scandium compounds may be toxic if inhaled or ingested. Scandium chloride has shown moderate toxicity in animal studies.</p>
+        <p><strong>Occupational Exposure:</strong> Workers in scandium production should use appropriate ventilation and personal protective equipment to minimize exposure to dust and fumes.</p>
+        <p><strong>Radioisotopes:</strong> Radioactive scandium isotopes (Sc-46, Sc-47) require proper handling and radiation safety protocols.</p>
+        <p><strong>First Aid:</strong> For scandium compound exposure, standard first aid procedures apply: remove contaminated clothing, flush affected areas with water, seek medical attention if symptoms develop.</p>
+        <p><strong>Storage:</strong> Store scandium metal under inert atmosphere or oil to prevent oxidation. Keep compounds in sealed containers away from incompatible materials.</p>
+        <p><strong>Environmental Considerations:</strong> While scandium itself has low environmental impact, its production as a mining byproduct carries the environmental burdens of primary mining operations.</p>
+        <p><strong>Regulatory Status:</strong> No specific OSHA exposure limits for scandium; general particulate limits apply. Scandium compounds may be regulated under general hazardous materials rules.</p>
+    </div>
+</body>
+</html>
