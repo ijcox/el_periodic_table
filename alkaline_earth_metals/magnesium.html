@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnesium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f39c12;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .info-card h3 {
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">12</div>
+            <div class="symbol-large">Mg</div>
+        </div>
+        <div class="element-title">
+            <h1>Magnesium</h1>
+            <div class="element-subtitle">Alkaline Earth Metal • Group 2 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>12</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>24.305 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Magnesium is a shiny gray solid that is the eighth most abundant element in Earth's crust and the third most abundant element dissolved in seawater. It is an alkaline earth metal and is relatively strong, lightweight, and highly flammable when powdered or in thin strips.</p>
+        <p>Magnesium was first isolated by Sir Humphry Davy in 1808 using electrolysis of a mixture of magnesia (MgO) and mercuric oxide. The name "magnesium" comes from Magnesia, a district in Thessaly, Greece, where magnesia alba (magnesium carbonate) was found.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>650°C (1202°F, 923 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>1091°C (1994°F, 1364 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>1.738 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>1.584 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>1.023 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>8.48 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>128 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+1, +2 (strongly basic oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.31 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>737.7 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (2nd)</td>
+                <td>1450.7 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>160 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>141 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>173 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Magnesium has three stable isotopes:</p>
+        <ul>
+            <li><strong>Magnesium-24 (²⁴Mg)</strong> - Natural abundance of 78.99%. The most common isotope with 12 protons and 12 neutrons.</li>
+            <li><strong>Magnesium-25 (²⁵Mg)</strong> - Natural abundance of 10.00%. Used in NMR spectroscopy studies.</li>
+            <li><strong>Magnesium-26 (²⁶Mg)</strong> - Natural abundance of 11.01%. The daughter product of aluminum-26 decay, used in cosmochemistry.</li>
+        </ul>
+        <p>Magnesium also has several radioactive isotopes, with magnesium-28 being the most notable with a half-life of 20.915 hours. The isotope ratios of magnesium provide important information about stellar nucleosynthesis and the early solar system.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Alloys</strong> - Magnesium-aluminum alloys for lightweight structural components in aerospace, automotive, and electronics</li>
+            <li><strong>Pyrotechnics</strong> - Magnesium powder produces bright white light in fireworks, flares, and incendiary weapons</li>
+            <li><strong>Sacrificial Anodes</strong> - Magnesium rods protect steel structures (ships, pipelines, water heaters) from corrosion</li>
+            <li><strong>Medicine</strong> - Magnesium compounds (oxide, citrate, sulfate) as antacids, laxatives, and to treat magnesium deficiency</li>
+            <li><strong>Agriculture</strong> - Magnesium sulfate (Epsom salt) as fertilizer for magnesium-deficient soils</li>
+            <li><strong>Construction</strong> - Magnesium oxide boards for fire-resistant walls and ceilings</li>
+            <li><strong>Energy Storage</strong> - Research into magnesium-ion batteries as potential successors to lithium-ion</li>
+            <li><strong>Chemical Industry</strong> - Grignard reagents (RMgX) for organic synthesis</li>
+            <li><strong>Food Industry</strong> - Magnesium salts as firming agents and nutritional supplements</li>
+            <li><strong>Sports Equipment</strong> - Magnesium chalk (carbonate) for better grip in weightlifting, gymnastics, and climbing</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Magnesium is an essential mineral for all living organisms and is involved in numerous biological processes:</p>
+        <ul>
+            <li><strong>Enzyme Cofactor</strong> - Required for over 300 enzyme systems including ATP production, DNA/RNA synthesis, and protein synthesis</li>
+            <li><strong>Chlorophyll</strong> - Central atom in chlorophyll molecules, essential for photosynthesis in plants</li>
+            <li><strong>Bone Health</strong> - About 60% of body magnesium is in bones; works with calcium for bone structure</li>
+            <li><strong>Muscle Function</strong> - Required for muscle contraction and relaxation; magnesium deficiency causes muscle cramps</li>
+            <li><strong>Nervous System</strong> - Regulates neurotransmitters and protects against excitotoxicity</li>
+            <li><strong>Cardiovascular Health</strong> - Maintains normal heart rhythm and blood pressure</li>
+            <li><strong>Energy Metabolism</strong> - Essential for converting food into cellular energy (ATP)</li>
+            <li><strong>Recommended Intake</strong> - Adults need 300-400 mg/day; dietary sources include nuts, seeds, whole grains, leafy greens</li>
+            <li><strong>Deficiency</strong> - Causes fatigue, weakness, muscle cramps, abnormal heart rhythms, and increased risk of chronic diseases</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Magnesium is the eighth most abundant element in Earth's crust (2.1% by weight) and the third most abundant element dissolved in seawater (0.13%). It occurs in:</p>
+        <ul>
+            <li><strong>Minerals</strong> - Dolomite (CaMg(CO₃)₂), magnesite (MgCO₃), carnallite (KMgCl₃·6H₂O), and brucite (Mg(OH)₂)</li>
+            <li><strong>Seawater</strong> - Contains about 1.3 g of magnesium per kilogram of seawater</li>
+            <li><strong>Brines</strong> - Salt lakes and underground brine deposits</li>
+            <li><strong>Plant Life</strong> - Essential component of chlorophyll</li>
+            <li><strong>Cosmic Abundance</strong> - Ninth most abundant element in the universe</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Metallic magnesium is produced by two main methods:</p>
+        <ul>
+            <li><strong>Electrolysis</strong> - Of molten magnesium chloride (from seawater or brine)</li>
+            <li><strong>Pidgeon Process</strong> - Thermal reduction of dolomite with ferrosilicon at high temperature</li>
+        </ul>
+        <p><strong>Major Producers:</strong> China produces about 85% of world magnesium, followed by Russia, Israel, and Kazakhstan.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Magnesium and its compounds have relatively low environmental impact compared to many metals:</p>
+        <ul>
+            <li><strong>Low Toxicity</strong> - Magnesium compounds are generally non-toxic and biodegradable</li>
+            <li><strong>Mining Impacts</strong> - Open-pit mining of magnesite can cause landscape disruption</li>
+            <li><strong>Energy Intensive</strong> - Production requires significant energy, especially for electrolysis</li>
+            <li><strong>Recyclability</strong> - Magnesium is highly recyclable with energy savings of up to 95% compared to primary production</li>
+            <li><strong>Carbon Footprint</strong> - The Pidgeon process has higher CO₂ emissions than electrolysis</li>
+            <li><strong>Water Usage</strong> - Seawater extraction requires large volumes of water but returns it with only magnesium removed</li>
+            <li><strong>Fire Risk</strong> - Magnesium fires in recycling facilities or during machining require special extinguishing agents</li>
+        </ul>
+        <p>Magnesium's light weight helps reduce fuel consumption in transportation, providing environmental benefits through weight reduction.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Magnesium compounds have been known since ancient times. The name comes from Magnesia, a region in Greece where magnesium minerals were found. In 1618, a farmer in Epsom, England, discovered that his cows refused to drink water from a certain well - the water tasted bitter but healed skin conditions. This was Epsom salt (magnesium sulfate).</p>
+        <p>In 1755, Joseph Black recognized magnesium as an element. Sir Humphry Davy first isolated it in 1808 by electrolysis of a mixture of magnesia and mercuric oxide. He produced an amalgam from which the mercury was removed by distillation. Pure magnesium metal was first produced in large quantities by Antoine Bussy in 1831 by reducing magnesium chloride with potassium.</p>
+        <p>Industrial production began in Germany in 1886 using electrolysis. During World War I, magnesium production increased dramatically for use in incendiary bombs and flares. The Pidgeon process, developed in Canada during World War II, made magnesium more accessible for wartime needs.</p>
+        <p>Today, magnesium's light weight makes it increasingly important for fuel-efficient vehicles and portable electronics.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Magnesium burns with an intensely bright white light - so bright it was used in early photographic flash powder</li>
+            <li>The human body contains about 25 grams of magnesium, with 60% in bones and 40% in muscles and soft tissues</li>
+            <li>Magnesium is 33% lighter than aluminum and 75% lighter than steel, making it ideal for lightweight applications</li>
+            <li>Green vegetables get their color from chlorophyll, which contains magnesium at its center</li>
+            <li>Magnesium wheels were first used on racing cars in the 1920s and are still prized for their light weight</li>
+            <li>During World War II, magnesium was called the "war metal" because of its extensive use in aircraft and incendiary weapons</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Fire Hazard:</strong> Magnesium metal burns with an intense white flame at temperatures up to 3100°C (5612°F). Magnesium powder or fine shavings can ignite spontaneously in air.</p>
+        <p><strong>Fire Extinguishing:</strong> Never use water on magnesium fires - it can produce explosive hydrogen gas. Use Class D fire extinguishers, dry sand, or specialized extinguishing powders.</p>
+        <p><strong>Machining Hazards:</strong> Magnesium machining produces fine dust that is explosive when mixed with air. Proper dust collection and explosion-proof equipment are essential.</p>
+        <p><strong>Health Effects:</strong> While magnesium ions are essential nutrients, inhalation of magnesium oxide fumes from burning can cause metal fume fever with flu-like symptoms.</p>
+        <p><strong>Reactivity:</strong> Magnesium reacts with acids producing hydrogen gas, which can form explosive mixtures with air.</p>
+        <p><strong>Storage:</strong> Store away from oxidizing agents, acids, and moisture. Keep magnesium powder in airtight containers under inert gas.</p>
+        <p><strong>Medical Considerations:</strong> Excessive magnesium supplementation can cause diarrhea, nausea, and abdominal cramps. Very high doses can cause magnesium toxicity with serious neurological and cardiac effects.</p>
+    </div>
+</body>
+</html>
