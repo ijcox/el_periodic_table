@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #00bcd4;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .info-card h3 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #00bcd4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">10</div>
+            <div class="symbol-large">Ne</div>
+        </div>
+        <div class="element-title">
+            <h1>Neon</h1>
+            <div class="element-subtitle">Noble Gas • Group 18 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>10</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>20.180 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s² 2p⁶</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Neon is a colorless, odorless, inert monatomic gas that gives a distinct reddish-orange glow when placed in an electric field. It is the second-lightest noble gas after helium and is the fifth most abundant element in the universe by mass, though relatively rare on Earth.</p>
+        <p>Neon was discovered in 1898 by British chemists Sir William Ramsay and Morris W. Travers shortly after their discovery of krypton and xenon. The name "neon" comes from the Greek word "neos" meaning "new." Neon is best known for its use in bright, colorful advertising signs, which became popular in the 1920s.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-248.59°C (-415.46°F, 24.56 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>-246.08°C (-410.94°F, 27.07 K)</td>
+            </tr>
+            <tr>
+                <td>Density (gas at STP)</td>
+                <td>0.9002 g/L</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at b.p.)</td>
+                <td>1.207 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas</td>
+            </tr>
+            <tr>
+                <td>Critical Point</td>
+                <td>-228.75°C, 2.76 MPa</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>0.335 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>1.71 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Triple Point</td>
+                <td>-248.59°C, 43.37 kPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0 (noble gas - extremely unreactive)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>No data (Pauling scale) - noble gas</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>2080.7 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>38 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>58 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>154 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Neon has three stable isotopes:</p>
+        <ul>
+            <li><strong>Neon-20 (²⁰Ne)</strong> - Natural abundance of 90.48%. The most common isotope with 10 protons and 10 neutrons.</li>
+            <li><strong>Neon-22 (²²Ne)</strong> - Natural abundance of 9.25%. Used in neon signs and as a tracer in geological studies.</li>
+            <li><strong>Neon-21 (²¹Ne)</strong> - Natural abundance of 0.27%. Produced by cosmic ray spallation and used in cosmic ray exposure dating.</li>
+        </ul>
+        <p>Neon also has several short-lived radioactive isotopes, with neon-19 being the most stable with a half-life of 17.22 seconds. The isotopic ratios of neon in rocks and meteorites provide important information about Earth's formation and cosmic ray exposure.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Advertising Signs</strong> - Classic red-orange neon signs; other colors created with different gases or phosphor coatings</li>
+            <li><strong>Vacuum Tubes</strong> - Indicator lights, voltage regulators, and television tubes</li>
+            <li><strong>Cryogenics</strong> - Refrigerant in cryogenic applications requiring temperatures between those of liquid helium and liquid nitrogen</li>
+            <li><strong>Lasers</strong> - Helium-neon lasers (HeNe lasers) used in barcode scanners, laboratory equipment, and alignment tools</li>
+            <li><strong>Lightning Arrestors</strong> - Neon glow lamps protect electrical circuits from voltage surges</li>
+            <li><strong>Scientific Research</strong> - Tracer gas in leak detection and ventilation studies</li>
+            <li><strong>High-Voltage Indicators</strong> - Neon test lamps for detecting live electrical circuits</li>
+            <li><strong>Plasma Displays</strong> - Some plasma television and computer displays use neon-xenon mixtures</li>
+            <li><strong>Diving Gas Mixtures</strong> - Neon-oxygen mixtures (neox) for deep diving, though expensive compared to helium mixtures</li>
+            <li><strong>Astrophysics Research</strong> - Study of neon spectral lines provides information about stellar composition</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Neon has no known biological role and is physiologically inert:</p>
+        <ul>
+            <li><strong>Non-toxic</strong> - Neon is non-toxic and does not participate in any known biological processes</li>
+            <li><strong>Asphyxiation Risk</strong> - Like other noble gases, neon can displace oxygen in confined spaces, posing an asphyxiation hazard</li>
+            <li><strong>Medical Imaging</strong> - Not used in medical applications like some other noble gases (xenon for anesthesia, krypton in imaging)</li>
+            <li><strong>Environmental Presence</strong> - Trace amounts exist in the atmosphere but have no biological significance</li>
+            <li><strong>Research Applications</strong> - Used in some physiological studies as an inert tracer gas</li>
+        </ul>
+        <p>Due to its chemical inertness and lack of biological activity, neon poses no direct toxicological risks beyond displacement of oxygen in confined spaces.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Neon is the fifth most abundant element in the universe by mass (after hydrogen, helium, oxygen, and carbon) but relatively rare on Earth. It occurs in:</p>
+        <ul>
+            <li><strong>Earth's Atmosphere</strong> - 0.0018% by volume (18 ppm), making it the fourth most abundant gas in dry air after nitrogen, oxygen, and argon</li>
+            <li><strong>Natural Gas Deposits</strong> - Some natural gas fields contain up to 2% neon</li>
+            <li><strong>Stars and Nebulae</strong> - Produced by nuclear fusion in stars; abundant in emission nebulae</li>
+            <li><strong>Cosmic Rays</strong> - Produced by cosmic ray spallation of heavier elements in Earth's atmosphere</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Neon is produced commercially by fractional distillation of liquefied air. Because its boiling point (-246°C) is close to that of nitrogen (-196°C), special distillation columns are required to separate neon from nitrogen.</p>
+        <p><strong>Global Production:</strong> Annual production is relatively small (a few hundred tons) due to limited demand. Major producers include the United States, Russia, and China.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Neon has minimal environmental impact due to its inert nature and atmospheric stability:</p>
+        <ul>
+            <li><strong>Non-polluting</strong> - Neon does not react with other substances in the environment and does not contribute to pollution</li>
+            <li><strong>Atmospheric Stability</strong> - Remains in the atmosphere indefinitely; does not break down into harmful compounds</li>
+            <li><strong>Greenhouse Effect</strong> - Does not contribute to global warming as it is monatomic and transparent to infrared radiation</li>
+            <li><strong>Ozone Layer</strong> - Does not affect the ozone layer</li>
+            <li><strong>Resource Considerations</strong> - Limited atmospheric abundance makes it relatively expensive compared to more abundant gases</li>
+            <li><strong>Energy Consumption</strong> - Production requires energy-intensive air liquefaction and distillation</li>
+        </ul>
+        <p>Neon's environmental impact is primarily limited to the energy required for its production and the fact that it is a finite atmospheric resource.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Neon was discovered in 1898 by British chemists Sir William Ramsay and Morris W. Travers at University College London. They had recently discovered krypton and xenon and were examining the least volatile fraction of liquefied air.</p>
+        <p>When they subjected this fraction to spectroscopic analysis, they observed brilliant red lines that didn't match any known element. Ramsay's son suggested the name "neon" from the Greek word "neos" meaning new. The discovery was announced at a meeting of the Chemical Society on June 9, 1898.</p>
+        <p>The first neon sign was created by French engineer Georges Claude in 1910. He demonstrated a neon lamp at the Paris Motor Show in December 1910, and the first neon advertising sign was sold to a barber shop in Paris in 1912. The technology was brought to the United States in 1923 when Claude sold two neon signs to a Packard car dealership in Los Angeles.</p>
+        <p>Neon lighting became hugely popular in the 1920s and 1930s, transforming urban nightscapes worldwide and becoming an iconic symbol of the Art Deco era.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Neon signs aren't always filled with neon - only the red-orange ones are; other colors use different gases or coatings</li>
+            <li>Neon has over 40 times the refrigerating capacity of liquid helium and three times that of liquid hydrogen</li>
+            <li>The familiar neon sign glow comes from excited neon atoms emitting light at 640 nm wavelength</li>
+            <li>Neon is lighter than air (density 0.9 g/L vs. air at 1.29 g/L) but not as light as helium</li>
+            <li>Las Vegas is called "Neon City" because of its extensive use of neon signs since the 1930s</li>
+            <li>Neon is used in some wave meter tubes because its electrical characteristics are very stable</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Asphyxiation Hazard:</strong> Neon can displace oxygen in confined spaces, leading to oxygen deficiency. Symptoms include dizziness, confusion, loss of consciousness, and death.</p>
+        <p><strong>Cryogenic Hazards:</strong> Liquid neon at -246°C causes severe frostbite and cryogenic burns upon contact with skin. Proper protective equipment is essential.</p>
+        <p><strong>Pressure Hazards:</strong> Neon cylinders are pressurized and can become dangerous projectiles if valves are damaged or improperly handled.</p>
+        <p><strong>Electrical Hazards:</strong> Neon lighting operates at high voltages (2-15 kV) and can cause serious electrical shock.</p>
+        <p><strong>Glass Breakage:</strong> Neon sign tubes are fragile and can break, creating sharp glass hazards. Some older signs may contain small amounts of mercury.</p>
+        <p><strong>Fire Hazard:</strong> While neon itself is non-flammable, electrical components in neon signs can overheat and cause fires if improperly installed or maintained.</p>
+        <p><strong>Environmental Considerations:</strong> Although neon itself is inert, the energy required for its production contributes to carbon emissions from power generation.</p>
+    </div>
+</body>
+</html>
