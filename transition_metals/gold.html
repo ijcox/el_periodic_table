@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold</title>
+    <style>
+        /* Gold is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">79</div>
+            <div class="symbol-large">Au</div>
+        </div>
+        <div class="element-title">
+            <h1>Gold</h1>
+            <div class="element-subtitle">Transition Metal • Group 11 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>79</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>196.97 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹⁴ 5d¹⁰ 6s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Gold is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79, making it one of the higher atomic number elements that occur naturally. In its pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal.</p>
+        <p>Gold has been highly valued throughout human history. It has been used as a symbol of wealth and prosperity, for coinage, jewelry, and other arts since long before the beginning of recorded history. Gold standards have been the basis for monetary policies throughout history. Gold is the most malleable of all metals; a single gram can be beaten into a sheet of 1 square meter, or an ounce into 300 square feet.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1064.18°C (1947.52°F, 1337.33 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2970°C (5378°F, 3243 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>19.30 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.129 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>12.55 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>324 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>318 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>22.14 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>2.5-3.0</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>79 GPa</td>
+            </tr>
+            <tr>
+                <td>Vickers Hardness</td>
+                <td>188-216 MPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, 0, +1, +2, +3, +5 (most common: +1, +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.54 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>890.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>144 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>136 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>166 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (fcc)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Gold has only one stable isotope:</p>
+        <ul>
+            <li><strong>Gold-197 (¹⁹⁷Au)</strong> - 100% natural abundance</li>
+        </ul>
+        <p>Gold has several radioactive isotopes:</p>
+        <ul>
+            <li><strong>Gold-195 (¹⁹⁵Au)</strong> - Half-life of 186.1 days</li>
+            <li><strong>Gold-196 (¹⁹⁶Au)</strong> - Half-life of 6.183 days</li>
+            <li><strong>Gold-198 (¹⁹⁸Au)</strong> - Half-life of 2.69517 days, used in medical applications</li>
+            <li><strong>Gold-199 (¹⁹⁹Au)</strong> - Half-life of 3.169 days</li>
+        </ul>
+        <p>Gold-198 is used in nuclear medicine for radiation therapy in cancer treatment, particularly for treating certain types of tumors.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Jewelry</strong> - Primary use (about 50% of demand); valued for beauty and resistance to tarnish</li>
+            <li><strong>Investment</strong> - Bullion bars, coins, and ETFs for wealth preservation and investment</li>
+            <li><strong>Electronics</strong> - Electrical connectors, switch contacts, and bonding wires due to excellent conductivity and corrosion resistance</li>
+            <li><strong>Dentistry</strong> - Dental alloys for crowns, bridges, and other dental work</li>
+            <li><strong>Medicine</strong> - Radioactive gold-198 for cancer treatment, gold salts for arthritis treatment</li>
+            <li><strong>Aerospace</strong> - Thin gold coatings on spacecraft components for thermal control and radiation protection</li>
+            <li><strong>Architecture</strong> - Gold leaf for gilding on buildings and monuments</li>
+            <li><strong>Food and Beverage</strong> - Gold leaf and flakes as decorative elements in luxury foods and drinks</li>
+            <li><strong>Catalysts</strong> - Gold nanoparticles as catalysts in chemical reactions</li>
+            <li><strong>Awards</strong> - Gold medals, trophies, and other symbols of achievement</li>
+            <li><strong>Monetary Standard</strong> - Historical use as basis for monetary systems (gold standard)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Gold has no known essential biological role but has medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Medical Treatments</li>
+            <li><strong>Gold Salts</strong> - Gold sodium thiomalate and auranofin used to treat rheumatoid arthritis</li>
+            <li><strong>Radioactive Gold</li>
+            <li><strong>Dental Use</strong> - Gold alloys used in dentistry for over 4,000 years</li>
+            <li><strong>Biocompatibility</strong> - Pure gold is highly biocompatible and non-allergenic</li>
+            <li><strong>Research</strong> - Gold nanoparticles studied for drug delivery, imaging, and cancer treatment</li>
+            <li><strong>Toxicity</strong> - Elemental gold is non-toxic and can be eaten (as gold leaf), but some gold compounds can be toxic</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts naturally present in human body</li>
+        </ul>
+        <p>Gold's most significant biological interactions are in medicine, particularly in arthritis treatment and cancer therapy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Gold is a rare element in Earth's crust (0.004 ppm). It occurs:</p>
+        <ul>
+            <li><strong>Native Gold</strong> - Usually as nuggets or grains in rocks and alluvial deposits</li>
+            <li><strong>Placer Deposits</li>
+            <li><strong>Vein Deposits</li>
+            <li><strong>Byproduct</li>
+            <li><strong>Seawater</strong> - Contains trace amounts (estimated 20 million tonnes total but at very low concentration)</li>
+            <li><strong>Major Producers</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Gold extraction methods:</p>
+        <ol>
+            <li><strong>Placer Mining</li>
+            <li><strong>Hard Rock Mining</li>
+            <li><strong>Ore Processing</li>
+            <li><strong>Cyanidation</li>
+            <li><strong>Carbon in Pulp</li>
+            <li><strong>Electrowinning</li>
+            <li><strong>Smelting</li>
+            <li><strong>Refining</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 3,000-3,500 tonnes annually. China is the largest producer, followed by Australia, Russia, and the United States.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Gold mining has significant environmental impacts:</p>
+        <ul>
+            <li><strong>Habitat Destruction</li>
+            <li><strong>Cyanide Use</li>
+            <li><strong>Mercury Pollution</li>
+            <li><strong>Water Consumption</li>
+            <li><strong>Tailings Dams</li>
+            <li><strong>Energy Intensive</li>
+            <li><strong>Carbon Emissions</li>
+            <li><strong>Acid Mine Drainage</li>
+            <li><strong>Recycling</li>
+            <li><strong>Artisanal Mining</li>
+        </ul>
+        <p>Gold presents significant environmental challenges, particularly from small-scale mining using mercury and large-scale mining using cyanide.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Gold has been known and valued since prehistoric times. The earliest recorded gold artifacts date back to the 4th millennium BCE in what is now Bulgaria. Gold is mentioned frequently in the Old Testament, beginning with Genesis, and was one of the gifts offered by the Magi to the infant Jesus.</p>
+        <p>The discovery of gold has driven exploration and colonization throughout history. The California Gold Rush (1848-1855) brought approximately 300,000 people to California. The Witwatersrand Gold Rush in South Africa (1886) led to the establishment of Johannesburg and transformed South Africa's economy.</p>
+        <p>Gold's chemical symbol Au comes from the Latin word "aurum," meaning "shining dawn" or "glow of sunrise." Gold has been used as money for thousands of years. The first known gold coins were struck in Lydia (modern Turkey) around 600 BCE.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>All the gold ever mined would fit in about three Olympic-sized swimming pools</li>
+            <li>Gold is edible - it's used as gold leaf in luxury foods and drinks</li>
+            <li>The chemical symbol Au comes from Latin "aurum" meaning "shining dawn"</li>
+            <li>Gold is so malleable that one ounce can be stretched into a wire 50 miles long</li>
+            <li>The largest gold nugget ever found weighed 72 kg (158 lbs) - the "Welcome Stranger"</li>
+            <li>Gold is chemically inert and doesn't rust or tarnish</li>
+            <li>Olympic gold medals are actually mostly silver with just 6 grams of gold plating</li>
+            <li>Fort Knox holds about 147.3 million ounces of gold (about half of U.S. reserves)</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Elemental Gold:</strong> Non-toxic and biologically inert. Can be eaten as gold leaf without harm.</p>
+        <p><strong>Gold Compounds:</strong> Some gold compounds used in medicine can have side effects including kidney damage and skin reactions.</p>
+        <p><strong>Gold Mining Hazards:</strong> Cyanide and mercury used in gold extraction are highly toxic to humans and wildlife.</p>
+        <strong>Cyanide Exposure:</strong> Gold mining using cyanide can cause acute poisoning with symptoms including headache, dizziness, and at high doses, death.</p>
+        <p><strong>Mercury Exposure:</strong> Artisanal gold mining using mercury causes neurological damage and environmental contamination.</p>
+        <p><strong>Dust Hazards:</strong> Gold powder may be irritating to respiratory system.</p>
+        <p><strong>First Aid:</strong> For inhalation of dust, move to fresh air. For skin contact, wash with soap and water. For cyanide or mercury exposure, seek immediate medical attention.</p>
+        <p><strong>Protective Equipment:</strong> In mining and refining, use appropriate respiratory protection, gloves, and eye protection.</p>
+        <p><strong>Environmental Protection:</strong> Gold mining operations must properly manage cyanide and mercury to prevent environmental contamination.</p>
+        <p><strong>Recycling:</strong> Gold recycling from electronics and jewelry reduces need for new mining and associated environmental impacts.</p>
+    </div>
+</body>
+</html>
