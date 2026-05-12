@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">29</div>
+            <div class="symbol-large">Cu</div>
+        </div>
+        <div class="element-title">
+            <h1>Copper</h1>
+            <div class="element-subtitle">Transition Metal • Group 11 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>29</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>63.546 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d¹⁰ 4s¹</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Copper is a soft, malleable, and highly ductile reddish-orange metal known for its exceptional electrical and thermal conductivity. It is one of the few metals that naturally occurs in metallic form and has been used by humans for over 10,000 years.</p>
+        <p>Copper played a major role in the development of civilization, giving its name to the Copper Age. Its excellent conductivity makes it indispensable in electrical wiring, electronics, renewable energy systems, and telecommunications. Copper also forms attractive green patinas when exposed to air over long periods.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1084.62°C (1984.32°F, 1357.77 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2562°C (4644°F, 2835 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>8.96 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>8.02 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.385 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>13.26 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>300.4 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>3.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, 0, +1, +2, +3, +4 (most common: +1, +2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.90 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>745.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>128 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>132 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>140 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Copper has two stable isotopes:</p>
+        <ul>
+            <li><strong>Copper-63 (⁶³Cu)</strong> - Makes up about 69.15% of natural copper</li>
+            <li><strong>Copper-65 (⁶⁵Cu)</strong> - Makes up about 30.85% of natural copper</li>
+        </ul>
+
+        <p>Several radioactive isotopes are also known:</p>
+        <ul>
+            <li><strong>Copper-64 (⁶⁴Cu)</strong> - Half-life of 12.7 hours; used in medical imaging and cancer treatment research</li>
+            <li><strong>Copper-67 (⁶⁷Cu)</strong> - Beta-emitting isotope used experimentally in targeted radiotherapy</li>
+            <li><strong>Copper-61 (⁶¹Cu)</strong> - Positron-emitting isotope used in PET imaging</li>
+        </ul>
+
+        <p>Copper radioisotopes are increasingly important in nuclear medicine due to their useful decay properties.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Electrical Wiring</strong> - Primary metal for power transmission and electrical circuits</li>
+            <li><strong>Electronics</strong> - Circuit boards, connectors, motors, and semiconductors</li>
+            <li><strong>Plumbing</strong> - Pipes, fittings, and water systems due to corrosion resistance</li>
+            <li><strong>Renewable Energy</strong> - Wind turbines, solar panels, and electric vehicles require large amounts of copper</li>
+            <li><strong>Alloys</strong> - Bronze (copper-tin) and brass (copper-zinc) are widely used engineering alloys</li>
+            <li><strong>Coins</strong> - Used in coinage for thousands of years</li>
+            <li><strong>Architecture</strong> - Roofing, cladding, and decorative features develop protective green patina</li>
+            <li><strong>Heat Exchangers</strong> - Excellent thermal conductivity for radiators and cooling systems</li>
+            <li><strong>Antimicrobial Surfaces</strong> - Copper kills many bacteria and viruses on contact</li>
+            <li><strong>Industrial Machinery</strong> - Bearings, gears, and industrial components</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Copper is an essential trace element required for many biological processes:</p>
+        <ul>
+            <li><strong>Enzyme Function</strong> - Copper is cofactor in enzymes involved in respiration, iron metabolism, and antioxidant defense</li>
+            <li><strong>Energy Production</strong> - Cytochrome c oxidase in mitochondria requires copper</li>
+            <li><strong>Nervous System</strong> - Important for neurotransmitter synthesis and brain development</li>
+            <li><strong>Collagen Formation</strong> - Copper-dependent enzymes help form connective tissue</li>
+            <li><strong>Immune System</strong> - Supports immune function and wound healing</li>
+            <li><strong>Dietary Sources</strong> - Nuts, shellfish, liver, seeds, whole grains, and chocolate</li>
+            <li><strong>Deficiency</strong> - Can cause anemia, bone abnormalities, and neurological disorders</li>
+            <li><strong>Wilson's Disease</strong> - Genetic disorder causing copper accumulation in tissues</li>
+            <li><strong>Menkes Disease</strong> - Genetic disorder causing copper deficiency and impaired transport</li>
+        </ul>
+
+        <p>The human body contains about 100 mg of copper, mostly stored in muscles, liver, and bones.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Copper is the 25th most abundant element in Earth's crust and occurs both as native metal and in minerals:</p>
+
+        <ul>
+            <li><strong>Chalcopyrite</strong> - CuFeS₂, the most important copper ore</li>
+            <li><strong>Bornite</strong> - Cu₅FeS₄, known as peacock ore</li>
+            <li><strong>Malachite</strong> - Cu₂CO₃(OH)₂, green copper carbonate mineral</li>
+            <li><strong>Azurite</strong> - Cu₃(CO₃)₂(OH)₂, deep blue copper mineral</li>
+            <li><strong>Cuprite</strong> - Cu₂O, copper oxide mineral</li>
+            <li><strong>Native Copper</strong> - Naturally occurring metallic copper</li>
+        </ul>
+
+        <p><strong>Industrial Production:</strong> Copper extraction involves several major steps:</p>
+
+        <ol>
+            <li>Mining and crushing of copper ore</li>
+            <li>Froth flotation to concentrate copper minerals</li>
+            <li>Smelting to produce copper matte</li>
+            <li>Converting to blister copper (~98-99% purity)</li>
+            <li>Electrorefining to produce 99.99% pure copper</li>
+        </ol>
+
+        <p><strong>Global Production:</strong> Chile is the world's largest copper producer, followed by Peru, China, the Democratic Republic of Congo, and the United States.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Copper mining and use have important environmental considerations:</p>
+
+        <ul>
+            <li><strong>Mining Impacts</strong> - Open-pit mining can cause habitat destruction and landscape alteration</li>
+            <li><strong>Acid Mine Drainage</strong> - Sulfide ores can generate acidic runoff containing dissolved metals</li>
+            <li><strong>Water Usage</strong> - Copper extraction requires large volumes of water</li>
+            <li><strong>Recycling</strong> - Copper is highly recyclable without losing quality</li>
+            <li><strong>Energy Transition</strong> - Essential for renewable energy infrastructure and electrification</li>
+            <li><strong>Air Pollution</strong> - Smelting releases sulfur dioxide if not properly controlled</li>
+            <li><strong>Toxicity</strong> - Excess copper can harm aquatic ecosystems</li>
+            <li><strong>Sustainable Development</strong> - Growing demand for copper in electric vehicles and renewable energy systems</li>
+        </ul>
+
+        <p>Recycling copper significantly reduces environmental impact compared to primary mining and saves up to 85% of the energy required for new copper production.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Copper was one of the first metals used by humans. Archaeological evidence suggests copper tools and ornaments were used as early as 9000 BCE in the Middle East.</p>
+
+        <p>The development of bronze around 3300 BCE revolutionized civilization and marked the beginning of the Bronze Age. Ancient Egyptians, Greeks, Romans, Chinese, and Mesopotamians all extensively used copper and its alloys.</p>
+
+        <p>The Latin name for copper, "cuprum," comes from "aes cyprium," meaning "metal of Cyprus," because Cyprus was an important ancient source of copper.</p>
+
+        <p>In modern times, copper became critical to electrical technology. The widespread electrification of society in the 19th and 20th centuries dramatically increased copper demand. Today, copper remains fundamental to modern infrastructure and green technologies.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Copper is one of the few metals naturally colored rather than silver-gray</li>
+            <li>The Statue of Liberty's green color comes from a copper patina</li>
+            <li>Copper has the second-highest electrical conductivity of any metal after silver</li>
+            <li>Ancient Egyptians used copper compounds to sterilize wounds and drinking water</li>
+            <li>Copper surfaces can kill many bacteria within hours</li>
+            <li>More than 80% of all copper ever mined is still in use today because it is highly recyclable</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+
+        <p><strong>Copper Dust:</strong> Inhalation of copper dust or fumes can irritate the respiratory system and cause metal fume fever.</p>
+
+        <p><strong>Ingestion:</strong> Excessive copper intake may cause nausea, vomiting, abdominal pain, and liver damage.</p>
+
+        <p><strong>Water Contamination:</strong> Acidic water can dissolve copper from plumbing into drinking water.</p>
+
+        <p><strong>Environmental Toxicity:</strong> High copper concentrations are toxic to aquatic organisms and plants.</p>
+
+        <p><strong>Occupational Exposure:</strong> Workers in mining, smelting, and welding industries require protective equipment and ventilation.</p>
+
+        <p><strong>Fire Hazard:</strong> Fine copper powder can present a fire or explosion hazard in air.</p>
+
+        <p><strong>First Aid:</strong> Move exposed individuals to fresh air after inhalation. Wash skin thoroughly after contact with copper compounds.</p>
+
+        <p><strong>Medical Conditions:</strong> Individuals with Wilson's disease must carefully manage copper intake.</p>
+
+        <p><strong>Recycling Safety:</strong> Improper recycling or burning of electronic waste containing copper can release toxic fumes.</p>
+    </div>
+</body>
+</html>
