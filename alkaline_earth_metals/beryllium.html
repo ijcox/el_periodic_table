@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beryllium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f39c12;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .info-card h3 {
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">4</div>
+            <div class="symbol-large">Be</div>
+        </div>
+        <div class="element-title">
+            <h1>Beryllium</h1>
+            <div class="element-subtitle">Alkaline Earth Metal • Group 2 • Period 2</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>4</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>9.0122 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[He] 2s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Beryllium is a relatively rare alkaline earth metal that is steel-gray in color, strong, lightweight, and brittle at room temperature. It has one of the highest melting points among light metals and exhibits unusual stiffness for such a low-density material.</p>
+        <p>Discovered in 1798 by French chemist Louis-Nicolas Vauquelin as a component of the mineral beryl and emerald, beryllium was first isolated independently by Friedrich Wöhler and Antoine Bussy in 1828. Its name comes from the mineral beryl, which itself is named after the Greek word "beryllos" meaning "precious blue-green stone."</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1287°C (2349°F, 1560 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2469°C (4476°F, 2742 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>1.85 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid, at m.p.)</td>
+                <td>1.69 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>200 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>12.2 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>292 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>5.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+2, +1 (rare) (amphoteric oxide)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.57 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>899.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>112 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>96 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>153 pm (estimated)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Beryllium has only one stable isotope:</p>
+        <ul>
+            <li><strong>Beryllium-9 (⁹Be)</strong> - The only stable isotope, making up 100% of natural beryllium. It has 4 protons and 5 neutrons.</li>
+        </ul>
+        <p>Beryllium also has several radioactive isotopes, with beryllium-10 being particularly important:</p>
+        <ul>
+            <li><strong>Beryllium-10 (¹⁰Be)</strong> - Cosmogenic radionuclide with a half-life of 1.39 million years, used in radiometric dating and studying erosion rates</li>
+            <li><strong>Beryllium-7 (⁷Be)</strong> - Short-lived isotope (53.22 days) produced in the upper atmosphere by cosmic rays</li>
+            <li><strong>Beryllium-8 (⁸Be)</strong> - Extremely unstable isotope with a half-life of about 8×10⁻¹⁷ seconds; crucial in stellar nucleosynthesis</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Aerospace</strong> - Structural components in satellites, spacecraft, and high-performance aircraft due to its stiffness-to-weight ratio</li>
+            <li><strong>Nuclear Applications</strong> - Neutron reflector and moderator in nuclear reactors; windows in X-ray tubes</li>
+            <li><strong>Precision Instruments</strong> - Inertial guidance systems and gyroscopes where dimensional stability is critical</li>
+            <li><strong>Alloys</strong> - Beryllium-copper alloys are strong, non-sparking tools used in explosive environments</li>
+            <li><strong>Electronics</strong> - Heat sinks and electrical connectors that require good thermal conductivity and strength</li>
+            <li><strong>Gemstones</strong> - Beryl minerals (emerald, aquamarine) contain beryllium; synthetic beryllium compounds create certain gemstones</li>
+            <li><strong>Acoustics</strong> - Tweeter diaphragms in high-fidelity speakers due to its stiffness and low density</li>
+            <li><strong>Optics</strong> - Windows and lenses for infrared and ultraviolet applications</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Beryllium has no known biological role and is highly toxic to humans and animals:</p>
+        <ul>
+            <li><strong>Toxicity</strong> - Beryllium and its compounds are carcinogenic and can cause chronic beryllium disease (berylliosis), a serious lung condition</li>
+            <li><strong>Allergic Reactions</strong> - Some individuals develop hypersensitivity to beryllium, leading to immune system reactions</li>
+            <li><strong>Environmental Exposure</strong> - Occurs mainly in occupational settings (mining, processing, manufacturing)</li>
+            <li><strong>Regulation</strong> - Strict workplace exposure limits are enforced due to health risks</li>
+            <li><strong>Medical Testing</strong> - Beryllium lymphocyte proliferation test (BeLPT) screens for beryllium sensitivity</li>
+        </ul>
+        <p>Despite its toxicity, beryllium has no known essential biological function in any organism.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Beryllium is relatively rare in the Earth's crust (about 2-6 ppm). It is found in about 30 different mineral species, with the most important being:</p>
+        <ul>
+            <li><strong>Beryl</strong> (Be₃Al₂Si₆O₁₈) - Source of gemstones emerald and aquamarine</li>
+            <li><strong>Bertrandite</strong> (Be₄Si₂O₇(OH)₂) - The principal commercial source</li>
+            <li><strong>Chrysoberyl</strong> (BeAl₂O₄) - Source of the gemstones alexandrite and cat's eye</li>
+            <li><strong>Phenakite</strong> (Be₂SiO₄) - Another gemstone-quality mineral</li>
+        </ul>
+        <p><strong>Production Methods:</strong> Beryllium is extracted through complex chemical processes involving extraction from ores, conversion to beryllium hydroxide, and then reduction to metal or conversion to alloys.</p>
+        <p><strong>Major Producers:</strong> United States (Utah), China, Mozambique, and Brazil.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Beryllium mining and processing present significant environmental and health challenges:</p>
+        <ul>
+            <li><strong>Air Pollution</strong> - Dust and fumes from processing can contain toxic beryllium particles</li>
+            <li><strong>Water Contamination</strong> - Runoff from mining operations can affect local water supplies</li>
+            <li><strong>Soil Contamination</strong> - Waste materials from processing can contaminate soil</li>
+            <li><strong>Worker Protection</strong> - Strict controls are needed to protect workers from exposure</li>
+            <li><strong>Waste Disposal</strong> - Beryllium-containing waste requires special handling and disposal</li>
+        </ul>
+        <p>Despite these concerns, beryllium's unique properties make it irreplaceable in certain high-technology applications where its performance benefits outweigh the environmental and health risks.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Beryllium was discovered in 1798 by French chemist Louis-Nicolas Vauquelin as a component of the mineral beryl (emerald). He found that emeralds and beryl contained a new earth (oxide) that differed from alumina (aluminum oxide).</p>
+        <p>The element was first isolated in 1828 by Friedrich Wöhler in Germany and independently by Antoine Bussy in France. Both used potassium to reduce beryllium chloride. The name "beryllium" comes from the Greek word "beryllos" referring to the mineral beryl.</p>
+        <p>For many years, beryllium was known as "glucinium" (from Greek "glykys" meaning sweet) because some of its compounds have a sweet taste. However, this name was eventually abandoned due to the toxicity of beryllium compounds.</p>
+        <p>Commercial production began in the 1930s, and its unique properties led to applications in the emerging aerospace and nuclear industries during World War II and the Cold War.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Beryllium is transparent to X-rays, making it ideal for X-ray tube windows</li>
+            <li>Despite being a metal, beryllium compounds can taste sweet (though highly toxic)</li>
+            <li>Beryllium has six times the specific stiffness (stiffness-to-density ratio) of steel</li>
+            <li>The James Webb Space Telescope uses a beryllium primary mirror due to its stability at cryogenic temperatures</li>
+            <li>Emeralds are beryl crystals colored green by chromium or vanadium impurities</li>
+            <li>Beryllium-8 is so unstable that it breaks apart in 0.00000000000000008 seconds</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Chronic Beryllium Disease:</strong> Inhalation of beryllium dust or fumes can cause chronic beryllium disease (berylliosis), a serious lung condition similar to sarcoidosis that can be fatal.</p>
+        <p><strong>Carcinogenicity:</strong> Beryllium and its compounds are classified as Group 1 carcinogens by IARC (carcinogenic to humans).</p>
+        <p><strong>Skin Contact:</strong> Can cause skin ulcers, rashes, and granulomas. Beryllium compounds may also cause allergic dermatitis.</p>
+        <p><strong>Storage and Handling:</strong> Requires special precautions including proper ventilation, protective equipment, and dust control measures.</p>
+        <p><strong>Medical Monitoring:</strong> Workers exposed to beryllium require regular medical surveillance including chest X-rays and lung function tests.</p>
+        <p><strong>Fire Hazard:</strong> Powdered beryllium can ignite in air and burns with an intense white flame. Use Class D fire extinguishers for beryllium fires.</p>
+    </div>
+</body>
+</html>
