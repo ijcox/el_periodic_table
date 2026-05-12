@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nickel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">28</div>
+            <div class="symbol-large">Ni</div>
+        </div>
+        <div class="element-title">
+            <h1>Nickel</h1>
+            <div class="element-subtitle">Transition Metal • Group 10 • Period 4</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>28</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>58.693 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ar] 3d⁸ 4s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Nickel is a silvery-white transition metal with a slight golden tint, valued for its strength, corrosion resistance, and ability to withstand high temperatures. It is one of the most important industrial metals and is widely used in alloys, stainless steel production, batteries, and electroplating.</p>
+
+        <p>Nickel is ferromagnetic at room temperature and shares many properties with iron and cobalt. Its excellent resistance to oxidation and corrosion makes it essential in marine environments, chemical processing equipment, and aerospace technology.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1455°C (2651°F, 1728 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2913°C (5275°F, 3186 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>8.908 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>7.81 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.444 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>17.48 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>370.4 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>4.0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, -1, 0, +1, +2, +3, +4 (most common: +2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.91 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>737.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>124 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>124 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>163 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Nickel has five stable isotopes:</p>
+
+        <ul>
+            <li><strong>Nickel-58 (⁵⁸Ni)</strong> - Most abundant isotope, about 68.1% of natural nickel</li>
+            <li><strong>Nickel-60 (⁶⁰Ni)</strong> - About 26.2% abundance</li>
+            <li><strong>Nickel-61 (⁶¹Ni)</strong> - Stable isotope with low natural abundance</li>
+            <li><strong>Nickel-62 (⁶²Ni)</strong> - One of the most tightly bound nuclei known</li>
+            <li><strong>Nickel-64 (⁶⁴Ni)</strong> - Rare stable isotope</li>
+        </ul>
+
+        <p>Important radioactive isotopes include:</p>
+
+        <ul>
+            <li><strong>Nickel-63 (⁶³Ni)</strong> - Beta-emitting isotope used in electron capture detectors and research</li>
+            <li><strong>Nickel-59 (⁵⁹Ni)</strong> - Long-lived isotope used in geological and cosmic studies</li>
+            <li><strong>Nickel-56 (⁵⁶Ni)</strong> - Produced in supernovae and important in stellar nucleosynthesis</li>
+        </ul>
+
+        <p>Nickel-56 decay plays a major role in powering the light emitted by supernova explosions.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Stainless Steel</strong> - Major alloying element providing corrosion resistance and strength</li>
+            <li><strong>Rechargeable Batteries</strong> - Nickel-metal hydride and nickel-cadmium batteries</li>
+            <li><strong>Electric Vehicles</strong> - Nickel-rich lithium-ion batteries for EVs</li>
+            <li><strong>Electroplating</strong> - Protective and decorative coatings for metals</li>
+            <li><strong>Superalloys</strong> - High-temperature alloys for jet engines and turbines</li>
+            <li><strong>Coins</strong> - Used in coinage due to durability and corrosion resistance</li>
+            <li><strong>Catalysts</strong> - Nickel catalysts used in hydrogenation and chemical synthesis</li>
+            <li><strong>Marine Equipment</strong> - Corrosion-resistant alloys for seawater applications</li>
+            <li><strong>Magnets</strong> - Nickel-containing magnetic alloys and components</li>
+            <li><strong>Electronics</strong> - Connectors, shielding, and electronic components</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Nickel has limited but important biological functions in some organisms:</p>
+
+        <ul>
+            <li><strong>Microbial Enzymes</strong> - Nickel is essential for certain bacterial and archaeal enzymes</li>
+            <li><strong>Urease Enzyme</strong> - Nickel-dependent enzyme that breaks down urea</li>
+            <li><strong>Plant Nutrition</strong> - Trace amounts required for healthy plant growth</li>
+            <li><strong>Hydrogen Metabolism</strong> - Important in microbial hydrogenase enzymes</li>
+            <li><strong>Human Exposure</strong> - Humans require very little nickel and its essentiality remains uncertain</li>
+            <li><strong>Dietary Sources</strong> - Nuts, legumes, grains, chocolate, and some vegetables</li>
+            <li><strong>Nickel Allergy</strong> - One of the most common metal allergies worldwide</li>
+            <li><strong>Toxicity</strong> - Excess nickel exposure can damage lungs, skin, and kidneys</li>
+        </ul>
+
+        <p>Nickel's biological role is much less significant in humans than iron, copper, or cobalt, but it is essential for many microorganisms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Nickel is the 24th most abundant element in Earth's crust and is also abundant in Earth's core.</p>
+
+        <ul>
+            <li><strong>Pentlandite</strong> - (Fe,Ni)₉S₈, the main nickel sulfide ore</li>
+            <li><strong>Garnierite</strong> - Nickel-rich silicate ore</li>
+            <li><strong>Laterite Deposits</strong> - Major tropical nickel ore source</li>
+            <li><strong>Meteorites</strong> - Iron meteorites often contain significant nickel</li>
+            <li><strong>Nickeline</strong> - NiAs, nickel arsenide mineral</li>
+            <li><strong>Earth's Core</strong> - Large quantities of nickel alloyed with iron</li>
+        </ul>
+
+        <p><strong>Industrial Production:</strong> Nickel extraction depends on ore type:</p>
+
+        <ol>
+            <li>Mining and crushing of ore</li>
+            <li>Concentration through flotation or leaching</li>
+            <li>Smelting and refining processes</li>
+            <li>Purification using the Mond process or electrorefining</li>
+            <li>Production of high-purity nickel metal</li>
+        </ol>
+
+        <p><strong>Mond Process:</strong> Nickel reacts with carbon monoxide to form volatile nickel tetracarbonyl gas, which decomposes to produce extremely pure nickel.</p>
+
+        <p><strong>Global Production:</strong> Indonesia, the Philippines, Russia, Canada, and Australia are among the leading nickel producers.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Nickel production and use involve several environmental concerns:</p>
+
+        <ul>
+            <li><strong>Mining Damage</strong> - Open-pit mining can destroy habitats and alter ecosystems</li>
+            <li><strong>Air Pollution</strong> - Smelting can release sulfur dioxide and metal particulates</li>
+            <li><strong>Water Contamination</strong> - Nickel compounds may leach into groundwater and rivers</li>
+            <li><strong>Battery Demand</strong> - Growing EV battery demand is increasing nickel mining worldwide</li>
+            <li><strong>Deforestation</strong> - Laterite mining in tropical regions can cause severe deforestation</li>
+            <li><strong>Recycling</strong> - Stainless steel and nickel alloys are highly recyclable</li>
+            <li><strong>Carbon Emissions</strong> - Nickel refining is energy intensive</li>
+            <li><strong>Toxicity to Aquatic Life</strong> - Elevated nickel levels can harm aquatic ecosystems</li>
+        </ul>
+
+        <p>Responsible sourcing, improved recycling, and cleaner refining technologies are increasingly important as global nickel demand rises.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Nickel compounds were used unknowingly in ancient times, particularly in alloys and naturally occurring nickel-containing meteoritic iron.</p>
+
+        <p>In the 18th century, miners in Germany found a reddish ore resembling copper ore but could not extract copper from it. Frustrated miners called it "Kupfernickel," meaning "devil's copper" or "Old Nick's copper."</p>
+
+        <p>In 1751, Swedish chemist Axel Fredrik Cronstedt isolated nickel from this mineral, proving it was a new metallic element.</p>
+
+        <p>Nickel became increasingly important during the Industrial Revolution, especially for steel production and corrosion-resistant alloys. In the modern era, nickel has become critical for rechargeable batteries, aerospace engineering, and renewable energy technologies.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Nickel is one of only four elements that are ferromagnetic at room temperature</li>
+            <li>The U.S. five-cent coin is called a "nickel" even though it contains mostly copper</li>
+            <li>Earth's core is believed to contain large amounts of iron and nickel</li>
+            <li>Nickel superalloys can withstand temperatures approaching 80% of their melting point</li>
+            <li>Some meteorites contain naturally occurring iron-nickel alloys</li>
+            <li>Nickel plating gives many household objects their shiny silver appearance</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+
+        <p><strong>Nickel Allergy:</strong> Nickel is a major cause of allergic contact dermatitis from jewelry, watches, and metal objects.</p>
+
+        <p><strong>Inhalation Hazard:</strong> Nickel dust and fumes can irritate the respiratory tract and increase lung cancer risk with prolonged exposure.</p>
+
+        <p><strong>Nickel Carbonyl:</strong> Nickel tetracarbonyl is an extremely toxic gas used in nickel refining.</p>
+
+        <p><strong>Occupational Risks:</strong> Workers in nickel mining, refining, welding, and electroplating require protective equipment and monitoring.</p>
+
+        <p><strong>Environmental Contamination:</strong> Excess nickel can contaminate soil and water near industrial facilities.</p>
+
+        <p><strong>Aquatic Toxicity:</strong> Dissolved nickel compounds can harm fish and aquatic organisms.</p>
+
+        <p><strong>First Aid:</strong> Move exposed individuals to fresh air after inhalation exposure and wash affected skin thoroughly.</p>
+
+        <p><strong>Regulations:</strong> Many countries regulate nickel release in jewelry and consumer products due to widespread allergies.</p>
+
+        <p><strong>Battery Recycling:</strong> Proper disposal and recycling of nickel-containing batteries is important to prevent environmental contamination.</p>
+    </div>
+</body>
+</html>
