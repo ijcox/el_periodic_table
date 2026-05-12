@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oganesson</title>
+    <style>
+        /* Oganesson is a noble gas */
+        .noble-gas { background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #00bcd4;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .info-card h3 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #00bcd4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">118</div>
+            <div class="symbol-large">Og</div>
+        </div>
+        <div class="element-title">
+            <h1>Oganesson</h1>
+            <div class="element-subtitle">Noble Gas • Group 18 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>118</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[294] u (most stable known isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶ (predicted)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid (predicted, unlike other noble gases)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Oganesson is a synthetic chemical element and the last element of period 7, making it currently the heaviest known element on the periodic table. It is a highly radioactive element that does not occur naturally and can only be produced in particle accelerators. Oganesson is predicted to be a solid at room temperature and possibly even a semiconductor, which is highly unusual for a noble gas (all other noble gases are gases at room temperature). This predicted behavior results from extreme relativistic effects that dominate the chemistry of superheavy elements.</p>
+        <p>Oganesson was first synthesized in 2002 and confirmed in 2005 by a joint Russian-American team at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia. The element was named after Yuri Oganessian, a Russian nuclear physicist of Armenian descent who has made major contributions to superheavy element research. Oganesson is only the second element to be named after a living person at the time of naming (the first was seaborgium).</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>Unknown (predicted to be around 52°C ± 15°C)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown (predicted to be around 177°C ± 15°C)</td>
+            </tr>
+            <tr>
+                <td>Density (predicted, solid)</td>
+                <td>7.2 g/cm³ (at boiling point: 4.9-5.1 g/cm³ as liquid)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid (predicted)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown (predicted to be low)</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown (predicted to be low)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown (predicted to be poor)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be semiconductor)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Unknown (likely soft)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Face-centered cubic (predicted, like other noble gas solids at low temperature)</td>
+            </tr>
+            <tr>
+                <td>Critical Temperature</td>
+                <td>Unknown (predicted)</td>
+            </tr>
+            <tr>
+                <td>Critical Pressure</td>
+                <td>Unknown (predicted)</td>
+            </tr>
+        </table>
+        <p>Oganesson's predicted physical state as a solid at room temperature makes it unique among noble gases. This results from relativistic effects that significantly increase the van der Waals forces between atoms. Its predicted melting and boiling points are hundreds of degrees higher than radon's (melting point -71°C, boiling point -61.7°C). Some calculations even suggest oganesson might be a semiconductor, which would be unprecedented for a noble gas.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +2, +4, +6 (predicted; may form compounds unlike other noble gases)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>860 kJ/mol (estimated; lower than radon due to relativistic effects)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>152 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>157 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown (predicted to be similar to other noble gases)</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>Predicted to be more reactive than other noble gases, possibly forming compounds</td>
+            </tr>
+        </table>
+        <p>Oganesson's chemistry is predicted to be dominated by extreme relativistic effects. Unlike other noble gases which are chemically inert (with only xenon and radon forming a few compounds under extreme conditions), oganesson may be significantly more reactive. The 7p electrons are predicted to be so destabilized by relativity that oganesson might readily form compounds. Possible compounds include OgF₂ (oganesson difluoride), OgF₄ (oganesson tetrafluoride), and OgF₆ (oganesson hexafluoride). Some calculations even suggest oganesson might form a +8 oxidation state compound (OgF₈), though this is controversial. Oganesson is predicted to have significantly lower ionization energy than radon, making it easier to remove electrons. The Og²⁻ ion might also be stable, which would be unprecedented for noble gases.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Oganesson has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Oganesson-293 (²⁹³Og)</strong> - Half-life: 0.12 milliseconds? (alpha decay, tentative)</li>
+            <li><strong>Oganesson-294 (²⁹⁴Og)</strong> - Half-life: 0.69 milliseconds (alpha decay, spontaneous fission) - Most stable known isotope</li>
+            <li><strong>Oganesson-295 (²⁹⁵Og)</strong> - Half-life: 0.18 milliseconds? (alpha decay, tentative)</li>
+            <li><strong>Oganesson-296 (²⁹⁶Og)</strong> - Half-life: ? (tentative)</li>
+        </ul>
+        <p>Oganesson-294 is the most stable known isotope with a half-life of approximately 0.69 milliseconds. The very short half-lives of oganesson isotopes have prevented any chemical studies so far, though theoretical predictions are extensive. Some calculations suggest that more neutron-rich isotopes with longer half-lives may exist near the "island of stability," but these have not yet been synthesized.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends at the end of the periodic table</li>
+            <li><strong>Theoretical Chemistry</strong> - Testing predictions about relativistic effects in noble gases</li>
+            <li><strong>Relativistic Effects Research</strong> - Study of how relativity can make a noble gas behave like a solid reactive element</li>
+            <li><strong>Island of Stability Research</strong> - Research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of how relativistic effects can fundamentally change chemical properties</li>
+            <li><strong>Periodic Table Completion</strong> - Currently the heaviest known element, completing period 7</li>
+        </ul>
+        <p>Like all transactinide elements, oganesson has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Oganesson has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha and spontaneous fission radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities and too short half-lives for biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+            <li><strong>Chemical Properties</strong> - If stable compounds could be formed, they might have unusual chemical properties, but this is purely speculative</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, oganesson has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Oganesson does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Hot Fusion Reactions:</strong>
+                <br>²⁴⁹Cf + ⁴⁸Ca → ²⁹⁴Og + 3n (original JINR synthesis, 2002, confirmed 2005)
+                <br>²⁴⁹Cf + ⁴⁸Ca → ²⁹³Og + 4n</li>
+            <li><strong>Production Challenges:</strong>
+                <br>Californium-249 target required (difficult and expensive to produce)
+                <br>Extremely low production cross-section (~0.5 picobarns)
+                <br>Only a few atoms produced after months of beam time</li>
+            <li><strong>Other Possible Reactions:</strong>
+                <br>²⁵¹Cf + ⁴⁸Ca → ²⁹⁶Og + 3n (theoretical)
+                <br>²⁴⁸Cm + ⁵⁴Cr → ²⁹⁹Og + 3n (theoretical)</li>
+            <li><strong>Separation</strong> - Oganesson atoms separated using gas-filled recoil separators. The Dubna Gas-Filled Recoil Separator (DGFRS) was used for its discovery and study.</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors. Decay by alpha emission or spontaneous fission.</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms total in history).</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Joint Institute for Nuclear Research (JINR, Dubna, Russia - primary site), Lawrence Livermore National Laboratory (USA, collaboration). Total world production is only about 5 atoms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Oganesson has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay in milliseconds</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and extremely short half-life, oganesson poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of oganesson completed period 7 of the periodic table and represented a pinnacle of superheavy element research:</p>
+        <p><strong>First Claim (1999):</strong> In 1999, researchers at Lawrence Berkeley National Laboratory claimed discovery of element 118, but retracted in 2002 when the results could not be reproduced and evidence emerged of scientific misconduct by one researcher.</p>
+        <p><strong>Actual Discovery (2002):</strong> In 2002, a joint Russian-American team at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia, synthesized oganesson by bombarding californium-249 with calcium-48 ions. They observed three atoms of oganesson-294. The results were published in 2006 after careful verification.</p>
+        <p><strong>Confirmation (2005):</strong> The discovery was confirmed in 2005-2006 by the same collaboration with additional experiments producing more atoms and studying the decay chains in detail.</p>
+        <p><strong>Independent Confirmation (2011):</strong> In 2011, a team at the GSI Helmholtz Centre in Germany independently confirmed the discovery of oganesson, providing definitive validation.</p>
+        <p><strong>Naming:</strong> The discovery team proposed the name "oganesson" after Yuri Oganessian, who has made major contributions to superheavy element research, including the discovery of several elements and development of the "hot fusion" technique using calcium-48 beams. This was only the second time an element was named after a living person.</p>
+        <p><strong>Official Recognition (2016):</strong> On November 28, 2016, IUPAC officially announced the name "oganesson" with symbol Og. The name was approved after the usual period of public comment and review.</p>
+        <p><strong>Significance:</strong> Oganesson's discovery completed period 7 of the periodic table (though period 7 is not completely filled due to the placement of lanthanides and actinides). It represents the current frontier of known elements and demonstrates the power of modern nuclear physics to create and study matter at the extreme end of the periodic table.</p>
+        <p><strong>Theoretical Interest:</strong> Oganesson has attracted enormous theoretical interest due to predictions that it might behave completely differently from other noble gases, possibly being a solid reactive element that forms compounds, fundamentally challenging our understanding of chemical periodicity.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Oganesson is named after Yuri Oganessian, a living scientist - only the second such honor</li>
+            <li>The element was discovered in 2002 at JINR Dubna and confirmed in 2005</li>
+            <li>Only about 5 atoms of oganesson have ever been produced worldwide</li>
+            <li>Oganesson completes period 7 of the periodic table (though the period is not completely filled)</li>
+            <li>The element is predicted to be a solid at room temperature, unlike other noble gases</li>
+            <li>Oganesson's most stable isotope has a half-life of about 0.69 milliseconds</li>
+            <li>The element is predicted to be more reactive than other noble gases and may form compounds</li>
+            <li>Oganesson was officially named in 2016, along with three other new elements</li>
+            <li>There was a false claim of discovery in 1999 that was later retracted due to scientific misconduct</li>
+            <li>Oganesson might be a semiconductor, which would be unprecedented for a noble gas</li>
+            <li>The element represents the current frontier of known chemical elements</li>
+            <li>Yuri Oganessian, the namesake, has contributed to the discovery of multiple superheavy elements</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of oganesson are highly radioactive. Primary hazards are alpha radiation and spontaneous fission (which produces neutrons and fission fragments).</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Some isotopes undergo spontaneous fission producing neutrons and fission fragments requiring neutron shielding.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. The extremely short half-lives require extremely fast experimental setups.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections. Neutron shielding may be required for spontaneous fission.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays in milliseconds.</p>
+    </div>
+</body>
+</html>
