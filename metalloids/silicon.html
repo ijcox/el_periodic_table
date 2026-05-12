@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #d4a574;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .info-card h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #d4a574;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">14</div>
+            <div class="symbol-large">Si</div>
+        </div>
+        <div class="element-title">
+            <h1>Silicon</h1>
+            <div class="element-subtitle">Metalloid • Group 14 • Period 3</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>14</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>28.085 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Ne] 3s² 3p²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Silicon is a hard, brittle crystalline solid with a blue-grey metallic lustre. It is a metalloid, meaning it has properties of both metals and nonmetals. Silicon is the second most abundant element in Earth's crust (about 28% by mass) after oxygen, and is the seventh most abundant element in the universe.</p>
+        <p>Silicon was discovered in 1824 by Swedish chemist Jöns Jacob Berzelius. The name comes from the Latin "silex" or "silicis" meaning flint or hard stone. Silicon is best known as the fundamental material of the semiconductor industry and computer technology, giving its name to Silicon Valley.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1414°C (2577°F, 1687 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3265°C (5909°F, 3538 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>2.3290 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Density (liquid at m.p.)</td>
+                <td>2.57 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>6.5</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>149 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>about 10³ Ω·m (at 20°C, pure)</td>
+            </tr>
+            <tr>
+                <td>Band Gap</td>
+                <td>1.12 eV (at 300 K)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-4, -3, -2, -1, 0, +1, +2, +3, +4 (most common: +4)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.90 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>786.5 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>111 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>111 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>210 pm</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Allotropes</h2>
+        <p>Silicon exists in several allotropic forms:</p>
+        <ul>
+            <li><strong>Crystalline Silicon</strong> - Diamond cubic crystal structure; the most common form used in electronics and solar cells</li>
+            <li><strong>Amorphous Silicon</strong> - Non-crystalline form used in thin-film solar cells and flat-panel displays</li>
+            <li><strong>Porous Silicon</strong> - Sponge-like structure that photoluminesces under UV light; used in sensors and optoelectronics</li>
+            <li><strong>Nanocrystalline Silicon</strong> - Small crystalline grains in amorphous matrix; used in some solar cells</li>
+            <li><strong>Silicon Nanowires</strong> - One-dimensional structures with unique electronic properties</li>
+        </ul>
+        <p>The electronic properties of silicon can be precisely controlled by doping with elements from Groups 13 or 15, creating p-type or n-type semiconductors respectively.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Semiconductors</strong> - Integrated circuits, transistors, diodes, and microchips in all electronic devices</li>
+            <li><strong>Solar Cells</strong> - Photovoltaic cells convert sunlight to electricity; silicon accounts for about 95% of solar panels</li>
+            <li><strong>Construction</strong> - Silicates in cement, concrete, bricks, and glass (silicon dioxide)</li>
+            <li><strong>Polymers</strong> - Silicones for sealants, adhesives, lubricants, medical devices, and cookware</li>
+            <li><strong>Metallurgy</strong> - Silicon as alloying element in aluminum, steel, and other metals</li>
+            <li><strong>Ceramics</strong> - Silicon carbide and silicon nitride for high-temperature applications and abrasives</li>
+            <li><strong>Fiber Optics</strong> - Ultra-pure silicon dioxide for optical fibers in telecommunications</li>
+            <li><strong>Medical Implants</strong> - Silicon compounds for artificial joints, bone replacements, and dental materials</li>
+            <li><strong>Cosmetics</strong> - Silicon dioxide as anti-caking agent and silicone oils in personal care products</li>
+            <li><strong>Food Industry</strong> - Silicon dioxide as food additive (anti-caking agent) and in beer clarification</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Silicon is considered a beneficial element for some organisms:</p>
+        <ul>
+            <li><strong>Plants</strong> - Essential for some plants like rice and sugarcane; strengthens cell walls, improves drought and disease resistance</li>
+            <li><strong>Diatoms and Sponges</strong> - Diatoms use silicon to build intricate silica shells; sponges use silicon for structural spicules</li>
+            <li><strong>Human Health</strong> - Not considered essential but may play roles in bone formation and connective tissue health</li>
+            <li><strong>Dietary Sources</strong> - Whole grains, cereals, vegetables, and drinking water; typical intake 20-50 mg/day</li>
+            <li><strong>Silicon Deficiency</strong> - In plants: weaker stems, increased susceptibility to diseases; in animals: affects bone and connective tissue</li>
+            <li><strong>Toxicity</strong> - Generally low toxicity; chronic inhalation of crystalline silica dust causes silicosis, a serious lung disease</li>
+            <li><strong>Medical Uses</strong> - Silicon implants and prosthetics are biocompatible; silicon-containing drugs for various conditions</li>
+        </ul>
+        <p>While silicon's essentiality for humans remains debated, its importance in plant biology and marine ecosystems is well established.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Silicon is the second most abundant element in Earth's crust (27.7% by weight) after oxygen. It never occurs free in nature but is always combined with oxygen as silica (SiO₂) or silicates. Major sources include:</p>
+        <ul>
+            <li><strong>Quartz</strong> - Crystalline SiO₂, the most common silica mineral</li>
+            <li><strong>Sand</strong> - Mostly quartz grains</li>
+            <li><strong>Clay Minerals</strong> - Various aluminosilicates</li>
+            <li><strong>Feldspars</strong> - Most abundant mineral group in Earth's crust</li>
+            <li><strong>Micas</strong> - Sheet silicates</li>
+            <li><strong>Ocean</strong> - Dissolved silica supports diatom growth</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Metallurgical grade silicon (98-99% pure) is produced by carbothermic reduction of silica in electric arc furnaces. Electronic grade silicon (99.9999999% pure) is produced by chemical purification followed by crystal growth (Czochralski or float zone methods).</p>
+        <p><strong>Global Production:</strong> About 8 million tons of metallurgical grade silicon annually, mostly in China. Electronic grade silicon production is smaller but higher value.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Silicon production and use have mixed environmental impacts:</p>
+        <ul>
+            <li><strong>Energy Intensive</strong> - Silicon production requires high temperatures (2000°C) in electric arc furnaces</li>
+            <li><strong>Greenhouse Gases</strong> - Silicon production generates CO₂; perfluorocarbons (PFCs) from semiconductor manufacturing are potent greenhouse gases</li>
+            <li><strong>Mining Impacts</strong> - Quartz and sand mining can cause habitat destruction and water pollution</li>
+            <li><strong>Chemical Waste</strong> - Semiconductor manufacturing uses hazardous chemicals requiring careful treatment</li>
+            <li><strong>Silicosis Risk</strong> - Inhalation of crystalline silica dust causes serious lung disease</li>
+            <li><strong>Renewable Energy</strong> - Silicon solar panels enable clean energy generation with minimal emissions during operation</li>
+            <li><strong>Recycling</strong> - Silicon wafers and solar panels can be recycled, though processes are still developing</li>
+            <li><strong>E-waste</strong> - Electronic devices containing silicon chips contribute to growing e-waste problem</li>
+        </ul>
+        <p>Silicon's role in enabling renewable energy and efficient electronics must be balanced against the environmental costs of its production.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Silicon compounds have been known since prehistoric times. Flint tools were used by early humans, and glassmaking dates back to at least 3500 BCE in Mesopotamia. In 1787, Antoine Lavoisier suspected silica to be an oxide of an unknown element.</p>
+        <p>Silicon was first isolated in 1824 by Swedish chemist Jöns Jacob Berzelius by heating potassium fluorosilicate with potassium metal. He obtained amorphous silicon and named it "silicium" (from Latin silex). Crystalline silicon was first prepared in 1854 by Henri Étienne Sainte-Claire Deville by electrolysis.</p>
+        <p>In the 20th century, silicon's semiconductor properties were discovered. The first silicon transistor was developed at Bell Labs in 1947 by John Bardeen, Walter Brattain, and William Shockley. The silicon integrated circuit was invented independently by Jack Kilby at Texas Instruments and Robert Noyce at Fairchild Semiconductor in 1958-1959.</p>
+        <p>The development of the planar process by Jean Hoerni and the silicon gate technology by Federico Faggin enabled the microprocessor revolution, leading to Silicon Valley's rise as the center of the semiconductor industry.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Silicon Valley got its name from the silicon used in semiconductor chips, not from the silicone used in breast implants</li>
+            <li>A single silicon chip the size of a fingernail can contain over 10 billion transistors</li>
+            <li>Silicon makes up about 28% of the Earth's crust by weight - if oxygen is excluded, it's about 47%</li>
+            <li>Pure silicon is a poor conductor, but when doped with tiny amounts of other elements, it becomes the basis of modern electronics</li>
+            <li>Silicon is the only element besides carbon that can form long chains of atoms, though not as complex as carbon's</li>
+            <li>The world's purest silicon is refined to 99.999999999% purity - that's "eleven nines" purity</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Silicosis Hazard:</strong> Inhalation of crystalline silica dust causes silicosis, a progressive, irreversible lung disease. Workers in mining, construction, and sandblasting are at highest risk.</p>
+        <p><strong>Chemical Hazards:</strong> Silicon production uses hazardous chemicals including hydrofluoric acid, silane gas (pyrophoric), and chlorosilanes (corrosive and toxic).</p>
+        <p><strong>Fire and Explosion:</strong> Silicon powder can form explosive dust clouds. Silane gas ignites spontaneously in air.</p>
+        <p><strong>Electrical Safety:</strong> Semiconductor manufacturing involves high voltages and currents requiring proper lockout/tagout procedures.</p>
+        <p><strong>Environmental Concerns:</strong> Semiconductor manufacturing uses and produces hazardous chemicals requiring careful waste management. Perfluorocarbons (PFCs) are potent greenhouse gases.</p>
+        <p><strong>Reactivity:</strong> Silicon reacts with strong alkalis producing hydrogen gas. Fine silicon powder can react with oxygen or halogens.</p>
+        <p><strong>Medical Devices:</strong> While silicone implants are generally safe, they can cause complications including rupture, capsular contracture, and associated anaplastic large cell lymphoma (BIA-ALCL).</p>
+        <p><strong>First Aid:</strong> For silica dust inhalation, move to fresh air. For chemical exposure, follow specific protocols for each chemical involved.</p>
+    </div>
+</body>
+</html>
