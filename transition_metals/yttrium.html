@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yttrium</title>
+    <style>
+        /* Yttrium is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">39</div>
+            <div class="symbol-large">Y</div>
+        </div>
+        <div class="element-title">
+            <h1>Yttrium</h1>
+            <div class="element-subtitle">Transition Metal • Group 3 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>39</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>88.90584 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d¹ 5s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Yttrium is a silvery-metallic transition metal chemically similar to the lanthanides and has often been classified as a "rare earth element." It is fairly stable in air due to formation of a protective oxide film. Yttrium is never found in nature as a free element but occurs in minerals containing other rare earth elements. The element has important applications in materials science, electronics, and medicine.</p>
+        <p>Yttrium was discovered in 1794 by Finnish chemist Johan Gadolin in the mineral ytterbite (later renamed gadolinite) from Ytterby, Sweden. The element was named after the village of Ytterby, which has the distinction of having four elements named after it: yttrium, ytterbium, terbium, and erbium. Yttrium was isolated in 1828 by Friedrich Wöhler.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1526°C (2779°F, 1799 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>3336°C (6037°F, 3609 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>4.472 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.298 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>11.42 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>363 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>17.2 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>596 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>N/A (similar to titanium)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +1, +2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.22 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>600 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>180 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>190 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Yttrium has one stable isotope:</p>
+        <ul>
+            <li><strong>Yttrium-89 (⁸⁹Y)</strong> - The only stable isotope, making up 100% of natural yttrium</li>
+        </ul>
+        <p>Yttrium has several radioactive isotopes with important medical applications:</p>
+        <ul>
+            <li><strong>Yttrium-90 (⁹⁰Y)</strong> - Radioactive isotope with half-life of 64.0 hours; pure beta emitter used in cancer therapy (radioimmunotherapy) and for treating arthritis</li>
+            <li><strong>Yttrium-88 (⁸⁸Y)</strong> - Radioactive isotope with half-life of 106.65 days; used in scientific research</li>
+            <li><strong>Yttrium-86 (⁸⁶Y)</strong> - Radioactive isotope with half-life of 14.74 hours; positron emitter used in PET imaging</li>
+            <li><strong>Yttrium-91 (⁹¹Y)</strong> - Radioactive isotope with half-life of 58.51 days</li>
+            <li><strong>Yttrium-87 (⁸⁷Y)</strong> - Radioactive isotope with half-life of 79.8 hours</li>
+        </ul>
+        <p>Yttrium-90 is particularly important as it decays to stable zirconium-90 and emits high-energy beta particles ideal for radiation therapy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Phosphors</strong> - Yttrium oxide sulfide with europium doping produces red phosphor in cathode ray tubes and LED lights</li>
+            <li><strong>Yttrium Aluminum Garnet (YAG)</strong> - Synthetic crystal used in lasers (Nd:YAG lasers), jewelry (as diamond simulant), and scintillators</li>
+            <li><strong>Cancer Treatment</strong> - Yttrium-90 microspheres for selective internal radiation therapy of liver cancer</li>
+            <li><strong>Superconductors</strong> - Yttrium barium copper oxide (YBCO) high-temperature superconductor</li>
+            <li><strong>Gas Mantles</strong> - Yttrium oxide in old-style gas lantern mantles (replacing radioactive thorium)</li>
+            <li><strong>Alloying Agent</strong> - Yttrium added to magnesium and aluminum alloys to improve strength and corrosion resistance</li>
+            <li><strong>Electronics</strong> - Yttrium iron garnet (YIG) in microwave filters and radar systems</li>
+            <li><strong>Fuel Cells</strong> - Yttria-stabilized zirconia as electrolyte in solid oxide fuel cells</li>
+            <li><strong>Ceramics</strong> - Yttrium oxide in advanced ceramics and thermal barrier coatings</li>
+            <li><strong>Rheumatoid Arthritis Treatment</strong> - Yttrium-90 for radiation synovectomy (destroying inflamed joint lining)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Yttrium has no known essential biological role but has significant medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Medical Radionuclide</strong> - Yttrium-90 widely used in cancer therapy and rheumatoid arthritis treatment</li>
+            <li><strong>Liver Cancer Treatment</strong> - Yttrium-90 microspheres injected into hepatic artery for selective internal radiation therapy</li>
+            <li><strong>Radioimmunotherapy</strong> - Yttrium-90 attached to antibodies targets cancer cells (e.g., ibritumomab tiuxetan for lymphoma)</li>
+            <li><strong>Radiation Synovectomy</strong> - Yttrium-90 destroys inflamed synovial tissue in arthritic joints</li>
+            <li><strong>Toxicity</strong> - Yttrium compounds have low to moderate toxicity; soluble salts more toxic than insoluble forms</li>
+            <li><strong>Bone Seeking</strong> - Like other rare earth elements, yttrium accumulates in bone</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental exposure; no known health effects at normal levels</li>
+            <li><strong>Research</strong> - Stable yttrium isotopes used as tracers in biological and environmental studies</li>
+        </ul>
+        <p>Yttrium's medical importance far outweighs any biological role, with yttrium-90 being one of the most important therapeutic radionuclides.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Yttrium is the 28th most abundant element in Earth's crust (33 ppm). It occurs in:</p>
+        <ul>
+            <li><strong>Xenotime</strong> - YPO₄ (yttrium phosphate, important commercial source)</li>
+            <li><strong>Monazite</strong> - (Ce,La,Nd,Th)PO₄ (contains 2-3% yttrium)</li>
+            <li><strong>Bastnäsite</strong> - (Ce,La,Y)CO₃F (rare earth fluorocarbonate)</li>
+            <li><strong>Gadolinite</strong> - Be₂FeY₂Si₂O₁₀ (the mineral in which yttrium was discovered)</li>
+            <li><strong>As Byproduct</strong> - Yttrium always occurs with other rare earth elements, never alone</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Yttrium is produced from rare earth ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Rare earth ores mined, typically monazite or bastnäsite</li>
+            <li><strong>Separation</strong> - Complex separation processes including solvent extraction and ion exchange</li>
+            <li><strong>Precipitation</strong> - Yttrium precipitated as oxalate or hydroxide</li>
+            <li><strong>Calcination</strong> - Converted to oxide (Y₂O₃)</li>
+            <li><strong>Reduction</strong> - Yttrium oxide reduced with calcium or lithium to produce metal</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 8,000 tons annually (as yttrium oxide). China produces about 95%, with smaller amounts from Malaysia, Russia, and USA.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Yttrium mining and processing have environmental impacts typical of rare earth elements:</p>
+        <ul>
+            <li><strong>Mining Waste</strong> - Rare earth mining produces large amounts of waste rock and tailings</li>
+            <li><strong>Radioactive Byproducts</strong> - Some yttrium ores contain thorium and uranium, creating radioactive waste issues</li>
+            <li><strong>Chemical Processing</strong> - Extraction uses acids and organic solvents that can contaminate water if not properly managed</li>
+            <li><strong>Energy Intensive</strong> - Separation and purification processes require significant energy</li>
+            <li><strong>Supply Chain Concentration</strong> - Production concentrated in China creates geopolitical and environmental concerns</li>
+            <li><strong>Recycling</strong> - Limited recycling of yttrium from end-of-life products</li>
+            <li><strong>Toxicity</strong> - Yttrium compounds have low to moderate toxicity to aquatic life</li>
+            <li><strong>Radioactive Waste</strong> - Medical use of yttrium-90 generates radioactive waste requiring proper disposal</li>
+            <li><strong>Green Technology Component</strong> - Yttrium enables energy-efficient technologies (LEDs, fuel cells) with net environmental benefits</li>
+        </ul>
+        <p>While yttrium production has environmental impacts, its use in energy-efficient technologies provides offsetting benefits.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1787, Swedish army lieutenant and mineralogist Carl Axel Arrhenius discovered an unusual black mineral in a feldspar quarry near the village of Ytterby, Sweden. He named it "ytterbite."</p>
+        <p>In 1794, Finnish chemist Johan Gadolin analyzed ytterbite and found it contained 38% of a new "earth" (oxide of a new element). He published his findings in 1794. The new oxide was named "yttria" and the element eventually became known as yttrium.</p>
+        <p>In 1828, German chemist Friedrich Wöhler isolated impure yttrium metal by reducing yttrium chloride with potassium. Pure yttrium was not produced until the 20th century.</p>
+        <p>The village of Ytterby became famous in chemistry history as four elements were named after it: yttrium (Y), ytterbium (Yb), terbium (Tb), and erbium (Er). Additionally, scandium, holmium, thulium, and gadolinium were discovered in minerals from the same quarry.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>The village of Ytterby, Sweden, has four elements named after it - more than any other place</li>
+            <li>Yttrium aluminum garnet (YAG) crystals are used as synthetic gemstones and in lasers</li>
+            <li>The red color in old-style color TV tubes came from yttrium-based phosphors</li>
+            <li>Yttrium-90 is used to treat some types of cancer and rheumatoid arthritis</li>
+            <li>Yttrium is more abundant in Earth's crust than lead or tin</li>
+            <li>Some fake diamonds are actually yttrium aluminum garnet (YAG) crystals</li>
+            <li>Yttrium was used in the first synthetic material to achieve high-temperature superconductivity</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Metal Dust and Powder:</strong> Yttrium powder is flammable and can ignite spontaneously in air. Fine dust may explode.</p>
+        <p><strong>Chemical Compounds:</strong> Yttrium compounds generally have low to moderate toxicity. Soluble salts more toxic than insoluble forms.</p>
+        <p><strong>Radioactive Yttrium-90:</strong> Pure beta emitter with 64-hour half-life. Internal exposure hazard; can cause radiation burns and long-term cancer risk.</p>
+        <p><strong>Inhalation:</strong> Yttrium dust may cause lung irritation and, with long-term exposure, lung damage (rare earth pneumoconiosis).</p>
+        <p><strong>Eye and Skin Contact:</strong> May cause irritation. Yttrium compounds can be skin sensitizers in some individuals.</p>
+        <p><strong>Medical Use Hazards:</strong> Yttrium-90 medical procedures require radiation safety precautions for patients and medical staff.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, and dust masks when handling yttrium powder or compounds.</p>
+        <p><strong>Storage:</strong> Store yttrium powder under inert gas or mineral oil to prevent oxidation. Keep away from heat and ignition sources.</p>
+        <p><strong>Radioactive Materials:</strong> Follow radiation safety protocols for yttrium-90. Use shielding (plexiglass for beta radiation) and monitoring equipment.</p>
+    </div>
+</body>
+</html>
