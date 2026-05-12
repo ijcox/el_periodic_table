@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iodine</title>
+    <style>
+        /* Iodine is a halogen */
+        .halogen { background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e91e63;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .info-card h3 {
+            color: #e91e63;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #e91e63;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">53</div>
+            <div class="symbol-large">I</div>
+        </div>
+        <div class="element-title">
+            <h1>Iodine</h1>
+            <div class="element-subtitle">Halogen • Group 17 • Period 5</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>53</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>126.90447 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Kr] 4d¹⁰ 5s² 5p⁵</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Iodine is a lustrous, purple-black nonmetallic solid that sublimes readily to form a violet gas. It is the least reactive of the halogens and the most electropositive halogen, meaning it has the least attraction for electrons. Iodine dissolves in some solvents, such as carbon tetrachloride and chloroform, giving violet solutions, and in others, such as alcohol, giving brown solutions.</p>
+        <p>Iodine was discovered in 1811 by French chemist Bernard Courtois. He was extracting sodium and potassium compounds from seaweed ash when he accidentally added sulfuric acid to the ash and observed a violet vapor that condensed as dark crystals. In 1813, Joseph Louis Gay-Lussac identified it as a new element and named it "iode" from the Greek word "iodes" meaning "violet." The element is essential for all animals and some microorganisms.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>113.7°C (236.66°F, 386.85 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>184.3°C (363.7°F, 457.5 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>4.933 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.214 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>15.52 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>41.57 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>0.449 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>1.3×10⁷ Ω·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>N/A (brittle)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-1, +1, +3, +5, +7 (most common: -1, +5, +7)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.66 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1008.4 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>140 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>139 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>198 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Orthorhombic</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Iodine has one stable isotope:</p>
+        <ul>
+            <li><strong>Iodine-127 (¹²⁷I)</strong> - 100% abundance, only stable isotope</li>
+        </ul>
+        <p>Iodine has several radioactive isotopes, some with important medical and environmental applications:</p>
+        <ul>
+            <li><strong>Iodine-129 (¹²⁹I)</strong> - Long-lived radionuclide with half-life of 15.7 million years; produced by cosmic rays and nuclear fission</li>
+            <li><strong>Iodine-131 (¹³¹I)</strong> - Important medical isotope with half-life of 8.02 days; used in treatment of thyroid cancer and hyperthyroidism</li>
+            <li><strong>Iodine-123 (¹²³I)</strong> - Medical imaging isotope with half-life of 13.22 hours; used in nuclear medicine</li>
+            <li><strong>Iodine-124 (¹²⁴I)</strong> - Positron-emitting isotope with half-life of 4.18 days; used in PET imaging</li>
+            <li><strong>Iodine-125 (¹²⁵I)</strong> - Medical isotope with half-life of 59.4 days; used in brachytherapy and research</li>
+        </ul>
+        <p>Iodine-131 is particularly significant as it was released in nuclear accidents like Chernobyl and Fukushima, contaminating large areas.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Medical Applications</strong> - Iodine-131 for thyroid cancer treatment, povidone-iodine as antiseptic, iodinated contrast media for X-rays</li>
+            <li><strong>Nutrition</strong> - Iodized salt to prevent iodine deficiency disorders (goiter, cretinism)</li>
+            <li><strong>Disinfectants</strong> - Tincture of iodine, iodophors for skin disinfection and water purification</li>
+            <li><strong>Chemical Synthesis</strong> - Catalyst in various organic reactions, reagent in analytical chemistry</li>
+            <li><strong>Photography</strong> - Silver iodide in traditional photographic film</li>
+            <li><strong>Animal Feed</strong> - Iodine supplements for livestock to ensure proper thyroid function</li>
+            <li><strong>LED Lights</strong> - Iodine in metal halide lamps for improved color rendering</li>
+            <li><strong>Polarizing Filters</strong> - Iodine in polarizing films for LCD displays and sunglasses</li>
+            <li><strong>Testing for Starch</strong> - Iodine solution turns blue-black in presence of starch (iodine-starch test)</li>
+            <li><strong>Cloud Seeding</strong> - Silver iodide used to induce rainfall</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Iodine is an essential trace element for all animals and some microorganisms:</p>
+        <ul>
+            <li><strong>Thyroid Hormones</strong> - Critical component of thyroid hormones thyroxine (T4) and triiodothyronine (T3)</li>
+            <li><strong>Metabolism Regulation</strong> - Thyroid hormones regulate metabolic rate, protein synthesis, and growth</li>
+            <li><strong>Brain Development</strong> - Essential for fetal and infant brain development; deficiency causes intellectual disability</li>
+            <li><strong>Goiter Prevention</strong> - Adequate iodine prevents goiter (enlarged thyroid gland)</li>
+            <li><strong>Dietary Requirements</strong> - Adults need 150 µg/day; pregnant women need 220 µg/day; found in seafood, dairy, iodized salt</li>
+            <li><strong>Iodine Deficiency Disorders (IDD)</strong> - Goiter, hypothyroidism, cretinism, impaired mental function</li>
+            <li><strong>Thyroid Function Tests</strong> - Radioactive iodine (¹²³I, ¹³¹I) used to diagnose and treat thyroid disorders</li>
+            <li><strong>Antiseptic Properties</strong> - Iodine kills bacteria, viruses, fungi, and protozoa; used in wound care</li>
+            <li><strong>Breast Tissue</strong> - Iodine concentrated in breast tissue; may have protective role against fibrocystic breast disease</li>
+        </ul>
+        <p>Iodine deficiency affects about 2 billion people worldwide and is the leading preventable cause of intellectual disability.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Iodine is relatively rare in Earth's crust (0.46 ppm) but concentrated in certain environments:</p>
+        <ul>
+            <li><strong>Seaweed and Seawater</strong> - Iodine concentrated by marine organisms, especially seaweed (kelp)</li>
+            <li><strong>Brines</strong> - Iodine-rich brines from natural gas and oil fields (primary commercial source)</li>
+            <li><strong>Caliche Deposits</strong> - Chilean nitrate deposits contain iodine as calcium iodate</li>
+            <li><strong>Minerals</strong> - Rare minerals like lautarite (calcium iodate) and dietzeite (calcium iodate chromate)</li>
+            <li><strong>As Trace Element</strong> - In some soils and rocks, especially near oceans</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Iodine is produced mainly from brines and caliche:</p>
+        <ol>
+            <li><strong>Brine Extraction</strong> - Iodine-rich brines pumped from underground</li>
+            <li><strong>Oxidation</strong> - Iodide in brine oxidized to iodine using chlorine: 2I⁻ + Cl₂ → I₂ + 2Cl⁻</li>
+            <li><strong>Blowing Out</strong> - Iodine blown out of solution with air</li>
+            <li><strong>Absorption</strong> - Iodine vapor absorbed in sulfur dioxide solution forming hydriodic acid</li>
+            <li><strong>Re-oxidation</strong> - Hydriodic acid oxidized with chlorine to precipitate crude iodine</li>
+            <li><strong>Purification</strong> - Crude iodine purified by sublimation</li>
+            <li><strong>Caliche Processing</strong> - Chilean caliche processed to extract iodine along with nitrate</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 30,000 tons annually. Major producers: Chile, Japan, United States, Azerbaijan.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Iodine production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Radioactive Iodine</strong> - ¹²⁹I and ¹³¹I from nuclear activities can contaminate environment</li>
+            <li><strong>Thyroid Uptake</strong> - Radioactive iodine concentrates in thyroid gland; major health concern after nuclear accidents</li>
+            <li><strong>Potassium Iodide Distribution</strong> - Non-radioactive KI tablets distributed near nuclear plants to block radioactive iodine uptake</li>
+            <li><strong>Water Treatment</strong> - Iodine used for water disinfection in emergency situations</li>
+            <li><strong>Waste Disposal</strong> - Medical radioactive iodine waste requires proper management</li>
+            <li><strong>Iodine Deficiency</strong> - Environmental iodine deficiency in mountainous and inland areas far from oceans</li>
+            <li><strong>Salt Iodization Programs</strong> - Public health programs to add iodine to salt prevent deficiency disorders</li>
+            <li><strong>Marine Ecosystems</strong> - Iodine cycling important in marine environments; algae release volatile iodine compounds</li>
+            <li><strong>Atmospheric Chemistry</strong> - Iodine compounds from oceans affect atmospheric chemistry and cloud formation</li>
+        </ul>
+        <p>Iodine presents unique environmental challenges due to both its essential biological role and the hazards of radioactive isotopes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1811, French chemist Bernard Courtois was working in Paris extracting saltpeter (potassium nitrate) for gunpowder production during the Napoleonic Wars. He used seaweed ash as a source of potassium, treating the ash with sulfuric acid to convert the potassium compounds to soluble forms.</p>
+        <p>One day, Courtois accidentally added too much sulfuric acid to the seaweed ash. To his surprise, a beautiful violet vapor erupted from the mixture, which condensed on cold surfaces as dark, shiny crystals. Courtois recognized this as something unusual but was too busy with his business to investigate further.</p>
+        <p>He gave samples to other chemists, including Charles Bernard Desormes and Nicolas Clément, who continued the research. In 1813, Joseph Louis Gay-Lussac identified the substance as a new element and named it "iode" from the Greek word "iodes" meaning "violet-colored."</p>
+        <p>The medical importance of iodine was recognized in the early 19th century when it was found to treat goiter. By the 1920s, iodized salt was introduced in Switzerland and the United States, dramatically reducing iodine deficiency disorders.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Iodine is named after the Greek word "iodes" meaning "violet" - referring to the color of its vapor</li>
+            <li>Iodine deficiency is the world's leading preventable cause of intellectual disability</li>
+            <li>The thyroid gland contains about 70-80% of the body's iodine</li>
+            <li>Iodine-131 has a half-life of 8 days and is used to treat thyroid cancer</li>
+            <li>Tincture of iodine (iodine in alcohol) was widely used as an antiseptic in World War I</li>
+            <li>Iodine test for starch turns blue-black - a classic chemistry demonstration</li>
+            <li>Seaweed can concentrate iodine from seawater up to 30,000 times</li>
+            <li>Iodized salt was first introduced in Michigan in 1924 to combat goiter</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Toxicity:</strong> Elemental iodine toxic by ingestion, inhalation, and skin contact. Iodine vapor highly irritating to eyes and respiratory tract.</p>
+        <p><strong>Elemental Iodine:</strong> Causes burns, stains skin yellow-brown. Ingestion causes abdominal pain, nausea, vomiting, diarrhea. Fatal dose: 2-3 grams.</p>
+        <p><strong>Iodine Vapor:</strong> Inhalation causes coughing, shortness of breath, pulmonary edema. OSHA PEL: 0.1 ppm (1 mg/m³).</p>
+        <p><strong>Radioactive Iodine:</strong> ¹³¹I poses cancer risk, especially thyroid cancer. Potassium iodide (KI) can block radioactive iodine uptake.</p>
+        <p><strong>Medical Uses:</strong> Povidone-iodine (Betadine) safe for topical use. Radioactive iodine used medically requires special precautions.</p>
+        <p><strong>Iodine Deficiency:</strong> More common than toxicity in general population. Daily requirements: 150 µg for adults.</p>
+        <p><strong>Iodine Excess:</strong> Chronic excessive intake can cause hyperthyroidism, thyroiditis, or hypothyroidism.</p>
+        <p><strong>Allergic Reactions:</strong> Some people allergic to iodine-containing compounds (contrast media, seafood). True iodine allergy rare.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give milk or starch solution and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, and appropriate respiratory protection when handling iodine. Use fume hood for sublimation.</p>
+        <p><strong>Storage:</strong> Store in tightly closed container in cool, dry, well-ventilated area away from incompatible materials (ammonia, acetylene, aluminum).</p>
+    </div>
+</body>
+</html>
