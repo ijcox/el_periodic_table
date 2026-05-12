@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erbium</title>
+    <style>
+        /* Erbium is a lanthanide */
+        .lanthanide { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #ff9800;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .info-card h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">68</div>
+            <div class="symbol-large">Er</div>
+        </div>
+        <div class="element-title">
+            <h1>Erbium</h1>
+            <div class="element-subtitle">Lanthanide • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>68</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>167.259 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹² 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Solid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Erbium is a silvery-white, soft, malleable rare earth metal. It is stable in air but reacts slowly with water and dissolves in acids. Erbium has some unusual optical properties - it has pink erbium(III) ions which are used to color glasses and for optical amplification at 1.5 μm wavelength, which is important for fiber optic communications. The element is named after the Swedish village of Ytterby, where its mineral was first discovered.</p>
+        <p>Erbium was discovered in 1843 by Swedish chemist Carl Gustaf Mosander, who separated it from yttria (yttrium oxide) into three fractions which he called yttria, erbia, and terbia. There was considerable confusion in the naming - what Mosander called "erbia" is now known to be terbium oxide, while what he called "terbia" is now known to be erbium oxide. The confusion was cleared up in the 1860s with the help of spectroscopy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>1529°C (2784°F, 1802 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>2868°C (5194°F, 3141 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>9.066 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Solid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.168 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>19.90 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>280 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>14.5 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>860 nΩ·m (at 20°C)</td>
+            </tr>
+            <tr>
+                <td>Curie Temperature</td>
+                <td>32 K (-241°C, -402°F)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>69.9 GPa</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>0, +1, +2, +3 (most common: +3)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.24 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>589.3 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>176 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>189 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Hexagonal close-packed (hcp)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Erbium has six stable isotopes:</p>
+        <ul>
+            <li><strong>Erbium-162 (¹⁶²Er)</strong> - 0.14% abundance, stable</li>
+            <li><strong>Erbium-164 (¹⁶⁴Er)</strong> - 1.61% abundance, stable</li>
+            <li><strong>Erbium-166 (¹⁶⁶Er)</strong> - 33.6% abundance, stable</li>
+            <li><strong>Erbium-167 (¹⁶⁷Er)</strong> - 22.95% abundance, stable</li>
+            <li><strong>Erbium-168 (¹⁶⁸Er)</strong> - 26.8% abundance, stable</li>
+            <li><strong>Erbium-170 (¹⁷⁰Er)</strong> - 14.9% abundance, stable</li>
+        </ul>
+        <p>Erbium has several artificial radioactive isotopes with various applications:</p>
+        <ul>
+            <li><strong>Erbium-169 (¹⁶⁹Er)</strong> - Medical isotope with half-life of 9.4 days; used in radiation synovectomy</li>
+            <li><strong>Erbium-171 (¹⁷¹Er)</strong> - Artificial isotope with half-life of 7.516 hours</li>
+            <li><strong>Erbium-172 (¹⁷²Er)</strong> - Artificial isotope with half-life of 49.3 hours</li>
+            <li><strong>Erbium-165 (¹⁶⁵Er)</strong> - Artificial isotope with half-life of 10.36 hours</li>
+            <li><strong>Erbium-160 (¹⁶⁰Er)</strong> - Artificial isotope with half-life of 28.58 hours</li>
+        </ul>
+        <p>Erbium-169 is used in medicine for radiation synovectomy, particularly for treating arthritis in small joints.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Fiber Optic Amplifiers</strong> - Erbium-doped fiber amplifiers (EDFAs) for telecommunications at 1.5 μm wavelength</li>
+            <li><strong>Pink Coloring</strong> - Erbium oxide gives pink color to glass, porcelain, and cubic zirconia</li>
+            <li><strong>Medical Lasers</strong> - Erbium:YAG lasers for skin resurfacing, dentistry, and surgical applications</li>
+            <li><strong>Nuclear Technology</strong> - Erbium as neutron poison in nuclear reactor control rods</li>
+            <li><strong>Photographic Filters</strong> - Erbium oxide in filters for photographic and scientific applications</li>
+            <li><strong>Medical Therapy</strong> - Erbium-169 for radiation synovectomy in arthritis treatment</li>
+            <li><strong>Welding and Metalworking</strong> - Erbium as alloying agent in vanadium to improve workability</li>
+            <li><strong>Research</strong> - Erbium in upconversion nanoparticles for biological imaging</li>
+            <li><strong>Optical Coatings</strong> - Erbium compounds in anti-reflective coatings and other optical applications</li>
+            <li><strong>Consumer Electronics</strong> - Erbium in some glass for camera lenses and displays</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role and Effects</h2>
+        <p>Erbium has no essential biological role but has important medical applications:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>Medical Lasers</strong> - Erbium:YAG lasers widely used in dermatology and cosmetic surgery</li>
+            <li><strong>Medical Applications</strong> - Skin resurfacing, tattoo removal, treatment of scars and wrinkles, dentistry</li>
+            <li><strong>Advantages</strong> - Precisely ablates tissue with minimal thermal damage to surrounding areas</li>
+            <li><strong>Radiation Therapy</strong> - Erbium-169 used in radiation synovectomy for arthritis, especially in finger joints</li>
+            <li><strong>Mechanism</strong> - Beta emission (0.34 MeV max) treats inflamed synovial tissue in joints</li>
+            <li><strong>Toxicity</strong> - Erbium compounds have low to moderate toxicity; similar to other rare earth elements</li>
+            <li><strong>Environmental Exposure</strong> - Trace amounts in human body from environmental sources</li>
+            <li><strong>Occupational Hazards</strong> - Workers in rare earth processing may be exposed to erbium dust</li>
+            <li><strong>Plants</strong> - Erbium can affect plant growth; typically inhibitory at high concentrations</li>
+        </ul>
+        <p>Erbium's biological significance is primarily its medical use in lasers and radiation therapy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Erbium is relatively rare in Earth's crust (3.5 ppm):</p>
+        <ul>
+            <li><strong>Minerals</strong> - Xenotime, monazite, bastnäsite, and euxenite are primary ores</li>
+            <li><strong>Geographic Distribution</strong> - Major deposits in China (Southern China clays), United States (Mountain Pass), Australia, India</li>
+            <li><strong>Seawater</strong> - Very low concentration (0.87 ng/L)</li>
+            <li><strong>In Rocks</strong> - More abundant than tin or tungsten</li>
+            <li><strong>Association</strong> - Typically found with other heavy rare earth elements like ytterbium and holmium</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Erbium is produced from rare earth ores:</p>
+        <ol>
+            <li><strong>Mining</strong> - Rare earth ores (xenotime, monazite) or ion-adsorption clays mined</li>
+            <li><strong>Ore Processing</strong> - For clays: in-situ leaching; for ores: crushing and concentration</li>
+            <li><strong>Acid Digestion</strong> - Treated with sulfuric or hydrochloric acid to dissolve rare earths</li>
+            <li><strong>Solvent Extraction</strong> - Multiple solvent extraction steps separate heavy rare earth elements</li>
+            <li><strong>Separation</strong> - Erbium separated from other rare earths using ion exchange chromatography</li>
+            <li><strong>Precipitation</strong> - Erbium precipitated as oxalate or hydroxide</li>
+            <li><strong>Calcination</strong> - Precipitate calcined to erbium oxide (Er₂O₃)</li>
+            <li><strong>Metal Production</strong> - Oxide reduced with calcium: Er₂O₃ + 3Ca → 2Er + 3CaO</li>
+            <li><strong>Purification</strong> - Additional purification by vacuum distillation</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 500 tons annually as erbium oxide. China produces majority of world supply.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Erbium production and use have several environmental considerations:</p>
+        <ul>
+            <li><strong>Mining Impact</strong> - Rare earth mining causes significant environmental damage</li>
+            <li><strong>Radioactive Waste</strong> - Monazite contains thorium; processing generates radioactive waste</li>
+            <li><strong>Chemical Pollution</strong> - Acid leaching processes can contaminate water with acids and heavy metals</li>
+            <li><strong>Telecommunications</strong> - Erbium-doped fiber amplifiers enable long-distance fiber optic communications</li>
+            <li><strong>Medical Benefits</strong> - Erbium lasers improve cosmetic and medical treatments with minimal invasiveness</li>
+            <li><strong>Electronic Waste</strong> - Erbium in fiber optics and medical devices requires proper disposal</li>
+            <li><strong>Limited Recycling</strong> - Very low rates of erbium recycling from end-of-life products</li>
+            <li><strong>Toxicity to Aquatic Life</strong> - Erbium compounds can be toxic to aquatic organisms</li>
+            <li><strong>Medical Radioisotopes</strong> - Erbium-169 medical use generates radioactive waste requiring proper disposal</li>
+            <li><strong>Internet Infrastructure</strong> - Erbium crucial for global internet backbone through fiber optic amplification</li>
+        </ul>
+        <p>Erbium presents environmental trade-offs: mining impacts vs. benefits in telecommunications and medicine.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>In 1843, Swedish chemist Carl Gustaf Mosander was working with yttria (yttrium oxide) at the Karolinska Institute in Stockholm. Through fractional crystallization, he separated yttria into three different materials which he called yttria, erbia, and terbia.</p>
+        <p>Mosander named one of these "erbia" after the village of Ytterby in Sweden, where the mineral containing yttrium had been found. However, there was considerable confusion in the naming. What Mosander called "erbia" is now known to be terbium oxide, while what he called "terbia" is now known to be erbium oxide mixed with other rare earth oxides.</p>
+        <p>The confusion wasn't resolved until the 1860s when spectroscopic techniques became available. In 1864, Swedish chemist Per Teodor Cleve began studying erbia and showed it contained at least two new elements, which he named holmium and thulium. In 1879, Swedish chemist Lars Fredrik Nilson completely separated erbia into its components, confirming erbium as a distinct element.</p>
+        <p>Pure erbium metal was first produced in 1934. Erbium's importance grew dramatically with the development of erbium-doped fiber amplifiers in the 1980s, which revolutionized long-distance telecommunications.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Erbium-doped fiber amplifiers make transoceanic internet cables possible by boosting optical signals</li>
+            <li>The element gives pink color to some glasses and is used to make pink artificial gemstones</li>
+            <li>Erbium lasers can precisely remove skin layer by layer - ideal for cosmetic procedures with minimal scarring</li>
+            <li>Erbium is named after Ytterby, Sweden - the same village gave its name to yttrium, terbium, and ytterbium</li>
+            <li>Erbium-169 treatment can relieve arthritis pain in finger joints for up to two years</li>
+            <li>The element amplifies light at exactly 1.5 μm wavelength - the most efficient wavelength for fiber optics</li>
+            <li>Erbium was involved in one of the most confusing naming mix-ups in chemistry history with terbium</li>
+            <li>Adding erbium to vanadium makes it easier to work with and less brittle</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>General Toxicity:</strong> Erbium compounds have low to moderate toxicity. Metal dust flammable.</p>
+        <p><strong>Metal Dust:</strong> Erbium powder flammable, can ignite spontaneously in air. Fire produces irritating fumes.</p>
+        <p><strong>Medical Lasers:</strong> Erbium:YAG lasers require proper training and safety protocols. Eye protection essential.</p>
+        <p><strong>Radiation Therapy:</strong> Erbium-169 medical use requires radiation safety protocols for handling and disposal.</p>
+        <p><strong>Occupational Exposure:</strong> Inhalation of erbium dust may cause lung damage. Chronic exposure may cause pneumoconiosis.</p>
+        <p><strong>Chemical Reactivity:</strong> Erbium metal reacts slowly with water and reacts with acids exothermically.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. For ingestion, give water and seek medical attention.</p>
+        <p><strong>Protective Equipment:</strong> Use gloves, safety glasses, dust masks when handling erbium compounds. Use local exhaust ventilation for dust.</p>
+        <p><strong>Radiation Safety:</strong> For radioactive erbium isotopes (¹⁶⁹Er), follow radiation safety protocols.</p>
+        <p><strong>Storage:</strong> Store metal under mineral oil or argon to prevent oxidation. Store compounds in tightly closed containers.</p>
+        <p><strong>Fire Hazard:</strong> Erbium metal burns readily. Use Class D extinguisher for metal fires. Do not use water on burning metal.</p>
+        <p><strong>Radioactive Considerations:</strong> Natural erbium ores may contain radioactive thorium. Follow radiation safety protocols when processing ores.</p>
+        <p><strong>Environmental:</strong> Erbium compounds may accumulate in environment. Follow proper disposal procedures.</p>
+        <p><strong>Disposal:</strong> Follow local regulations for disposal of erbium compounds and contaminated materials. Radioactive erbium requires special disposal.</p>
+        <p><strong>Fiber Optic Safety:</strong> When working with erbium-doped fiber amplifiers, follow laser safety protocols for infrared radiation.</p>
+    </div>
+</body>
+</html>
