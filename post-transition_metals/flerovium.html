@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flerovium</title>
+    <style>
+        /* Flerovium is a post-transition metal */
+        .post-transition { background: linear-gradient(135deg, #16a085 0%, #138d75 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #16a085;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #16a085 0%, #138d75 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #16a085;
+        }
+        
+        .info-card h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #16a085;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">114</div>
+            <div class="symbol-large">Fl</div>
+        </div>
+        <div class="element-title">
+            <h1>Flerovium</h1>
+            <div class="element-subtitle">Post-Transition Metal • Group 14 • Period 7</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>114</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>[289] u (most stable isotope)</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p² (predicted)</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Gas or volatile liquid (predicted, unlike other group 14 metals)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Flerovium is a synthetic chemical element and a member of the transactinide series. It is a highly radioactive element that does not occur naturally and can only be produced in particle accelerators. Flerovium is predicted to be a gas or volatile liquid at room temperature, which is highly unusual for a group 14 element (carbon, silicon, germanium, tin, and lead are all solids). This predicted behavior results from extreme relativistic effects that dominate the chemistry of superheavy elements.</p>
+        <p>Flerovium was first synthesized in 1998 by a joint Russian-American team at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia. The element was named in honor of Georgy Flerov, the Russian physicist who founded the JINR laboratory and made significant contributions to nuclear physics. The name also recognizes the Flerov Laboratory of Nuclear Reactions at JINR, where many superheavy elements have been synthesized.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>Unknown (predicted to be very low, possibly around -73°C)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>Unknown (predicted to be around 80°C)</td>
+            </tr>
+            <tr>
+                <td>Density (predicted, liquid)</td>
+                <td>14 g/cm³ (at boiling point)</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Gas or volatile liquid (predicted)</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>Unknown (predicted to be very low)</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>Unknown (predicted to be low)</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>Unknown (predicted to be semiconductor or poor metal)</td>
+            </tr>
+            <tr>
+                <td>Mohs Hardness</td>
+                <td>Not applicable (gas/liquid)</td>
+            </tr>
+            <tr>
+                <td>Young's Modulus</td>
+                <td>Not applicable (gas/liquid)</td>
+            </tr>
+            <tr>
+                <td>Critical Temperature</td>
+                <td>Unknown (predicted)</td>
+            </tr>
+            <tr>
+                <td>Critical Pressure</td>
+                <td>Unknown (predicted)</td>
+            </tr>
+        </table>
+        <p>Flerovium's predicted physical state as a gas or volatile liquid at room temperature makes it unique among group 14 elements. This results from relativistic effects that increase the energy of the 7p electrons and weaken metallic bonding. If confirmed, flerovium would be the first element in group 14 to be gaseous at room temperature. Some calculations even suggest it could be a noble gas-like element.</p>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>+4, +2, 0, possibly +6 (predicted; +2 may be more stable than +4)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>1.3 (Pauling scale, estimated)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>823.9 kJ/mol (estimated)</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>180 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>143 pm (estimated)</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>Unknown (likely similar to noble gases)</td>
+            </tr>
+            <tr>
+                <td>Chemical Behavior</td>
+                <td>Predicted to be more noble than lead, possibly behaving like a noble gas</td>
+            </tr>
+        </table>
+        <p>Flerovium's chemistry is predicted to be dominated by extreme relativistic effects. Unlike lead which exhibits +2 and +4 oxidation states, flerovium may favor the +2 oxidation state over +4, and may even be stable in the 0 oxidation state. The "inert pair effect" is expected to be extremely strong for flerovium, making the +2 state more stable than +4. Some calculations suggest flerovium could be chemically inert - possibly behaving more like a noble gas than a metal. It may form weak van der Waals bonds but is unlikely to form strong chemical bonds under normal conditions. Flerovium is predicted to be more volatile and chemically inert than its lighter congeners.</p>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Flerovium has no stable isotopes. All isotopes are radioactive and synthetic:</p>
+        <ul>
+            <li><strong>Flerovium-284 (²⁸⁴Fl)</strong> - Half-life: 2.5 milliseconds (spontaneous fission)</li>
+            <li><strong>Flerovium-285 (²⁸⁵Fl)</strong> - Half-life: 0.10 seconds (alpha decay)</li>
+            <li><strong>Flerovium-286 (²⁸⁶Fl)</strong> - Half-life: 0.16 seconds (spontaneous fission)</li>
+            <li><strong>Flerovium-287 (²⁸⁷Fl)</strong> - Half-life: 0.48 seconds (alpha decay)</li>
+            <li><strong>Flerovium-288 (²⁸⁸Fl)</strong> - Half-life: 0.66 seconds (alpha decay)</li>
+            <li><strong>Flerovium-289 (²⁸⁹Fl)</strong> - Half-life: 2.1 seconds (alpha decay) - Most stable known isotope</li>
+            <li><strong>Flerovium-290 (²⁹⁰Fl)</strong> - Half-life: 19 seconds? (alpha decay, tentative)</li>
+            <li><strong>Flerovium-291 (²⁹¹Fl)</strong> - Half-life: 1.1 minutes? (alpha decay, tentative)</li>
+            <li><strong>Flerovium-292 (²⁹²Fl)</strong> - Half-life: 1.1 minutes? (alpha decay, tentative)</li>
+            <li><strong>Flerovium-293 (²⁹³Fl)</strong> - Half-life: 5? seconds (tentative)</li>
+        </ul>
+        <p>Flerovium-289 is the most stable known isotope with a half-life of approximately 2.1 seconds. There are unconfirmed reports of flerovium-290 and flerovium-291 with half-lives of 19 seconds and 1.1 minutes respectively, which if verified, would be relatively long-lived for such heavy elements and might indicate proximity to the "island of stability."</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Scientific Research</strong> - Study of superheavy element properties and nuclear structure</li>
+            <li><strong>Nuclear Physics</strong> - Investigation of stability trends in heavy nuclei near the "island of stability"</li>
+            <li><strong>Theoretical Chemistry</strong> - Testing extreme predictions about relativistic effects in heavy elements</li>
+            <li><strong>Relativistic Effects Research</strong> - Study of how relativity can make a post-transition metal behave like a noble gas</li>
+            <li><strong>Gas-Phase Chemistry Studies</strong> - Investigation of volatile superheavy elements</li>
+            <li><strong>Island of Stability Research</strong> - Key element in research into predicted region of enhanced stability</li>
+            <li><strong>Education</strong> - Example of how relativistic effects can fundamentally change chemical properties</li>
+        </ul>
+        <p>Like all transactinide elements, flerovium has no practical applications outside basic scientific research due to its extreme rarity, short half-life, and high production costs. Only atom quantities have ever been produced.</p>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Flerovium has no biological role:</p>
+        <ul>
+            <li><strong>No Biological Function</strong> - Synthetic element not found in nature</li>
+            <li><strong>High Radioactivity</strong> - Extreme radioactivity makes it toxic to living organisms</li>
+            <li><strong>No Natural Occurrence</strong> - Only produced artificially in laboratories</li>
+            <li><strong>No Environmental Presence</strong> - Not present in the environment</li>
+            <li><strong>Radiation Hazard</strong> - Alpha and spontaneous fission radiation damaging to biological tissues</li>
+            <li><strong>No Biochemical Studies</strong> - Insufficient quantities and too short half-lives for biological research</li>
+            <li><strong>No Medical Applications</strong> - Not used in medicine due to production difficulty and short half-lives</li>
+            <li><strong>Volatility</strong> - If inhaled as a gas, it could distribute through the respiratory system</li>
+            <li><strong>Chemical Inertness</strong> - Predicted chemical inertness might reduce chemical toxicity, but radiation hazard would remain primary concern</li>
+        </ul>
+        <p>As a synthetic element produced only in minute quantities in laboratories, flerovium has no interaction with biological systems and no known or potential biological role.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Flerovium does not occur naturally. It is entirely synthetic.</p>
+        <p><strong>Artificial Production Methods:</strong></p>
+        <ol>
+            <li><strong>Hot Fusion Reactions:</strong>
+                <br>²⁴⁴Pu + ⁴⁸Ca → ²⁸⁹Fl + 3n (original JINR discovery reaction, December 1998)
+                <br>²⁴⁴Pu + ⁴⁸Ca → ²⁹⁰Fl + 2n</li>
+            <li><strong>Other Reactions:</strong>
+                <br>²⁴²Pu + ⁴⁸Ca → ²⁸⁷Fl + 3n
+                <br>²⁴⁵Cm + ⁴⁸Ca → ²⁹⁰Fl + 3n</li>
+            <li><strong>Cold Fusion Reactions (alternative approach):</strong>
+                <br>²⁰⁸Pb + ⁷⁶Ge → ²⁸³Fl + n (theoretical, not yet achieved)
+                <br>²⁰⁹Bi + ⁷³Ga → ²⁸¹Fl + n (theoretical)</li>
+            <li><strong>Separation</strong> - Flerovium atoms separated using gas-filled recoil separators. The Dubna Gas-Filled Recoil Separator (DGFRS) was used for its discovery and study.</li>
+            <li><strong>Detection</strong> - Individual atoms detected by their characteristic decay patterns using silicon detectors, often requiring correlation with daughter decays through alpha decay chains to copernicium and darmstadtium.</li>
+            <li><strong>Quantity</strong> - Production rates extremely low (a few atoms per year of beam time).</li>
+        </ol>
+        <p><strong>Production Sites:</strong> Joint Institute for Nuclear Research (JINR, Dubna, Russia - primary site), Lawrence Berkeley National Laboratory (USA), RIKEN (Japan). Total world production is only about 80 atoms, making it one of the more "prolific" superheavy elements.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Flerovium has negligible environmental impact:</p>
+        <ul>
+            <li><strong>No Natural Presence</strong> - Does not occur naturally in the environment</li>
+            <li><strong>Extreme Rarity</strong> - Only minute quantities produced (atom scale)</li>
+            <li><strong>Short Half-Lives</strong> - Most isotopes decay quickly (milliseconds to seconds)</li>
+            <li><strong>Containment</strong> - Produced and studied under controlled laboratory conditions</li>
+            <li><strong>No Industrial Use</strong> - No commercial applications that could lead to release</li>
+            <li><strong>Research Waste</strong> - Minimal radioactive waste from production experiments</li>
+            <li><strong>Radiation Hazard</strong> - Theoretical hazard if released, but quantities too small for significant impact</li>
+            <li><strong>No Bioaccumulation</strong> - Not produced in quantities sufficient for environmental accumulation</li>
+            <li><strong>Regulation</strong> - Handled as radioactive material under nuclear regulations</li>
+            <li><strong>Volatility</strong> - If released as a gas, it would disperse quickly but decay rapidly</li>
+            <li><strong>Chemical Inertness</strong> - Predicted chemical inertness might reduce environmental reactivity</li>
+        </ul>
+        <p>Due to its synthetic nature, extreme rarity, and generally short half-life, flerovium poses no meaningful environmental risk. It exists only momentarily in controlled laboratory settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>The discovery of flerovium continued the successful superheavy element research at JINR Dubna:</p>
+        <p><strong>Discovery (1998):</strong> In December 1998, a joint Russian-American team at the Joint Institute for Nuclear Research (JINR) in Dubna, Russia, synthesized flerovium by bombarding plutonium-244 with calcium-48 ions. They produced a single atom of flerovium-289, which decayed by alpha emission with a half-life of about 30 seconds. The discovery was announced in January 1999.</p>
+        <p><strong>Confirmation and Further Studies:</strong> The discovery was confirmed in 2004 and 2006 at JINR with the production of more atoms, including the isotopes flerovium-288 and flerovium-289. The longer half-life of some isotopes enabled initial chemical studies.</p>
+        <p><strong>Chemical Studies (2012):</strong> In 2012, a team at JINR and Paul Scherrer Institute conducted chemical experiments on flerovium, studying its adsorption on gold surfaces. The results suggested flerovium is more volatile than lead and may indeed be gaseous at room temperature, confirming theoretical predictions.</p>
+        <p><strong>Naming:</strong> The JINR team initially proposed the name "flerovium" in honor of Georgy Flerov, founder of the JINR laboratory. After evaluation by IUPAC, the name was officially adopted in 2012.</p>
+        <p><strong>Official Recognition (2012):</strong> On May 30, 2012, IUPAC officially announced the name "flerovium" with symbol Fl. The name recognizes both Georgy Flerov and the Flerov Laboratory of Nuclear Reactions at JINR.</p>
+        <p><strong>Significance:</strong> Flerovium's predicted and experimentally suggested volatility represents another dramatic manifestation of relativistic effects in chemistry. It shows how these effects become increasingly important for heavier elements and can fundamentally change expected chemical behavior based on periodic table position.</p>
+        <p><strong>Theoretical Interest:</strong> Flerovium has attracted considerable theoretical interest due to predictions that it might be chemically inert like a noble gas, despite being in group 14. This challenges traditional understanding of chemical periodicity.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Flerovium is named after Georgy Flerov, founder of the JINR laboratory in Dubna</li>
+            <li>The element is predicted to be a gas at room temperature, unlike any other element in group 14</li>
+            <li>Flerovium was discovered in December 1998 at JINR Dubna</li>
+            <li>About 80 atoms of flerovium have been produced, making it relatively "common" among superheavy elements</li>
+            <li>The element's volatility was experimentally confirmed in 2012, validating theoretical predictions</li>
+            <li>Flerovium may be chemically inert, possibly behaving more like a noble gas than a metal</li>
+            <li>The "inert pair effect" is predicted to be extremely strong for flerovium, favoring the +2 oxidation state</li>
+            <li>Flerovium completes the group 14 elements in the periodic table</li>
+            <li>Some isotopes of flerovium may have half-lives of about a minute, unusually long for such heavy elements</li>
+            <li>The element demonstrates how relativity can override expected periodic trends</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>Radioactivity:</strong> All isotopes of flerovium are highly radioactive. Primary hazards are alpha radiation and spontaneous fission (which produces neutrons and fission fragments).</p>
+        <p><strong>Production:</strong> Produced only in specialized nuclear facilities with heavy ion accelerators. Not available outside research laboratories.</p>
+        <p><strong>Quantity:</strong> Only atom quantities produced; insufficient for bulk handling or conventional chemical study.</p>
+        <p><strong>Alpha Radiation:</strong> Most isotopes decay by alpha emission; external hazard minimal but internal hazard serious if ingested or inhaled.</p>
+        <p><strong>Spontaneous Fission:</strong> Some isotopes undergo spontaneous fission producing neutrons and fission fragments requiring neutron shielding.</p>
+        <p><strong>Daughter Products:</strong> Decay chains include other radioactive elements; secondary radiation hazards.</p>
+        <p><strong>Volatility:</strong> Predicted to be gaseous or highly volatile; if produced in quantity, could pose inhalation hazard and be difficult to contain.</p>
+        <p><strong>Handling:</strong> Atom-at-a-time techniques; remote handling essential. Gas-phase studies require specialized containment.</p>
+        <p><strong>Containment:</strong> Produced and studied in sealed systems; strict containment protocols to prevent release, especially important for volatile elements.</p>
+        <p><strong>Regulations:</strong> Subject to nuclear materials regulations despite minute quantities.</p>
+        <p><strong>Waste:</strong> Radioactive waste from production experiments managed as nuclear waste.</p>
+        <p><strong>First Aid:</strong> Not applicable due to production scale; standard radiation emergency procedures if contamination suspected.</p>
+        <p><strong>Protective Equipment:</strong> Standard radiation laboratory protections. Additional respiratory protection would be needed if significant quantities of gaseous flerovium were produced.</p>
+        <p><strong>Storage:</strong> Not stored; atoms exist momentarily then decay.</p>
+        <p><strong>Environmental:</strong> No environmental release; all material contained and decays quickly.</p>
+    </div>
+</body>
+</html>
