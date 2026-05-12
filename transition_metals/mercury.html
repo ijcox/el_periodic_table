@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury</title>
+    <style>
+        /* Mercury is a transition metal */
+        .transition { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .element-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .element-symbol-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .symbol-large {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .atomic-num-large {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .element-title {
+            flex: 1;
+        }
+        
+        .element-title h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .element-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-card p {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .properties-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .properties-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .properties-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-header">
+        <div class="element-symbol-box">
+            <div class="atomic-num-large">80</div>
+            <div class="symbol-large">Hg</div>
+        </div>
+        <div class="element-title">
+            <h1>Mercury</h1>
+            <div class="element-subtitle">Transition Metal • Group 12 • Period 6</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Atomic Number</h3>
+            <p>80</p>
+        </div>
+        <div class="info-card">
+            <h3>Atomic Mass</h3>
+            <p>200.59 u</p>
+        </div>
+        <div class="info-card">
+            <h3>Electron Configuration</h3>
+            <p>[Xe] 4f¹⁴ 5d¹⁰ 6s²</p>
+        </div>
+        <div class="info-card">
+            <h3>State at Room Temperature</h3>
+            <p>Liquid</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>Mercury is a chemical element with the symbol Hg and atomic number 80. It is commonly known as quicksilver and was formerly named hydrargyrum. Mercury is the only metallic element that is liquid at standard conditions for temperature and pressure. It is a heavy, silvery-white metal that is relatively poor conductor of heat compared to other metals but a fair conductor of electricity.</p>
+        <p>Mercury has been used in thermometers, barometers, manometers, sphygmomanometers, float valves, mercury switches, mercury relays, fluorescent lamps and other devices, though concerns about the element's toxicity have led to mercury thermometers and sphygmomanometers being largely phased out in clinical environments in favor of alternatives such as alcohol- or galinstan-filled glass thermometers and thermistor- or infrared-based electronic instruments.</p>
+    </div>
+
+    <div class="section">
+        <h2>Physical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Melting Point</td>
+                <td>-38.83°C (-37.89°F, 234.32 K)</td>
+            </tr>
+            <tr>
+                <td>Boiling Point</td>
+                <td>356.73°C (674.11°F, 629.88 K)</td>
+            </tr>
+            <tr>
+                <td>Density (at 20°C)</td>
+                <td>13.534 g/cm³</td>
+            </tr>
+            <tr>
+                <td>Phase at STP</td>
+                <td>Liquid</td>
+            </tr>
+            <tr>
+                <td>Specific Heat Capacity</td>
+                <td>0.140 J/(g·K)</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>2.29 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Heat of Vaporization</td>
+                <td>59.11 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Thermal Conductivity</td>
+                <td>8.30 W/(m·K)</td>
+            </tr>
+            <tr>
+                <td>Electrical Resistivity</td>
+                <td>961 nΩ·m (at 25°C)</td>
+            </tr>
+            <tr>
+                <td>Surface Tension</td>
+                <td>0.4655 N/m at 20°C</td>
+            </tr>
+            <tr>
+                <td>Viscosity</td>
+                <td>1.526 mPa·s at 25°C</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Chemical Properties</h2>
+        <table class="properties-table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Oxidation States</td>
+                <td>-2, +1, +2 (most common: +1, +2)</td>
+            </tr>
+            <tr>
+                <td>Electronegativity</td>
+                <td>2.00 (Pauling scale)</td>
+            </tr>
+            <tr>
+                <td>Ionization Energy (1st)</td>
+                <td>1007.1 kJ/mol</td>
+            </tr>
+            <tr>
+                <td>Atomic Radius</td>
+                <td>151 pm</td>
+            </tr>
+            <tr>
+                <td>Covalent Radius</td>
+                <td>132 pm</td>
+            </tr>
+            <tr>
+                <td>Van der Waals Radius</td>
+                <td>155 pm</td>
+            </tr>
+            <tr>
+                <td>Crystal Structure</td>
+                <td>Rhombohedral (solid)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Isotopes</h2>
+        <p>Mercury has seven stable isotopes:</p>
+        <ul>
+            <li><strong>Mercury-196 (¹⁹⁶Hg)</strong> - 0.15% abundance</li>
+            <li><strong>Mercury-198 (¹⁹⁸Hg)</strong> - 9.97% abundance</li>
+            <li><strong>Mercury-199 (¹⁹⁹Hg)</strong> - 16.87% abundance</li>
+            <li><strong>Mercury-200 (²⁰⁰Hg)</strong> - 23.10% abundance</li>
+            <li><strong>Mercury-201 (²⁰¹Hg)</strong> - 13.18% abundance</li>
+            <li><strong>Mercury-202 (²⁰²Hg)</strong> - 29.86% abundance</li>
+            <li><strong>Mercury-204 (²⁰⁴Hg)</strong> - 6.87% abundance</li>
+        </ul>
+        <p>Mercury has several radioactive isotopes:</p>
+        <ul>
+            <li><strong>Mercury-194 (¹⁹⁴Hg)</strong> - Half-life of 444 years</li>
+            <li><strong>Mercury-203 (²⁰³Hg)</strong> - Half-life of 46.612 days, used in research</li>
+            <li><strong>Mercury-205 (²⁰⁵Hg)</strong> - Half-life of 5.14 minutes</li>
+        </ul>
+        <p>Mercury-203 has been used in research and in some medical applications, though its use is limited due to the element's toxicity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Uses</h2>
+        <ul>
+            <li><strong>Thermometers</strong> - Traditional use in medical and laboratory thermometers (largely phased out)</li>
+            <li><strong>Barometers and Manometers</strong> - Measuring atmospheric pressure and gas pressures</li>
+            <li><strong>Electrical Switches</strong> - Mercury tilt switches in thermostats and other devices</li>
+            <li><strong>Fluorescent Lamps</strong> - Mercury vapor produces ultraviolet light that excites phosphors</li>
+            <li><strong>Dental Amalgams</strong> - Alloy with silver, tin, and copper for dental fillings</li>
+            <li><strong>Industrial Catalysts</strong> - Mercury compounds in chemical production (declining due to environmental concerns)</li>
+            <li><strong>Gold Mining</strong> - Mercury used to extract gold from ore in artisanal mining (major environmental issue)</li>
+            <li><strong>Laboratory Reagents</strong> - Mercury compounds in analytical chemistry and research</li>
+            <li><strong>Batteries</strong> - Mercury batteries (button cells), now largely replaced by lithium cells</li>
+            <li><strong>Historical Medicine</strong> - Formerly used in various medicinal preparations (now recognized as toxic)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Biological Role</h2>
+        <p>Mercury has no known essential biological role and is highly toxic:</p>
+        <ul>
+            <li><strong>No Essential Function</strong> - Not required for any known biological processes</li>
+            <li><strong>High Toxicity</strong> - All forms of mercury toxic to humans and wildlife</li>
+            <li><strong>Neurotoxin</strong> - Mercury compounds, especially methylmercury, damage nervous system</li>
+            <li><strong>Bioaccumulation</strong> - Mercury accumulates in food chain, especially in fish</li>
+            <li><strong>Methylmercury Formation</strong> - Bacteria convert inorganic mercury to methylmercury, which bioaccumulates</li>
+            <li><strong>Minamata Disease</strong> - Neurological syndrome caused by methylmercury poisoning from industrial pollution</li>
+            <li><strong>Dental Amalgams</strong> - Mercury release from dental fillings controversial; generally considered safe but being phased out</li>
+            <li><strong>Vaccine Preservative</strong> - Thimerosal (ethylmercury compound) used as preservative in some vaccines (now removed from most childhood vaccines)</li>
+            <li><strong>Environmental Health Concern</strong> - Mercury pollution major global health issue</li>
+        </ul>
+        <p>Mercury's biological significance is almost entirely negative due to its toxicity and ability to bioaccumulate in ecosystems.</p>
+    </div>
+
+    <div class="section">
+        <h2>Production and Occurrence</h2>
+        <p><strong>Natural Occurrence:</strong> Mercury occurs in several forms:</p>
+        <ul>
+            <li><strong>Cinnabar (HgS)</strong> - Primary mercury ore, bright red mineral</li>
+            <li><strong>Native Mercury</strong> - Rarely as liquid droplets in rocks</li>
+            <li><strong>Volcanic Emissions</strong> - Mercury released from volcanic activity</li>
+            <li><strong>Coal</strong> - Contains trace mercury released when burned</li>
+            <li><strong>Major Deposits</strong> - Spain, China, Kyrgyzstan, Algeria, Mexico, United States</li>
+        </ul>
+        <p><strong>Industrial Production:</strong> Mercury extraction from cinnabar:</p>
+        <ol>
+            <li><strong>Mining</strong> - Cinnabar ore mined, usually from underground mines</li>
+            <li><strong>Roasting</strong> - Ore heated in air: HgS + O₂ → Hg + SO₂</li>
+            <li><strong>Condensation</li>
+            <li><strong>Purification</li>
+            <li><strong>Distillation</li>
+        </ol>
+        <p><strong>Global Production:</strong> About 1,900 tonnes annually (declining). China is the largest producer, followed by Kyrgyzstan and Chile. Most mercury now comes from recycling rather than primary production.</p>
+    </div>
+
+    <div class="section">
+        <h2>Environmental Impact</h2>
+        <p>Mercury is a major global environmental pollutant:</p>
+        <ul>
+            <li><strong>Atmospheric Transport</strong> - Mercury vapor travels globally in atmosphere</li>
+            <li><strong>Water Contamination</li>
+            <li><strong>Bioaccumulation</li>
+            <li><strong>Fish Consumption Advisories</li>
+            <li><strong>Coal Combustion</li>
+            <li><strong>Artisanal Gold Mining</li>
+            <li><strong>Legacy Pollution</li>
+            <li><strong>Minamata Convention</li>
+            <li><strong>Waste Management</li>
+            <li><strong>Climate Change Interaction</li>
+        </ul>
+        <p>Mercury pollution is a persistent global problem requiring international cooperation to address.</p>
+    </div>
+
+    <div class="section">
+        <h2>Discovery and History</h2>
+        <p>Mercury has been known since ancient times. It was found in Egyptian tombs dating from 1500 BCE. The ancient Chinese and Hindus knew about mercury, and it was used in China for prolonging life, healing fractures, and maintaining good health, although it is now known that exposure to mercury leads to serious adverse health effects.</p>
+        <p>In Greek mythology, Mercury was the messenger of the gods, and the element's name comes from the Roman god Mercury, known for his speed and mobility. The symbol Hg comes from its Greek name, hydrargyrum, meaning "liquid silver."</p>
+        <p>Alchemists believed mercury was the First Matter from which all metals were formed. They thought that different metals could be produced by varying the quality and quantity of sulfur contained within the mercury. The alchemical symbol for mercury was the same as the astrological symbol for the planet Mercury.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+            <li>Mercury is the only metal that is liquid at room temperature</li>
+            <li>The symbol Hg comes from Greek "hydrargyrum" meaning "liquid silver"</li>
+            <li>Mercury is so dense that iron floats on it</li>
+            <li>A gallon of mercury weighs about 113 pounds (51 kg)</li>
+            <li>Mercury was used in hat making, leading to the phrase "mad as a hatter"</li>
+            <li>The planet Mercury is named after the Roman god, not the element</li>
+            <li>Mercury has the smallest temperature range of any metal (melts at -38°C, boils at 357°C)</li>
+            <li>Ancient Chinese emperors took mercury pills hoping for immortality</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h3>Safety Information</h3>
+        <p><strong>High Toxicity:</strong> All forms of mercury toxic. Exposure affects nervous, digestive, and immune systems.</p>
+        <p><strong>Elemental Mercury:</strong> Liquid mercury vaporizes at room temperature. Inhalation of vapor primary exposure route.</p>
+        <p><strong>Methylmercury:</strong> Organic form that bioaccumulates in fish. Particularly harmful to developing nervous systems.</p>
+        <strong>Acute Exposure Symptoms:</strong> Cough, chest pain, difficulty breathing, nausea, vomiting, diarrhea, increased blood pressure, skin rashes, eye irritation.</p>
+        <p><strong>Chronic Exposure Effects:</strong> Tremors, emotional instability, insomnia, memory loss, neuromuscular effects, headaches.</p>
+        <p><strong>Developmental Effects:</strong> Exposure in utero can cause neurological damage, cognitive deficits, motor dysfunction.</p>
+        <p><strong>Spill Cleanup:</strong> Never use vacuum cleaner (creates vapor). Use specialized mercury spill kits. Ventilate area.</p>
+        <p><strong>Protective Equipment:</strong> Use in fume hood. Wear appropriate gloves, eye protection, and respiratory protection if needed.</p>
+        <p><strong>Storage:</strong> Store in sealed containers in cool, well-ventilated area away from heat and incompatible materials.</p>
+        <p><strong>Disposal:</strong> Mercury and mercury-containing waste must be disposed as hazardous waste according to regulations.</p>
+        <p><strong>First Aid:</strong> For inhalation, move to fresh air. For skin contact, wash with soap and water. For eye contact, flush with water for 15 minutes. Seek medical attention for all exposures.</p>
+    </div>
+</body>
+</html>
